@@ -105,6 +105,18 @@ class Storage:
             seen.setdefault(aid, day.isoformat())
         write_json(self.seen_path, dict(sorted(seen.items())))
 
+    # ---- Nhật ký lượng dùng: data/usage/YYYY-MM-DD.json = {"runs": [mỗi lần chạy]}
+
+    def usage_path(self, day: date) -> Path:
+        return self.data_dir / "usage" / f"{day.isoformat()}.json"
+
+    def append_usage(self, day: date, record: dict[str, Any]) -> Path:
+        path = self.usage_path(day)
+        data = read_json(path, default={"date": day.isoformat(), "runs": []})
+        data["runs"].append(record)
+        write_json(path, data)
+        return path
+
     # ---- Sitemap: data/sitemaps/<source_id>.json = danh sách URL đã thấy
 
     def sitemap_path(self, source_id: str) -> Path:

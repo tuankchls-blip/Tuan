@@ -242,15 +242,32 @@ categories:
 
 # ---------------------------------------------------------------- Dịch
 translation:
-  # Ngôn ngữ cần dịch sang tiếng Việt
+  # Ngôn ngữ cần dịch sang tiếng Việt (tin tiếng Việt giữ nguyên)
   source_langs: [en]
-  # Dự phòng khi Claude không dịch hoặc dịch sai
-  fallback: google
-  # Số ký tự tối đa gửi Google Translate mỗi lần (giới hạn của dịch vụ là 5.000)
-  google_max_chars: 4500
+
+  # Dịch chính: Claude Code chạy không tương tác, theo skill dich-tin-ai.
+  # Chỉ được đọc in.json, glossary.yaml, SKILL.md và ghi out.json; không shell, không mạng.
+  # Tắt tạm thời: chạy với --no-claude hoặc đặt biến môi trường DIGEST_NO_CLAUDE=1.
+  claude:
+    enabled: true
+    command: claude
+    model: null           # null = mô hình mặc định của gói Claude
+    max_turns: 15         # giới hạn số lượt
+    timeout_seconds: 900  # quá thời gian thì bỏ, chuyển sang Google
+
+  # Dự phòng: Google Translate qua deep-translator (không cần khóa API).
+  # Tắt: chạy với --no-google.
+  google:
+    enabled: true
+    max_chars: 4500       # giới hạn mỗi lần gửi (dịch vụ cho tối đa 5.000)
 
 # ---------------------------------------------------------------- Đường dẫn
 paths:
   data_dir: data
   docs_dir: docs
   templates_dir: templates
+  translate_in: data/translate/in.json
+  translate_out: data/translate/out.json
+  translations_cache: data/translations_cache.json
+  skill_file: .claude/skills/dich-tin-ai/SKILL.md
+  glossary_file: config/glossary.yaml

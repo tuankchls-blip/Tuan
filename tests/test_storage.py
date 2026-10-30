@@ -45,3 +45,12 @@ def test_sitemap_state(tmp_path):
     assert st.load_sitemap_urls("anthropic") is None
     st.save_sitemap_urls("anthropic", {"https://x/news/b", "https://x/news/a"})
     assert st.load_sitemap_urls("anthropic") == {"https://x/news/a", "https://x/news/b"}
+
+
+def test_usage_log_appends_runs(tmp_path):
+    st = Storage(tmp_path)
+    st.append_usage(date(2026, 10, 30), {"duration_seconds": 10})
+    path = st.append_usage(date(2026, 10, 30), {"duration_seconds": 12})
+    assert path == tmp_path / "usage" / "2026-10-30.json"
+    data = storage.read_json(path)
+    assert data["date"] == "2026-10-30" and len(data["runs"]) == 2
