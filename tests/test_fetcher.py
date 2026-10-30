@@ -142,3 +142,24 @@ def test_wordpress_boilerplate_removed():
     for _ in range(2):
         text = BOILERPLATE_RE.sub("", text)
     assert text == "We share results. Our paper fully details"
+
+
+def test_hf_papers_tolerates_one_bad_day(sources, ctx):
+    good = fixture_getter("hf_papers.json")
+
+    def get(url, params):
+        if params["date"] == "2026-10-28":
+            resp = requests.Response()
+            resp.status_code = 400
+            raise requests.HTTPError(response=resp)
+        return good(url, params)
+
+    arts, note = fetcher.fetch_hf_papers(sources["hf-papers"], ctx, get)
+    assert arts and note == "1 ngày đọc lỗi"
+
+
+def test_hf_papers_does_not_ask_future_dates(sources, ctx):
+    ctx.now = datetime(2026, 10, 29, 6, tzinfo=timezone.utc)  # chạy sớm hơn mốc chốt
+    get = fixture_getter("hf_papers.json")
+    fetcher.fetch_hf_papers(sources["hf-papers"], ctx, get)
+    assert [p["date"] for _, p in get.calls] == ["2026-10-28", "2026-10-29"]

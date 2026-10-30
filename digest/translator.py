@@ -91,7 +91,8 @@ def claude_command(cfg: dict[str, Any], paths: dict[str, str]) -> list[str]:
         "--output-format", "json",
         "--tools", "Read,Write",
         "--allowedTools",
-        f"Read(./{skill})", f"Read(./{inp})", f"Read(./{glossary})", f"Write(./{out})",
+        # Quyền ghi file khai báo bằng luật Edit(...) (áp dụng cho cả công cụ Write)
+        f"Read(./{skill})", f"Read(./{inp})", f"Read(./{glossary})", f"Edit(./{out})", f"Write(./{out})",
         "--permission-mode", "dontAsk",
         "--strict-mcp-config",
         "--no-session-persistence",
@@ -139,6 +140,13 @@ def run_claude(cfg: dict[str, Any], paths: dict[str, str], root: Path,
         usage={k: usage.get(k) for k in (
             "input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")},
     )
+    # Để chẩn đoán: thao tác bị từ chối quyền và đoạn cuối câu trả lời của Claude
+    denials = result.get("permission_denials") or []
+    if denials:
+        log["permission_denials"] = [
+            {"tool": d.get("tool_name"), "input": str(d.get("tool_input", ""))[:200]} for d in denials[:5]
+        ]
+    log["result_tail"] = str(result.get("result", ""))[-300:]
     if not log["ok"]:
         log["error"] = f"{result.get('subtype')}: {str(result.get('result', ''))[:300]}"
     return log

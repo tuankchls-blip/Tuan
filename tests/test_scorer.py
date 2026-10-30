@@ -102,3 +102,32 @@ def test_score_all_sorts_important_first(sources, settings):
     )
     kept, dropped = scorer.score_all(stories, sources, settings)
     assert [s.label for s in kept] == ["important", "notable"]
+
+
+def test_security_keywords_lift_security_news(sources, settings):
+    (s,) = score([art("press", "Hackers exploit zero-day in popular VPN appliance")], sources, settings)
+    assert s.label == "notable"
+    assert "zero-day" in s.matched_keywords
+
+
+def test_press_with_single_ai_keyword_is_notable(sources, settings):
+    (s,) = score([art("press", "Anthropic is asking Wall Street to believe in AGI and AI")], sources, settings)
+    assert s.label == "notable"
+    (s,) = score([art("press", "Carmaker recalls trucks over brake issue")], sources, settings)
+    assert s.label is None
+
+
+def test_routine_lab_posts_not_automatically_important(sources, settings):
+    (s,) = score([art("lab", "How Acme Corp is using AI for contract review")], sources, settings)
+    assert s.label == "notable"
+    (s,) = score([art("lab", "Research Focus – Edition #97")], sources, settings)
+    assert s.label != "important"
+    (s,) = score([art("lab", "How we detect frontier model misalignment")], sources, settings)
+    assert s.label == "important"
+
+
+def test_hf_papers_need_min_upvotes(sources, settings):
+    (s,) = score([art("hf-papers", "A new LLM reasoning benchmark", hf_upvotes=2)], sources, settings)
+    assert s.label is None and any("tối thiểu" in r for r in s.reasons)
+    (s,) = score([art("hf-papers", "A new LLM reasoning benchmark", hf_upvotes=6)], sources, settings)
+    assert s.label is not None

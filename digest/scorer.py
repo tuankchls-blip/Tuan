@@ -101,9 +101,12 @@ def score_story(story: Story, sources: dict[str, Source], settings: dict[str, An
     always: list[str] = []
     if not excluded:
         rules = sc["always_important"]
+        routine = find_terms(rules.get("origin_exclude_titles", []), story.primary.title)
+        if routine:
+            reasons.append("bài thường kỳ/kể chuyện khách hàng: không tự động Quan trọng")
         for a in story.articles:
             s = sources[a.source_id]
-            if s.role in rules["roles"] and s.weight >= rules["min_weight"]:
+            if not routine and s.role in rules["roles"] and s.weight >= rules["min_weight"]:
                 always.append(f"công bố gốc từ {s.id}")
                 break
         if story.source_ids & set(rules.get("source_ids", [])):
@@ -121,6 +124,10 @@ def score_story(story: Story, sources: dict[str, Source], settings: dict[str, An
     notable_min = sc.get("notable_by_group", {}).get(primary_src.group, sc["thresholds"]["notable"])
 
     community_only = all(sources[a.source_id].role == "community" for a in story.articles)
+    # Chỉ có tín hiệu cộng đồng (và có thể arXiv): áp số phiếu HF tối thiểu
+    signal_only = all(sources[a.source_id].role in ("community", "preprint") for a in story.articles)
+    hf_min = sc["community"].get("hf_min_upvotes", 0)
+    has_hf = any("hf_upvotes" in a.extra for a in story.articles)
 
     if unconfirmed and sc["preprint"]["drop_unconfirmed"]:
         label = None
@@ -128,6 +135,9 @@ def score_story(story: Story, sources: dict[str, Source], settings: dict[str, An
     elif community_only and sc.get("community_only_requires_keyword") and not matched:
         label = None
         reasons.append("chỉ có nguồn cộng đồng, không khớp từ khóa ưu tiên")
+    elif signal_only and has_hf and hf < hf_min:
+        label = None
+        reasons.append(f"HF Papers {hf} phiếu, dưới mức tối thiểu {hf_min}")
     elif always:
         label = "important"
         reasons.extend(f"luôn đưa vào: {r}" for r in always)

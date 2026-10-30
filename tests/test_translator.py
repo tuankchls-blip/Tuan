@@ -58,7 +58,7 @@ def test_claude_command_is_restricted(settings):
     assert cmd[:2] == ["claude", "-p"]
     assert cmd[cmd.index("--tools") + 1] == "Read,Write"
     assert cmd[cmd.index("--permission-mode") + 1] == "dontAsk"
-    assert "Write(./data/translate/out.json)" in cmd
+    assert "Edit(./data/translate/out.json)" in cmd  # luật ghi file của Claude Code
     assert "Read(./data/translate/in.json)" in cmd
     assert "--strict-mcp-config" in cmd and "--max-turns" in cmd
     assert not any("Bash" in c or "WebFetch" in c for c in cmd)
@@ -247,3 +247,14 @@ def test_google_stops_after_repeated_errors():
         with pytest.raises(Exception):
             g.translate("hello")
     assert len(calls) == GoogleBackend.MAX_CONSECUTIVE_ERRORS and g.disabled
+
+
+def test_run_claude_logs_permission_denials(settings, tmp_path):
+    (tmp_path / "data/translate").mkdir(parents=True)
+    (tmp_path / "data/translate/in.json").write_text("[]", encoding="utf-8")
+    payload = {"type": "result", "subtype": "success", "is_error": False, "result": "Tôi không ghi được file.",
+               "permission_denials": [{"tool_name": "Write", "tool_input": {"file_path": "data/translate/out.json"}}]}
+    log = translator.run_claude(settings["translation"]["claude"], settings["paths"], tmp_path,
+                                runner=claude_runner(lambda i: None, payload=payload))
+    assert log["permission_denials"][0]["tool"] == "Write"
+    assert "không ghi được" in log["result_tail"]

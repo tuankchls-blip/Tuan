@@ -150,10 +150,17 @@ def fetch_rss(source: Source, ctx: FetchContext, get: Getter) -> tuple[list[Arti
 def fetch_hf_papers(source: Source, ctx: FetchContext, get: Getter) -> tuple[list[Article], str | None]:
     """HF Daily Papers: lấy danh sách của từng ngày (UTC) trong khung thời gian."""
     articles: list[Article] = []
+    errors: list[Exception] = []
     day = ctx.since.astimezone(timezone.utc).date()
-    last = ctx.until.astimezone(timezone.utc).date()
+    # API trả lỗi 400 cho ngày ở tương lai, nên không hỏi quá ngày hiện tại
+    last = min(ctx.until, ctx.now).astimezone(timezone.utc).date()
     while day <= last:
-        for entry in json.loads(get(source.url, {"date": day.isoformat()})):
+        try:
+            entries = json.loads(get(source.url, {"date": day.isoformat()}))
+        except Exception as exc:  # một ngày lỗi thì bỏ qua ngày đó
+            errors.append(exc)
+            entries = []
+        for entry in entries:
             paper = entry.get("paper", {})
             pid = paper.get("id", "")
             title = clean_text(paper.get("title") or entry.get("title"))
@@ -174,7 +181,9 @@ def fetch_hf_papers(source: Source, ctx: FetchContext, get: Getter) -> tuple[lis
             a.arxiv_ids = find_arxiv_ids(f"arxiv.org/abs/{pid}")
             articles.append(a)
         day += timedelta(days=1)
-    return articles, None
+    if errors and not articles:
+        raise errors[0]
+    return articles, f"{len(errors)} ngày đọc lỗi" if errors else None
 
 
 def fetch_hackernews(source: Source, ctx: FetchContext, get: Getter) -> tuple[list[Article], str | None]:
