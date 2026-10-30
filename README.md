@@ -61,5 +61,5 @@ Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claud
 ## Lộ trình
 
 1. **Bản ngày** (xong, chờ duyệt)
-2. **Chạy tự động trên GitHub Actions + GitHub Pages** — hướng dẫn bật Actions, Pages và tạo secret `CLAUDE_CODE_OAUTH_TOKEN` sẽ được bổ sung ở đây.
+2. **Chạy tự động trên GitHub Actions + GitHub Pages** — hướng dẫn bật Actions và Pages sẽ được bổ sung ở đây. Hiện workflow dịch bằng Google Translate; muốn dịch bằng Claude thì thêm secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`), workflow sẽ tự dùng.
 3. **Bản tổng hợp** tuần, tháng, quý, năm.
