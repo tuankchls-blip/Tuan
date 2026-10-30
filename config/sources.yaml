@@ -42,9 +42,11 @@ sources:
     url: https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CL+cs.CV+cs.SE+cs.CR
     enabled: true
     options:
-      # ~1.500 bài/ngày: chỉ giữ bài được HF Daily Papers, blog chuyên gia
-      # hoặc Hacker News nhắc tới (xem settings.yaml > scoring.preprint)
-      requires_confirmation: true
+      # ~1.500 mục/ngày: chỉ giữ bài được HF Daily Papers, blog chuyên gia
+      # hoặc Hacker News nhắc tới (xem settings.yaml > scoring.preprint).
+      # Giờ đăng của arXiv là giờ công bố hôm sau, nên bài arXiv không lọc theo giờ.
+      # Bỏ các mục chỉ là bản cập nhật của bài cũ:
+      skip_announce_types: [replace, replace-cross]
 
   - id: hf-papers
     name: Hugging Face Daily Papers

@@ -24,12 +24,29 @@ fetch:
 
 # ---------------------------------------------------------------- Bước 2–3: lọc, bỏ trùng
 filter:
-  # Giữ tin đăng trong bao nhiêu giờ trước thời điểm tạo bản tin
+  # Bản tin ngày D gồm tin đăng trong window_hours giờ trước D lúc cutoff_time (giờ VN).
+  # Mốc cố định nên chạy trễ hoặc chạy lại vẫn ra cùng khung giờ, không bỏ sót, không trùng.
+  cutoff_time: "07:00"
   window_hours: 24
 
 dedup:
-  # Hai tiêu đề giống nhau từ ngưỡng này trở lên (difflib, 0–1) được coi là cùng sự kiện
+  # Cách 1 — difflib: hai tiêu đề giống nhau từ ngưỡng này trở lên (0–1) là cùng sự kiện.
+  # Bắt được tiêu đề gần như y hệt (cùng bài đăng lại).
   title_similarity: 0.82
+  # Cách 2 — từ đặc trưng chung: bắt được tiêu đề viết khác nhau về cùng sự kiện, ví dụ
+  # "Welcome Le Chonk: Mistral Large 4 on Hugging Face" và "We're releasing the weights of Mistral Large 4".
+  # Mỗi từ có trọng số theo độ hiếm trong các tin của lần chạy (từ hiếm nặng ký hơn).
+  # Gộp khi: tỷ lệ trọng số từ chung >= token_overlap, chung ít nhất min_shared_tokens từ,
+  # và có ít nhất một từ chung là tên riêng (viết hoa ở cả hai tiêu đề) hoặc chứa số.
+  token_overlap: 0.35
+  min_shared_tokens: 2
+  # Từ phổ biến không tính khi so (đã viết thường)
+  stopwords: [a, an, the, of, to, in, "on", for, and, or, with, by, from, at, as, is, are, was, were,
+              be, been, it, its, this, that, these, those, we, our, you, your, they, their, he, she,
+              his, her, i, my, me, us, how, why, what, when, who, which, new, now, says, say, said,
+              into, over, after, about, can, will, just, more, most, than, not, "no", vs, via, up, out,
+              "off", all, any, one, two, only, also, has, have, had, do, does, did, get, gets, make,
+              makes, using, use, used, toward, towards, per, here, there]
   # Khoảng thời gian tìm tin cùng sự kiện để đếm "số nguồn cùng đưa tin"
   cluster_window_hours: 48
   # Tham số truy vấn bị bỏ khi chuẩn hóa URL
@@ -62,6 +79,11 @@ scoring:
   per_extra_source: 1
   # Số nguồn độc lập tối thiểu (trong cluster_window_hours) để luôn là Quan trọng
   important_min_sources: 3
+  # Nguồn có role này không tính là "nguồn độc lập" (cộng đồng chỉ là tín hiệu xếp hạng)
+  not_independent_roles: [community]
+  # Sự kiện chỉ có nguồn cộng đồng (ví dụ chỉ có Hacker News) phải khớp ít nhất
+  # một từ khóa ưu tiên, nếu không thì loại (tránh tin ngoài lề CNTT nhiều điểm HN)
+  community_only_requires_keyword: true
 
   # Tín hiệu cộng đồng: cộng điểm theo bậc (lấy bậc cao nhất đạt được)
   community:
@@ -107,6 +129,8 @@ scoring:
 
 # ---------------------------------------------------------------- Từ khóa
 # So khớp không phân biệt hoa thường, theo ranh giới từ, trên tiêu đề và tóm tắt gốc.
+# Riêng từ viết tắt toàn chữ hoa (AI, LLM, RAG, GPU, EU; kể cả dạng số nhiều LLMs)
+# thì phân biệt hoa thường, để "AI" không khớp chữ "ai" trong tiếng Việt.
 # Mỗi từ khóa chỉ tính một lần; mỗi nhóm cộng tối đa một lần.
 keywords:
   priority:
@@ -177,6 +201,16 @@ categories:
     hf-papers: research
     nature-mi: research
     cacm: research
+
+  # Khi không từ khóa nào khớp: mục mặc định theo nhóm nguồn (không có thì vào "other")
+  default_by_group:
+    research: research
+    lab: research
+    infra: infra
+    software: software
+    security: security
+    expert: research
+    vietnam: vietnam
 
   keywords:
     models: [model, release, launches, introducing, GPT, Claude, Gemini, Llama, open-weight, checkpoint, ra mắt mô hình]

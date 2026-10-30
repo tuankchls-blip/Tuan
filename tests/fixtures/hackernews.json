@@ -1,0 +1,6 @@
+{"hits": [
+  {"objectID": "100", "title": "Model X: an open-weight LLM", "url": "https://lab.example.com/blog/model-x",
+   "points": 640, "num_comments": 300, "created_at": "2026-10-29T12:00:00Z"},
+  {"objectID": "101", "title": "Ask HN: What are you reading?", "url": null,
+   "points": 250, "num_comments": 500, "created_at": "2026-10-29T13:00:00Z"}
+]}

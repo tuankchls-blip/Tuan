@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<channel>
+  <title>cs.AI updates on arXiv.org</title>
+  <link>http://rss.arxiv.org/rss/cs.AI</link>
+  <item>
+    <title>Model X: Scaling Open-Weight Language Models</title>
+    <link>https://arxiv.org/abs/2610.00001</link>
+    <description>arXiv:2610.00001v1 Announce Type: new
+Abstract: We present Model X, a large language model.</description>
+    <category>cs.CL</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 -0400</pubDate>
+    <arxiv:announce_type>new</arxiv:announce_type>
+  </item>
+  <item>
+    <title>An Unconfirmed Paper</title>
+    <link>https://arxiv.org/abs/2610.00002</link>
+    <description>arXiv:2610.00002v1 Announce Type: new
+Abstract: Nobody talks about this one.</description>
+    <category>cs.LG</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 -0400</pubDate>
+    <arxiv:announce_type>new</arxiv:announce_type>
+  </item>
+  <item>
+    <title>A Replaced Paper</title>
+    <link>https://arxiv.org/abs/2509.00003</link>
+    <description>arXiv:2509.00003v3 Announce Type: replace
+Abstract: Old paper, new version.</description>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 -0400</pubDate>
+    <arxiv:announce_type>replace</arxiv:announce_type>
+  </item>
+</channel>
+</rss>

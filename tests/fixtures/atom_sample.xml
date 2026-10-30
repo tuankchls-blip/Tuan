@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog chuyên gia mẫu</title>
+  <id>https://expert.example.com/</id>
+  <updated>2026-10-29T22:00:00+00:00</updated>
+  <entry>
+    <title>Notes on the Model X paper</title>
+    <link href="https://expert.example.com/2026/Oct/29/model-x/" rel="alternate"/>
+    <id>https://expert.example.com/2026/Oct/29/model-x/</id>
+    <updated>2026-10-29T22:00:00+00:00</updated>
+    <summary type="html">Short notes.</summary>
+    <content type="html">&lt;p&gt;I read &lt;a href="https://arxiv.org/pdf/2610.00001"&gt;the paper&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+</feed>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Lab mẫu</title>
+  <link>https://lab.example.com/blog</link>
+  <item>
+    <title>Introducing Model X: an open-weight LLM</title>
+    <link>https://lab.example.com/blog/model-x?utm_source=rss</link>
+    <pubDate>Thu, 29 Oct 2026 10:00:00 +0000</pubDate>
+    <description><![CDATA[<p>We release <b>Model X</b>, an open-weight LLM that sets a new state of the art on the benchmark. Paper: <a href="https://arxiv.org/abs/2610.00001v2">arXiv</a>.</p>]]></description>
+  </item>
+  <item>
+    <title>An old post</title>
+    <link>https://lab.example.com/blog/old</link>
+    <pubDate>Mon, 01 Jun 2026 10:00:00 +0000</pubDate>
+    <description>Old.</description>
+  </item>
+  <item>
+    <title>A post without a date</title>
+    <link>https://lab.example.com/blog/no-date</link>
+    <description>No date.</description>
+  </item>
+  <item>
+    <title>Future dated post</title>
+    <link>https://lab.example.com/blog/future</link>
+    <pubDate>Sat, 31 Oct 2026 10:00:00 +0000</pubDate>
+    <description>Feed ghi sai giờ.</description>
+  </item>
+</channel>
+</rss>

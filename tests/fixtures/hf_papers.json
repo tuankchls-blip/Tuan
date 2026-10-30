@@ -1,0 +1,8 @@
+[
+  {"paper": {"id": "2610.00001", "title": "Model X: Scaling Open-Weight Language Models", "summary": "We present Model X.",
+             "upvotes": 25, "submittedOnDailyAt": "2026-10-29T00:00:00.000Z", "githubRepo": "https://github.com/example/model-x"},
+   "publishedAt": "2026-10-27T20:00:00.000Z", "title": "Model X: Scaling Open-Weight Language Models"},
+  {"paper": {"id": "2610.00009", "title": "A Small Paper", "summary": "Few votes.", "upvotes": 1,
+             "submittedOnDailyAt": "2026-10-29T00:00:00.000Z"},
+   "publishedAt": "2026-10-28T20:00:00.000Z", "title": "A Small Paper"}
+]

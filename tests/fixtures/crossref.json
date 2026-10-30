@@ -1,0 +1,8 @@
+{"status": "ok", "message": {"total-results": 2, "items": [
+  {"DOI": "10.1145/0000001", "URL": "https://doi.org/10.1145/0000001", "type": "journal-article",
+   "title": ["Agency as a New Abstraction for Computer Science"],
+   "abstract": "<jats:p>We argue that <jats:italic>agency</jats:italic> is a new abstraction.</jats:p>",
+   "created": {"date-time": "2026-10-29T09:00:00Z"}},
+  {"DOI": "10.1145/0000002", "URL": "https://doi.org/10.1145/0000002", "type": "journal-article",
+   "title": [], "created": {"date-time": "2026-10-29T10:00:00Z"}}
+]}}
