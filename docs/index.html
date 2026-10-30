@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI & CNTT — Mục lục</title>
+<meta name="description" content="Bản tin AI, khoa học máy tính và CNTT hằng ngày bằng tiếng Việt">
+<style>
+/* Giao diện chung: nhúng thẳng vào mỗi trang HTML, không dùng CDN */
+:root {
+  --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f2f0ec; --text: #1d1d1f; --muted: #5f6368;
+  --border: #e3e0da; --link: #1a56b8; --accent: #b4441f;
+  --imp-bg: #fde8e1; --imp-fg: #9a2f10; --not-bg: #e6eefb; --not-fg: #1d4f9c;
+  --warn-bg: #fff4d6; --warn-fg: #7a5600; --ok: #1e7d3a; --err: #b3261e;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+    --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+    --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+    --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+  --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+  --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+  --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 48px; }
+header.top { padding: 20px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .9rem; }
+.topbar nav { display: flex; gap: 14px; flex-wrap: wrap; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 14px 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+h3.sub { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
+.stat b { font-variant-numeric: tabular-nums; }
+button.theme {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0; padding: 0; list-style: none; font-size: .95rem; }
+.toc .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.filters {
+  position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--border);
+}
+.filters .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.filters .seg button {
+  border: 0; background: var(--surface); color: var(--text); padding: 5px 12px; font: inherit; font-size: .88rem; cursor: pointer;
+}
+.filters .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.filters select {
+  font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 8px; max-width: 100%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.filters .count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.story {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 10px 0; box-shadow: var(--shadow);
+}
+.story[hidden], section[hidden] { display: none; }
+.story h4 { font-size: 1.05rem; line-height: 1.4; margin: 6px 0 2px; overflow-wrap: anywhere; }
+.story .orig { color: var(--muted); font-size: .85rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+.story .summary { margin: 6px 0; overflow-wrap: anywhere; }
+.story details { font-size: .9rem; color: var(--muted); }
+.story details summary { cursor: pointer; color: var(--link); }
+.story details p { margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .82rem; color: var(--muted); }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: .75rem; font-weight: 600; letter-spacing: .01em; }
+.badge.important { background: var(--imp-bg); color: var(--imp-fg); }
+.badge.notable { background: var(--not-bg); color: var(--not-fg); }
+.badge.untranslated { background: var(--warn-bg); color: var(--warn-fg); font-weight: 500; }
+.also, .kw { font-size: .85rem; color: var(--muted); margin: 6px 0 0; }
+.kw { display: flex; flex-wrap: wrap; gap: 4px; }
+.kw span { background: var(--surface-2); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.empty { color: var(--muted); font-style: italic; }
+table.status { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.status th, table.status td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.status td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--ok); } .err { color: var(--err); }
+.table-scroll { overflow-x: auto; }
+footer { margin-top: 36px; font-size: .85rem; color: var(--muted); }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0 8px; font-size: .95rem; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive .n { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+details.month > summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.search input {
+  width: 100%; font: inherit; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.search ol { padding-left: 0; list-style: none; }
+.search li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.search .when { color: var(--muted); font-size: .8rem; }
+.latest .story h4 { font-size: 1rem; }
+section[data-group] { scroll-margin-top: 64px; }
+@media (max-width: 520px) {
+  h1 { font-size: 1.35rem; }
+  .filters { position: static; }  /* trên điện thoại thanh lọc chiếm quá nhiều chỗ nếu dính */
+  section[data-group] { scroll-margin-top: 8px; }
+  .story { padding: 12px; }
+  .filters .count { width: 100%; margin-left: 0; }
+}</style>
+<script>
+// Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
+(function () {
+  var KEY = "digest-theme";
+  var LABEL = { auto: "Giao diện: tự động", light: "Giao diện: sáng", dark: "Giao diện: tối" };
+  var root = document.documentElement;
+  function load() { try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
+    var b = document.getElementById("theme-btn"); if (b) b.textContent = LABEL[v];
+  }
+  var current = load(); apply(current);
+  document.addEventListener("DOMContentLoaded", function () {
+    apply(current);
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    b.addEventListener("click", function () {
+      current = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+      save(current); apply(current);
+    });
+  });
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="index.html">Mục lục</a>
+    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+<h1>Bản tin AI & CNTT</h1>
+<p class="lead">Tin AI, khoa học máy tính và CNTT hằng ngày bằng tiếng Việt, chọn lọc từ 31 nguồn uy tín.</p>
+</header>
+<main>
+<section class="latest">
+  <h2>Bản mới nhất: <a href="daily/2026/2026-10-30.html">Thứ Sáu, 30/10/2026</a></h2>
+  <div class="stats">
+    <span class="stat"><b>15</b> Quan trọng</span>
+    <span class="stat"><b>38</b> Đáng chú ý</span>
+  </div>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Hugging Face Blog</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-a1765f446c">Welcome Le Chonk: Mistral Large 4 on Hugging Face</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>MIT Technology Review – AI</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-0c49eb4fc3">We urgently need to monitor AI agents’ actions in real time</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Hugging Face Daily Papers</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-a85ae40a50">Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Hugging Face Daily Papers</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-d039e7322f">TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Hugging Face Daily Papers</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-b15471bb94">Amortizing Sequential Experimental Design in Reasoning LLMs</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Google DeepMind</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-34b0bf3f94">Gemini 4 Carbon: Our next frontier model</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>Meta AI</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-2b2f487795">Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>CISA – Known Exploited Vulnerabilities</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-2dc39333ee">CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>CISA – Known Exploited Vulnerabilities</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-9264426921">CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability</a></h4>
+  </article>
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>OpenAI News</span></div>
+    <h4><a href="daily/2026/2026-10-30.html#s-7bf0065ceb">An updated Model Spec for more capable and beneficial AI</a></h4>
+  </article>
+  <p><a href="daily/2026/2026-10-30.html">Đọc toàn bộ bản tin →</a></p>
+</section>
+
+<section class="search">
+  <h2>Tìm theo tiêu đề</h2>
+  <input type="search" id="q" placeholder="Ví dụ: Gemini, an toàn AI, lỗ hổng…" autocomplete="off" aria-label="Tìm tin theo tiêu đề">
+  <p class="lead" id="q-status"></p>
+  <ol id="q-results"></ol>
+  <noscript><p class="lead">Cần bật JavaScript để tìm kiếm.</p></noscript>
+</section>
+
+
+<section>
+  <h2>Bản ngày</h2>
+  <details class="month" open>
+    <summary>Tháng 10/2026 <span class="n">(1 bản)</span></summary>
+    <ul class="archive">
+      <li><a href="daily/2026/2026-10-30.html">Thứ Sáu, 30/10/2026</a><span class="n">15 QT · 38 ĐCY</span></li>
+    </ul>
+  </details>
+</section>
+</main>
+<footer>
+<p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+<script>
+// Tìm kiếm: tải chỉ mục (search-index.js) khi bắt đầu gõ; chạy được cả khi mở file trực tiếp trên máy
+(function () {
+  var input = document.getElementById("q"), status = document.getElementById("q-status"),
+      list = document.getElementById("q-results"), loading = false;
+  function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
+  function ensureIndex(cb) {
+    if (window.DIGEST_SEARCH) return cb();
+    if (loading) return; loading = true; status.textContent = "Đang tải chỉ mục…";
+    var sc = document.createElement("script"); sc.src = "search-index.js";
+    sc.onload = function () { loading = false; cb(); };
+    sc.onerror = function () { status.textContent = "Không tải được chỉ mục tìm kiếm."; };
+    document.head.appendChild(sc);
+  }
+  function run() {
+    var q = norm(input.value.trim()); list.innerHTML = "";
+    if (q.length < 2) { status.textContent = ""; return; }
+    var words = q.split(/\s+/), hits = [];
+    window.DIGEST_SEARCH.forEach(function (r) {
+      var hay = norm(r[1] + " " + r[2]);
+      if (words.every(function (w) { return hay.indexOf(w) >= 0; })) hits.push(r);
+    });
+    status.textContent = hits.length ? "Tìm thấy " + hits.length + " tin" + (hits.length > 100 ? " (hiện 100 tin mới nhất)" : "") : "Không tìm thấy tin nào.";
+    hits.slice(0, 100).forEach(function (r) {
+      var li = document.createElement("li");
+      var when = document.createElement("div"); when.className = "when";
+      var day = document.createElement("a"); day.href = r[5]; day.textContent = r[0];
+      when.appendChild(day); when.appendChild(document.createTextNode(r[4] === "important" ? " · Quan trọng" : " · Đáng chú ý"));
+      var a = document.createElement("a"); a.href = r[3]; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.textContent = r[1] || r[2];
+      li.appendChild(when); li.appendChild(a); list.appendChild(li);
+    });
+  }
+  var t;
+  input.addEventListener("input", function () { clearTimeout(t); t = setTimeout(function () { ensureIndex(run); }, 150); });
+})();
+</script>
+</body>
+</html>
