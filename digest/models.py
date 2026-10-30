@@ -121,6 +121,17 @@ class Story:
     def source_ids(self) -> set[str]:
         return {a.source_id for a in self.articles}
 
+    @property
+    def summary(self) -> str:
+        """Tóm tắt gốc: của bài gốc; nếu bài gốc không có (DeepMind, HF Blog, sitemap)
+        thì lấy của bài đầu tiên cùng sự kiện có tóm tắt và cùng ngôn ngữ."""
+        if self.primary.summary:
+            return self.primary.summary
+        for a in self.others:
+            if a.summary and a.lang == self.primary.lang:
+                return a.summary
+        return ""
+
     def to_dict(self) -> dict[str, Any]:
         """Chuyển sang dict theo cấu trúc JSON ngày trong PLAN.md."""
         p = self.primary
@@ -136,7 +147,7 @@ class Story:
             "published_at": p.published_at.isoformat(),
             "lang": p.lang,
             "title_orig": p.title,
-            "summary_orig": p.summary,
+            "summary_orig": self.summary,
             "title_vi": self.title_vi,
             "summary_vi": self.summary_vi,
             "translated": self.translated,

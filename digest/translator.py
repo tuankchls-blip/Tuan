@@ -51,18 +51,16 @@ class TranslationCache:
 
     def get(self, story: Story) -> dict[str, Any] | None:
         entry = self.data.get(story.id)
-        p = story.primary
-        if entry and entry.get("hash") == text_hash(p.title, p.summary):
+        if entry and entry.get("hash") == text_hash(story.primary.title, story.summary):
             return entry
         return None
 
     def put(self, story: Story, title_vi: str, summary_vi: str, source: str) -> None:
-        p = story.primary
         self.data[story.id] = {
             "title_vi": title_vi,
             "summary_vi": summary_vi,
             "source": source,
-            "hash": text_hash(p.title, p.summary),
+            "hash": text_hash(story.primary.title, story.summary),
             "translated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         }
 
@@ -76,7 +74,7 @@ class TranslationCache:
 def build_input(stories: list[Story], cache: TranslationCache, source_langs: list[str]) -> list[dict[str, str]]:
     """Danh sách tin cần Claude dịch: tiếng Anh và chưa có trong bộ nhớ đệm."""
     return [
-        {"id": s.id, "title": s.primary.title, "summary": s.primary.summary}
+        {"id": s.id, "title": s.primary.title, "summary": s.summary}
         for s in stories
         if s.primary.lang in source_langs and cache.get(s) is None
     ]
@@ -193,8 +191,13 @@ PLACEHOLDER_RE = re.compile(r"Z\s*Z\s*(\d+)\s*Z\s*Z", re.IGNORECASE)
 class GoogleBackend:
     """Dịch bằng Google Translate; thuật ngữ trong glossary được giữ nguyên bằng mã giữ chỗ."""
 
+    # Lỗi liên tiếp bấy nhiêu lần thì ngừng gọi Google trong lần chạy này
+    # (ví dụ Google chặn IP máy chủ bằng trang CAPTCHA)
+    MAX_CONSECUTIVE_ERRORS = 3
+
     def __init__(self, glossary: dict[str, Any], max_chars: int = 4500,
                  translate_fn: Callable[[str], str] | None = None) -> None:
+        self.consecutive_errors = 0
         # Thuật ngữ: so khớp như từ khóa (viết tắt thì phân biệt hoa thường).
         # Tên riêng: luôn phân biệt hoa thường, để "Apple" được giữ còn "apple" vẫn được dịch.
         patterns = [(t, compile_term(t)) for t in glossary.get("keep_terms", [])]
@@ -240,14 +243,26 @@ class GoogleBackend:
             raise ValueError("bản dịch làm mất thuật ngữ")
         return out
 
+    @property
+    def disabled(self) -> bool:
+        return self.consecutive_errors >= self.MAX_CONSECUTIVE_ERRORS
+
     def translate(self, text: str) -> str:
         if not text.strip():
             return ""
-        protected, kept = self.protect(text[: self.max_chars])
-        translated = self._fn()(protected)
-        if not translated:
-            raise ValueError("Google trả về rỗng")
-        return self.restore(translated, kept)
+        if self.disabled:
+            raise RuntimeError("Google đã ngừng sau nhiều lỗi liên tiếp")
+        try:
+            protected, kept = self.protect(text[: self.max_chars])
+            translated = self._fn()(protected)
+            if not translated:
+                raise ValueError("Google trả về rỗng")
+            result = self.restore(translated, kept)
+        except Exception:
+            self.consecutive_errors += 1
+            raise
+        self.consecutive_errors = 0
+        return result
 
 
 # ---------------------------------------------------------------- Ghép lại
@@ -282,7 +297,7 @@ def apply_translations(
     for s in stories:
         p = s.primary
         if p.lang not in source_langs:
-            s.title_vi, s.summary_vi, s.translated, s.translation_source = p.title, p.summary, True, "original"
+            s.title_vi, s.summary_vi, s.translated, s.translation_source = p.title, s.summary, True, "original"
             report.counts["original"] += 1
             continue
         entry = cache.get(s)
@@ -296,7 +311,7 @@ def apply_translations(
             source = "claude"
         elif google is not None:
             try:
-                title_vi, summary_vi = google.translate(p.title), google.translate(p.summary)
+                title_vi, summary_vi = google.translate(p.title), google.translate(s.summary)
                 source = "google"
             except Exception as exc:  # Google lỗi: để tiếng Anh, lần sau dịch lại
                 report.google_errors.append(f"{s.id[:8]}: {type(exc).__name__}: {str(exc)[:100]}")

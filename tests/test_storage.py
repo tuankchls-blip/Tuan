@@ -42,9 +42,14 @@ def test_seen_keeps_earliest_day(tmp_path):
 
 def test_sitemap_state(tmp_path):
     st = Storage(tmp_path)
-    assert st.load_sitemap_urls("anthropic") is None
-    st.save_sitemap_urls("anthropic", {"https://x/news/b", "https://x/news/a"})
-    assert st.load_sitemap_urls("anthropic") == {"https://x/news/a", "https://x/news/b"}
+    d29, d30 = date(2026, 10, 29), date(2026, 10, 30)
+    assert st.sitemap_known_before("anthropic", d29) is None
+    st.update_sitemap_state("anthropic", d29, {"https://x/news/a"}, baseline=True)
+    assert st.sitemap_known_before("anthropic", d29) == {"https://x/news/a"}
+    st.update_sitemap_state("anthropic", d30, {"https://x/news/a", "https://x/news/b"}, baseline=False)
+    # chạy lại ngày 30: b vẫn được coi là mới của ngày 30
+    assert st.sitemap_known_before("anthropic", d30) == {"https://x/news/a"}
+    assert st.sitemap_known_before("anthropic", date(2026, 10, 31)) == {"https://x/news/a", "https://x/news/b"}
 
 
 def test_usage_log_appends_runs(tmp_path):

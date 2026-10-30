@@ -233,3 +233,17 @@ def test_cache_invalidated_when_text_changes(stories, tmp_path):
     assert cache.get(s) is not None
     s.primary.summary += " (cập nhật)"
     assert cache.get(s) is None
+
+
+def test_google_stops_after_repeated_errors():
+    calls = []
+
+    def blocked(text):
+        calls.append(text)
+        raise ConnectionError("CAPTCHA")
+
+    g = GoogleBackend(load_glossary(), translate_fn=blocked)
+    for _ in range(5):
+        with pytest.raises(Exception):
+            g.translate("hello")
+    assert len(calls) == GoogleBackend.MAX_CONSECUTIVE_ERRORS and g.disabled

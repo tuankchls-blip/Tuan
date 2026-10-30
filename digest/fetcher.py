@@ -47,6 +47,11 @@ TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 HREF_RE = re.compile(r"""href=["']([^"']+)["']""", re.IGNORECASE)
 ARXIV_PREFIX_RE = re.compile(r"^arXiv:\S+\s+Announce Type:\s*\S+\s*(Abstract:\s*)?", re.IGNORECASE)
+# Câu thừa do WordPress tự thêm vào cuối tóm tắt
+BOILERPLATE_RE = re.compile(
+    r"\s*(\[(\.\.\.|…)\]\s*(Read More\.*)?|The post .{0,300}? appeared first on .{0,100}?\.?)\s*$",
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 def clean_text(raw: str | None, max_chars: int = 0) -> str:
@@ -120,6 +125,8 @@ def fetch_rss(source: Source, ctx: FetchContext, get: Getter) -> tuple[list[Arti
         raw_summary = e.get("summary", "")
         content = " ".join(c.get("value", "") for c in e.get("content", []))
         summary = ARXIV_PREFIX_RE.sub("", clean_text(raw_summary))
+        for _ in range(2):  # có feed thêm cả "[...] Read More..." lẫn "The post … appeared first on …"
+            summary = BOILERPLATE_RE.sub("", summary)
         summary = clean_text(summary, ctx.max_summary_chars)
         a = Article(
             url=link,

@@ -12,7 +12,7 @@ Bản tin AI & CNTT hằng ngày bằng tiếng Việt, chạy tự động trê
 ## Lệnh
 
 ```bash
-python main.py daily [--date YYYY-MM-DD]      # bản ngày
+python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google]   # bản ngày
 python main.py weekly|monthly|quarterly|yearly [--date YYYY-MM-DD]
 pytest                                        # test, không gọi mạng
 ```
@@ -26,7 +26,7 @@ pytest                                        # test, không gọi mạng
 5. `classifier.py` — phân mục theo nội dung: models, research (có subcategory: nlp, cv, rl, safety, theory, systems…), infra, software, security, policy, business, vietnam. Mục rỗng thì ẩn.
 6. `renderer.py` + `storage.py` — ghi `data/YYYY/YYYY-MM-DD.json`, dựng `docs/daily/YYYY/YYYY-MM-DD.html`, cập nhật `docs/index.html`.
 
-Dịch (`translator.py`): Python ghi tin tiếng Anh chưa dịch vào `data/translate/in.json` → Claude Code (skill `dich-tin-ai`) ghi `data/translate/out.json` → Python kiểm tra; tin thiếu/sai thì dịch bằng Google (`deep-translator`, thuật ngữ trong glossary thay bằng mã giữ chỗ); Google lỗi thì để tiếng Anh với nhãn “chưa dịch”. Bản dịch lưu trong `data/translations_cache.json` kèm nguồn dịch (`claude`/`google`). Nhật ký mỗi lần chạy ghi vào `data/usage/YYYY-MM-DD.json`.
+Dịch (`translator.py`): Python ghi tin tiếng Anh chưa dịch vào `data/translate/in.json` → Python tự gọi `claude -p` (quyền tối thiểu: `--tools Read,Write`, chỉ đúng 4 file, `--permission-mode dontAsk`, `--max-turns`, timeout; đã chốt với chủ dự án là gọi trong Python thay vì bước workflow riêng) để dịch theo skill `dich-tin-ai` ra `data/translate/out.json` → Python kiểm tra; tin thiếu/sai thì dịch bằng Google (`deep-translator`, thuật ngữ trong glossary thay bằng mã giữ chỗ, ngừng sau 3 lỗi liên tiếp vì Google hay chặn IP máy chủ bằng CAPTCHA); Google lỗi thì để tiếng Anh với nhãn “chưa dịch”. Bản dịch lưu trong `data/translations_cache.json` kèm nguồn dịch (`claude`/`google`). Nhật ký mỗi lần chạy ghi vào `data/usage/YYYY-MM-DD.json`. Tắt Claude: `--no-claude` hoặc `DIGEST_NO_CLAUDE=1`.
 
 Tổng hợp (`aggregator.py`): tuần (ISO, Thứ Hai–Chủ Nhật) ← tin Quan trọng của 7 bản ngày; tháng ← tuần; quý ← tháng; năm ← quý. Số liệu thống kê luôn tính lại từ dữ liệu ngày.
 

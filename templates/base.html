@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Bản tin AI & CNTT{% endblock %}</title>
+<meta name="description" content="{% block description %}Bản tin AI, khoa học máy tính và CNTT hằng ngày bằng tiếng Việt{% endblock %}">
+<style>
+{% include "partials/style.css" %}
+</style>
+<script>
+{% include "partials/theme.js" %}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="{{ root }}index.html">Mục lục</a>
+      {% block nav %}{% endblock %}
+    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+  {% block header %}{% endblock %}
+</header>
+<main>
+{% block content %}{% endblock %}
+</main>
+<footer>
+{% block footer %}{% endblock %}
+<p>Tạo tự động bởi <a href="{{ repo_url }}">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+{% block scripts %}{% endblock %}
+</body>
+</html>

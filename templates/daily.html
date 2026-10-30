@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Bản tin AI & CNTT {{ day | vn_short_date }}{% endblock %}
+{% block description %}{{ n_important }} tin Quan trọng, {{ n_notable }} tin Đáng chú ý ngày {{ day | vn_short_date }}{% endblock %}
+{% block nav %}
+  {% if prev_href %}<a href="{{ prev_href }}">← Ngày trước</a>{% endif %}
+  {% if next_href %}<a href="{{ next_href }}">Ngày sau →</a>{% endif %}
+{% endblock %}
+{% block header %}
+<h1>Bản tin AI & CNTT<br><small>{{ day | vn_long_date }}</small></h1>
+<p class="lead">Tin trong 24 giờ đến {{ window_end | vn_time }} (giờ Việt Nam).</p>
+<div class="stats">
+  <span class="stat"><b>{{ n_important }}</b> Quan trọng</span>
+  <span class="stat"><b>{{ n_notable }}</b> Đáng chú ý</span>
+  <span class="stat"><b>{{ n_sources_ok }}/{{ n_sources }}</b> nguồn đọc được</span>
+</div>
+{% if groups %}
+<ul class="toc">
+  {% for g in groups %}<li><a href="#c-{{ g.key }}">{{ g.label }}</a> <span class="n">{{ g.count }}</span></li>{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+{% block content %}
+{% if groups %}
+<div class="filters" id="filters" hidden>
+  <span class="seg" role="group" aria-label="Lọc theo nhãn">
+    <button type="button" data-label-btn="all" aria-pressed="true">Tất cả</button>
+    <button type="button" data-label-btn="important" aria-pressed="false">Quan trọng</button>
+    <button type="button" data-label-btn="notable" aria-pressed="false">Đáng chú ý</button>
+  </span>
+  <select id="f-cat" aria-label="Lọc theo mục">
+    <option value="all">Mọi mục</option>
+    {% for g in groups %}<option value="{{ g.key }}">{{ g.label }}</option>{% endfor %}
+  </select>
+  <select id="f-src" aria-label="Lọc theo nguồn">
+    <option value="all">Mọi nguồn</option>
+    {% for sid in used_sources %}<option value="{{ sid }}">{{ source_name(sid) }}</option>{% endfor %}
+  </select>
+  <span class="count" id="filter-count"></span>
+</div>
+{% for g in groups %}
+<section id="c-{{ g.key }}" data-group="{{ g.key }}">
+  <h2>{{ g.label }}</h2>
+  {% if g.subgroups %}
+    {% for sg in g.subgroups %}
+    <section data-group="{{ g.key }}-{{ sg.key }}">
+      <h3 class="sub">{{ sg.label }}</h3>
+      {% for s in sg.stories %}{% include "_story.html" %}{% endfor %}
+    </section>
+    {% endfor %}
+  {% else %}
+    {% for s in g.stories %}{% include "_story.html" %}{% endfor %}
+  {% endif %}
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">Không có tin nào đạt ngưỡng trong khung giờ này.</p>
+{% endif %}
+{% endblock %}
+{% block footer %}
+<div class="pager">
+  <span>{% if prev_href %}<a href="{{ prev_href }}">← {{ prev_day | vn_short_date }}</a>{% endif %}</span>
+  <span>{% if next_href %}<a href="{{ next_href }}">{{ next_day | vn_short_date }} →</a>{% endif %}</span>
+</div>
+<h2>Tình trạng nguồn</h2>
+<div class="table-scroll">
+<table class="status">
+  <thead><tr><th>Nguồn</th><th>Trạng thái</th><th class="n">Số bài</th><th>Ghi chú</th></tr></thead>
+  <tbody>
+  {% for st in sources_status %}
+    <tr>
+      <td>{{ source_name(st.source_id) }}</td>
+      <td>{% if st.ok %}<span class="ok">✓ đọc được</span>{% else %}<span class="err">✗ lỗi</span>{% endif %}</td>
+      <td class="n">{{ st["items"] }}</td>
+      <td>{{ st.error or st.note or "" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% if translation %}
+<p>Dịch: Claude {{ translation.claude }} · Google {{ translation.google }} · dùng lại bản dịch cũ {{ translation.cache }} · chưa dịch {{ translation.untranslated }}.</p>
+{% endif %}
+<p>Tạo lúc {{ generated_at | vn_time }}.</p>
+{% endblock %}
+{% block scripts %}
+<script>
+{% include "partials/daily.js" %}
+</script>
+{% endblock %}

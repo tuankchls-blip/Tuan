@@ -1,0 +1,33 @@
+{# Một tin. Biến: s (dict tin), src (dict nguồn), hiển thị theo cấu trúc JSON ngày #}
+<article class="story" id="s-{{ s.id[:10] }}" data-label="{{ s.label }}" data-cat="{{ s.category }}"
+         data-srcs="{{ ([s.source_id] + s.also_covered_by | map(attribute='source_id') | list) | unique | join(' ') }}">
+  <div class="meta">
+    <span class="badge {{ s.label }}">{{ label_names[s.label] }}</span>
+    <span>{{ source_name(s.source_id) }}</span>
+    <span>·</span>
+    <time datetime="{{ s.published_at }}">{{ s.published_at | vn_time }}</time>
+    {% if s.also_covered_by %}<span>· {{ (s.also_covered_by | map(attribute='source_id') | unique | list | length) + 1 }} nguồn</span>{% endif %}
+    {% if s.signals.hn_points %}<span>· HN {{ s.signals.hn_points }} điểm</span>{% endif %}
+    {% if s.signals.hf_upvotes %}<span>· HF {{ s.signals.hf_upvotes }} phiếu</span>{% endif %}
+  </div>
+  {% set show_vi = s.translated and s.title_vi %}
+  <h4>
+    <a href="{{ s.url | safe_url }}" target="_blank" rel="noopener noreferrer"{% if not show_vi %} lang="{{ s.lang }}"{% endif %}>{{ s.title_vi if show_vi else s.title_orig }}</a>
+    {% if not s.translated %}<span class="badge untranslated">chưa dịch</span>{% endif %}
+  </h4>
+  {% if show_vi and s.lang != 'vi' %}<p class="orig" lang="{{ s.lang }}">{{ s.title_orig }}</p>{% endif %}
+  {% if show_vi and s.summary_vi %}
+    <p class="summary">{{ s.summary_vi }}</p>
+    {% if s.lang != 'vi' and s.summary_orig %}
+    <details><summary>Xem bản gốc</summary><p lang="{{ s.lang }}">{{ s.summary_orig }}</p></details>
+    {% endif %}
+  {% elif s.summary_orig %}
+    <p class="summary" lang="{{ s.lang }}">{{ s.summary_orig }}</p>
+  {% endif %}
+  {% if s.also_covered_by %}
+  <p class="also">Cùng đưa tin:
+    {% for o in s.also_covered_by %}<a href="{{ o.url | safe_url }}" target="_blank" rel="noopener noreferrer" title="{{ o.title }}">{{ o.display or source_name(o.source_id) }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+  </p>
+  {% endif %}
+  {% if s.matched_keywords %}<p class="kw">{% for k in s.matched_keywords[:6] %}<span>{{ k }}</span>{% endfor %}</p>{% endif %}
+</article>

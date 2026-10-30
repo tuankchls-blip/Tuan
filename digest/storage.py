@@ -61,6 +61,7 @@ def write_json(path: Path, data: Any) -> None:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
             f.write("\n")
+        os.chmod(tmp, 0o644)  # mkstemp tạo file chỉ chủ sở hữu đọc được
         os.replace(tmp, path)
     except BaseException:
         Path(tmp).unlink(missing_ok=True)
@@ -85,6 +86,23 @@ class Storage:
 
     def load_daily(self, day: date) -> dict[str, Any] | None:
         return read_json(self.daily_path(day))
+
+    def list_days(self) -> list[date]:
+        """Mọi ngày đã có dữ liệu, tăng dần."""
+        days = []
+        for path in self.data_dir.glob("[0-9][0-9][0-9][0-9]/*.json"):
+            try:
+                days.append(date.fromisoformat(path.stem))
+            except ValueError:
+                continue
+        return sorted(days)
+
+    def neighbors(self, day: date) -> tuple[date | None, date | None]:
+        """Ngày có dữ liệu ngay trước và ngay sau `day`."""
+        days = self.list_days()
+        before = [d for d in days if d < day]
+        after = [d for d in days if d > day]
+        return (before[-1] if before else None, after[0] if after else None)
 
     # ---- Tin đã đăng: data/seen.json = {"<mã tin>": "<ngày bản tin>"}
 
@@ -117,15 +135,29 @@ class Storage:
         write_json(path, data)
         return path
 
-    # ---- Sitemap: data/sitemaps/<source_id>.json = danh sách URL đã thấy
+    # ---- Sitemap: data/sitemaps/<source_id>.json = {url: ngày thấy lần đầu}
+    # Lần chạy đầu ghi ngày BASELINE cho mọi URL hiện có (không đăng).
+    # Lưu ngày để chạy lại cùng ngày vẫn đăng lại đúng các URL mới của ngày đó.
+
+    BASELINE = "0000-00-00"
 
     def sitemap_path(self, source_id: str) -> Path:
         return self.data_dir / "sitemaps" / f"{source_id}.json"
 
-    def load_sitemap_urls(self, source_id: str) -> set[str] | None:
+    def load_sitemap_state(self, source_id: str) -> dict[str, str] | None:
         """Trả về None nếu chưa từng đọc nguồn này (lần chạy đầu)."""
-        data = read_json(self.sitemap_path(source_id))
-        return None if data is None else set(data)
+        return read_json(self.sitemap_path(source_id))
 
-    def save_sitemap_urls(self, source_id: str, urls: set[str]) -> None:
-        write_json(self.sitemap_path(source_id), sorted(urls))
+    def sitemap_known_before(self, source_id: str, day: date) -> set[str] | None:
+        """Các URL đã thấy trước ngày `day` (None nếu chưa từng đọc)."""
+        state = self.load_sitemap_state(source_id)
+        if state is None:
+            return None
+        return {url for url, first in state.items() if first < day.isoformat()}
+
+    def update_sitemap_state(self, source_id: str, day: date, urls: set[str], baseline: bool) -> None:
+        state = self.load_sitemap_state(source_id) or {}
+        mark = self.BASELINE if baseline else day.isoformat()
+        for url in urls:
+            state.setdefault(url, mark)
+        write_json(self.sitemap_path(source_id), dict(sorted(state.items())))

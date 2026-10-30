@@ -132,3 +132,13 @@ def test_unknown_type_is_reported(sources, ctx):
     src.type = "gopher"
     r = fetch_source(src, ctx, fixture_getter("rss_sample.xml"))
     assert not r.ok and "gopher" in r.error
+
+
+def test_wordpress_boilerplate_removed():
+    from digest.fetcher import BOILERPLATE_RE
+
+    text = ("We share results. Our paper fully details [...] Read More... "
+            "The post Catching Bugs appeared first on Engineering at Meta .")
+    for _ in range(2):
+        text = BOILERPLATE_RE.sub("", text)
+    assert text == "We share results. Our paper fully details"

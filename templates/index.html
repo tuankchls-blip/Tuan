@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Bản tin AI & CNTT — Mục lục{% endblock %}
+{% block header %}
+<h1>Bản tin AI & CNTT</h1>
+<p class="lead">Tin AI, khoa học máy tính và CNTT hằng ngày bằng tiếng Việt, chọn lọc từ {{ n_sources }} nguồn uy tín.</p>
+{% endblock %}
+{% block content %}
+{% if latest %}
+<section class="latest">
+  <h2>Bản mới nhất: <a href="{{ latest.href }}">{{ latest.day | vn_long_date }}</a></h2>
+  <div class="stats">
+    <span class="stat"><b>{{ latest.n_important }}</b> Quan trọng</span>
+    <span class="stat"><b>{{ latest.n_notable }}</b> Đáng chú ý</span>
+  </div>
+  {% for t in latest.top %}
+  <article class="story">
+    <div class="meta"><span class="badge important">Quan trọng</span><span>{{ source_name(t.source_id) }}</span></div>
+    <h4><a href="{{ latest.href }}#s-{{ t.id[:10] }}">{{ t.title_vi if (t.translated and t.title_vi) else t.title_orig }}</a></h4>
+  </article>
+  {% endfor %}
+  <p><a href="{{ latest.href }}">Đọc toàn bộ bản tin →</a></p>
+</section>
+{% endif %}
+
+<section class="search">
+  <h2>Tìm theo tiêu đề</h2>
+  <input type="search" id="q" placeholder="Ví dụ: Gemini, an toàn AI, lỗ hổng…" autocomplete="off" aria-label="Tìm tin theo tiêu đề">
+  <p class="lead" id="q-status"></p>
+  <ol id="q-results"></ol>
+  <noscript><p class="lead">Cần bật JavaScript để tìm kiếm.</p></noscript>
+</section>
+
+{% for level in summaries %}
+{% if level.entries %}
+<section>
+  <h2>{{ level.label }}</h2>
+  <ul class="archive">
+    {% for it in level.entries %}<li><a href="{{ it.href }}">{{ it.name }}</a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endfor %}
+
+<section>
+  <h2>Bản ngày</h2>
+  {% for m in months %}
+  <details class="month"{% if loop.first %} open{% endif %}>
+    <summary>Tháng {{ m.label }} <span class="n">({{ m.days | length }} bản)</span></summary>
+    <ul class="archive">
+      {% for d in m.days %}
+      <li><a href="{{ d.href }}">{{ d.day | vn_long_date }}</a><span class="n">{{ d.n_important }} QT · {{ d.n_notable }} ĐCY</span></li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% else %}
+  <p class="empty">Chưa có bản tin nào.</p>
+  {% endfor %}
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+// Tìm kiếm: tải chỉ mục (search-index.js) khi bắt đầu gõ; chạy được cả khi mở file trực tiếp trên máy
+(function () {
+  var input = document.getElementById("q"), status = document.getElementById("q-status"),
+      list = document.getElementById("q-results"), loading = false;
+  function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
+  function ensureIndex(cb) {
+    if (window.DIGEST_SEARCH) return cb();
+    if (loading) return; loading = true; status.textContent = "Đang tải chỉ mục…";
+    var sc = document.createElement("script"); sc.src = "search-index.js";
+    sc.onload = function () { loading = false; cb(); };
+    sc.onerror = function () { status.textContent = "Không tải được chỉ mục tìm kiếm."; };
+    document.head.appendChild(sc);
+  }
+  function run() {
+    var q = norm(input.value.trim()); list.innerHTML = "";
+    if (q.length < 2) { status.textContent = ""; return; }
+    var words = q.split(/\s+/), hits = [];
+    window.DIGEST_SEARCH.forEach(function (r) {
+      var hay = norm(r[1] + " " + r[2]);
+      if (words.every(function (w) { return hay.indexOf(w) >= 0; })) hits.push(r);
+    });
+    status.textContent = hits.length ? "Tìm thấy " + hits.length + " tin" + (hits.length > 100 ? " (hiện 100 tin mới nhất)" : "") : "Không tìm thấy tin nào.";
+    hits.slice(0, 100).forEach(function (r) {
+      var li = document.createElement("li");
+      var when = document.createElement("div"); when.className = "when";
+      var day = document.createElement("a"); day.href = r[5]; day.textContent = r[0];
+      when.appendChild(day); when.appendChild(document.createTextNode(r[4] === "important" ? " · Quan trọng" : " · Đáng chú ý"));
+      var a = document.createElement("a"); a.href = r[3]; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.textContent = r[1] || r[2];
+      li.appendChild(when); li.appendChild(a); list.appendChild(li);
+    });
+  }
+  var t;
+  input.addEventListener("input", function () { clearTimeout(t); t = setTimeout(function () { ensureIndex(run); }, 150); });
+})();
+</script>
+{% endblock %}
