@@ -1,0 +1,222 @@
+# Cài đặt chung của ai-daily-digest.
+# Mọi ngưỡng, trọng số, từ khóa đều ở đây; sửa file này không cần sửa code.
+# Sau 1–2 tuần đọc thử sẽ chỉnh lại các con số cho khớp.
+
+project:
+  name: ai-daily-digest
+  repo_url: https://github.com/tuankchls-blip/Tuan
+  # Crossref khuyến nghị kèm email liên hệ trong User-Agent
+  contact_email: tuankch.ls@gmail.com
+  # {name}, {repo_url}, {contact_email} được thay bằng giá trị ở trên
+  user_agent: "{name}/0.1 (+{repo_url}; mailto:{contact_email})"
+
+# Múi giờ dùng để tính "ngày" và hiển thị giờ
+timezone: Asia/Ho_Chi_Minh
+
+# ---------------------------------------------------------------- Bước 1: thu thập
+fetch:
+  timeout_seconds: 15
+  max_workers: 8
+  # Số tin tối đa lấy từ một nguồn mỗi lần chạy (arXiv có thể > 1.000)
+  max_items_per_source: 2000
+  # Độ dài tối đa của tóm tắt gốc lưu lại (ký tự); chỉ lưu tóm tắt, không lưu toàn văn
+  max_summary_chars: 1200
+
+# ---------------------------------------------------------------- Bước 2–3: lọc, bỏ trùng
+filter:
+  # Giữ tin đăng trong bao nhiêu giờ trước thời điểm tạo bản tin
+  window_hours: 24
+
+dedup:
+  # Hai tiêu đề giống nhau từ ngưỡng này trở lên (difflib, 0–1) được coi là cùng sự kiện
+  title_similarity: 0.82
+  # Khoảng thời gian tìm tin cùng sự kiện để đếm "số nguồn cùng đưa tin"
+  cluster_window_hours: 48
+  # Tham số truy vấn bị bỏ khi chuẩn hóa URL
+  strip_query_params:
+    - utm_source
+    - utm_medium
+    - utm_campaign
+    - utm_term
+    - utm_content
+    - ref
+    - source
+    - fbclid
+    - gclid
+    - mc_cid
+    - mc_eid
+
+# ---------------------------------------------------------------- Bước 4: chấm điểm
+# Điểm = trọng số nguồn + số nguồn cùng đưa tin + tín hiệu cộng đồng
+#        + từ khóa ưu tiên − từ khóa loại trừ
+scoring:
+  thresholds:
+    important: 8     # điểm từ mức này: nhãn Quan trọng
+    notable: 4       # điểm từ mức này: nhãn Đáng chú ý; thấp hơn thì loại
+  # Ngưỡng Đáng chú ý riêng theo nhóm nguồn (group trong sources.yaml).
+  # VnExpress có trọng số 1 nên cần ngưỡng thấp hơn, nếu không mục Việt Nam luôn trống.
+  notable_by_group:
+    vietnam: 2
+
+  # Mỗi nguồn khác cùng đưa tin cộng thêm bấy nhiêu điểm
+  per_extra_source: 1
+  # Số nguồn độc lập tối thiểu (trong cluster_window_hours) để luôn là Quan trọng
+  important_min_sources: 3
+
+  # Tín hiệu cộng đồng: cộng điểm theo bậc (lấy bậc cao nhất đạt được)
+  community:
+    hackernews_points:     # điểm Hacker News -> điểm cộng
+      200: 1
+      500: 2
+      1000: 3
+    hf_upvotes:            # số phiếu HF Daily Papers -> điểm cộng
+      5: 1
+      20: 2
+      50: 3
+
+  # Luật "luôn đưa vào" (nhãn Quan trọng) theo PLAN.md
+  always_important:
+    # Công bố gốc từ nguồn có role này và trọng số tối thiểu này
+    roles: [origin, peer_reviewed]
+    min_weight: 3
+    # Lỗ hổng mới vào danh mục CISA KEV
+    source_ids: [cisa-kev]
+    # Luật/quy định về AI được thông qua hoặc có hiệu lực:
+    # cần khớp ít nhất một từ ở cả hai danh sách
+    policy:
+      subject: ["AI", "artificial intelligence", "trí tuệ nhân tạo"]
+      action:
+        - "AI Act"
+        - "signed into law"
+        - "passes law"
+        - "passed the"
+        - "takes effect"
+        - "comes into force"
+        - "enters into force"
+        - "executive order"
+        - "regulation adopted"
+        - "luật trí tuệ nhân tạo"
+        - "có hiệu lực"
+        - "thông qua luật"
+
+  # Bài chưa bình duyệt (role: preprint, như arXiv) chỉ được giữ khi có xác nhận từ:
+  preprint:
+    confirmed_by_roles: [community, expert]
+    # Bài không được xác nhận thì bị loại, dù điểm cao
+    drop_unconfirmed: true
+
+# ---------------------------------------------------------------- Từ khóa
+# So khớp không phân biệt hoa thường, theo ranh giới từ, trên tiêu đề và tóm tắt gốc.
+# Mỗi từ khóa chỉ tính một lần; mỗi nhóm cộng tối đa một lần.
+keywords:
+  priority:
+    - group: Mô hình ngôn ngữ
+      points: 2
+      terms: [LLM, LLMs, large language model, large language models, reasoning, AI agent, AI agents, agentic, RAG]
+    - group: Đa phương thức & thị giác
+      points: 2
+      terms: [multimodal, vision-language, computer vision, 3D reconstruction, Gaussian splatting]
+    - group: Mô hình mở & đánh giá
+      points: 2
+      terms: [open-weight, open-weights, open-source model, open source model, benchmark, benchmarks, state of the art, state-of-the-art]
+    - group: An toàn AI
+      points: 1
+      terms: [AI safety, interpretability, alignment]
+    - group: Dữ liệu
+      points: 1
+      terms: [data science, dataset, datasets]
+    - group: Hạ tầng
+      points: 1
+      terms: [AI chip, AI chips, GPU, GPUs, inference]
+    - group: Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress)
+      points: 1
+      terms: [AI, artificial intelligence, machine learning, deep learning, neural network, trí tuệ nhân tạo, học máy, chatbot]
+
+  # Từ khóa loại trừ: mỗi từ khớp trừ penalty điểm.
+  # Mục có dạng "re:..." là biểu thức chính quy.
+  exclude:
+    penalty: 5
+    terms:
+      - deal
+      - deals
+      - discount
+      - sale
+      - giveaway
+      - sponsored
+      - "re:best .{0,40} to buy"
+      - hands-on review
+      - hiring
+      - webinar
+      - podcast
+      - khuyến mãi
+      - giảm giá
+
+# ---------------------------------------------------------------- Bước 5: phân mục
+# Mục được chọn theo thứ tự: luật theo nguồn trước, rồi từ khóa (mục khớp nhiều nhất).
+# Mục không có tin thì ẩn trong bản tin.
+categories:
+  order: [models, research, infra, software, security, policy, business, vietnam, other]
+  labels:
+    models: Mô hình & hệ thống AI mới
+    research: Nghiên cứu
+    infra: Hạ tầng & phần cứng
+    software: Phần mềm & công cụ
+    security: Bảo mật
+    policy: Chính sách & đạo đức AI
+    business: Kinh doanh & ngành
+    vietnam: Việt Nam
+    other: Tin khác
+
+  # Nguồn luôn vào một mục cố định
+  by_source:
+    vnexpress-sohoa: vietnam
+    cisa-kev: security
+    krebs: security
+    bleepingcomputer: security
+    arxiv: research
+    hf-papers: research
+    nature-mi: research
+    cacm: research
+
+  keywords:
+    models: [model, release, launches, introducing, GPT, Claude, Gemini, Llama, open-weight, checkpoint, ra mắt mô hình]
+    research: [paper, study, researchers, arXiv, theorem, algorithm, proof, nghiên cứu]
+    infra: [GPU, chip, chips, data center, datacenter, TPU, CUDA, semiconductor, supercomputer, inference, bán dẫn, trung tâm dữ liệu]
+    software: [developer, developers, open source, GitHub, programming, coding, framework, library, API, SDK, IDE, compiler]
+    security: [vulnerability, CVE, exploit, malware, ransomware, breach, zero-day, phishing, hacker, lỗ hổng, mã độc, tấn công mạng]
+    policy: [regulation, law, policy, government, senate, congress, EU, AI Act, ethics, copyright, lawsuit, court, chính sách, quy định, luật]
+    business: [funding, raises, acquisition, acquires, startup, valuation, IPO, revenue, investment, layoffs, gọi vốn, thương vụ]
+
+  # Mục con của "research"
+  research_subcategories:
+    order: [nlp, cv, rl, safety, theory, systems, other]
+    labels:
+      nlp: Xử lý ngôn ngữ tự nhiên
+      cv: Thị giác máy tính
+      rl: Học tăng cường
+      safety: An toàn AI
+      theory: Lý thuyết khoa học máy tính
+      systems: Hệ thống
+      other: Lĩnh vực khác
+    keywords:
+      nlp: [language model, LLM, NLP, text, translation, question answering, tokenizer, cs.CL]
+      cv: [vision, image, video, 3D, segmentation, detection, diffusion, Gaussian splatting, cs.CV]
+      rl: [reinforcement learning, RL, reward, policy optimization, robot, robotics]
+      safety: [safety, alignment, interpretability, jailbreak, red teaming, robustness]
+      theory: [complexity, theorem, proof, algorithm, lower bound, graph theory, cryptography]
+      systems: [distributed, compiler, kernel, scheduling, database, cs.SE, cs.DC, systems]
+
+# ---------------------------------------------------------------- Dịch
+translation:
+  # Ngôn ngữ cần dịch sang tiếng Việt
+  source_langs: [en]
+  # Dự phòng khi Claude không dịch hoặc dịch sai
+  fallback: google
+  # Số ký tự tối đa gửi Google Translate mỗi lần (giới hạn của dịch vụ là 5.000)
+  google_max_chars: 4500
+
+# ---------------------------------------------------------------- Đường dẫn
+paths:
+  data_dir: data
+  docs_dir: docs
+  templates_dir: templates

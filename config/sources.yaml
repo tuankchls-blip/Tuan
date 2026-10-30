@@ -1,0 +1,399 @@
+# Danh sách nguồn tin của ai-daily-digest.
+# Thêm, bỏ hoặc tắt nguồn ở đây mà không cần sửa code.
+#
+# Các trường của mỗi nguồn:
+#   id        mã ngắn, duy nhất, dùng trong dữ liệu JSON (không đổi sau khi đã chạy)
+#   name      tên hiển thị trong bản tin
+#   homepage  trang chủ của nguồn
+#   group     nhóm: research | lab | infra | press | software | security | expert | community | vietnam
+#   role      vai trò khi chấm điểm:
+#               origin         nơi công bố gốc (lab, viện nghiên cứu)
+#               peer_reviewed  tạp chí đã bình duyệt
+#               official       cơ quan chính thức (CISA)
+#               press          báo chí
+#               expert         blog/bản tin chuyên gia
+#               preprint       bài chưa bình duyệt, cần tín hiệu khác xác nhận (arXiv)
+#               community      tín hiệu cộng đồng (Hacker News, HF Daily Papers)
+#   weight    trọng số: 3 = nguồn gốc/bình duyệt · 2 = báo/chuyên gia uy tín · 1 = cộng đồng
+#   lang      ngôn ngữ: en | vi
+#   type      cách đọc:
+#               rss         RSS hoặc Atom
+#               hf_papers   API JSON của Hugging Face Daily Papers
+#               hackernews  API Algolia của Hacker News
+#               cisa_kev    file JSON danh mục CISA KEV
+#               crossref    API Crossref, lọc theo ISSN của tạp chí
+#               sitemap     sitemap.xml; chỉ lấy đường dẫn mới xuất hiện (nguồn không có RSS)
+#   url       địa chỉ feed/API
+#   enabled   false để tạm tắt nguồn
+#   options   tùy chọn riêng cho từng type (xem từng nguồn)
+#
+# Kết quả kiểm tra ngày 30/10/2026: cả 31 nguồn đều đọc được.
+
+sources:
+  # ---------------------------------------------------------------- Nghiên cứu
+  - id: arxiv
+    name: arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.SE, cs.CR)
+    homepage: https://arxiv.org
+    group: research
+    role: preprint
+    weight: 2
+    lang: en
+    type: rss
+    url: https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CL+cs.CV+cs.SE+cs.CR
+    enabled: true
+    options:
+      # ~1.500 bài/ngày: chỉ giữ bài được HF Daily Papers, blog chuyên gia
+      # hoặc Hacker News nhắc tới (xem settings.yaml > scoring.preprint)
+      requires_confirmation: true
+
+  - id: hf-papers
+    name: Hugging Face Daily Papers
+    homepage: https://huggingface.co/papers
+    group: research
+    role: community
+    weight: 2
+    lang: en
+    type: hf_papers
+    url: https://huggingface.co/api/daily_papers
+    enabled: true
+
+  - id: nature-mi
+    name: Nature Machine Intelligence
+    homepage: https://www.nature.com/natmachintell/
+    group: research
+    role: peer_reviewed
+    weight: 3
+    lang: en
+    type: rss
+    url: https://www.nature.com/natmachintell.rss
+    enabled: true
+
+  - id: cacm
+    name: Communications of the ACM
+    homepage: https://cacm.acm.org
+    group: research
+    role: peer_reviewed
+    weight: 3
+    lang: en
+    type: crossref
+    # cacm.acm.org chặn đọc feed (403) và ACM DL không có RSS cho CACM,
+    # nên dùng API công khai của Crossref theo ISSN.
+    url: https://api.crossref.org/journals/0001-0782/works
+    enabled: true
+    options:
+      rows: 50
+
+  - id: quanta-cs
+    name: Quanta Magazine – Computer Science
+    homepage: https://www.quantamagazine.org/computer-science/
+    group: research
+    role: press
+    weight: 3
+    lang: en
+    type: rss
+    url: https://www.quantamagazine.org/computer-science/feed/
+    enabled: true
+
+  - id: mit-news-ai
+    name: MIT News – AI
+    homepage: https://news.mit.edu/topic/artificial-intelligence2
+    group: research
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml
+    enabled: true
+
+  - id: bair
+    name: Berkeley AI Research (BAIR)
+    homepage: https://bair.berkeley.edu/blog/
+    group: research
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://bair.berkeley.edu/blog/feed.xml
+    enabled: true
+
+  - id: stanford-hai
+    name: Stanford HAI
+    homepage: https://hai.stanford.edu/news
+    group: research
+    role: origin
+    weight: 3
+    lang: en
+    type: sitemap
+    # Không có RSS; dùng sitemap công khai, chỉ lấy đường dẫn /news/ mới xuất hiện.
+    url: https://hai.stanford.edu/sitemap.xml
+    enabled: true
+    options:
+      path_prefix: /news/
+
+  # ---------------------------------------------------------------- Lab AI
+  - id: deepmind
+    name: Google DeepMind
+    homepage: https://deepmind.google/discover/blog/
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://deepmind.google/blog/rss.xml   # feed không có tóm tắt
+    enabled: true
+
+  - id: google-research
+    name: Google Research
+    homepage: https://research.google/blog/
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://research.google/blog/rss/
+    enabled: true
+
+  - id: openai
+    name: OpenAI News
+    homepage: https://openai.com/news/
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://openai.com/news/rss.xml
+    enabled: true
+
+  - id: anthropic
+    name: Anthropic News
+    homepage: https://www.anthropic.com/news
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: sitemap
+    # Không có RSS; dùng sitemap công khai, chỉ lấy đường dẫn /news/ mới xuất hiện.
+    url: https://www.anthropic.com/sitemap.xml
+    enabled: true
+    options:
+      path_prefix: /news/
+
+  - id: meta-ai
+    name: Meta AI
+    homepage: https://ai.meta.com/blog/
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    # ai.meta.com không có RSS; dùng chuyên mục AI Research của blog kỹ thuật Meta.
+    url: https://engineering.fb.com/category/ai-research/feed/
+    enabled: true
+
+  - id: msr
+    name: Microsoft Research
+    homepage: https://www.microsoft.com/en-us/research/blog/
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://www.microsoft.com/en-us/research/feed/
+    enabled: true
+
+  - id: apple-ml
+    name: Apple Machine Learning Research
+    homepage: https://machinelearning.apple.com
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://machinelearning.apple.com/rss.xml
+    enabled: true
+
+  - id: hf-blog
+    name: Hugging Face Blog
+    homepage: https://huggingface.co/blog
+    group: lab
+    role: origin
+    weight: 3
+    lang: en
+    type: rss
+    url: https://huggingface.co/blog/feed.xml   # feed không có tóm tắt
+    enabled: true
+
+  # ---------------------------------------------------------------- Hạ tầng
+  - id: nvidia
+    name: NVIDIA Technical Blog
+    homepage: https://developer.nvidia.com/blog/
+    group: infra
+    role: origin
+    weight: 2
+    lang: en
+    type: rss
+    url: https://developer.nvidia.com/blog/feed/
+    enabled: true
+
+  # ---------------------------------------------------------------- Báo công nghệ
+  - id: mit-tr-ai
+    name: MIT Technology Review – AI
+    homepage: https://www.technologyreview.com/topic/artificial-intelligence/
+    group: press
+    role: press
+    weight: 3
+    lang: en
+    type: rss
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed
+    enabled: true
+
+  - id: ieee-spectrum-ai
+    name: IEEE Spectrum – AI
+    homepage: https://spectrum.ieee.org/topic/artificial-intelligence/
+    group: press
+    role: press
+    weight: 3
+    lang: en
+    type: rss
+    url: https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+    enabled: true
+
+  - id: ars
+    name: Ars Technica
+    homepage: https://arstechnica.com
+    group: press
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://feeds.arstechnica.com/arstechnica/index   # feed tổng, có cả tin ngoài CNTT
+    enabled: true
+
+  - id: verge-ai
+    name: The Verge – AI
+    homepage: https://www.theverge.com/ai-artificial-intelligence
+    group: press
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    enabled: true
+
+  - id: wired-ai
+    name: Wired – AI
+    homepage: https://www.wired.com/tag/artificial-intelligence/
+    group: press
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://www.wired.com/feed/tag/ai/latest/rss
+    enabled: true
+
+  - id: techcrunch-ai
+    name: TechCrunch – AI
+    homepage: https://techcrunch.com/category/artificial-intelligence/
+    group: press
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    enabled: true
+
+  # ---------------------------------------------------------------- Phần mềm
+  - id: github-blog
+    name: GitHub Blog
+    homepage: https://github.blog
+    group: software
+    role: origin
+    weight: 2
+    lang: en
+    type: rss
+    url: https://github.blog/feed/
+    enabled: true
+
+  # ---------------------------------------------------------------- Bảo mật
+  - id: cisa-kev
+    name: CISA – Known Exploited Vulnerabilities
+    homepage: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+    group: security
+    role: official
+    weight: 3
+    lang: en
+    type: cisa_kev
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    enabled: true
+
+  - id: krebs
+    name: Krebs on Security
+    homepage: https://krebsonsecurity.com
+    group: security
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://krebsonsecurity.com/feed/
+    enabled: true
+
+  - id: bleepingcomputer
+    name: BleepingComputer
+    homepage: https://www.bleepingcomputer.com
+    group: security
+    role: press
+    weight: 2
+    lang: en
+    type: rss
+    url: https://www.bleepingcomputer.com/feed/
+    enabled: true
+
+  # ---------------------------------------------------------------- Chuyên gia
+  - id: simonwillison
+    name: Simon Willison’s Weblog
+    homepage: https://simonwillison.net
+    group: expert
+    role: expert
+    weight: 2
+    lang: en
+    type: rss
+    url: https://simonwillison.net/atom/everything/
+    enabled: true
+
+  - id: importai
+    name: Import AI
+    homepage: https://importai.substack.com
+    group: expert
+    role: expert
+    weight: 2
+    lang: en
+    type: rss
+    url: https://importai.substack.com/feed
+    enabled: true
+
+  # ---------------------------------------------------------------- Cộng đồng
+  - id: hackernews
+    name: Hacker News
+    homepage: https://news.ycombinator.com
+    group: community
+    role: community
+    weight: 1
+    lang: en
+    type: hackernews
+    url: https://hn.algolia.com/api/v1/search_by_date
+    enabled: true
+    options:
+      min_points: 200
+      hits_per_page: 100
+
+  # ---------------------------------------------------------------- Tiếng Việt
+  - id: vnexpress-sohoa
+    name: VnExpress Số hóa
+    homepage: https://vnexpress.net/so-hoa
+    group: vietnam
+    role: press
+    weight: 1
+    lang: vi
+    type: rss
+    url: https://vnexpress.net/rss/so-hoa.rss
+    enabled: true

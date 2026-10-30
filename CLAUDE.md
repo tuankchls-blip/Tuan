@@ -34,7 +34,10 @@ Tổng hợp (`aggregator.py`): tuần (ISO, Thứ Hai–Chủ Nhật) ← tin Q
 
 ```
 main.py                      # daily / weekly / monthly / quarterly / yearly
-config/sources.yaml          # nguồn: id, tên, url feed/API, nhóm, trọng số (1–3), ngôn ngữ
+config/sources.yaml          # nguồn: id, tên, url, nhóm, role, trọng số (1–3), ngôn ngữ, type
+                             #   type: rss | hf_papers | hackernews | cisa_kev | crossref | sitemap
+                             #   sitemap (Anthropic, Stanford HAI): chỉ lấy URL mới xuất hiện;
+                             #   lần chạy đầu chỉ ghi nhận, không đăng
 config/settings.yaml         # ngưỡng điểm, từ khóa ưu tiên/loại trừ, múi giờ
 config/glossary.yaml         # thuật ngữ, tên riêng giữ nguyên khi dịch
 .claude/skills/dich-tin-ai/SKILL.md

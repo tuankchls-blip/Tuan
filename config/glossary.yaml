@@ -1,0 +1,139 @@
+# Thuật ngữ dùng khi dịch tin sang tiếng Việt.
+# - Claude đọc file này qua skill dich-tin-ai.
+# - Với Google Translate, các từ trong keep_terms và proper_nouns được thay bằng
+#   mã giữ chỗ trước khi dịch rồi trả lại nguyên văn sau khi dịch.
+# So khớp không phân biệt hoa thường, theo ranh giới từ; cụm dài được ưu tiên trước.
+
+# Thuật ngữ kỹ thuật giữ nguyên tiếng Anh
+keep_terms:
+  - LLM
+  - LLMs
+  - Transformer
+  - Transformers
+  - fine-tuning
+  - fine-tune
+  - pre-training
+  - benchmark
+  - benchmarks
+  - token
+  - tokens
+  - tokenizer
+  - prompt
+  - prompts
+  - prompt injection
+  - RAG
+  - agent
+  - agents
+  - agentic
+  - GPU
+  - GPUs
+  - TPU
+  - CPU
+  - CUDA
+  - open-weight
+  - open-source
+  - CVE
+  - zero-day
+  - API
+  - SDK
+  - embedding
+  - embeddings
+  - diffusion model
+  - Mixture of Experts
+  - MoE
+  - RLHF
+  - chain-of-thought
+  - jailbreak
+  - red teaming
+  - Gaussian splatting
+  - ransomware
+  - malware
+  - phishing
+
+# Tên riêng (công ty, tổ chức, mô hình, sản phẩm) giữ nguyên.
+# Tên người, mã CVE, số liệu, đường dẫn, đoạn code cũng luôn giữ nguyên dù không có ở đây.
+proper_nouns:
+  # Công ty, tổ chức
+  - OpenAI
+  - Anthropic
+  - Google
+  - Google DeepMind
+  - DeepMind
+  - Meta
+  - Microsoft
+  - Apple
+  - NVIDIA
+  - Nvidia
+  - AMD
+  - Intel
+  - TSMC
+  - Hugging Face
+  - GitHub
+  - Amazon
+  - AWS
+  - Mistral
+  - xAI
+  - DeepSeek
+  - Alibaba
+  - Qwen
+  - Baidu
+  - Tencent
+  - ByteDance
+  - Samsung
+  - IBM
+  - Cohere
+  - Perplexity
+  - CISA
+  - NIST
+  - ACM
+  - IEEE
+  - MIT
+  - Stanford
+  - Berkeley
+  - arXiv
+  # Mô hình, sản phẩm
+  - GPT
+  - ChatGPT
+  - Codex
+  - Claude
+  - Claude Code
+  - Gemini
+  - Gemma
+  - Llama
+  - AlphaFold
+  - Copilot
+  - Granite
+  - Phi
+  - Sora
+  - Midjourney
+  - Stable Diffusion
+  - PyTorch
+  - TensorFlow
+  - JAX
+  - Kubernetes
+  - Linux
+  - Windows
+  - Android
+  - iOS
+
+# Thuật ngữ có từ tiếng Việt phổ biến: dịch theo bảng này
+preferred_translations:
+  machine learning: học máy
+  deep learning: học sâu
+  artificial intelligence: trí tuệ nhân tạo
+  dataset: bộ dữ liệu
+  datasets: bộ dữ liệu
+  neural network: mạng nơ-ron
+  reinforcement learning: học tăng cường
+  computer vision: thị giác máy tính
+  natural language processing: xử lý ngôn ngữ tự nhiên
+  large language model: mô hình ngôn ngữ lớn
+  inference: suy luận
+  reasoning: suy luận
+  training: huấn luyện
+  vulnerability: lỗ hổng
+  data center: trung tâm dữ liệu
+  semiconductor: bán dẫn
+  open source: mã nguồn mở
+  alignment: căn chỉnh (alignment)
+  interpretability: khả năng diễn giải

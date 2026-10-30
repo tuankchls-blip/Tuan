@@ -1,0 +1,7 @@
+# Thư viện cần cho ai-daily-digest (Python 3.11 trở lên)
+feedparser>=6.0,<7      # đọc RSS/Atom
+requests>=2.31,<3       # tải feed/API có timeout và User-Agent
+PyYAML>=6.0,<7          # đọc file cấu hình trong config/
+Jinja2>=3.1,<4          # dựng HTML từ templates/
+deep-translator>=1.11,<2  # dịch dự phòng bằng Google Translate
+pytest>=8,<10           # kiểm thử
