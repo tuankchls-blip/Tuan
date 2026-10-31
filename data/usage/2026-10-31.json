@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-31",
+  "runs": [
+    {
+      "generated_at": "2026-10-31T11:46:45+07:00",
+      "duration_seconds": 5.2,
+      "sources_ok": 29,
+      "sources_failed": [
+        "arxiv",
+        "importai"
+      ],
+      "stories": {
+        "important": 22,
+        "notable": 48,
+        "dropped": 63
+      },
+      "translation": {
+        "counts": {
+          "original": 12,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "untranslated": 58
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "google_errors": [
+          "e9a7675c: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "d0a61c51: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "46ae5159: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "7b1da81f: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "40ab6c04: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "995c90cb: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "041a3647: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "db9db60c: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "f8223849: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "40f56731: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "f53dd469: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "4854dc14: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "de7eef27: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "226d6d5c: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "527b6f7f: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "c76597c7: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "25cc4c9b: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "d2282bcc: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "b2263e9f: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "8085d28c: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp"
+        ]
+      }
+    }
+  ]
+}
