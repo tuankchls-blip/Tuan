@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-01",
+  "runs": [
+    {
+      "generated_at": "2026-11-01T12:09:02+07:00",
+      "duration_seconds": 6.5,
+      "sources_ok": 29,
+      "sources_failed": [
+        "arxiv",
+        "importai"
+      ],
+      "stories": {
+        "important": 1,
+        "notable": 17,
+        "dropped": 25
+      },
+      "translation": {
+        "counts": {
+          "original": 5,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "untranslated": 13
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "google_errors": [
+          "1d78de13: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "fb9fb5a9: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "95dfb073: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "d5bb41b6: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "edd821e0: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "dd35d009: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "4c77a0df: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "6bd209fe: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "74dc1ad0: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "9f56e268: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "e07dacdb: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "ee9f8f39: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "c6b2d3ea: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp"
+        ]
+      }
+    }
+  ]
+}

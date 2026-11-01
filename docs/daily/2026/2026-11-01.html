@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI & CNTT 01/11/2026</title>
+<meta name="description" content="1 tin Quan trọng, 17 tin Đáng chú ý ngày 01/11/2026">
+<style>
+/* Giao diện chung: nhúng thẳng vào mỗi trang HTML, không dùng CDN */
+:root {
+  --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f2f0ec; --text: #1d1d1f; --muted: #5f6368;
+  --border: #e3e0da; --link: #1a56b8; --accent: #b4441f;
+  --imp-bg: #fde8e1; --imp-fg: #9a2f10; --not-bg: #e6eefb; --not-fg: #1d4f9c;
+  --warn-bg: #fff4d6; --warn-fg: #7a5600; --ok: #1e7d3a; --err: #b3261e;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+    --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+    --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+    --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+  --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+  --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+  --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 48px; }
+header.top { padding: 20px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .9rem; }
+.topbar nav { display: flex; gap: 14px; flex-wrap: wrap; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 14px 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+h3.sub { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
+.stat b { font-variant-numeric: tabular-nums; }
+button.theme {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0; padding: 0; list-style: none; font-size: .95rem; }
+.toc .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.filters {
+  position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--border);
+}
+.filters .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.filters .seg button {
+  border: 0; background: var(--surface); color: var(--text); padding: 5px 12px; font: inherit; font-size: .88rem; cursor: pointer;
+}
+.filters .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.filters select {
+  font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 8px; max-width: 100%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.filters .count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.story {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 10px 0; box-shadow: var(--shadow);
+}
+.story[hidden], section[hidden] { display: none; }
+.story h4 { font-size: 1.05rem; line-height: 1.4; margin: 6px 0 2px; overflow-wrap: anywhere; }
+.story .orig { color: var(--muted); font-size: .85rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+.story .summary { margin: 6px 0; overflow-wrap: anywhere; }
+.story details { font-size: .9rem; color: var(--muted); }
+.story details summary { cursor: pointer; color: var(--link); }
+.story details p { margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .82rem; color: var(--muted); }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: .75rem; font-weight: 600; letter-spacing: .01em; }
+.badge.important { background: var(--imp-bg); color: var(--imp-fg); }
+.badge.notable { background: var(--not-bg); color: var(--not-fg); }
+.badge.untranslated { background: var(--warn-bg); color: var(--warn-fg); font-weight: 500; }
+.also, .kw { font-size: .85rem; color: var(--muted); margin: 6px 0 0; }
+.kw { display: flex; flex-wrap: wrap; gap: 4px; }
+.kw span { background: var(--surface-2); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.empty { color: var(--muted); font-style: italic; }
+table.status { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.status th, table.status td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.status td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--ok); } .err { color: var(--err); }
+.table-scroll { overflow-x: auto; }
+footer { margin-top: 36px; font-size: .85rem; color: var(--muted); }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0 8px; font-size: .95rem; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive .n { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+details.month > summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.search input {
+  width: 100%; font: inherit; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.search ol { padding-left: 0; list-style: none; }
+.search li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.search .when { color: var(--muted); font-size: .8rem; }
+.latest .story h4 { font-size: 1rem; }
+section[data-group] { scroll-margin-top: 64px; }
+@media (max-width: 520px) {
+  h1 { font-size: 1.35rem; }
+  .filters { position: static; }  /* trên điện thoại thanh lọc chiếm quá nhiều chỗ nếu dính */
+  section[data-group] { scroll-margin-top: 8px; }
+  .story { padding: 12px; }
+  .filters .count { width: 100%; margin-left: 0; }
+}</style>
+<script>
+// Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
+(function () {
+  var KEY = "digest-theme";
+  var LABEL = { auto: "Giao diện: tự động", light: "Giao diện: sáng", dark: "Giao diện: tối" };
+  var root = document.documentElement;
+  function load() { try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
+    var b = document.getElementById("theme-btn"); if (b) b.textContent = LABEL[v];
+  }
+  var current = load(); apply(current);
+  document.addEventListener("DOMContentLoaded", function () {
+    apply(current);
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    b.addEventListener("click", function () {
+      current = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+      save(current); apply(current);
+    });
+  });
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="../../index.html">Mục lục</a>
+<a href="../2026/2026-10-31.html">← Ngày trước</a>    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+<h1>Bản tin AI & CNTT<br><small>Chủ Nhật, 01/11/2026</small></h1>
+<p class="lead">Tin trong 24 giờ đến 07:00 01/11 (giờ Việt Nam).</p>
+<div class="stats">
+  <span class="stat"><b>1</b> Quan trọng</span>
+  <span class="stat"><b>17</b> Đáng chú ý</span>
+  <span class="stat"><b>29/31</b> nguồn đọc được</span>
+</div>
+<ul class="toc">
+<li><a href="#c-models">Mô hình &amp; hệ thống AI mới</a> <span class="n">2</span></li><li><a href="#c-infra">Hạ tầng &amp; phần cứng</a> <span class="n">1</span></li><li><a href="#c-software">Phần mềm &amp; công cụ</a> <span class="n">1</span></li><li><a href="#c-security">Bảo mật</a> <span class="n">5</span></li><li><a href="#c-policy">Chính sách &amp; đạo đức AI</a> <span class="n">1</span></li><li><a href="#c-vietnam">Việt Nam</a> <span class="n">5</span></li><li><a href="#c-other">Tin khác</a> <span class="n">3</span></li></ul>
+</header>
+<main>
+<div class="filters" id="filters" hidden>
+  <span class="seg" role="group" aria-label="Lọc theo nhãn">
+    <button type="button" data-label-btn="all" aria-pressed="true">Tất cả</button>
+    <button type="button" data-label-btn="important" aria-pressed="false">Quan trọng</button>
+    <button type="button" data-label-btn="notable" aria-pressed="false">Đáng chú ý</button>
+  </span>
+  <select id="f-cat" aria-label="Lọc theo mục">
+    <option value="all">Mọi mục</option>
+<option value="models">Mô hình &amp; hệ thống AI mới</option><option value="infra">Hạ tầng &amp; phần cứng</option><option value="software">Phần mềm &amp; công cụ</option><option value="security">Bảo mật</option><option value="policy">Chính sách &amp; đạo đức AI</option><option value="vietnam">Việt Nam</option><option value="other">Tin khác</option>  </select>
+  <select id="f-src" aria-label="Lọc theo nguồn">
+    <option value="all">Mọi nguồn</option>
+<option value="bleepingcomputer">BleepingComputer</option><option value="hackernews">Hacker News</option><option value="simonwillison">Simon Willison’s Weblog</option><option value="techcrunch-ai">TechCrunch – AI</option><option value="verge-ai">The Verge – AI</option><option value="vnexpress-sohoa">VnExpress Số hóa</option><option value="wired-ai">Wired – AI</option>  </select>
+  <span class="count" id="filter-count"></span>
+</div>
+<section id="c-models" data-group="models">
+  <h2>Mô hình &amp; hệ thống AI mới</h2>
+<article class="story" id="s-edd821e09b" data-label="notable" data-cat="models"
+         data-srcs="wired-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Wired – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T10:00:00+00:00">17:00 31/10</time>
+  </div>
+  <h4>
+    <a href="https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/" target="_blank" rel="noopener noreferrer" lang="en">An AI Agent Injected Drugs Into a Live Mouse’s Brain</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.</p>
+<p class="kw"><span>AI agent</span><span>AI</span></p></article><article class="story" id="s-4c77a0dfd6" data-label="notable" data-cat="models"
+         data-srcs="simonwillison">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Simon Willison’s Weblog</span>
+    <span>·</span>
+    <time datetime="2026-10-31T22:10:01+00:00">05:10 01/11</time>
+  </div>
+  <h4>
+    <a href="https://simonwillison.net/2026/Oct/31/datasette-llm/" target="_blank" rel="noopener noreferrer" lang="en">datasette-llm 0.1a9</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here&#39;s a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent</p>
+<p class="kw"><span>LLM</span></p></article></section>
+<section id="c-infra" data-group="infra">
+  <h2>Hạ tầng &amp; phần cứng</h2>
+<article class="story" id="s-c6b2d3ea79" data-label="notable" data-cat="infra"
+         data-srcs="techcrunch-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>TechCrunch – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T01:20:05+00:00">08:20 31/10</time>
+  </div>
+  <h4>
+    <a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener noreferrer" lang="en">Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.</p>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-software" data-group="software">
+  <h2>Phần mềm &amp; công cụ</h2>
+<article class="story" id="s-dd35d009aa" data-label="notable" data-cat="software"
+         data-srcs="simonwillison hackernews">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Simon Willison’s Weblog</span>
+    <span>·</span>
+    <time datetime="2026-10-31T23:15:22+00:00">06:15 01/11</time>
+<span>· 2 nguồn</span><span>· HN 313 điểm</span>  </div>
+  <h4>
+    <a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/" target="_blank" rel="noopener noreferrer" lang="en">How We Took Over ChatGPT Accounts</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT&#39;s implementation of the artifacts pattern (OpenAI used to call this &#34;Canvas&#34; but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It&#39;s important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn&#39;t directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…</p>
+  <p class="also">Cùng đưa tin:
+<a href="https://news.ycombinator.com/item?id=50314699" target="_blank" rel="noopener noreferrer" title="Do the math: How we took over ChatGPT accounts">Hacker News</a>  </p>
+</article></section>
+<section id="c-security" data-group="security">
+  <h2>Bảo mật</h2>
+<article class="story" id="s-1d78de13bd" data-label="important" data-cat="security"
+         data-srcs="wired-ai hackernews">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Wired – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T12:00:00+00:00">19:00 31/10</time>
+<span>· 2 nguồn</span><span>· HN 238 điểm</span>  </div>
+  <h4>
+    <a href="https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/" target="_blank" rel="noopener noreferrer" lang="en">Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.</p>
+  <p class="also">Cùng đưa tin:
+<a href="https://news.ycombinator.com/item?id=50316531" target="_blank" rel="noopener noreferrer" title="Malware uses LLMs to rank victims by how much they&#39;re worth">Hacker News</a>  </p>
+<p class="kw"><span>LLMs</span><span>malware</span><span>AI</span></p></article><article class="story" id="s-fb9fb5a975" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer hackernews">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-10-31T18:01:12+00:00">01:01 01/11</time>
+<span>· 2 nguồn</span><span>· HN 473 điểm</span>  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/" target="_blank" rel="noopener noreferrer" lang="en">Northflank security breach leads to abuse of customers&#39; AI API keys</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers&#39; AI API keys.</p>
+  <p class="also">Cùng đưa tin:
+<a href="https://news.ycombinator.com/item?id=50305025" target="_blank" rel="noopener noreferrer" title="Northflank Breached">Hacker News</a>  </p>
+<p class="kw"><span>breach</span><span>AI</span></p></article><article class="story" id="s-95dfb073e0" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-10-31T12:50:09+00:00">19:50 31/10</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/" target="_blank" rel="noopener noreferrer" lang="en">Chainalysis discloses data breach from &#34;offensive agentic techniques&#34;</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Blockchain analytics firm Chainalysis disclosed a data breach after attackers used &#34;offensive agentic techniques&#34; to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles.</p>
+<p class="kw"><span>agentic</span><span>data breach</span><span>breach</span></p></article><article class="story" id="s-6bd209feef" data-label="notable" data-cat="security"
+         data-srcs="hackernews">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hacker News</span>
+    <span>·</span>
+    <time datetime="2026-10-31T19:16:30+00:00">02:16 01/11</time>
+<span>· HN 420 điểm</span>  </div>
+  <h4>
+    <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer" lang="en">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+<p class="kw"><span>CVE</span></p></article><article class="story" id="s-74dc1ad06d" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-10-31T15:35:11+00:00">22:35 31/10</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" target="_blank" rel="noopener noreferrer" lang="en">New Android SMS of Death exploit can remotely crash unpatched phones</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed &#34;SMS of Death&#34; and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message.</p>
+<p class="kw"><span>CVE</span></p></article></section>
+<section id="c-policy" data-group="policy">
+  <h2>Chính sách &amp; đạo đức AI</h2>
+<article class="story" id="s-e07dacdb45" data-label="notable" data-cat="policy"
+         data-srcs="techcrunch-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>TechCrunch – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T21:17:03+00:00">04:17 01/11</time>
+  </div>
+  <h4>
+    <a href="https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" target="_blank" rel="noopener noreferrer" lang="en">Judge allows NAACP lawsuit over xAI data center pollution to move forward</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.</p>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-vietnam" data-group="vietnam">
+  <h2>Việt Nam</h2>
+<article class="story" id="s-9daa20c1fa" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-10-31T23:00:00+00:00">06:00 01/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/musk-va-zuckerberg-dung-sieu-tri-tue-thay-ai-5139138.html" target="_blank" rel="noopener noreferrer">Musk và Zuckerberg dùng &#39;siêu trí tuệ&#39; thay &#39;AI&#39;</a>
+  </h4>
+    <p class="summary">Elon Musk và Mark Zuckerberg đều sử dụng cụm từ &#34;siêu trí tuệ&#34; trong báo cáo tài chính, theo yêu cầu được Tổng thống Mỹ Donald Trump đưa ra hồi tháng 9.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-b260cf8e5d" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-10-31T12:00:00+00:00">19:00 31/10</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/sam-altman-that-te-khi-ram-nam-trong-may-nguoi-dung-5139149.html" target="_blank" rel="noopener noreferrer">Sam Altman: &#39;Thật tệ khi RAM nằm trong máy người dùng&#39;</a>
+  </h4>
+    <p class="summary">CEO OpenAI Sam Altman bày tỏ lo ngại về những người muốn AI suy luận cục bộ trên thiết bị, cho rằng RAM nên dành cho trung tâm dữ liệu.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-00a41a7041" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-10-31T10:03:17+00:00">17:03 31/10</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/ai-can-tao-gia-tri-thuc-thay-vi-dung-o-thu-nghiem-5138281.html" target="_blank" rel="noopener noreferrer">AI cần tạo giá trị thực thay vì dừng ở thử nghiệm</a>
+  </h4>
+    <p class="summary">Theo các chuyên gia, nhiều nghiên cứu AI tại Việt Nam chưa gắn với nhu cầu, khiến khoảng cách từ phòng thí nghiệm đến ứng dụng thực tế vẫn còn lớn, đòi hỏi sự phối hợp của doanh nghiệp trong nghiên cứu.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-7ec1b7a368" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-10-31T08:30:00+00:00">15:30 31/10</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/plaud-note-pro-the-ghi-am-ai-gia-5-8-trieu-dong-5138984.html" target="_blank" rel="noopener noreferrer">Plaud Note Pro - &#39;thẻ ghi âm AI&#39; giá 5,8 triệu đồng</a>
+  </h4>
+    <p class="summary">Plaud Note Pro có thiết kế tương tự thẻ ngân hàng, hỗ trợ ghi âm và phân tích nội dung bằng AI, nhưng giá cao.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-cd9431be4d" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-10-31T08:00:00+00:00">15:00 31/10</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/cuoc-thi-ai-chuan-quoc-te-cho-hoc-sinh-thpt-5139130.html" target="_blank" rel="noopener noreferrer">Cuộc thi AI chuẩn quốc tế cho học sinh THPT</a>
+  </h4>
+    <p class="summary">Cuộc thi AI or Behind dành cho học sinh THPT trên toàn quốc, giúp rèn kỹ năng sử dụng AI tạo sinh, kiểm chứng thông tin và phát triển giải pháp công nghệ.</p>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-other" data-group="other">
+  <h2>Tin khác</h2>
+<article class="story" id="s-d5bb41b6ba" data-label="notable" data-cat="other"
+         data-srcs="wired-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Wired – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T10:30:00+00:00">17:30 31/10</time>
+  </div>
+  <h4>
+    <a href="https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/" target="_blank" rel="noopener noreferrer" lang="en">Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.</p>
+<p class="kw"><span>AI agents</span><span>AI</span></p></article><article class="story" id="s-9f56e268b0" data-label="notable" data-cat="other"
+         data-srcs="techcrunch-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>TechCrunch – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T21:41:00+00:00">04:41 01/11</time>
+  </div>
+  <h4>
+    <a href="https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" target="_blank" rel="noopener noreferrer" lang="en">Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Apple&#39;s new CEO defended the company&#39;s current position in the AI landscape.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-ee9f8f39be" data-label="notable" data-cat="other"
+         data-srcs="verge-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>The Verge – AI</span>
+    <span>·</span>
+    <time datetime="2026-10-31T16:05:00+00:00">23:05 31/10</time>
+  </div>
+  <h4>
+    <a href="https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code" target="_blank" rel="noopener noreferrer" lang="en">I built an AI Tamagotchi before Meta could</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+    <p class="summary" lang="en">Mark Zuckerberg&#39;s Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won&#39;t be buying one, because we have Muse Charm at home. It</p>
+<p class="kw"><span>AI</span></p></article></section>
+</main>
+<footer>
+<div class="pager">
+  <span><a href="../2026/2026-10-31.html">← 31/10/2026</a></span>
+  <span></span>
+</div>
+<h2>Tình trạng nguồn</h2>
+<div class="table-scroll">
+<table class="status">
+  <thead><tr><th>Nguồn</th><th>Trạng thái</th><th class="n">Số bài</th><th>Ghi chú</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.SE, cs.CR)</td>
+      <td><span class="err">✗ lỗi</span></td>
+      <td class="n">0</td>
+      <td>ValueError: feed không có mục nào</td>
+    </tr>
+    <tr>
+      <td>Hugging Face Daily Papers</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">39</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nature Machine Intelligence</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">8</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Communications of the ACM</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Quanta Magazine – Computer Science</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MIT News – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Berkeley AI Research (BAIR)</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stanford HAI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Google DeepMind</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Google Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>OpenAI News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">1341</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Anthropic News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Meta AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Microsoft Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Apple Machine Learning Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Hugging Face Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">894</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NVIDIA Technical Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MIT Technology Review – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IEEE Spectrum – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ars Technica</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>The Verge – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Wired – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TechCrunch – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GitHub Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CISA – Known Exploited Vulnerabilities</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">4</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Krebs on Security</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>BleepingComputer</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">15</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Simon Willison’s Weblog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Import AI</td>
+      <td><span class="err">✗ lỗi</span></td>
+      <td class="n">0</td>
+      <td>HTTP 403</td>
+    </tr>
+    <tr>
+      <td>Hacker News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">37</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>VnExpress Số hóa</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">60</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Dịch: Claude 0 · Google 0 · dùng lại bản dịch cũ 0 · chưa dịch 13.</p>
+<p>Tạo lúc 12:09 01/11.</p>
+<p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+<script>
+// Bộ lọc nhanh theo nhãn, mục, nguồn. Không có JavaScript thì mọi tin vẫn hiện.
+(function () {
+  var state = { label: "all", cat: "all", src: "all" };
+  function update() {
+    var stories = document.querySelectorAll(".story[data-label]");
+    var shown = 0;
+    stories.forEach(function (el) {
+      var ok = (state.label === "all" || el.dataset.label === state.label) &&
+               (state.cat === "all" || el.dataset.cat === state.cat) &&
+               (state.src === "all" || (" " + el.dataset.srcs + " ").indexOf(" " + state.src + " ") >= 0);
+      el.hidden = !ok; if (ok) shown++;
+    });
+    document.querySelectorAll("section[data-group]").forEach(function (sec) {
+      sec.hidden = !sec.querySelector(".story:not([hidden])");
+    });
+    var c = document.getElementById("filter-count");
+    if (c) c.textContent = "Đang hiện " + shown + "/" + stories.length + " tin";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var bar = document.getElementById("filters");
+    if (!bar) return;
+    bar.hidden = false;
+    bar.querySelectorAll("[data-label-btn]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        state.label = b.dataset.labelBtn;
+        bar.querySelectorAll("[data-label-btn]").forEach(function (x) {
+          x.setAttribute("aria-pressed", x === b ? "true" : "false");
+        });
+        update();
+      });
+    });
+    document.getElementById("f-cat").addEventListener("change", function (e) { state.cat = e.target.value; update(); });
+    document.getElementById("f-src").addEventListener("change", function (e) { state.src = e.target.value; update(); });
+    update();
+  });
+})();</script>
+</body>
+</html>

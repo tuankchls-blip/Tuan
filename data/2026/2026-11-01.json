@@ -1,0 +1,806 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T12:09:02+07:00",
+  "window": {
+    "start": "2026-10-31T07:00:00+07:00",
+    "end": "2026-11-01T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": false,
+      "items": 0,
+      "error": "ValueError: feed không có mục nào",
+      "note": null
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 39,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1341,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 894,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 4,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": false,
+      "items": 0,
+      "error": "HTTP 403",
+      "note": null
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 37,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e",
+      "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+      "source_id": "wired-ai",
+      "published_at": "2026-10-31T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+      "summary_orig": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50316531",
+          "title": "Malware uses LLMs to rank victims by how much they're worth"
+        }
+      ],
+      "category": "security",
+      "subcategory": null,
+      "score": 9.0,
+      "label": "important",
+      "matched_keywords": [
+        "LLMs",
+        "malware",
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 238
+      },
+      "reasons": [
+        "nguồn wired-ai +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 238 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Bảo mật +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e",
+        "5b0ac3b976a1c0a5a8fe26ed07fa45bbd5e69d6f"
+      ]
+    },
+    {
+      "id": "fb9fb5a975e9eb28458d3f11e66dc7b0af3ef891",
+      "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-10-31T18:01:12+00:00",
+      "lang": "en",
+      "title_orig": "Northflank security breach leads to abuse of customers' AI API keys",
+      "summary_orig": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50305025",
+          "title": "Northflank Breached"
+        }
+      ],
+      "category": "security",
+      "subcategory": null,
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 473
+      },
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 473 +1",
+        "từ khóa Bảo mật +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "fb9fb5a975e9eb28458d3f11e66dc7b0af3ef891",
+        "e34a839c61eb0979f4f8e01a83307806a08761df"
+      ]
+    },
+    {
+      "id": "95dfb073e0ec8286880a017aaf1cebe747e1f321",
+      "url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-10-31T12:50:09+00:00",
+      "lang": "en",
+      "title_orig": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+      "summary_orig": "Blockchain analytics firm Chainalysis disclosed a data breach after attackers used \"offensive agentic techniques\" to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "agentic",
+        "data breach",
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "95dfb073e0ec8286880a017aaf1cebe747e1f321"
+      ]
+    },
+    {
+      "id": "d5bb41b6ba041206b1410f5dbd278a1cd9bcfe74",
+      "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
+      "source_id": "wired-ai",
+      "published_at": "2026-10-31T10:30:00+00:00",
+      "lang": "en",
+      "title_orig": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
+      "summary_orig": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "d5bb41b6ba041206b1410f5dbd278a1cd9bcfe74"
+      ]
+    },
+    {
+      "id": "edd821e09ba3cc5366f890405e2c7043fb0c3049",
+      "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+      "source_id": "wired-ai",
+      "published_at": "2026-10-31T10:00:00+00:00",
+      "lang": "en",
+      "title_orig": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+      "summary_orig": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "edd821e09ba3cc5366f890405e2c7043fb0c3049"
+      ]
+    },
+    {
+      "id": "dd35d009aad680f7bdb8901c179d770026e55ae7",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+      "source_id": "simonwillison",
+      "published_at": "2026-10-31T23:15:22+00:00",
+      "lang": "en",
+      "title_orig": "How We Took Over ChatGPT Accounts",
+      "summary_orig": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn't directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50314699",
+          "title": "Do the math: How we took over ChatGPT accounts"
+        }
+      ],
+      "category": "software",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [],
+      "signals": {
+        "hn_points": 313
+      },
+      "reasons": [
+        "nguồn simonwillison +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 313 +1"
+      ],
+      "article_ids": [
+        "dd35d009aad680f7bdb8901c179d770026e55ae7",
+        "a9ce9215ef28b6653abc499ea49997007117cadf"
+      ]
+    },
+    {
+      "id": "4c77a0dfd6338debf2fa3d6f68af301e16bc3b18",
+      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+      "source_id": "simonwillison",
+      "published_at": "2026-10-31T22:10:01+00:00",
+      "lang": "en",
+      "title_orig": "datasette-llm 0.1a9",
+      "summary_orig": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn simonwillison +2",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "4c77a0dfd6338debf2fa3d6f68af301e16bc3b18"
+      ]
+    },
+    {
+      "id": "6bd209feefbeab17a3f5fb389d25b5a774e46e10",
+      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "source_id": "hackernews",
+      "published_at": "2026-10-31T19:16:30+00:00",
+      "lang": "en",
+      "title_orig": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "summary_orig": "",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "CVE"
+      ],
+      "signals": {
+        "hn_points": 420
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 420 +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "6bd209feefbeab17a3f5fb389d25b5a774e46e10"
+      ]
+    },
+    {
+      "id": "74dc1ad06d2d1d6d64c61f482a0e7972b8af5593",
+      "url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-10-31T15:35:11+00:00",
+      "lang": "en",
+      "title_orig": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "summary_orig": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "CVE"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "74dc1ad06d2d1d6d64c61f482a0e7972b8af5593"
+      ]
+    },
+    {
+      "id": "9f56e268b05ea69134d92ef78e09b3b78f4b6f63",
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-10-31T21:41:00+00:00",
+      "lang": "en",
+      "title_orig": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+      "summary_orig": "Apple's new CEO defended the company's current position in the AI landscape.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "9f56e268b05ea69134d92ef78e09b3b78f4b6f63"
+      ]
+    },
+    {
+      "id": "e07dacdb45dcc75e43fc5c0e372ea75eac8c7fbd",
+      "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-10-31T21:17:03+00:00",
+      "lang": "en",
+      "title_orig": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+      "summary_orig": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "e07dacdb45dcc75e43fc5c0e372ea75eac8c7fbd"
+      ]
+    },
+    {
+      "id": "ee9f8f39beac17095a41c387246bb008552d4c3a",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "source_id": "verge-ai",
+      "published_at": "2026-10-31T16:05:00+00:00",
+      "lang": "en",
+      "title_orig": "I built an AI Tamagotchi before Meta could",
+      "summary_orig": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "ee9f8f39beac17095a41c387246bb008552d4c3a"
+      ]
+    },
+    {
+      "id": "c6b2d3ea79170b2aaebd03c698f22e18c5fd0ff8",
+      "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-10-31T01:20:05+00:00",
+      "lang": "en",
+      "title_orig": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+      "summary_orig": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "infra",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "c6b2d3ea79170b2aaebd03c698f22e18c5fd0ff8"
+      ]
+    },
+    {
+      "id": "9daa20c1fa99e062d6a9e3094fec5b4c15e827a5",
+      "url": "https://vnexpress.net/musk-va-zuckerberg-dung-sieu-tri-tue-thay-ai-5139138.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-10-31T23:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Musk và Zuckerberg dùng 'siêu trí tuệ' thay 'AI'",
+      "summary_orig": "Elon Musk và Mark Zuckerberg đều sử dụng cụm từ \"siêu trí tuệ\" trong báo cáo tài chính, theo yêu cầu được Tổng thống Mỹ Donald Trump đưa ra hồi tháng 9.",
+      "title_vi": "Musk và Zuckerberg dùng 'siêu trí tuệ' thay 'AI'",
+      "summary_vi": "Elon Musk và Mark Zuckerberg đều sử dụng cụm từ \"siêu trí tuệ\" trong báo cáo tài chính, theo yêu cầu được Tổng thống Mỹ Donald Trump đưa ra hồi tháng 9.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "9daa20c1fa99e062d6a9e3094fec5b4c15e827a5"
+      ]
+    },
+    {
+      "id": "b260cf8e5d074d4e6fa87057475fbfddc81771df",
+      "url": "https://vnexpress.net/sam-altman-that-te-khi-ram-nam-trong-may-nguoi-dung-5139149.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-10-31T12:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Sam Altman: 'Thật tệ khi RAM nằm trong máy người dùng'",
+      "summary_orig": "CEO OpenAI Sam Altman bày tỏ lo ngại về những người muốn AI suy luận cục bộ trên thiết bị, cho rằng RAM nên dành cho trung tâm dữ liệu.",
+      "title_vi": "Sam Altman: 'Thật tệ khi RAM nằm trong máy người dùng'",
+      "summary_vi": "CEO OpenAI Sam Altman bày tỏ lo ngại về những người muốn AI suy luận cục bộ trên thiết bị, cho rằng RAM nên dành cho trung tâm dữ liệu.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "b260cf8e5d074d4e6fa87057475fbfddc81771df"
+      ]
+    },
+    {
+      "id": "00a41a70417e01550d2cc8874839f555cc9519bf",
+      "url": "https://vnexpress.net/ai-can-tao-gia-tri-thuc-thay-vi-dung-o-thu-nghiem-5138281.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-10-31T10:03:17+00:00",
+      "lang": "vi",
+      "title_orig": "AI cần tạo giá trị thực thay vì dừng ở thử nghiệm",
+      "summary_orig": "Theo các chuyên gia, nhiều nghiên cứu AI tại Việt Nam chưa gắn với nhu cầu, khiến khoảng cách từ phòng thí nghiệm đến ứng dụng thực tế vẫn còn lớn, đòi hỏi sự phối hợp của doanh nghiệp trong nghiên cứu.",
+      "title_vi": "AI cần tạo giá trị thực thay vì dừng ở thử nghiệm",
+      "summary_vi": "Theo các chuyên gia, nhiều nghiên cứu AI tại Việt Nam chưa gắn với nhu cầu, khiến khoảng cách từ phòng thí nghiệm đến ứng dụng thực tế vẫn còn lớn, đòi hỏi sự phối hợp của doanh nghiệp trong nghiên cứu.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "00a41a70417e01550d2cc8874839f555cc9519bf"
+      ]
+    },
+    {
+      "id": "7ec1b7a36883f90d83c0e172edb2c92856174e23",
+      "url": "https://vnexpress.net/plaud-note-pro-the-ghi-am-ai-gia-5-8-trieu-dong-5138984.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-10-31T08:30:00+00:00",
+      "lang": "vi",
+      "title_orig": "Plaud Note Pro - 'thẻ ghi âm AI' giá 5,8 triệu đồng",
+      "summary_orig": "Plaud Note Pro có thiết kế tương tự thẻ ngân hàng, hỗ trợ ghi âm và phân tích nội dung bằng AI, nhưng giá cao.",
+      "title_vi": "Plaud Note Pro - 'thẻ ghi âm AI' giá 5,8 triệu đồng",
+      "summary_vi": "Plaud Note Pro có thiết kế tương tự thẻ ngân hàng, hỗ trợ ghi âm và phân tích nội dung bằng AI, nhưng giá cao.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "7ec1b7a36883f90d83c0e172edb2c92856174e23"
+      ]
+    },
+    {
+      "id": "cd9431be4d217e277e9452ba09e39fd4f146df92",
+      "url": "https://vnexpress.net/cuoc-thi-ai-chuan-quoc-te-cho-hoc-sinh-thpt-5139130.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-10-31T08:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Cuộc thi AI chuẩn quốc tế cho học sinh THPT",
+      "summary_orig": "Cuộc thi AI or Behind dành cho học sinh THPT trên toàn quốc, giúp rèn kỹ năng sử dụng AI tạo sinh, kiểm chứng thông tin và phát triển giải pháp công nghệ.",
+      "title_vi": "Cuộc thi AI chuẩn quốc tế cho học sinh THPT",
+      "summary_vi": "Cuộc thi AI or Behind dành cho học sinh THPT trên toàn quốc, giúp rèn kỹ năng sử dụng AI tạo sinh, kiểm chứng thông tin và phát triển giải pháp công nghệ.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "cd9431be4d217e277e9452ba09e39fd4f146df92"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 5,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "untranslated": 13
+    }
+  }
+}
