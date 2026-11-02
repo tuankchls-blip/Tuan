@@ -67,6 +67,8 @@ Cài đặt một lần trong *Settings* của repo (đã làm):
 3. *Pages* → *Deploy from a branch*: `main`, thư mục `/docs`.
 4. (Tùy chọn) *Secrets and variables* → *Actions*: secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`) để dịch bằng Claude. Không có secret thì dịch bằng Google, rồi MyMemory.
 
+Việc dịch do thư viện [`dichviet`](https://github.com/tuankchls-blip/dichviet) đảm nhận (ghim bản `v0.1.0` trong `requirements.txt`; cấu hình ở `config/dichviet.yaml`, thuật ngữ riêng của bản tin ở `config/glossary.yaml`). Nâng phiên bản: đổi tag trong `requirements.txt` sau khi đã thử bản mới.
+
 Workflow `.github/workflows/tests.yml` chạy `pytest` mỗi khi đẩy code.
 
 ## Kiểm thử
@@ -75,7 +77,7 @@ Workflow `.github/workflows/tests.yml` chạy `pytest` mỗi khi đẩy code.
 pytest
 ```
 
-Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claude và Google đều được giả lập.
+Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; các máy dịch của `dichviet` (Claude, Google, MyMemory) được thay bằng máy giả trong `tests/fake_dichviet.py`.
 
 ## Lộ trình
 

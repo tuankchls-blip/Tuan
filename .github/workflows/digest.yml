@@ -20,7 +20,7 @@ on:
         type: string
         required: false
       no_claude:
-        description: "Không dịch bằng Claude (chỉ dùng Google)"
+        description: "Không dịch bằng Claude (chỉ dùng Google, MyMemory)"
         type: boolean
         default: false
 
@@ -52,7 +52,8 @@ jobs:
       - name: Chạy test
         run: pytest -q
 
-      # Chỉ cài Claude Code khi có token; không có thì dịch bằng Google
+      # Dịch bằng thư viện dichviet (cài qua requirements.txt). Chỉ cài Claude Code khi có
+      # token; không có thì dichviet dịch bằng Google, rồi MyMemory.
       - uses: actions/setup-node@v5
         if: env.HAS_CLAUDE_TOKEN == 'true'
         with:
@@ -86,7 +87,7 @@ jobs:
           if [ "$NO_CLAUDE" = "true" ]; then
             args+=(--no-claude)
           elif [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
-            echo "::notice::Không có secret CLAUDE_CODE_OAUTH_TOKEN: dịch bằng Google Translate"
+            echo "::notice::Không có secret CLAUDE_CODE_OAUTH_TOKEN: dịch bằng Google, rồi MyMemory"
             args+=(--no-claude)
           fi
           python main.py "${args[@]}"

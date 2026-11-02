@@ -160,6 +160,8 @@ Bỏ trùng dùng `difflib` có sẵn trong Python, không cần thư viện AI.
 
 ## Dịch tiếng Việt và từ khóa
 
+> **Cập nhật 02/11/2026:** phần dịch đã chuyển sang thư viện dùng chung [`dichviet`](https://github.com/tuankchls-blip/dichviet) (`v0.1.0`), theo mục "Tích hợp với ai-daily-digest" trong `SPEC.md` của repo đó. Claude Code không còn đọc `in.json`/ghi `out.json` theo skill `dich-tin-ai`; mô tả bên dưới giữ lại để tham khảo.
+
 Bản tin hiển thị bằng tiếng Việt; tin tiếng Anh giữ nguyên tiêu đề và tóm tắt gốc, kèm bản dịch. **Dịch chính bằng Claude** (Claude Code chạy trên GitHub bằng gói Claude của bạn, theo một skill dịch riêng); **dự phòng bằng Google Translate** qua `deep-translator` khi Claude lỗi hoặc hết hạn mức.
 
 **Luồng dịch mỗi ngày:**

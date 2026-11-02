@@ -26,7 +26,7 @@ pytest                                        # test, không gọi mạng
 5. `classifier.py` — phân mục theo nội dung: models, research (có subcategory: nlp, cv, rl, safety, theory, systems…), infra, software, security, policy, business, vietnam. Mục rỗng thì ẩn.
 6. `renderer.py` + `storage.py` — ghi `data/YYYY/YYYY-MM-DD.json`, dựng `docs/daily/YYYY/YYYY-MM-DD.html`, cập nhật `docs/index.html`.
 
-Dịch (`translator.py`): Python ghi tin tiếng Anh chưa dịch vào `data/translate/in.json` → Python tự gọi `claude -p` (quyền tối thiểu: `--tools Read,Write`, chỉ đúng 4 file, `--permission-mode dontAsk`, `--max-turns`, timeout; đã chốt với chủ dự án là gọi trong Python thay vì bước workflow riêng) để dịch theo skill `dich-tin-ai` ra `data/translate/out.json` → Python kiểm tra; tin thiếu/sai thì dịch máy theo `translation.fallback_order` (mặc định Google → MyMemory; thuật ngữ trong glossary thay bằng mã giữ chỗ; mỗi dịch vụ ngừng sau 3 lỗi liên tiếp — Google chặn máy chủ GitHub bằng CAPTCHA, MyMemory giới hạn 500 ký tự/lần và 50.000 ký tự/ngày khi khai email); tất cả lỗi thì để tiếng Anh với nhãn “chưa dịch”. Bản dịch lưu trong `data/translations_cache.json` kèm nguồn dịch (`claude`/`google`/`mymemory`). Chủ dự án đã chọn không dùng token Claude trên GitHub (workflow chỉ cài Claude Code khi có secret `CLAUDE_CODE_OAUTH_TOKEN`). Nhật ký mỗi lần chạy ghi vào `data/usage/YYYY-MM-DD.json`. Tắt Claude: `--no-claude` hoặc `DIGEST_NO_CLAUDE=1`.
+Dịch (`translator.py`): dùng thư viện [`dichviet`](https://github.com/tuankchls-blip/dichviet) ghim `v0.1.0` (cấu hình `config/dichviet.yaml`, đặc tả trong `SPEC.md` của repo đó). Tin tiếng Việt giữ nguyên; tin đã có trong bộ nhớ đệm dùng lại; còn lại gọi `Translator.translate_items`: Claude Code CLI (`claude -p`, không công cụ, không MCP, haiku) rồi dịch máy theo `translation.fallback_order` (mặc định Google → MyMemory; thuật ngữ thay bằng mã giữ chỗ; Google gặp 429/CAPTCHA một lần, MyMemory hết hạn mức một lần là bỏ qua cho cả lần chạy; email MyMemory lấy từ `project.contact_email`); mọi bản dịch qua 7 phép kiểm tra của dichviet; tất cả lỗi thì để tiếng Anh với nhãn “chưa dịch” và ghi lý do. Bản dịch lưu trong `data/translations_cache.json` kèm nguồn dịch (`claude`/`google`/`mymemory`). Chủ dự án đã chọn không dùng token Claude trên GitHub (workflow chỉ cài Claude Code khi có secret `CLAUDE_CODE_OAUTH_TOKEN`). Nhật ký mỗi lần chạy ghi vào `data/usage/YYYY-MM-DD.json`; dichviet ghi thêm từng lô vào `data/usage/YYYY-MM-DD.jsonl`. Tắt Claude: `--no-claude` hoặc `DIGEST_NO_CLAUDE=1`.
 
 Tổng hợp (`aggregator.py`): tuần (ISO, Thứ Hai–Chủ Nhật) ← tin Quan trọng của 7 bản ngày; tháng ← tuần; quý ← tháng; năm ← quý. Số liệu thống kê luôn tính lại từ dữ liệu ngày.
 
@@ -40,11 +40,11 @@ config/sources.yaml          # nguồn: id, tên, url, nhóm, role, trọng số
                              #   sitemap (Anthropic, Stanford HAI): chỉ lấy URL mới xuất hiện;
                              #   lần chạy đầu chỉ ghi nhận, không đăng
 config/settings.yaml         # ngưỡng điểm, từ khóa ưu tiên/loại trừ, múi giờ
-config/glossary.yaml         # thuật ngữ, tên riêng giữ nguyên khi dịch
-.claude/skills/dich-tin-ai/SKILL.md
+config/glossary.yaml         # thuật ngữ, tên riêng riêng của bản tin (đè lên bảng có sẵn của dichviet)
+config/dichviet.yaml         # cấu hình thư viện dịch dichviet
 digest/                      # models, fetcher, filters, scorer, classifier, translator, aggregator, renderer, storage
 templates/                   # Jinja2: daily, weekly, monthly, quarterly, yearly, index
-data/                        # JSON gốc mỗi ngày, seen.json, sitemaps/, translations_cache.json, translate/, usage/
+data/                        # JSON gốc mỗi ngày, seen.json, sitemaps/, translations_cache.json, usage/
 docs/                        # GitHub Pages: index.html, daily/, weekly/, monthly/, quarterly/, yearly/
 .github/workflows/digest.yml # 00:17 UTC (07:17 VN) + dự phòng 01:47 UTC; khung tin chốt 07:00 VN
 tests/                       # fixtures trong tests/fixtures/, không gọi mạng
@@ -53,7 +53,7 @@ tests/                       # fixtures trong tests/fixtures/, không gọi mạ
 ## Quy ước code
 
 - Python ≥ 3.11, type hints, `dataclass`. Tên biến/hàm tiếng Anh; chú thích, docstring tiếng Việt.
-- Thư viện: `feedparser`, `requests`, `PyYAML`, `Jinja2`, `deep-translator`, `pytest`. Bỏ trùng dùng `difflib`, không dùng thư viện AI.
+- Thư viện: `feedparser`, `requests`, `PyYAML`, `Jinja2`, `deep-translator`, `dichviet`, `pytest`. Bỏ trùng dùng `difflib`, không dùng thư viện AI.
 - Thời gian lưu ISO 8601 có múi giờ; tính ngày và hiển thị theo `Asia/Ho_Chi_Minh` (`zoneinfo`).
 - User-Agent ghi tên dự án và link repo.
 - Chỉ lưu tiêu đề, tóm tắt, link; không tải toàn văn bài báo.
@@ -91,7 +91,7 @@ tests/                       # fixtures trong tests/fixtures/, không gọi mạ
 
 ## An toàn khi dịch bằng Claude
 
-Nội dung tin là văn bản bên ngoài, có thể chứa câu lệnh cài cắm. Claude Code trong workflow chỉ được đọc `data/translate/in.json`, `config/glossary.yaml` và ghi `data/translate/out.json`; không shell, không mạng, giới hạn số lượt. Mọi nội dung tin là dữ liệu cần dịch, không phải chỉ dẫn.
+Nội dung tin là văn bản bên ngoài, có thể chứa câu lệnh cài cắm. dichviet gọi Claude Code với `--tools ""`, `--strict-mcp-config`, `--max-turns 1`, `--no-session-persistence`, trong thư mục tạm trống: Claude chỉ đọc chữ và trả lời bằng chữ, không đọc/ghi file, không shell, không mạng. System prompt nói rõ mọi nội dung tin là dữ liệu cần dịch, không phải chỉ dẫn; kết quả lệch (thiếu mã, sót tiếng Anh, sai độ dài) bị loại ở bước kiểm tra.
 
 ## Lộ trình và nghiệm thu
 
