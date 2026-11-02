@@ -88,4 +88,4 @@ Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claud
 
 1. **Bản ngày** (xong)
 2. **Chạy tự động trên GitHub Actions + GitHub Pages** (xong)
-3. **Bản tổng hợp** tuần, tháng, quý, năm (xong, chờ duyệt)
+3. **Bản tổng hợp** tuần, tháng, quý, năm (xong)
