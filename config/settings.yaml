@@ -322,6 +322,7 @@ llm:
   endpoint: https://models.github.ai/inference/chat/completions
   catalog_url: https://models.github.ai/catalog/models
   token_env: GITHUB_TOKEN
+  api_version: "2026-03-10"  # header X-GitHub-Api-Version (theo tài liệu REST mới nhất)
   model: null              # chốt sau khi chạy llm-check
   candidates:              # mô hình thử trong llm-check
     - openai/gpt-4.1-mini

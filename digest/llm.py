@@ -51,8 +51,27 @@ class LLMClient:
         return bool(self.token)
 
     def _headers(self) -> dict[str, str]:
-        return {"Authorization": f"Bearer {self.token}", "Accept": "application/vnd.github+json",
-                "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
+        headers = {"Authorization": f"Bearer {self.token}", "Accept": "application/vnd.github+json",
+                   "Content-Type": "application/json"}
+        if self.cfg.get("api_version"):
+            headers["X-GitHub-Api-Version"] = self.cfg["api_version"]
+        return headers
+
+    def probe(self, model: str, log: Callable[[str], None]) -> None:
+        """Chẩn đoán: thử vài biến thể header, in mã HTTP, kiểu nội dung, nội dung trả về."""
+        body = {"model": model, "messages": [{"role": "user", "content": "Say OK"}], "max_tokens": 5}
+        variants = {
+            "2022-11-28": {"X-GitHub-Api-Version": "2022-11-28", "Accept": "application/vnd.github+json"},
+            "2026-03-10": {"X-GitHub-Api-Version": "2026-03-10", "Accept": "application/vnd.github+json"},
+            "không header phiên bản, Accept json": {"Accept": "application/json"},
+        }
+        for name, extra in variants.items():
+            headers = {"Authorization": f"Bearer {self.token}", "Content-Type": "application/json", **extra}
+            try:
+                r = self._post(self.cfg["endpoint"], headers=headers, json=body, timeout=30)
+                log(f"  [{name}] HTTP {r.status_code} · {r.headers.get('content-type', '')} · {r.text[:160]!r}")
+            except requests.RequestException as exc:
+                log(f"  [{name}] lỗi mạng: {exc}")
 
     def catalog(self) -> list[dict[str, Any]]:
         """Danh mục mô hình GitHub Models (id, tên, hạn mức)."""
@@ -92,7 +111,8 @@ class LLMClient:
             data = r.json()
             text = data["choices"][0]["message"]["content"] or ""
         except (ValueError, KeyError, IndexError, TypeError) as exc:
-            raise LLMError(f"đầu ra lạ: {str(exc)[:100]}") from exc
+            ctype = r.headers.get("content-type", "")
+            raise LLMError(f"đầu ra lạ ({ctype}): {r.text[:120]!r}") from exc
         usage = data.get("usage") or {}
         self.tokens["prompt"] += usage.get("prompt_tokens", 0) or 0
         self.tokens["completion"] += usage.get("completion_tokens", 0) or 0
@@ -125,6 +145,9 @@ def check(client: LLMClient, candidates: list[str], log: Callable[[str], None] =
             log(f"  {c}: {'có' if m else 'KHÔNG có'}" + (f" · tier {m.get('rate_limit_tier')}" if m else ""))
     except LLMError as exc:
         log(f"Không đọc được danh mục: {exc}")
+    if candidates:
+        log(f"Chẩn đoán với {candidates[0]}:")
+        client.probe(candidates[0], log)
     prompt = ("Dịch tiêu đề và tóm tắt sau sang tiếng Việt, tự nhiên như báo công nghệ. Giữ nguyên tên riêng, "
               "tên mô hình, tên công ty và thuật ngữ như LLM, open-weight, benchmark, RCE. Trả về JSON "
               '{"items": [{"id", "title_vi", "summary_vi"}]}, không thêm chữ nào khác.\n\n'

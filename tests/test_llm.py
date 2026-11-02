@@ -63,6 +63,7 @@ def test_check_reports_each_model():
 
     get = lambda *a, **k: Resp(200, [{"id": "good", "rate_limit_tier": "low"}])  # noqa: E731
     report = llm.check(client(post, get), ["good", "bad"], log=lambda *a: None)
+    assert report["models"]["good"]["ok"]
     assert report["catalog"] == 1
     assert report["models"]["good"]["ok"] and not report["models"]["bad"]["ok"]
 
