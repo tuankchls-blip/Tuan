@@ -1,1 +1,51 @@
-{}
+{
+  "0dbf0226aa90a12c5a2161ad1c244a578bd24b7d": {
+    "title_vi": "OpenAI có thể đổi thương hiệu trung tâm dữ liệu của mình thành ‘cơ sở điện toán AI’",
+    "summary_vi": "Các trung tâm dữ liệu rất ít được ưa chuộng. Nhưng nếu chúng ta gọi họ bằng cái tên khác thì sao?",
+    "source": "mymemory",
+    "hash": "83bd078497641fdc",
+    "translated_at": "2026-11-02T14:13:12+00:00"
+  },
+  "1cc70eeb84cf8fefdc0ea8416012b2928496eae9": {
+    "title_vi": "Alpine Linux xây dựng lại GitLab sau khi cố gắng tấn công RCE",
+    "summary_vi": "Tin tặc đã cố gắng khai thác lỗ hổng GitLab quan trọng trong cơ sở hạ tầng phát triển của Alpine Linux vào ngày 20-21 tháng 10, khiến dự án open-source phải xây dựng lại máy chủ GitLab và đặt lại tất cả mật khẩu do lo ngại về một sự thỏa hiệp có thể xảy ra.",
+    "source": "mymemory",
+    "hash": "8e1a1a519e509ced",
+    "translated_at": "2026-11-02T14:13:09+00:00"
+  },
+  "38343bf46fe3ff86c7fe7f54901d0e7366ade0aa": {
+    "title_vi": "Các nhà khoa học tự hỏi liệu AI của tôi có ăn cắp ý tưởng của tôi không",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "b9c6c30e55134712",
+    "translated_at": "2026-11-02T14:13:05+00:00"
+  },
+  "594f44f4d3492479847fdc2d840dc1d1aa62e02c": {
+    "title_vi": "Canh giữ cánh cổng tri thức",
+    "summary_vi": "Một cuộn gần đây qua phương tiện truyền thông xã hội khiến tôi suy nghĩ về sự tin tưởng. Khoảng một nửa nguồn cấp dữ liệu của tôi chứa đầy AI slop mà những người dùng sắc sảo sẽ gọi là do máy tạo ra, thường là sự bối rối của rube, người vô tình lan truyền nó và đôi khi là niềm vui của người đăng chia sẻ nó một cách có chủ ý vì họ thấy nó thú vị hoặc hữu ích để gieo rắc sự nhầm lẫn.",
+    "source": "mymemory",
+    "hash": "152038cb062913d3",
+    "translated_at": "2026-11-02T14:13:11+00:00"
+  },
+  "7a06514023fd7da46cc275af453cfd3d44351c84": {
+    "title_vi": "Trích dẫn Kyle Kingsbury",
+    "summary_vi": "Rộng hơn, việc sử dụng LLMs làm xói mòn niềm tin vào tài liệu, vào phần mềm và vào các tổ chức sản xuất ra chúng. Có lẽ các kỹ sư sẽ bắt đầu đối xử với bất kỳ dự án phần mềm mới nào với sự nghi ngờ - những tín hiệu mà chúng ta từng dựa vào như là dấu hiệu của một hệ thống trưởng thành giờ đây dễ bị làm giả hơn. [...] Trong thời đại LLMs, người bảo trì có thể làm gì để đảm bảo phần mềm và tài liệu chính xác?",
+    "source": "mymemory",
+    "hash": "369f1b4dfec84537",
+    "translated_at": "2026-11-02T14:13:07+00:00"
+  },
+  "bb2642061f374db81b63843af50a0f70ef36e8e4": {
+    "title_vi": "AI có thể giúp cuộc sống của các CEO công nghệ trở nên dễ dàng hơn. Còn những người khác thì sao?",
+    "summary_vi": "Về Equity, chúng ta thảo luận về lý do tại sao các tuyên bố của Giám đốc điều hành công nghệ có vẻ như bị điếc.",
+    "source": "mymemory",
+    "hash": "a88f6f9fbb9b94b8",
+    "translated_at": "2026-11-02T14:13:14+00:00"
+  },
+  "e3c2e19ab9b4b96414fdacad5433a70a343d8c2f": {
+    "title_vi": "Chatbots đang dẫn dắt những người đi bộ lạc lối, với những hậu quả nguy hiểm",
+    "summary_vi": "Lập kế hoạch thuê ngoài cho AI có thể khiến mọi người từ bỏ tư duy phê phán của chính họ, điều này có thể dẫn đến hậu quả chết người ở những nơi như vùng hẻo lánh.",
+    "source": "mymemory",
+    "hash": "244f84919c5e9443",
+    "translated_at": "2026-11-02T14:13:15+00:00"
+  }
+}

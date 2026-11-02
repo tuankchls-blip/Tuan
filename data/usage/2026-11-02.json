@@ -37,6 +37,38 @@
           "e3c2e19a: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp"
         ]
       }
+    },
+    {
+      "generated_at": "2026-11-02T21:12:59+07:00",
+      "duration_seconds": 16.8,
+      "sources_ok": 31,
+      "sources_failed": [],
+      "stories": {
+        "important": 1,
+        "notable": 9,
+        "dropped": 24
+      },
+      "translation": {
+        "counts": {
+          "original": 3,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "mymemory": 7,
+          "untranslated": 0
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "machine_errors": [
+          "google 38343bf4: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google 7a065140: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google 1cc70eeb: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make "
+        ]
+      }
     }
   ]
 }
