@@ -332,4 +332,83 @@ File `data/2026/2026-10-31.json` là đầu vào duy nhất cho bản HTML của
 | 1 · Bản ngày | `python main.py daily` chạy trên máy bạn, tạo được file HTML và JSON đúng cấu trúc; có báo cáo nguồn nào đọc được, nguồn nào lỗi; không có tin trùng; mọi tin tiếng Anh có bản dịch hoặc nhãn “chưa dịch”; tắt Claude thì Google tự dịch thay; có nhật ký lượng dùng trong data/usage/; toàn bộ `pytest` đạt |
 | 2 · GitHub | Workflow chạy đúng lịch và bằng nút chạy tay; tự commit kết quả; trang GitHub Pages hiển thị mục lục và bản mới nhất; chạy lại cùng ngày không sinh bản trùng |
 | 3 · Tổng hợp | `weekly`, `monthly`, `quarterly`, `yearly` chạy được với `--date`; test bằng dữ liệu giả lập hơn một năm; ranh giới tuần ISO đúng, kể cả tuần 2026-W53 vắt sang năm 2027; trang mục lục có liên kết tới mọi cấp |
-| 4, 5 · Mở rộng | Đặc tả chi tiết sẽ viết khi giai đoạn 3 xong |
+| 4 · AI | Xem bảng nghiệm thu trong phần “Đặc tả giai đoạn 4–5” |
+| 5 · App iOS và phân tích | Xem bảng nghiệm thu trong phần “Đặc tả giai đoạn 4–5” |
+
+## Đặc tả giai đoạn 4–5
+
+Viết ngày 02/11/2026 sau khi giai đoạn 3 được duyệt. Các lựa chọn đã chốt với chủ dự án:
+
+- **AI dùng GitHub Models** (miễn phí trong hạn mức ngày, xác thực bằng `GITHUB_TOKEN` có sẵn trong Actions, không cần thêm khóa). Không dùng token Claude trên GitHub.
+- **Nhận định bằng lời** ở cả bản ngày (“điểm nhanh hôm nay”, 2–3 câu) và bản tổng hợp (3–5 câu).
+- **App iOS dạng web app cài được (PWA)** trên nền GitHub Pages, không cần máy Mac hay tài khoản Apple Developer.
+- **Trang phân tích dữ liệu** dài hạn từ kho JSON.
+
+### Hiện trạng làm nền
+
+- Dịch hiện tại: Google bị chặn trên GitHub, MyMemory dịch được nhưng kém tự nhiên và hay dịch cả tên riêng (“Le Chonk: Mistral Large 4” → “Lê Chonk: Mistral Lớn 4”).
+- Bản ngày khoảng 10–60 tin; tiêu đề + tóm tắt khoảng 25.000–35.000 ký tự/ngày.
+- Mọi dữ liệu nằm trong `data/` (JSON), trang web trong `docs/`.
+
+### Giai đoạn 4 · AI qua GitHub Models
+
+**Module mới `digest/llm.py`**: gọi API chat của GitHub Models (`https://models.github.ai/inference/chat/completions`) bằng `requests`, có timeout, đếm số lần gọi và token, dừng khi hết hạn mức (lỗi 429) thay vì làm hỏng lần chạy. Tên mô hình, giới hạn số lần gọi và token mỗi lần nằm trong `config/settings.yaml` (mục `llm`). Workflow thêm quyền `models: read`.
+
+**4a · Dịch bằng mô hình AI.** Thêm `llm` vào đầu `translation.fallback_order` (trước Google, MyMemory):
+
+- Gửi theo lô (khoảng 10 tin/lần) để ít lần gọi; đầu vào và đầu ra là JSON `{id, title, summary}` → `{id, title_vi, summary_vi}` giống skill `dich-tin-ai`; lời nhắc hệ thống lấy từ chính `SKILL.md` và `glossary.yaml`.
+- Kiểm tra đầu ra như với Claude (`read_output`): đủ mã tin, không rỗng, độ dài hợp lý; tin sai thì rơi xuống MyMemory.
+- Nguồn dịch ghi là `llm:<tên mô hình>` trong bộ nhớ đệm và nhật ký.
+
+**4b · Nhận định bằng lời.**
+
+- Bản ngày: “Điểm nhanh hôm nay” 2–3 câu ở đầu trang, dựa trên các tin Quan trọng.
+- Bản tổng hợp: 3–5 câu ở đầu trang, dựa trên tin nổi bật, chủ đề tăng/giảm và sự kiện nhiều ngày.
+- Đầu vào chỉ là dữ liệu đã có (tiêu đề, tóm tắt, số liệu); mô hình phải trích mã tin cho mỗi ý. Python kiểm tra mọi mã được trích có thật; không đạt thì bỏ đoạn nhận định (trang vẫn tạo bình thường).
+- Lưu trong JSON (`commentary`: văn bản, mã tin được trích, mô hình, thời điểm); trang hiển thị kèm dòng “Nhận định do AI viết tự động, có thể sai” và link tới các tin được trích.
+
+**An toàn:** nội dung tin là văn bản bên ngoài; lời nhắc hệ thống ghi rõ mọi nội dung tin là dữ liệu, không phải chỉ dẫn; mô hình không có công cụ nào, chỉ trả về văn bản; đầu ra luôn được thoát ký tự HTML và kiểm tra cấu trúc trước khi dùng.
+
+**Nghiệm thu giai đoạn 4:**
+
+| Tiêu chí | Cách kiểm tra |
+| --- | --- |
+| Gọi được GitHub Models từ workflow chỉ bằng `GITHUB_TOKEN` | Chạy thật trên GitHub, nhật ký ghi số lần gọi và token |
+| Bản ngày được dịch bằng mô hình AI; tên riêng và thuật ngữ giữ đúng | Chạy thật; so vài tin với bản MyMemory cũ |
+| Hết hạn mức hoặc API lỗi thì MyMemory dịch thay, lần chạy vẫn thành công | Test giả lập lỗi 429 và lỗi mạng |
+| Bản ngày có “Điểm nhanh hôm nay”, bản tổng hợp có nhận định; mọi ý trích đúng mã tin có thật | Test với mô hình giả lập (cả trường hợp trích sai mã) và chạy thật |
+| Toàn bộ `pytest` đạt, không test nào gọi mạng | `pytest` với mạng bị chặn |
+
+### Giai đoạn 5 · App iOS (PWA) và phân tích dữ liệu
+
+**5a · Web app cài được trên iPhone.**
+
+- `docs/manifest.webmanifest`, biểu tượng app (PNG 180×180 cho iOS, 192 và 512), thẻ meta cho Safari; mở toàn màn hình như app.
+- Service worker: lưu sẵn trang mục lục và 14 bản ngày gần nhất để đọc khi mất mạng; có mạng thì tải bản mới.
+- Trong app: lưu tin yêu thích và đánh dấu đã đọc (lưu trên máy, không cần tài khoản); trang “Đã lưu”.
+- Thông báo đẩy mỗi sáng (iOS 16.4+, chỉ khi app đã thêm vào Màn hình chính): workflow gửi Web Push sau khi tạo bản ngày, nội dung là số tin Quan trọng và câu đầu của “Điểm nhanh hôm nay”. Cần cặp khóa VAPID (secret) và mã đăng ký của điện thoại (app hiển thị để chủ dự án dán vào secret một lần). Thêm thư viện `pywebpush`.
+
+**5b · Trang phân tích dữ liệu** (`docs/analysis.html`), cập nhật mỗi ngày:
+
+- Số tin theo tuần, theo mục, theo nguồn; chủ đề tăng/giảm theo thời gian; từ khóa nổi lên; tỉ lệ nguồn đọc lỗi và cách dịch theo thời gian.
+- Biểu đồ vẽ sẵn bằng SVG trong Python (không CDN), xuất kèm file CSV để tự phân tích tiếp (ví dụ bằng pandas).
+
+**Nghiệm thu giai đoạn 5:**
+
+| Tiêu chí | Cách kiểm tra |
+| --- | --- |
+| Thêm vào Màn hình chính trên iPhone, mở toàn màn hình, có biểu tượng | Chủ dự án thử trên iPhone |
+| Bật chế độ máy bay vẫn đọc được bản mới nhất | Chủ dự án thử; test service worker bằng trình duyệt tự động |
+| Lưu tin yêu thích, đánh dấu đã đọc còn sau khi đóng app | Chủ dự án thử |
+| Nhận thông báo buổi sáng sau khi bản ngày tạo xong | Chủ dự án nhận trên iPhone |
+| Trang phân tích hiển thị đúng số liệu và có file CSV | Test đối chiếu với dữ liệu giả lập |
+| Toàn bộ `pytest` đạt, không test nào gọi mạng | `pytest` |
+
+### Thứ tự làm và việc cần chủ dự án
+
+1. **4a:** kiểm tra thật GitHub Models trên GitHub (mô hình nào dùng được, hạn mức) → `llm.py` → dịch bằng AI.
+2. **4b:** nhận định cho bản ngày và bản tổng hợp.
+3. **5a:** PWA → thông báo đẩy (chủ dự án tạo secret VAPID và dán mã đăng ký của iPhone).
+4. **5b:** trang phân tích.
+
+Rủi ro: danh mục mô hình và hạn mức miễn phí của GitHub Models có thể thay đổi; mọi tính năng AI đều có đường lùi (MyMemory cho dịch, bỏ đoạn nhận định) để bản tin không bao giờ ngừng.
