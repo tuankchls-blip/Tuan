@@ -10,7 +10,7 @@ Tài liệu theo dõi cho chủ dự án: mỗi giai đoạn xong (hoặc khi c�
 | 1 | Bản ngày: thu thập 31 nguồn, lọc, gộp sự kiện, chấm điểm, phân mục, dịch, xuất HTML | ✅ Xong | 30/10/2026 |
 | 2 | Chạy tự động trên GitHub Actions, đăng GitHub Pages | ✅ Xong | 02/11/2026 |
 | 3 | Bản tổng hợp tuần, tháng, quý, năm | ✅ Xong | 02/11/2026 |
-| 4 | AI qua GitHub Models: dịch tốt hơn, nhận định bằng lời | 🔄 Đang làm (bước 1) | |
+| 4 | AI: dịch tốt hơn, nhận định bằng lời | ⏸ Chờ chọn dịch vụ AI (GitHub Models đã ngừng) | |
 | 5 | App iOS dạng PWA (đọc offline, lưu tin, thông báo đẩy), trang phân tích dữ liệu | ⏳ Chưa làm | |
 
 **Việc đang chờ chủ dự án:** chạy dịch bù `retranslate` cho ngày 31/10 (58 tin) và 30/10 (1 tin): *Actions → Bản tin AI hằng ngày → Run workflow*. Để sang ngày khác nhau vì hạn mức MyMemory 50.000 ký tự/ngày.
@@ -76,6 +76,15 @@ Quyết định của chủ dự án: AI dùng **GitHub Models** (miễn phí); 
 
 ---
 
+## Phiên 2 (tiếp) · 02/11/2026 — Giai đoạn 4, bước 1
+
+- Tạo tài liệu theo dõi này (`TIEN_DO.md`) theo yêu cầu; `CLAUDE.md` ghi quy tắc cập nhật sau mỗi giai đoạn.
+- Viết `digest/llm.py` (client API chat kiểu OpenAI, có timeout, nhận ra hết hạn mức) và lệnh `python main.py llm-check`; workflow thêm quyền `models: read`.
+- **Sự cố:** chạy `llm-check` trên GitHub, mọi lời gọi (danh mục và chat, với mọi phiên bản header) đều trả `HTTP 200 text/plain "OK"`. Nguyên nhân: **GitHub Models đã ngừng hoạt động hoàn toàn từ 30/07/2026** (https://github.blog/changelog/2026-07-30-github-models-is-now-retired/). Đặc tả giai đoạn 4 dựa trên thông tin cũ của Claude, chưa kiểm tra trước khi đề xuất. Bước kiểm tra đã phát hiện trước khi viết phần dịch.
+- Giai đoạn 4 tạm dừng, chờ chủ dự án chọn dịch vụ AI thay thế.
+
+---
+
 ## Theo dõi chi phí và hạn mức
 
 | Dịch vụ | Dùng cho | Hạn mức / chi phí | Ghi chú |
@@ -84,4 +93,4 @@ Quyết định của chủ dự án: AI dùng **GitHub Models** (miễn phí); 
 | MyMemory | Dịch dự phòng | 50.000 ký tự/ngày (miễn phí) | Ngày nhiều tin ~30.000 ký tự |
 | Google Translate | Dịch dự phòng | Bị chặn trên GitHub | Vẫn thử 3 lần rồi bỏ qua |
 | Claude (gói của chủ dự án) | Không dùng trên GitHub | ~0,54 USD đã dùng khi kiểm tra ở phiên 1 | Bật lại bằng secret `CLAUDE_CODE_OAUTH_TOKEN` |
-| GitHub Models | Giai đoạn 4 | Miễn phí trong hạn mức ngày | Đang kiểm tra |
+| GitHub Models | (dự kiến cho giai đoạn 4) | Đã ngừng hoạt động từ 30/07/2026 | Không dùng được |
