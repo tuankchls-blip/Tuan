@@ -46,7 +46,7 @@ digest/                      # models, fetcher, filters, scorer, classifier, tra
 templates/                   # Jinja2: daily, weekly, monthly, quarterly, yearly, index
 data/                        # JSON gốc mỗi ngày, seen.json, sitemaps/, translations_cache.json, translate/, usage/
 docs/                        # GitHub Pages: index.html, daily/, weekly/, monthly/, quarterly/, yearly/
-.github/workflows/digest.yml # 00:00 UTC = 07:00 VN
+.github/workflows/digest.yml # 00:17 UTC (07:17 VN) + dự phòng 01:47 UTC; khung tin chốt 07:00 VN
 tests/                       # fixtures trong tests/fixtures/, không gọi mạng
 ```
 

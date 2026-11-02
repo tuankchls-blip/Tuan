@@ -50,6 +50,25 @@ Không cần sửa code, chỉ sửa file trong `config/`:
 
 Mỗi tin trong file JSON ngày có trường `reasons` giải thích vì sao tin được chọn hoặc bị loại, giúp chỉnh cấu hình.
 
+## Chạy tự động trên GitHub
+
+Workflow `.github/workflows/digest.yml` tạo bản tin mỗi sáng lúc 07:17 giờ Việt Nam (lịch dự phòng 08:47, tự bỏ qua nếu bản hôm nay đã có), commit `data/` và `docs/` vào nhánh `main`, rồi GitHub Pages đăng lại trang:
+
+**https://tuankchls-blip.github.io/Tuan/**
+
+GitHub có thể chạy lịch trễ vài chục phút đến vài giờ; nội dung không đổi vì khung tin luôn chốt lúc 07:00.
+
+**Chạy tay hoặc tạo lại một ngày:** tab *Actions* → *Bản tin AI hằng ngày* → *Run workflow*, chọn loại bản tin, nhập ngày (để trống = hôm nay).
+
+Cài đặt một lần trong *Settings* của repo (đã làm):
+
+1. *General* → *Default branch*: `main`.
+2. *Actions* → *General* → *Workflow permissions*: **Read and write permissions**.
+3. *Pages* → *Deploy from a branch*: `main`, thư mục `/docs`.
+4. (Tùy chọn) *Secrets and variables* → *Actions*: secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`) để dịch bằng Claude. Không có secret thì dịch bằng Google, rồi MyMemory.
+
+Workflow `.github/workflows/tests.yml` chạy `pytest` mỗi khi đẩy code.
+
 ## Kiểm thử
 
 ```bash
@@ -61,5 +80,5 @@ Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claud
 ## Lộ trình
 
 1. **Bản ngày** (xong)
-2. **Chạy tự động trên GitHub Actions + GitHub Pages** — hướng dẫn bật Actions và Pages sẽ được bổ sung ở đây. Hiện workflow dịch bằng Google Translate, rồi MyMemory; muốn dịch bằng Claude thì thêm secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`), workflow sẽ tự dùng.
+2. **Chạy tự động trên GitHub Actions + GitHub Pages** (xong)
 3. **Bản tổng hợp** tuần, tháng, quý, năm.
