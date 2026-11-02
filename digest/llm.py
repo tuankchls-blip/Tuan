@@ -59,7 +59,11 @@ class LLMClient:
         r = self._get(self.cfg["catalog_url"], headers=self._headers(), timeout=self.cfg.get("timeout_seconds", 60))
         if r.status_code != 200:
             raise LLMError(f"catalog HTTP {r.status_code}: {r.text[:200]}")
-        return r.json()
+        try:
+            return r.json()
+        except ValueError as exc:
+            ctype = r.headers.get("content-type", "")
+            raise LLMError(f"catalog không phải JSON ({ctype}): {r.text[:200]!r}") from exc
 
     def chat(self, messages: list[dict[str, str]], model: str | None = None, max_tokens: int = 1500,
              json_mode: bool = False) -> LLMResult:

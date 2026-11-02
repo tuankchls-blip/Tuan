@@ -70,3 +70,13 @@ def test_check_reports_each_model():
 def test_check_without_token():
     report = llm.check(client(token=""), ["x"], log=lambda *a: None)
     assert report == {"token": False, "catalog": None, "models": {}}
+
+
+def test_check_continues_when_catalog_is_not_json():
+    class Bad(Resp):
+        def json(self):
+            raise ValueError("not json")
+
+    report = llm.check(client(lambda *a, **k: Resp(200, OK), lambda *a, **k: Bad(200, text="")), ["m"],
+                       log=lambda *a: None)
+    assert report["catalog"] is None and report["models"]["m"]["ok"]
