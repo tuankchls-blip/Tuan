@@ -2,7 +2,7 @@
 
 Mỗi ngày, chương trình gom tin mới trong 24 giờ qua từ 31 nguồn uy tín về AI, khoa học máy tính và CNTT, chọn ra mọi tin đủ quan trọng theo góc nhìn nhà nghiên cứu, dịch sang tiếng Việt và xuất thành trang HTML đọc được trên điện thoại.
 
-Đặc tả đầy đủ: [`PLAN.md`](PLAN.md). Tóm tắt cho Claude Code: [`CLAUDE.md`](CLAUDE.md).
+Đặc tả đầy đủ: [`PLAN.md`](PLAN.md). Tiến độ từng phiên làm việc: [`TIEN_DO.md`](TIEN_DO.md). Tóm tắt cho Claude Code: [`CLAUDE.md`](CLAUDE.md).
 
 ## Cài đặt trên máy
 

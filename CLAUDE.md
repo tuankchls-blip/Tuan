@@ -8,6 +8,7 @@ Bản tin AI & CNTT hằng ngày bằng tiếng Việt, chạy tự động trê
 - Làm từng bước nhỏ; **hỏi chủ dự án trước khi bắt đầu mỗi bước**.
 - Làm từng giai đoạn; hết giai đoạn thì dừng lại để duyệt theo bảng nghiệm thu, chưa sang giai đoạn sau.
 - Trao đổi và chú thích bằng tiếng Việt.
+- **Cập nhật `TIEN_DO.md`** (tài liệu theo dõi của chủ dự án) mỗi khi xong một giai đoạn hoặc có quyết định/sự cố quan trọng: việc đã làm, quyết định, sự cố, chi phí.
 
 ## Lệnh
 

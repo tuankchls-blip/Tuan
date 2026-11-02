@@ -315,6 +315,23 @@ translation:
     max_chars: 450
     timeout_seconds: 15
 
+# ---------------------------------------------------------------- Mô hình AI (giai đoạn 4)
+# GitHub Models: miễn phí trong hạn mức ngày, xác thực bằng GITHUB_TOKEN (workflow cần quyền models: read).
+# Chạy `python main.py llm-check` để xem mô hình nào dùng được và hạn mức còn lại.
+llm:
+  endpoint: https://models.github.ai/inference/chat/completions
+  catalog_url: https://models.github.ai/catalog/models
+  token_env: GITHUB_TOKEN
+  model: null              # chốt sau khi chạy llm-check
+  candidates:              # mô hình thử trong llm-check
+    - openai/gpt-4.1-mini
+    - openai/gpt-4o-mini
+    - openai/gpt-4.1
+    - meta/Llama-3.3-70B-Instruct
+    - mistral-ai/mistral-small-2503
+  timeout_seconds: 60
+  temperature: 0.2
+
 # ---------------------------------------------------------------- Đường dẫn
 paths:
   data_dir: data
