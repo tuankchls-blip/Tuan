@@ -1,0 +1,14 @@
+# Cấu hình thư viện dịch dichviet cho ai-daily-digest (đặc tả: SPEC.md của repo dichviet).
+# Đường dẫn tương đối tính từ thư mục chứa file này (config/).
+program: ai-daily-digest            # ghi vào nhật ký sử dụng
+style: tin-cong-nghe                # hồ sơ văn phong tin tức: haiku, chuỗi claude-cli → google → mymemory
+quality: chuan                      # đủ 7 phép kiểm tra, thử lại 1 lần
+glossaries: [ai, cntt, an-ninh-mang]    # bảng có sẵn trong dichviet
+extra_glossary: glossary.yaml       # bảng riêng của bản tin (config/glossary.yaml), đè lên bảng có sẵn
+cache:
+  backend: none                     # bản tin giữ bộ nhớ đệm theo tin trong data/translations_cache.json
+usage_dir: ../data/usage            # dichviet ghi YYYY-MM-DD.jsonl, mỗi lô một dòng
+claude_cli:
+  timeout_s: 180
+# Email cho MyMemory (hạn mức 50.000 ký tự/ngày): translator.py lấy từ project.contact_email
+# trong settings.yaml và đặt vào biến môi trường MYMEMORY_EMAIL nếu biến đó chưa có.

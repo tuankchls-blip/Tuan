@@ -4,4 +4,6 @@ requests>=2.31,<3       # tải feed/API có timeout và User-Agent
 PyYAML>=6.0,<7          # đọc file cấu hình trong config/
 Jinja2>=3.1,<4          # dựng HTML từ templates/
 deep-translator>=1.11,<2  # dịch dự phòng bằng Google Translate
+# Thư viện dịch dùng chung (Claude Code CLI, dự phòng Google rồi MyMemory); ghim đúng tag
+dichviet @ git+https://github.com/tuankchls-blip/dichviet@v0.1.0
 pytest>=8,<10           # kiểm thử

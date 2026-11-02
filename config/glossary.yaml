@@ -38,6 +38,8 @@ keep_terms:
   - SDK
   - embedding
   - embeddings
+  # inference giữ nguyên vì "suy luận" đã dành cho reasoning (thống nhất với dichviet)
+  - inference
   - diffusion model
   - Mixture of Experts
   - MoE
@@ -128,7 +130,6 @@ preferred_translations:
   computer vision: thị giác máy tính
   natural language processing: xử lý ngôn ngữ tự nhiên
   large language model: mô hình ngôn ngữ lớn
-  inference: suy luận
   reasoning: suy luận
   training: huấn luyện
   vulnerability: lỗ hổng
