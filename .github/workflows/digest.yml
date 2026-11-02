@@ -13,10 +13,11 @@ on:
       kind:
         description: "Loại bản tin"
         type: choice
-        options: [daily, weekly, monthly, quarterly, yearly]
+        # due: các bản tổng hợp đến hạn; retranslate: dịch bù bản ngày đã lưu (cần nhập ngày)
+        options: [daily, weekly, monthly, quarterly, yearly, due, retranslate]
         default: daily
       date:
-        description: "Ngày cần tạo (YYYY-MM-DD); để trống = hôm nay theo giờ Việt Nam"
+        description: "Ngày (YYYY-MM-DD). Bản ngày/due/retranslate: để trống = hôm nay; bản tổng hợp: ngày bất kỳ trong kỳ, để trống = kỳ vừa kết thúc"
         type: string
         required: false
       no_claude:
@@ -90,6 +91,10 @@ jobs:
             args+=(--no-claude)
           fi
           python main.py "${args[@]}"
+          # Lịch hằng ngày: tạo thêm các bản tổng hợp đến hạn (Thứ Hai, ngày 1, đầu quý, đầu năm)
+          if [ "$EVENT" = "schedule" ]; then
+            python main.py due
+          fi
 
       - name: Commit kết quả
         env:

@@ -450,3 +450,33 @@ def translate_stories(
     apply_translations(stories, cache, source_langs, claude_out, machines, report)
     cache.save()
     return report
+
+
+def retranslate_daily(data: dict[str, Any], settings: dict[str, Any], glossary: dict[str, Any], root: Path,
+                      **kwargs: Any) -> TranslationReport:
+    """Dịch bù các tin "chưa dịch" trong dữ liệu một bản ngày đã lưu (sửa thẳng vào `data`).
+
+    Không tải lại tin: dựng Story tạm từ tiêu đề và tóm tắt gốc đã lưu rồi chạy lại luồng dịch.
+    """
+    from .models import Article  # tránh vòng import ở đầu file
+
+    source_langs = settings["translation"]["source_langs"]
+    pending = [s for s in data.get("stories", []) if not s.get("translated") and s.get("lang") in source_langs]
+    temp: list[Story] = []
+    for s in pending:
+        a = Article(url=s["url"], source_id=s["source_id"], title=s["title_orig"],
+                    summary=s.get("summary_orig", ""), published_at=datetime.fromisoformat(s["published_at"]),
+                    lang=s["lang"])
+        a.id = s["id"]
+        temp.append(Story(primary=a))
+    report = translate_stories(temp, settings, glossary, root, **kwargs)
+    for s, story in zip(pending, temp):
+        if story.translated:
+            s.update(title_vi=story.title_vi, summary_vi=story.summary_vi, translated=True,
+                     translation_source=story.translation_source)
+    counts = (data.setdefault("translation", {})).setdefault("counts", {})
+    done = [story for story in temp if story.translated]
+    counts["untranslated"] = max(0, counts.get("untranslated", len(pending)) - len(done))
+    for story in done:
+        counts[story.translation_source] = counts.get(story.translation_source, 0) + 1
+    return report

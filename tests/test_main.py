@@ -114,5 +114,58 @@ def test_untranslated_when_both_translators_fail(tmp_path):
     assert "chưa dịch" in r.html_path.read_text(encoding="utf-8")
 
 
-def test_cli_rejects_phase3_commands(capsys):
-    assert main.main(["weekly"]) == 2
+def test_cli_retranslate_needs_date():
+    assert main.main(["retranslate"]) == 2
+
+
+# ---------------------------------------------------------------- Bản tổng hợp và dịch bù
+
+
+def test_summary_due_and_index(tmp_path):
+    run(tmp_path)  # bản ngày 30/10/2026 (tuần 2026-W44, tháng 10)
+    quiet = {"root": tmp_path, "now": NOW, "log": lambda *a: None}
+    html = main.run_summary("weekly", date(2026, 10, 30), **quiet)
+    assert html == tmp_path / "docs/weekly/2026-W44.html"
+    summary = json.loads((tmp_path / "data/weekly/2026-W44.json").read_text(encoding="utf-8"))
+    assert summary["days_with_data"] == ["2026-10-30"] and summary["highlights"]
+    assert "Model X" in html.read_text(encoding="utf-8")
+
+    # Không có --date: kỳ vừa kết thúc tính theo "hôm nay" (30/10 → tuần trước là W43)
+    assert main.run_summary("weekly", **quiet).name == "2026-W43.html"
+
+    # Thứ Hai 02/11: đến hạn bản tuần W44; Chủ Nhật 01/11 là ngày 1: bản tháng 10
+    assert [p.name for p in main.run_due(date(2026, 11, 2), **quiet)] == ["2026-W44.html"]
+    assert [p.name for p in main.run_due(date(2026, 11, 1), **quiet)] == ["2026-10.html"]
+    assert main.run_due(date(2026, 11, 3), **quiet) == []
+    # 01/01/2027: tháng 12, quý IV và năm 2026 (dù chưa có dữ liệu cho các kỳ này vẫn chạy được)
+    assert [p.name for p in main.run_due(date(2027, 1, 1), **quiet)] == ["2026-12.html", "2026-Q4.html", "2026.html"]
+
+    index = (tmp_path / "docs/index.html").read_text(encoding="utf-8")
+    for href in ("weekly/2026-W44.html", "monthly/2026-10.html", "quarterly/2026-Q4.html", "yearly/2026.html",
+                 "daily/2026/2026-10-30.html"):
+        assert f'href="{href}"' in index
+
+
+def test_retranslate_fills_untranslated_and_updates_summaries(tmp_path):
+    def broken(text):
+        raise ConnectionError("blocked")
+
+    run(tmp_path, google=GoogleBackend(load_glossary(), translate_fn=broken))
+    quiet = {"root": tmp_path, "now": NOW, "log": lambda *a: None}
+    main.run_summary("weekly", date(2026, 10, 30), **quiet)
+    assert 'class="badge untranslated"' in (tmp_path / "docs/weekly/2026-W44.html").read_text(encoding="utf-8")
+
+    from digest.translator import MyMemoryBackend
+
+    main.run_retranslate(date(2026, 10, 30), root=tmp_path, log=lambda *a: None, use_claude=False,
+                         use_google=False, mymemory=MyMemoryBackend(load_glossary(), translate_fn=lambda t: "[mm] " + t))
+    data = json.loads((tmp_path / "data/2026/2026-10-30.json").read_text(encoding="utf-8"))
+    en = [s for s in data["stories"] if s["lang"] == "en"]
+    assert en and all(s["translated"] and s["translation_source"] == "mymemory" for s in en)
+    assert data["translation"]["counts"]["untranslated"] == 0
+    assert data["translation"]["counts"]["mymemory"] == len(en)
+    assert 'class="badge untranslated"' not in (tmp_path / "docs/daily/2026/2026-10-30.html").read_text(encoding="utf-8")
+    weekly = (tmp_path / "docs/weekly/2026-W44.html").read_text(encoding="utf-8")
+    assert "[mm] " in weekly and 'class="badge untranslated"' not in weekly
+    runs = json.loads((tmp_path / "data/usage/2026-10-30.json").read_text(encoding="utf-8"))["runs"]
+    assert runs[-1]["retranslate"] is True

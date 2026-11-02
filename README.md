@@ -25,7 +25,14 @@ python main.py daily                      # bản tin hôm nay (giờ Việt Nam
 python main.py daily --date 2026-10-30    # tạo lại bản của một ngày
 python main.py daily --no-claude          # chỉ dịch máy (Google, MyMemory)
 python main.py daily --no-claude --no-google --no-mymemory   # không dịch (để kiểm tra nhanh)
+
+python main.py weekly                     # bản tuần vừa kết thúc (tương tự monthly, quarterly, yearly)
+python main.py weekly --date 2026-10-28   # bản tuần chứa ngày 28/10 (tuần 2026-W44)
+python main.py due                        # mọi bản tổng hợp đến hạn hôm nay
+python main.py retranslate --date 2026-10-30   # dịch bù tin "chưa dịch" của một bản ngày đã lưu
 ```
+
+Bản tổng hợp: tuần (Thứ Hai – Chủ Nhật, theo tuần ISO), tháng, quý, năm. Mỗi cấp chọn tin nổi bật từ cấp ngay dưới; số liệu luôn tính lại từ dữ liệu ngày. Lưu ở `data/<weekly|monthly|quarterly|yearly>/` và `docs/<weekly|monthly|quarterly|yearly>/`.
 
 Kết quả:
 
@@ -52,13 +59,13 @@ Mỗi tin trong file JSON ngày có trường `reasons` giải thích vì sao ti
 
 ## Chạy tự động trên GitHub
 
-Workflow `.github/workflows/digest.yml` tạo bản tin mỗi sáng lúc 07:17 giờ Việt Nam (lịch dự phòng 08:47, tự bỏ qua nếu bản hôm nay đã có), commit `data/` và `docs/` vào nhánh `main`, rồi GitHub Pages đăng lại trang:
+Workflow `.github/workflows/digest.yml` tạo bản tin mỗi sáng lúc 07:17 giờ Việt Nam (lịch dự phòng 08:47, tự bỏ qua nếu bản hôm nay đã có), tạo thêm các bản tổng hợp đến hạn (bản tuần sáng Thứ Hai, bản tháng ngày 1, bản quý đầu quý, bản năm ngày 1/1), commit `data/` và `docs/` vào nhánh `main`, rồi GitHub Pages đăng lại trang:
 
 **https://tuankchls-blip.github.io/Tuan/**
 
 GitHub có thể chạy lịch trễ vài chục phút đến vài giờ; nội dung không đổi vì khung tin luôn chốt lúc 07:00.
 
-**Chạy tay hoặc tạo lại một ngày:** tab *Actions* → *Bản tin AI hằng ngày* → *Run workflow*, chọn loại bản tin, nhập ngày (để trống = hôm nay).
+**Chạy tay, tạo lại một ngày hoặc dịch bù:** tab *Actions* → *Bản tin AI hằng ngày* → *Run workflow*, chọn loại (`daily`, `weekly`…, `due`, `retranslate`), nhập ngày.
 
 Cài đặt một lần trong *Settings* của repo (đã làm):
 
@@ -81,4 +88,4 @@ Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claud
 
 1. **Bản ngày** (xong)
 2. **Chạy tự động trên GitHub Actions + GitHub Pages** (xong)
-3. **Bản tổng hợp** tuần, tháng, quý, năm.
+3. **Bản tổng hợp** tuần, tháng, quý, năm (xong, chờ duyệt)

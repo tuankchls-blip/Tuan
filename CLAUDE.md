@@ -13,7 +13,9 @@ Bản tin AI & CNTT hằng ngày bằng tiếng Việt, chạy tự động trê
 
 ```bash
 python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google] [--no-mymemory]   # bản ngày
-python main.py weekly|monthly|quarterly|yearly [--date YYYY-MM-DD]
+python main.py weekly|monthly|quarterly|yearly [--date YYYY-MM-DD]   # --date: ngày bất kỳ trong kỳ; không có = kỳ vừa kết thúc
+python main.py due [--date YYYY-MM-DD]          # bản tổng hợp đến hạn (workflow gọi sau bản ngày theo lịch)
+python main.py retranslate --date YYYY-MM-DD    # dịch bù tin "chưa dịch" của bản ngày đã lưu
 pytest                                        # test, không gọi mạng
 ```
 

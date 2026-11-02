@@ -1,7 +1,9 @@
 """Điểm khởi động của ai-daily-digest.
 
     python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google] [--no-mymemory]
-    python main.py weekly | monthly | quarterly | yearly [--date YYYY-MM-DD]   (giai đoạn 3)
+    python main.py weekly | monthly | quarterly | yearly [--date YYYY-MM-DD]
+    python main.py due [--date YYYY-MM-DD]          # các bản tổng hợp đến hạn (workflow gọi sau bản ngày)
+    python main.py retranslate --date YYYY-MM-DD    # dịch bù tin "chưa dịch" của một bản ngày đã lưu
 """
 
 from __future__ import annotations
@@ -16,7 +18,7 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from digest import classifier, fetcher, filters, scorer, storage, translator
+from digest import aggregator, classifier, fetcher, filters, scorer, storage, translator
 from digest.renderer import Renderer
 from digest.storage import Storage
 
@@ -141,11 +143,77 @@ def run_daily(
     return DailyResult(day, json_path, html_path, usage_path, summary)
 
 
+def _renderer(root: Path, settings: dict[str, Any]) -> Renderer:
+    paths = settings["paths"]
+    return Renderer(ROOT / paths["templates_dir"], root / paths["docs_dir"], settings,
+                    storage.load_sources(include_disabled=True))
+
+
+def run_summary(kind: str, day: date | None = None, root: Path = ROOT, now: datetime | None = None,
+                log=print) -> Path:
+    """Dựng bản tổng hợp: có `day` thì là kỳ chứa ngày đó, không có thì là kỳ vừa kết thúc."""
+    settings = storage.load_settings()
+    store = Storage(root / settings["paths"]["data_dir"])
+    now = now or datetime.now(timezone.utc)
+    today = now.astimezone(ZoneInfo(settings["timezone"])).date()
+    period = aggregator.period_for(kind, day) if day else aggregator.last_completed(kind, today)
+    summary = aggregator.Aggregator(store, settings, now=now).build_and_save(period)
+    renderer = _renderer(root, settings)
+    html_path = renderer.render_summary_and_neighbors(store, kind, period.key)
+    renderer.render_index(store)
+    log(f"[{kind}] {period.key} ({period.start} → {period.end}): {summary['stats']['stories']} tin, "
+        f"{len(summary['highlights'])} tin nổi bật → {html_path.relative_to(root)}")
+    return html_path
+
+
+def run_due(day: date | None = None, root: Path = ROOT, now: datetime | None = None, log=print) -> list[Path]:
+    """Dựng mọi bản tổng hợp đến hạn vào ngày `day` (mặc định hôm nay theo giờ VN)."""
+    settings = storage.load_settings()
+    now = now or datetime.now(timezone.utc)
+    day = day or now.astimezone(ZoneInfo(settings["timezone"])).date()
+    kinds = aggregator.due_kinds(day)
+    if not kinds:
+        log(f"Ngày {day}: chưa đến hạn bản tổng hợp nào")
+    # Kỳ vừa kết thúc tính theo ngày `day` (truyền ngày cuối của kỳ để dựng đúng kỳ đó)
+    return [run_summary(k, aggregator.last_completed(k, day).end, root, now, log) for k in kinds]
+
+
+def run_retranslate(day: date, root: Path = ROOT, log=print, **kwargs: Any) -> Path:
+    """Dịch bù tin "chưa dịch" của một bản ngày đã lưu, rồi dựng lại trang ngày và các bản tổng hợp có ngày đó."""
+    settings = storage.load_settings()
+    store = Storage(root / settings["paths"]["data_dir"])
+    data = store.load_daily(day)
+    if data is None:
+        raise SystemExit(f"Chưa có bản tin ngày {day}")
+    kwargs.setdefault("user_agent", storage.user_agent(settings))
+    report = translator.retranslate_daily(data, settings, storage.load_glossary(), root, **kwargs)
+    store.save_daily(day, data)
+    renderer = _renderer(root, settings)
+    html_path = renderer.render_daily(data, *store.neighbors(day))
+    renderer.write_search_index(store)
+    renderer.render_index(store)
+    log(f"[dịch bù] {day}: {report.counts}")
+    # Bản tổng hợp đã có chứa ngày này: dựng lại để dùng bản dịch mới
+    agg = aggregator.Aggregator(store, settings)
+    for kind in aggregator.KINDS:
+        period = aggregator.period_for(kind, day)
+        if store.load_summary(kind, period.key) is not None:
+            agg.build_and_save(period)
+            renderer.render_summary_and_neighbors(store, kind, period.key)
+            log(f"    dựng lại {kind} {period.key}")
+    store.append_usage(day, {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                             "retranslate": True, "translation": report.to_dict()})
+    return html_path
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Bản tin AI & CNTT hằng ngày bằng tiếng Việt")
-    p.add_argument("kind", choices=["daily", "weekly", "monthly", "quarterly", "yearly"], help="loại bản tin")
+    p.add_argument("kind", choices=["daily", "weekly", "monthly", "quarterly", "yearly", "due", "retranslate"],
+                   help="daily: bản ngày; weekly/monthly/quarterly/yearly: bản tổng hợp; "
+                        "due: các bản tổng hợp đến hạn hôm nay; retranslate: dịch bù một bản ngày đã lưu")
     p.add_argument("--date", type=date.fromisoformat, default=None,
-                   help="ngày cần tạo (YYYY-MM-DD); mặc định là hôm nay theo giờ Việt Nam")
+                   help="daily/due/retranslate: ngày (mặc định hôm nay theo giờ VN); "
+                        "bản tổng hợp: một ngày bất kỳ trong kỳ (mặc định kỳ vừa kết thúc)")
     p.add_argument("--no-claude", action="store_true", help="không dịch bằng Claude (Google dịch thay)")
     p.add_argument("--no-google", action="store_true", help="không dùng Google Translate dự phòng")
     p.add_argument("--no-mymemory", action="store_true", help="không dùng MyMemory dự phòng")
@@ -154,9 +222,20 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
-    if args.kind != "daily":
-        print(f"'{args.kind}' thuộc giai đoạn 3, chưa làm.", file=sys.stderr)
-        return 2
+    translate_opts = {"use_claude": not args.no_claude, "use_google": not args.no_google,
+                      "use_mymemory": not args.no_mymemory}
+    if args.kind in aggregator.KINDS:
+        run_summary(args.kind, args.date)
+        return 0
+    if args.kind == "due":
+        run_due(args.date)
+        return 0
+    if args.kind == "retranslate":
+        if args.date is None:
+            print("retranslate cần --date YYYY-MM-DD", file=sys.stderr)
+            return 2
+        run_retranslate(args.date, **translate_opts)
+        return 0
     result = run_daily(args.date, use_claude=not args.no_claude, use_google=not args.no_google,
                        use_mymemory=not args.no_mymemory)
     print(f"Xong bản tin {result.day} trong {result.summary['duration_seconds']} giây.")
