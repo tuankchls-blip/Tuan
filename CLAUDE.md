@@ -8,6 +8,7 @@ Bản tin AI & CNTT hằng ngày bằng tiếng Việt, chạy tự động trê
 - Làm từng bước nhỏ; **hỏi chủ dự án trước khi bắt đầu mỗi bước**.
 - Làm từng giai đoạn; hết giai đoạn thì dừng lại để duyệt theo bảng nghiệm thu, chưa sang giai đoạn sau.
 - Trao đổi và chú thích bằng tiếng Việt.
+- Xong mỗi giai đoạn (hoặc bước lớn, PR) thì cập nhật `TIEN-DO.md`: trạng thái, nhật ký theo ngày, việc đang chờ chủ dự án. File này ghi cả repo `dichviet` và mọi phiên làm việc.
 
 ## Lệnh
 
