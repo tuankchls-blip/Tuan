@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin tháng 10/2026</title>
+<meta name="description" content="37 tin Quan trọng, 123 tin trong tháng 10/2026">
+<style>
+/* Giao diện chung: nhúng thẳng vào mỗi trang HTML, không dùng CDN */
+:root {
+  --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f2f0ec; --text: #1d1d1f; --muted: #5f6368;
+  --border: #e3e0da; --link: #1a56b8; --accent: #b4441f;
+  --imp-bg: #fde8e1; --imp-fg: #9a2f10; --not-bg: #e6eefb; --not-fg: #1d4f9c;
+  --warn-bg: #fff4d6; --warn-fg: #7a5600; --ok: #1e7d3a; --err: #b3261e;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+    --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+    --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+    --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+  --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+  --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+  --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 48px; }
+header.top { padding: 20px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .9rem; }
+.topbar nav { display: flex; gap: 14px; flex-wrap: wrap; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 14px 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+h3.sub { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
+.stat b { font-variant-numeric: tabular-nums; }
+button.theme {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0; padding: 0; list-style: none; font-size: .95rem; }
+.toc .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.filters {
+  position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--border);
+}
+.filters .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.filters .seg button {
+  border: 0; background: var(--surface); color: var(--text); padding: 5px 12px; font: inherit; font-size: .88rem; cursor: pointer;
+}
+.filters .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.filters select {
+  font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 8px; max-width: 100%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.filters .count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.story {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 10px 0; box-shadow: var(--shadow);
+}
+.story[hidden], section[hidden] { display: none; }
+.story h4 { font-size: 1.05rem; line-height: 1.4; margin: 6px 0 2px; overflow-wrap: anywhere; }
+.story .orig { color: var(--muted); font-size: .85rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+.story .summary { margin: 6px 0; overflow-wrap: anywhere; }
+.story details { font-size: .9rem; color: var(--muted); }
+.story details summary { cursor: pointer; color: var(--link); }
+.story details p { margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .82rem; color: var(--muted); }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: .75rem; font-weight: 600; letter-spacing: .01em; }
+.badge.important { background: var(--imp-bg); color: var(--imp-fg); }
+.badge.notable { background: var(--not-bg); color: var(--not-fg); }
+.badge.untranslated { background: var(--warn-bg); color: var(--warn-fg); font-weight: 500; }
+.also, .kw { font-size: .85rem; color: var(--muted); margin: 6px 0 0; }
+.kw { display: flex; flex-wrap: wrap; gap: 4px; }
+.kw span { background: var(--surface-2); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.empty { color: var(--muted); font-style: italic; }
+table.status { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.status th, table.status td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.status td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--ok); } .err { color: var(--err); }
+.table-scroll { overflow-x: auto; }
+footer { margin-top: 36px; font-size: .85rem; color: var(--muted); }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0 8px; font-size: .95rem; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive .n { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+details.month > summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.search input {
+  width: 100%; font: inherit; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.search ol { padding-left: 0; list-style: none; }
+.search li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.search .when { color: var(--muted); font-size: .8rem; }
+.latest .story h4 { font-size: 1rem; }
+section[data-group] { scroll-margin-top: 64px; }
+@media (max-width: 520px) {
+  h1 { font-size: 1.35rem; }
+  .filters { position: static; }  /* trên điện thoại thanh lọc chiếm quá nhiều chỗ nếu dính */
+  section[data-group] { scroll-margin-top: 8px; }
+  .story { padding: 12px; }
+  .filters .count { width: 100%; margin-left: 0; }
+}
+/* Bản tổng hợp: biểu đồ thanh bằng CSS, bảng chủ đề, dòng thời gian */
+.bars { list-style: none; padding: 0; margin: 8px 0; }
+.bars li { display: grid; grid-template-columns: minmax(7em, 34%) 1fr 3.2em; gap: 8px; align-items: center; padding: 3px 0; font-size: .9rem; }
+.bars .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { background: var(--surface-2); border-radius: 4px; height: 10px; overflow: hidden; }
+.bars .fill { display: block; height: 100%; background: var(--link); border-radius: 4px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--muted); }
+.daylink { font-size: .8rem; }
+.event { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin: 10px 0; }
+.event h4 { margin: 0 0 6px; font-size: 1rem; }
+.event ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.timeline h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); }
+.note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: minmax(8em, 50%) 1fr 2.6em; }
+}</style>
+<script>
+// Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
+(function () {
+  var KEY = "digest-theme";
+  var LABEL = { auto: "Giao diện: tự động", light: "Giao diện: sáng", dark: "Giao diện: tối" };
+  var root = document.documentElement;
+  function load() { try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
+    var b = document.getElementById("theme-btn"); if (b) b.textContent = LABEL[v];
+  }
+  var current = load(); apply(current);
+  document.addEventListener("DOMContentLoaded", function () {
+    apply(current);
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    b.addEventListener("click", function () {
+      current = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+      save(current); apply(current);
+    });
+  });
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="../index.html">Mục lục</a>
+    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+<h1>Bản tin tháng 10/2026<br><small>01/10/2026 – 31/10/2026</small></h1>
+<div class="stats">
+  <span class="stat"><b>123</b> tin</span>
+  <span class="stat"><b>37</b> Quan trọng</span>
+  <span class="stat"><b>86</b> Đáng chú ý</span>
+  <span class="stat"><b>2</b> ngày có bản tin</span>
+</div>
+<ul class="toc">
+  <li><a href="#noi-bat">Tin nổi bật</a></li>
+  <li><a href="#chu-de">Chủ đề</a></li>
+<li><a href="#xu-huong">Xu hướng</a></li>  <li><a href="#so-lieu">Số liệu</a></li>
+</ul>
+</header>
+<main>
+
+
+<section id="noi-bat">
+  <h2>Tin nổi bật</h2>
+<article class="story" id="h-a1765f446c">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Blog</span>
+<span>· 4 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-a1765f446c">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/blog/mistral-large4" target="_blank" rel="noopener noreferrer" lang="en">Welcome Le Chonk: Mistral Large 4 on Hugging Face</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-e9a7675cfd">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-e9a7675cfd">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.35138" target="_blank" rel="noopener noreferrer" lang="en">Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-46ae515986">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-46ae515986">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.36671" target="_blank" rel="noopener noreferrer" lang="en">Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-7b1da81f3b">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-7b1da81f3b">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.38678" target="_blank" rel="noopener noreferrer" lang="en">AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-d0a61c51ac">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-d0a61c51ac">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.38568" target="_blank" rel="noopener noreferrer" lang="en">A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-40ab6c0496">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>BleepingComputer</span>
+<span>· 3 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-40ab6c0496">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/" target="_blank" rel="noopener noreferrer" lang="en">Malicious Claude Code extension on Cursor planted SSH backdoors</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-0c49eb4fc3">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>MIT Technology Review – AI</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-0c49eb4fc3">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/" target="_blank" rel="noopener noreferrer" lang="en">We urgently need to monitor AI agents’ actions in real time</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-a85ae40a50">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-a85ae40a50">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.32749" target="_blank" rel="noopener noreferrer" lang="en">Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-b15471bb94">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-b15471bb94">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.20832" target="_blank" rel="noopener noreferrer" lang="en">Amortizing Sequential Experimental Design in Reasoning LLMs</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-d039e7322f">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-d039e7322f">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.37230" target="_blank" rel="noopener noreferrer" lang="en">TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-041a364739">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-041a364739">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.32411" target="_blank" rel="noopener noreferrer" lang="en">A Broader Look into MLLM&#39;s Retrieval Heads</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-40f567311a">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-40f567311a">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.39264" target="_blank" rel="noopener noreferrer" lang="en">Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-995c90cb5d">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-995c90cb5d">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.39301" target="_blank" rel="noopener noreferrer" lang="en">Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-db9db60ca7">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-db9db60ca7">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.38425" target="_blank" rel="noopener noreferrer" lang="en">IntReal: A Real-World Dataset and Benchmark for Multimodal Interleaved Generation</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-f8223849f5">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-f8223849f5">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2610.38342" target="_blank" rel="noopener noreferrer" lang="en">Investor&#39;s Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-34b0bf3f94">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Google DeepMind</span>
+<span>· 2 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-34b0bf3f94">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/" target="_blank" rel="noopener noreferrer" lang="en">Gemini 4 Carbon: Our next frontier model</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-2b2f487795">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Meta AI</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-2b2f487795">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/" target="_blank" rel="noopener noreferrer" lang="en">Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-2dc39333ee">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-2dc39333ee">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-97229" target="_blank" rel="noopener noreferrer" lang="en">CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-9264426921">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-9264426921">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76418" target="_blank" rel="noopener noreferrer" lang="en">CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-4854dc1468">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-4854dc1468">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111357" target="_blank" rel="noopener noreferrer" lang="en">CVE-2026-111357: Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-f53dd46908">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-f53dd46908">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118527" target="_blank" rel="noopener noreferrer" lang="en">CVE-2026-118527: Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-7bf0065ceb">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>OpenAI News</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-7bf0065ceb">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://openai.com/index/updated-model-spec" target="_blank" rel="noopener noreferrer" lang="en">An updated Model Spec for more capable and beneficial AI</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-e1c742c1d9">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Blog</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-30.html#s-e1c742c1d9">bản ngày 30/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/blog/announcing-project-protostar" target="_blank" rel="noopener noreferrer" lang="en">Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article><article class="story" id="h-226d6d5c25">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>MIT News – AI</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-10-31.html#s-226d6d5c25">bản ngày 31/10/2026</a>
+  </div>
+  <h4>
+    <a href="https://news.mit.edu/2026/qa-hey-ai-who-should-i-vote-for-this-year-1030" target="_blank" rel="noopener noreferrer" lang="en">Q&amp;A: Hey AI, who should I vote for this year?</a>
+<span class="badge untranslated">chưa dịch</span>  </h4>
+</article></section>
+
+
+
+<section id="chu-de">
+  <h2>Chủ đề so với tháng 9/2026</h2>
+  <div class="table-scroll">
+  <table class="status">
+    <thead><tr><th>Chủ đề</th><th class="n">Kỳ này</th><th class="n">Kỳ trước</th><th class="n">Thay đổi</th></tr></thead>
+    <tbody>
+      <tr><td>AI nói chung</td><td class="n">68</td><td class="n">0</td>
+        <td class="n up">▲ +68</td></tr>
+      <tr><td>Mô hình ngôn ngữ</td><td class="n">23</td><td class="n">0</td>
+        <td class="n up">▲ +23</td></tr>
+      <tr><td>Bảo mật</td><td class="n">21</td><td class="n">0</td>
+        <td class="n up">▲ +21</td></tr>
+      <tr><td>Mô hình mở &amp; đánh giá</td><td class="n">19</td><td class="n">0</td>
+        <td class="n up">▲ +19</td></tr>
+      <tr><td>Hạ tầng</td><td class="n">9</td><td class="n">0</td>
+        <td class="n up">▲ +9</td></tr>
+      <tr><td>Đa phương thức &amp; thị giác</td><td class="n">8</td><td class="n">0</td>
+        <td class="n up">▲ +8</td></tr>
+      <tr><td>An toàn AI</td><td class="n">4</td><td class="n">0</td>
+        <td class="n up">▲ +4</td></tr>
+      <tr><td>Dữ liệu</td><td class="n">2</td><td class="n">0</td>
+        <td class="n up">▲ +2</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+
+<section id="xu-huong">
+  <h2>Xu hướng theo tuần</h2>
+  <div class="table-scroll">
+  <table class="status">
+    <thead><tr><th>Tuần</th><th class="n">Số tin</th><th class="n">Quan trọng</th><th>Mục nhiều tin nhất</th></tr></thead>
+    <tbody>
+      <tr><td>Tuần 40/2026 (28/09–04/10)</td><td class="n">0</td><td class="n">0</td>
+        <td></td></tr>
+      <tr><td>Tuần 41/2026 (05/10–11/10)</td><td class="n">0</td><td class="n">0</td>
+        <td></td></tr>
+      <tr><td>Tuần 42/2026 (12/10–18/10)</td><td class="n">0</td><td class="n">0</td>
+        <td></td></tr>
+      <tr><td>Tuần 43/2026 (19/10–25/10)</td><td class="n">0</td><td class="n">0</td>
+        <td></td></tr>
+      <tr><td>Tuần 44/2026 (26/10–01/11)</td><td class="n">123</td><td class="n">37</td>
+        <td>Nghiên cứu (42)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="so-lieu">
+  <h2>Số liệu</h2>
+  <div class="grid2">
+    <div>
+      <h3 class="sub">Theo mục</h3>
+<ul class="bars">
+  <li><span class="name" title="Nghiên cứu">Nghiên cứu</span>
+      <span class="track"><span class="fill" style="width: 100.0%"></span></span>
+      <span class="n">42</span></li>
+  <li><span class="name" title="Tin khác">Tin khác</span>
+      <span class="track"><span class="fill" style="width: 50.0%"></span></span>
+      <span class="n">21</span></li>
+  <li><span class="name" title="Việt Nam">Việt Nam</span>
+      <span class="track"><span class="fill" style="width: 40.5%"></span></span>
+      <span class="n">17</span></li>
+  <li><span class="name" title="Bảo mật">Bảo mật</span>
+      <span class="track"><span class="fill" style="width: 31.0%"></span></span>
+      <span class="n">13</span></li>
+  <li><span class="name" title="Mô hình &amp; hệ thống AI mới">Mô hình &amp; hệ thống AI mới</span>
+      <span class="track"><span class="fill" style="width: 23.8%"></span></span>
+      <span class="n">10</span></li>
+  <li><span class="name" title="Chính sách &amp; đạo đức AI">Chính sách &amp; đạo đức AI</span>
+      <span class="track"><span class="fill" style="width: 21.4%"></span></span>
+      <span class="n">9</span></li>
+  <li><span class="name" title="Hạ tầng &amp; phần cứng">Hạ tầng &amp; phần cứng</span>
+      <span class="track"><span class="fill" style="width: 11.9%"></span></span>
+      <span class="n">5</span></li>
+  <li><span class="name" title="Kinh doanh &amp; ngành">Kinh doanh &amp; ngành</span>
+      <span class="track"><span class="fill" style="width: 11.9%"></span></span>
+      <span class="n">5</span></li>
+  <li><span class="name" title="Phần mềm &amp; công cụ">Phần mềm &amp; công cụ</span>
+      <span class="track"><span class="fill" style="width: 2.4%"></span></span>
+      <span class="n">1</span></li>
+</ul>    </div>
+    <div>
+      <h3 class="sub">Theo nguồn gốc</h3>
+<ul class="bars">
+  <li><span class="name" title="Hugging Face Daily Papers">Hugging Face Daily Papers</span>
+      <span class="track"><span class="fill" style="width: 100.0%"></span></span>
+      <span class="n">27</span></li>
+  <li><span class="name" title="TechCrunch – AI">TechCrunch – AI</span>
+      <span class="track"><span class="fill" style="width: 77.8%"></span></span>
+      <span class="n">21</span></li>
+  <li><span class="name" title="VnExpress Số hóa">VnExpress Số hóa</span>
+      <span class="track"><span class="fill" style="width: 63.0%"></span></span>
+      <span class="n">17</span></li>
+  <li><span class="name" title="The Verge – AI">The Verge – AI</span>
+      <span class="track"><span class="fill" style="width: 33.3%"></span></span>
+      <span class="n">9</span></li>
+  <li><span class="name" title="BleepingComputer">BleepingComputer</span>
+      <span class="track"><span class="fill" style="width: 29.6%"></span></span>
+      <span class="n">8</span></li>
+  <li><span class="name" title="OpenAI News">OpenAI News</span>
+      <span class="track"><span class="fill" style="width: 22.2%"></span></span>
+      <span class="n">6</span></li>
+  <li><span class="name" title="Ars Technica">Ars Technica</span>
+      <span class="track"><span class="fill" style="width: 22.2%"></span></span>
+      <span class="n">6</span></li>
+  <li><span class="name" title="Hugging Face Blog">Hugging Face Blog</span>
+      <span class="track"><span class="fill" style="width: 18.5%"></span></span>
+      <span class="n">5</span></li>
+  <li><span class="name" title="Hacker News">Hacker News</span>
+      <span class="track"><span class="fill" style="width: 18.5%"></span></span>
+      <span class="n">5</span></li>
+  <li><span class="name" title="CISA – Known Exploited Vulnerabilities">CISA – Known Exploited Vulnerabilities</span>
+      <span class="track"><span class="fill" style="width: 14.8%"></span></span>
+      <span class="n">4</span></li>
+  <li><span class="name" title="Communications of the ACM">Communications of the ACM</span>
+      <span class="track"><span class="fill" style="width: 11.1%"></span></span>
+      <span class="n">3</span></li>
+  <li><span class="name" title="Wired – AI">Wired – AI</span>
+      <span class="track"><span class="fill" style="width: 7.4%"></span></span>
+      <span class="n">2</span></li>
+  <li><span class="name" title="Microsoft Research">Microsoft Research</span>
+      <span class="track"><span class="fill" style="width: 7.4%"></span></span>
+      <span class="n">2</span></li>
+  <li><span class="name" title="MIT News – AI">MIT News – AI</span>
+      <span class="track"><span class="fill" style="width: 7.4%"></span></span>
+      <span class="n">2</span></li>
+  <li><span class="name" title="MIT Technology Review – AI">MIT Technology Review – AI</span>
+      <span class="track"><span class="fill" style="width: 3.7%"></span></span>
+      <span class="n">1</span></li>
+</ul>    </div>
+  </div>
+  <h3 class="sub">Từ khóa xuất hiện nhiều</h3>
+  <p class="kw"><span>AI · 68</span><span>benchmark · 13</span><span>benchmarks · 9</span><span>inference · 7</span><span>hack · 7</span><span>LLM · 6</span><span>large language models · 6</span><span>agentic · 5</span><span>CVE · 5</span><span>AI agent · 5</span><span>multimodal · 5</span><span>LLMs · 4</span><span>vision-language · 4</span><span>alignment · 4</span><span>hackers · 4</span></p>
+</section>
+</main>
+<footer>
+<div class="pager">
+  <span></span>
+  <span></span>
+</div>
+<p>Số liệu tính từ các bản ngày trong kỳ. Tạo lúc 22:34 02/11.</p>
+<p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+</body>
+</html>

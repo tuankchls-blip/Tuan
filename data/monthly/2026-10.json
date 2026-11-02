@@ -1,0 +1,711 @@
+{
+  "kind": "monthly",
+  "key": "2026-10",
+  "start": "2026-10-01",
+  "end": "2026-10-31",
+  "previous_key": "2026-09",
+  "generated_at": "2026-11-02T22:34:04+07:00",
+  "days_with_data": [
+    "2026-10-30",
+    "2026-10-31"
+  ],
+  "days_expected": [
+    "2026-10-30",
+    "2026-10-31"
+  ],
+  "days_total": 31,
+  "complete": true,
+  "highlights": [
+    {
+      "day": "2026-10-30",
+      "id": "a1765f446c5b64b5bbced0cf22070e131e3557ee",
+      "url": "https://huggingface.co/blog/mistral-large4",
+      "source_id": "hf-blog",
+      "lang": "en",
+      "title_orig": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 12.0,
+      "n_sources": 4,
+      "matched_keywords": [
+        "open-weight",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "e9a7675cfdc13dc1e71f55955ef413ed0036833a",
+      "url": "https://huggingface.co/papers/2610.35138",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "agentic",
+        "multimodal",
+        "benchmark",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "46ae515986bc383f37f6ac60211c6fcded95cca6",
+      "url": "https://huggingface.co/papers/2610.36671",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "vision-language",
+        "benchmarks"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "7b1da81f3be954a9cc769daf0ce5e527fc67c74c",
+      "url": "https://huggingface.co/papers/2610.38678",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "large language models",
+        "multimodal",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "d0a61c51acd8d0e27d82d62cfbf1658759ebc394",
+      "url": "https://huggingface.co/papers/2610.38568",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "rl",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "multimodal",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "40ab6c049676090d9f9f919ded4dbb54e7c07eb4",
+      "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+      "source_id": "bleepingcomputer",
+      "lang": "en",
+      "title_orig": "Malicious Claude Code extension on Cursor planted SSH backdoors",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "security",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 3,
+      "matched_keywords": [
+        "backdoor",
+        "malware"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "0c49eb4fc30298f014f2732cdf1ea4427e4dbec2",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "source_id": "mit-tr-ai",
+      "lang": "en",
+      "title_orig": "We urgently need to monitor AI agents’ actions in real time",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "policy",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI agents",
+        "hacked",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "a85ae40a50205c8789917a9a89d390ddf3f132ac",
+      "url": "https://huggingface.co/papers/2610.32749",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "systems",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "benchmark",
+        "benchmarks",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "b15471bb948feccc137537a930aad09b044896d9",
+      "url": "https://huggingface.co/papers/2610.20832",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Amortizing Sequential Experimental Design in Reasoning LLMs",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "LLMs",
+        "large language models",
+        "reasoning",
+        "benchmark",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "d039e7322fab508c059019bb2a358768023176b5",
+      "url": "https://huggingface.co/papers/2610.37230",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "systems",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "agentic",
+        "state-of-the-art",
+        "GPUs",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "041a364739d1000adf6bb620c14c2bd59c091d32",
+      "url": "https://huggingface.co/papers/2610.32411",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "A Broader Look into MLLM's Retrieval Heads",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "large language models",
+        "multimodal",
+        "vision-language"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "40f567311a02aac3124690ede8b8ae62bccae6e2",
+      "url": "https://huggingface.co/papers/2610.39264",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "rl",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "vision-language",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "995c90cb5d11043aaaae3e350ce31e91e43ac1c9",
+      "url": "https://huggingface.co/papers/2610.39301",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "state-of-the-art",
+        "alignment"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "db9db60ca796804987f2d6c0407b58a0da999cca",
+      "url": "https://huggingface.co/papers/2610.38425",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "IntReal: A Real-World Dataset and Benchmark for Multimodal Interleaved Generation",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "multimodal",
+        "benchmark",
+        "dataset"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "f8223849f5aef9de68e68c6aec0e73e0da972dc7",
+      "url": "https://huggingface.co/papers/2610.38342",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "systems",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI agents",
+        "benchmark",
+        "benchmarks",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "34b0bf3f94c3851e6957dd11bedc60679d6c4b34",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+      "source_id": "deepmind",
+      "lang": "en",
+      "title_orig": "Gemini 4 Carbon: Our next frontier model",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 7.0,
+      "n_sources": 2,
+      "matched_keywords": []
+    },
+    {
+      "day": "2026-10-30",
+      "id": "2b2f487795f0e5d2db0f0a071b84108898ab827b",
+      "url": "https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/",
+      "source_id": "meta-ai",
+      "lang": "en",
+      "title_orig": "Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 5.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "large language models"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "2dc39333ee9758ee601f0aab4324d58a216759ff",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+      "source_id": "cisa-kev",
+      "lang": "en",
+      "title_orig": "CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "security",
+      "subcategory": null,
+      "label": "important",
+      "score": 5.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "CVE"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "92644269214698b8d46c2fca399b8bbd0b6befb8",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+      "source_id": "cisa-kev",
+      "lang": "en",
+      "title_orig": "CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "security",
+      "subcategory": null,
+      "label": "important",
+      "score": 5.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "CVE"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "4854dc1468c2c6c785d25170a29b386b07157c0f",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111357",
+      "source_id": "cisa-kev",
+      "lang": "en",
+      "title_orig": "CVE-2026-111357: Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "security",
+      "subcategory": null,
+      "label": "important",
+      "score": 5.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "CVE"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "f53dd469089ec9211756cb7c21a094b0e1d09056",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+      "source_id": "cisa-kev",
+      "lang": "en",
+      "title_orig": "CVE-2026-118527: Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "security",
+      "subcategory": null,
+      "label": "important",
+      "score": 5.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "CVE"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "7bf0065ceb1646f57aedf5f7d913738e013e364b",
+      "url": "https://openai.com/index/updated-model-spec",
+      "source_id": "openai",
+      "lang": "en",
+      "title_orig": "An updated Model Spec for more capable and beneficial AI",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 4.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-30",
+      "id": "e1c742c1d925baf7505636d3c989a52bf3620d01",
+      "url": "https://huggingface.co/blog/announcing-project-protostar",
+      "source_id": "hf-blog",
+      "lang": "en",
+      "title_orig": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 4.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-10-31",
+      "id": "226d6d5c25cb9ac1ca62efc394810317f24f426c",
+      "url": "https://news.mit.edu/2026/qa-hey-ai-who-should-i-vote-for-this-year-1030",
+      "source_id": "mit-news-ai",
+      "lang": "en",
+      "title_orig": "Q&A: Hey AI, who should I vote for this year?",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "category": "research",
+      "subcategory": "systems",
+      "label": "important",
+      "score": 4.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI"
+      ]
+    }
+  ],
+  "stats": {
+    "stories": 123,
+    "labels": {
+      "important": 37,
+      "notable": 86
+    },
+    "categories": {
+      "models": 10,
+      "research": 42,
+      "infra": 5,
+      "software": 1,
+      "security": 13,
+      "policy": 9,
+      "business": 5,
+      "vietnam": 17,
+      "other": 21
+    },
+    "sources": {
+      "hf-papers": 27,
+      "techcrunch-ai": 21,
+      "vnexpress-sohoa": 17,
+      "verge-ai": 9,
+      "bleepingcomputer": 8,
+      "openai": 6,
+      "ars": 6,
+      "hf-blog": 5,
+      "hackernews": 5,
+      "cisa-kev": 4,
+      "cacm": 3,
+      "wired-ai": 2,
+      "msr": 2,
+      "mit-news-ai": 2,
+      "mit-tr-ai": 1
+    },
+    "keywords": {
+      "AI": 68,
+      "benchmark": 13,
+      "benchmarks": 9,
+      "inference": 7,
+      "hack": 7,
+      "LLM": 6,
+      "large language models": 6,
+      "agentic": 5,
+      "CVE": 5,
+      "AI agent": 5,
+      "multimodal": 5,
+      "LLMs": 4,
+      "vision-language": 4,
+      "alignment": 4,
+      "hackers": 4
+    }
+  },
+  "topics": [
+    {
+      "topic": "AI nói chung",
+      "count": 68,
+      "previous": 0,
+      "delta": 68
+    },
+    {
+      "topic": "Mô hình ngôn ngữ",
+      "count": 23,
+      "previous": 0,
+      "delta": 23
+    },
+    {
+      "topic": "Bảo mật",
+      "count": 21,
+      "previous": 0,
+      "delta": 21
+    },
+    {
+      "topic": "Mô hình mở & đánh giá",
+      "count": 19,
+      "previous": 0,
+      "delta": 19
+    },
+    {
+      "topic": "Hạ tầng",
+      "count": 9,
+      "previous": 0,
+      "delta": 9
+    },
+    {
+      "topic": "Đa phương thức & thị giác",
+      "count": 8,
+      "previous": 0,
+      "delta": 8
+    },
+    {
+      "topic": "An toàn AI",
+      "count": 4,
+      "previous": 0,
+      "delta": 4
+    },
+    {
+      "topic": "Dữ liệu",
+      "count": 2,
+      "previous": 0,
+      "delta": 2
+    }
+  ],
+  "series": [
+    {
+      "key": "2026-W40",
+      "start": "2026-09-28",
+      "end": "2026-10-04",
+      "stories": 0,
+      "important": 0,
+      "categories": {},
+      "topics": {
+        "Mô hình ngôn ngữ": 0,
+        "Đa phương thức & thị giác": 0,
+        "Mô hình mở & đánh giá": 0,
+        "An toàn AI": 0,
+        "Dữ liệu": 0,
+        "Hạ tầng": 0,
+        "Bảo mật": 0,
+        "AI nói chung": 0
+      }
+    },
+    {
+      "key": "2026-W41",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "stories": 0,
+      "important": 0,
+      "categories": {},
+      "topics": {
+        "Mô hình ngôn ngữ": 0,
+        "Đa phương thức & thị giác": 0,
+        "Mô hình mở & đánh giá": 0,
+        "An toàn AI": 0,
+        "Dữ liệu": 0,
+        "Hạ tầng": 0,
+        "Bảo mật": 0,
+        "AI nói chung": 0
+      }
+    },
+    {
+      "key": "2026-W42",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "stories": 0,
+      "important": 0,
+      "categories": {},
+      "topics": {
+        "Mô hình ngôn ngữ": 0,
+        "Đa phương thức & thị giác": 0,
+        "Mô hình mở & đánh giá": 0,
+        "An toàn AI": 0,
+        "Dữ liệu": 0,
+        "Hạ tầng": 0,
+        "Bảo mật": 0,
+        "AI nói chung": 0
+      }
+    },
+    {
+      "key": "2026-W43",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "stories": 0,
+      "important": 0,
+      "categories": {},
+      "topics": {
+        "Mô hình ngôn ngữ": 0,
+        "Đa phương thức & thị giác": 0,
+        "Mô hình mở & đánh giá": 0,
+        "An toàn AI": 0,
+        "Dữ liệu": 0,
+        "Hạ tầng": 0,
+        "Bảo mật": 0,
+        "AI nói chung": 0
+      }
+    },
+    {
+      "key": "2026-W44",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "stories": 123,
+      "important": 37,
+      "categories": {
+        "models": 10,
+        "policy": 9,
+        "research": 42,
+        "security": 13,
+        "other": 21,
+        "infra": 5,
+        "business": 5,
+        "software": 1,
+        "vietnam": 17
+      },
+      "topics": {
+        "Mô hình ngôn ngữ": 23,
+        "Đa phương thức & thị giác": 8,
+        "Mô hình mở & đánh giá": 19,
+        "An toàn AI": 4,
+        "Dữ liệu": 2,
+        "Hạ tầng": 9,
+        "Bảo mật": 21,
+        "AI nói chung": 68
+      }
+    }
+  ]
+}
