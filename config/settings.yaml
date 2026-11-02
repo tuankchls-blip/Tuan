@@ -298,6 +298,8 @@ translation:
   # Dịch máy dự phòng khi không có bản dịch của Claude: thử lần lượt theo thứ tự này.
   # Dịch vụ lỗi 3 lần liên tiếp thì ngừng gọi trong lần chạy đó.
   fallback_order: [google, mymemory]
+  # Bản dịch máy làm mất tối đa bấy nhiêu thuật ngữ (trong glossary) vẫn được nhận
+  max_lost_terms: 1
 
   # Google Translate qua deep-translator (không cần khóa API).
   # Lưu ý: Google hay chặn máy chủ GitHub Actions bằng CAPTCHA. Tắt: --no-google.

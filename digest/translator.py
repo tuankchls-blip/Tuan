@@ -206,8 +206,10 @@ class MachineBackend:
     MAX_CONSECUTIVE_ERRORS = 3
 
     def __init__(self, glossary: dict[str, Any], max_chars: int = 4500,
-                 translate_fn: Callable[[str], str] | None = None) -> None:
+                 translate_fn: Callable[[str], str] | None = None, max_lost_terms: int = 1) -> None:
         self.consecutive_errors = 0
+        # Bản dịch làm mất tối đa bấy nhiêu thuật ngữ vẫn được nhận (chủ dự án chấp nhận thiếu ít)
+        self.max_lost_terms = max_lost_terms
         # Thuật ngữ: so khớp như từ khóa (viết tắt thì phân biệt hoa thường).
         # Tên riêng: luôn phân biệt hoa thường, để "Apple" được giữ còn "apple" vẫn được dịch.
         patterns = [(t, compile_term(t)) for t in glossary.get("keep_terms", [])]
@@ -248,8 +250,7 @@ class MachineBackend:
             text = pattern.sub(repl, text)
         return text, kept
 
-    @staticmethod
-    def restore(text: str, kept: list[str]) -> str:
+    def restore(self, text: str, kept: list[str]) -> str:
         found: set[int] = set()
 
         def repl(m: re.Match[str]) -> str:
@@ -260,8 +261,9 @@ class MachineBackend:
             return kept[i]
 
         out = PLACEHOLDER_RE.sub(repl, text)
-        if len(found) != len(set(range(len(kept)))):
-            raise ValueError("bản dịch làm mất thuật ngữ")
+        lost = len(kept) - len(found)
+        if lost > self.max_lost_terms:
+            raise ValueError(f"bản dịch làm mất {lost} thuật ngữ")
         return out
 
     @property
@@ -309,8 +311,8 @@ class MyMemoryBackend(MachineBackend):
 
     def __init__(self, glossary: dict[str, Any], email: str = "", user_agent: str = "",
                  max_chars: int = 450, timeout: float = 15,
-                 translate_fn: Callable[[str], str] | None = None) -> None:
-        super().__init__(glossary, max_chars, translate_fn)
+                 translate_fn: Callable[[str], str] | None = None, max_lost_terms: int = 1) -> None:
+        super().__init__(glossary, max_chars, translate_fn, max_lost_terms)
         self.email, self.user_agent, self.timeout = email, user_agent, timeout
 
     def _make_fn(self) -> Callable[[str], str]:
@@ -441,11 +443,13 @@ def translate_stories(
         if not mcfg.get("enabled", True):
             continue
         if name == "google" and use_google:
-            machines.append(google or GoogleBackend(glossary, mcfg.get("max_chars", 4500)))
+            machines.append(google or GoogleBackend(glossary, mcfg.get("max_chars", 4500),
+                                                    max_lost_terms=cfg.get("max_lost_terms", 1)))
         elif name == "mymemory" and use_mymemory:
             machines.append(mymemory or MyMemoryBackend(
                 glossary, email=settings["project"].get("contact_email", ""), user_agent=user_agent,
-                max_chars=mcfg.get("max_chars", 450), timeout=mcfg.get("timeout_seconds", 15)))
+                max_chars=mcfg.get("max_chars", 450), timeout=mcfg.get("timeout_seconds", 15),
+                max_lost_terms=cfg.get("max_lost_terms", 1)))
 
     apply_translations(stories, cache, source_langs, claude_out, machines, report)
     cache.save()

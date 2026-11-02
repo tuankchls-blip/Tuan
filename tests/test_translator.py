@@ -138,10 +138,14 @@ def test_google_keeps_glossary_terms():
         assert term in out
 
 
-def test_google_detects_lost_terms():
+def test_lost_terms_tolerance():
     g = GoogleBackend(load_glossary(), translate_fn=lambda text: "bản dịch làm rơi mã")
+    assert g.translate("Claude is here") == "bản dịch làm rơi mã"  # mất 1 thuật ngữ: vẫn nhận
     with pytest.raises(ValueError):
-        g.translate("Claude is here")
+        g.translate("Claude and Gemini are here")                 # mất 2: loại
+    strict = GoogleBackend(load_glossary(), translate_fn=lambda text: "x", max_lost_terms=0)
+    with pytest.raises(ValueError):
+        strict.translate("Claude is here")
 
 
 def test_google_prefers_longer_phrase():
