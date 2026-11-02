@@ -50,6 +50,32 @@
           "d8eb5a4b: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp"
         ]
       }
+    },
+    {
+      "generated_at": "2026-11-02T15:37:14+00:00",
+      "retranslate": true,
+      "translation": {
+        "counts": {
+          "original": 0,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "mymemory": 47,
+          "untranslated": 1
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "machine_errors": [
+          "google a1765f44: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google 0c49eb4f: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google a85ae40a: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "mymemory 169aca9d: ValueError: bản dịch làm mất thuật ngữ"
+        ]
+      }
     }
   ]
 }
