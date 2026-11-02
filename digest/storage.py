@@ -104,6 +104,24 @@ class Storage:
         after = [d for d in days if d > day]
         return (before[-1] if before else None, after[0] if after else None)
 
+    # ---- Bản tổng hợp: data/<weekly|monthly|quarterly|yearly>/<khóa kỳ>.json
+
+    def summary_path(self, kind: str, key: str) -> Path:
+        return self.data_dir / kind / f"{key}.json"
+
+    def save_summary(self, kind: str, key: str, data: dict[str, Any]) -> Path:
+        path = self.summary_path(kind, key)
+        write_json(path, data)
+        return path
+
+    def load_summary(self, kind: str, key: str) -> dict[str, Any] | None:
+        return read_json(self.summary_path(kind, key))
+
+    def list_summaries(self, kind: str) -> list[str]:
+        """Khóa các bản tổng hợp đã lưu, tăng dần (2026-W44, 2026-W45…)."""
+        folder = self.data_dir / kind
+        return sorted(p.stem for p in folder.glob("*.json")) if folder.exists() else []
+
     # ---- Tin đã đăng: data/seen.json = {"<mã tin>": "<ngày bản tin>"}
 
     @property

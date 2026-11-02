@@ -170,7 +170,8 @@ keywords:
       terms: [zero-day, actively exploited, exploited in the wild, ransomware, data breach, breach,
               supply chain attack, supply-chain attack, backdoor, remote code execution, RCE, CVE,
               critical vulnerability, hack, hacked, hackers, malware, lỗ hổng, mã độc, tấn công mạng]
-    - group: Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress)
+    # Giúp lọc feed tổng như Ars Technica, VnExpress
+    - group: AI nói chung
       points: 1
       terms: [AI, artificial intelligence, machine learning, deep learning, neural network, trí tuệ nhân tạo, học máy, chatbot]
 
@@ -260,6 +261,24 @@ categories:
       safety: [safety, alignment, interpretability, jailbreak, red teaming, robustness]
       theory: [complexity, theorem, proof, algorithm, lower bound, graph theory, cryptography]
       systems: [distributed, compiler, kernel, scheduling, database, cs.SE, cs.DC, systems]
+
+# ---------------------------------------------------------------- Bản tổng hợp (giai đoạn 3)
+# Mỗi cấp chọn tin nổi bật từ cấp ngay dưới: tuần ← tin Quan trọng của các bản ngày,
+# tháng ← các bản tuần, quý ← các bản tháng, năm ← các bản quý.
+# Số liệu thống kê luôn tính lại từ dữ liệu ngày.
+summaries:
+  weekly:
+    max_highlights: 25
+    research_picks: 10       # bài nghiên cứu đáng đọc (mục Nghiên cứu, mọi nhãn)
+    multi_day_min_days: 2    # sự kiện được đưa tin từ bấy nhiêu ngày trở lên
+  monthly:
+    max_highlights: 30
+  quarterly:
+    max_highlights: 30
+  yearly:
+    max_highlights: 50
+  # Số mục hiện trong bảng thống kê (nguồn, từ khóa)
+  top_n: 15
 
 # ---------------------------------------------------------------- Dịch
 translation:
