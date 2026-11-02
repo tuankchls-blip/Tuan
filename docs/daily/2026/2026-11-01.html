@@ -116,6 +116,25 @@ section[data-group] { scroll-margin-top: 64px; }
   section[data-group] { scroll-margin-top: 8px; }
   .story { padding: 12px; }
   .filters .count { width: 100%; margin-left: 0; }
+}
+/* Bản tổng hợp: biểu đồ thanh bằng CSS, bảng chủ đề, dòng thời gian */
+.bars { list-style: none; padding: 0; margin: 8px 0; }
+.bars li { display: grid; grid-template-columns: minmax(7em, 34%) 1fr 3.2em; gap: 8px; align-items: center; padding: 3px 0; font-size: .9rem; }
+.bars .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { background: var(--surface-2); border-radius: 4px; height: 10px; overflow: hidden; }
+.bars .fill { display: block; height: 100%; background: var(--link); border-radius: 4px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--muted); }
+.daylink { font-size: .8rem; }
+.event { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin: 10px 0; }
+.event h4 { margin: 0 0 6px; font-size: 1rem; }
+.event ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.timeline h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); }
+.note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: minmax(8em, 50%) 1fr 2.6em; }
 }</style>
 <script>
 // Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
@@ -186,9 +205,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T10:00:00+00:00">17:00 31/10</time>
   </div>
   <h4>
-    <a href="https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/" target="_blank" rel="noopener noreferrer" lang="en">An AI Agent Injected Drugs Into a Live Mouse’s Brain</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.</p>
+    <a href="https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/" target="_blank" rel="noopener noreferrer">Một AI Agent đã tiêm thuốc vào não chuột sống</a>
+  </h4>
+<p class="orig" lang="en">An AI Agent Injected Drugs Into a Live Mouse’s Brain</p>    <p class="summary">Một công ty khởi nghiệp công nghệ sinh học cho phép agent chọn liệu pháp gen và tiêm thành công phương pháp điều trị, mang đến một cái nhìn đáng ngạc nhiên về tương lai của các phòng thí nghiệm nghiên cứu.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.</p></details>
 <p class="kw"><span>AI agent</span><span>AI</span></p></article><article class="story" id="s-4c77a0dfd6" data-label="notable" data-cat="models"
          data-srcs="simonwillison">
   <div class="meta">
@@ -198,9 +218,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T22:10:01+00:00">05:10 01/11</time>
   </div>
   <h4>
-    <a href="https://simonwillison.net/2026/Oct/31/datasette-llm/" target="_blank" rel="noopener noreferrer" lang="en">datasette-llm 0.1a9</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here&#39;s a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent</p>
+    <a href="https://simonwillison.net/2026/Oct/31/datasette-llm/" target="_blank" rel="noopener noreferrer">datasette-llm 0.1a9</a>
+  </h4>
+<p class="orig" lang="en">datasette-llm 0.1a9</p>    <p class="summary">Phát hành: datasette-llm 0.1a9 Tôi có một số nâng cấp lớn cho Datasette Agent, nhưng trong thời gian chờ đợi, đây là một cải tiến nhỏ về trải nghiệm người dùng đối với plugin datasette-llm cơ bản.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here&#39;s a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent</p></details>
 <p class="kw"><span>LLM</span></p></article></section>
 <section id="c-infra" data-group="infra">
   <h2>Hạ tầng &amp; phần cứng</h2>
@@ -213,9 +234,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T01:20:05+00:00">08:20 31/10</time>
   </div>
   <h4>
-    <a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener noreferrer" lang="en">Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.</p>
+    <a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener noreferrer">Nvidia cân nhắc chơi cosigner cho trung tâm dữ liệu AI của Nscale ở Tây Virginia</a>
+  </h4>
+<p class="orig" lang="en">Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia</p>    <p class="summary">Khi các nhà đầu tư cảm thấy lo lắng về chi tiêu AI, sẽ rất hữu ích khi nhà sản xuất chip bán đề nghị cung cấp chip để ký hợp đồng cho vay.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.</p></details>
 <p class="kw"><span>AI</span></p></article></section>
 <section id="c-software" data-group="software">
   <h2>Phần mềm &amp; công cụ</h2>
@@ -228,9 +250,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T23:15:22+00:00">06:15 01/11</time>
 <span>· 2 nguồn</span><span>· HN 313 điểm</span>  </div>
   <h4>
-    <a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/" target="_blank" rel="noopener noreferrer" lang="en">How We Took Over ChatGPT Accounts</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT&#39;s implementation of the artifacts pattern (OpenAI used to call this &#34;Canvas&#34; but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It&#39;s important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn&#39;t directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…</p>
+    <a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/" target="_blank" rel="noopener noreferrer">Cách chúng tôi tiếp quản tài khoản ChatGPT</a>
+  </h4>
+<p class="orig" lang="en">How We Took Over ChatGPT Accounts</p>    <p class="summary">Cách chúng tôi tiếp quản thông số tài khoản ChatGPT Labs mô tả một khai thác mà họ tìm thấy đối với việc triển khai mẫu tạo tác của ChatGPT (OpenAI được sử dụng để gọi đây là &#34;Canvas&#34; nhưng có vẻ như bản sửa đổi mới nhất được gọi là bản xem trước HTML), nơi các ứng dụng HTML tùy chỉnh tương tác được hiển thị trong khung nội tuyến hộp cát. Điều quan trọng là HTML trong các tệp này phải được đóng hộp cát chặt chẽ để tránh mã không đáng tin cậy tương tác với các API OpenAI và truy cập dữ liệu riêng tư.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT&#39;s implementation of the artifacts pattern (OpenAI used to call this &#34;Canvas&#34; but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It&#39;s important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn&#39;t directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…</p></details>
   <p class="also">Cùng đưa tin:
 <a href="https://news.ycombinator.com/item?id=50314699" target="_blank" rel="noopener noreferrer" title="Do the math: How we took over ChatGPT accounts">Hacker News</a>  </p>
 </article></section>
@@ -245,9 +268,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T12:00:00+00:00">19:00 31/10</time>
 <span>· 2 nguồn</span><span>· HN 238 điểm</span>  </div>
   <h4>
-    <a href="https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/" target="_blank" rel="noopener noreferrer" lang="en">Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.</p>
+    <a href="https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/" target="_blank" rel="noopener noreferrer">Spooky New Infostealer Malware Sử dụng AI cho nạn nhân ‘Autodox’</a>
+  </h4>
+<p class="orig" lang="en">Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims</p>    <p class="summary">Được đặt tên là &#34;Volta-Autodoxer&#34;, malware được phát hiện gần đây sử dụng các công cụ AI để thu thập dữ liệu về nạn nhân, từ thông tin đăng nhập và số thẻ tín dụng đến các phiên Discord và biên lai UberEats.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.</p></details>
   <p class="also">Cùng đưa tin:
 <a href="https://news.ycombinator.com/item?id=50316531" target="_blank" rel="noopener noreferrer" title="Malware uses LLMs to rank victims by how much they&#39;re worth">Hacker News</a>  </p>
 <p class="kw"><span>LLMs</span><span>malware</span><span>AI</span></p></article><article class="story" id="s-fb9fb5a975" data-label="notable" data-cat="security"
@@ -259,9 +283,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T18:01:12+00:00">01:01 01/11</time>
 <span>· 2 nguồn</span><span>· HN 473 điểm</span>  </div>
   <h4>
-    <a href="https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/" target="_blank" rel="noopener noreferrer" lang="en">Northflank security breach leads to abuse of customers&#39; AI API keys</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers&#39; AI API keys.</p>
+    <a href="https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/" target="_blank" rel="noopener noreferrer">Vi phạm an ninh Northflank dẫn đến lạm dụng khóa AI API của khách hàng</a>
+  </h4>
+<p class="orig" lang="en">Northflank security breach leads to abuse of customers&#39; AI API keys</p>    <p class="summary">Nền tảng lưu trữ ứng dụng đám mây Northflank đang cảnh báo khách hàng xoay vòng tất cả thông tin đăng nhập và bí mật được lưu trữ trên nền tảng của mình sau khi vi phạm bảo mật dẫn đến việc sử dụng trái phép khóa AI API của khách hàng.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers&#39; AI API keys.</p></details>
   <p class="also">Cùng đưa tin:
 <a href="https://news.ycombinator.com/item?id=50305025" target="_blank" rel="noopener noreferrer" title="Northflank Breached">Hacker News</a>  </p>
 <p class="kw"><span>breach</span><span>AI</span></p></article><article class="story" id="s-95dfb073e0" data-label="notable" data-cat="security"
@@ -273,9 +298,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T12:50:09+00:00">19:50 31/10</time>
   </div>
   <h4>
-    <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/" target="_blank" rel="noopener noreferrer" lang="en">Chainalysis discloses data breach from &#34;offensive agentic techniques&#34;</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Blockchain analytics firm Chainalysis disclosed a data breach after attackers used &#34;offensive agentic techniques&#34; to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles.</p>
+    <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/" target="_blank" rel="noopener noreferrer">Phân tích chuỗi tiết lộ vi phạm dữ liệu từ &#34;các kỹ thuật agentic tấn công&#34;</a>
+  </h4>
+<p class="orig" lang="en">Chainalysis discloses data breach from &#34;offensive agentic techniques&#34;</p>    <p class="summary">Công ty phân tích Blockchain Chainalysis tiết lộ một vụ vi phạm dữ liệu sau khi kẻ tấn công sử dụng &#34;kỹ thuật tấn công agentic&#34; để truy cập các hệ thống và công cụ nội bộ, tiết lộ tên khách hàng, địa chỉ email, ID người dùng và vai trò của tổ chức.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Blockchain analytics firm Chainalysis disclosed a data breach after attackers used &#34;offensive agentic techniques&#34; to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles.</p></details>
 <p class="kw"><span>agentic</span><span>data breach</span><span>breach</span></p></article><article class="story" id="s-6bd209feef" data-label="notable" data-cat="security"
          data-srcs="hackernews">
   <div class="meta">
@@ -285,9 +311,9 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T19:16:30+00:00">02:16 01/11</time>
 <span>· HN 420 điểm</span>  </div>
   <h4>
-    <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer" lang="en">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-<p class="kw"><span>CVE</span></p></article><article class="story" id="s-74dc1ad06d" data-label="notable" data-cat="security"
+    <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a>
+  </h4>
+<p class="orig" lang="en">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</p><p class="kw"><span>CVE</span></p></article><article class="story" id="s-74dc1ad06d" data-label="notable" data-cat="security"
          data-srcs="bleepingcomputer">
   <div class="meta">
     <span class="badge notable">Đáng chú ý</span>
@@ -296,9 +322,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T15:35:11+00:00">22:35 31/10</time>
   </div>
   <h4>
-    <a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" target="_blank" rel="noopener noreferrer" lang="en">New Android SMS of Death exploit can remotely crash unpatched phones</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed &#34;SMS of Death&#34; and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message.</p>
+    <a href="https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/" target="_blank" rel="noopener noreferrer">Khai thác Android SMS of Death mới có thể làm hỏng điện thoại chưa được vá từ xa</a>
+  </h4>
+<p class="orig" lang="en">New Android SMS of Death exploit can remotely crash unpatched phones</p>    <p class="summary">Một nhà nghiên cứu bảo mật đã phát hành một khai thác bằng chứng về khái niệm cho một lỗ hổng Android được vá gần đây, được gọi là &#34;SMS of Death&#34; và được theo dõi là CVE-2026-58882, cho phép kẻ tấn công làm gián đoạn từ xa dịch vụ di động hoặc làm sập điện thoại bằng cách gửi một tin nhắn văn bản được tạo đặc biệt.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed &#34;SMS of Death&#34; and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message.</p></details>
 <p class="kw"><span>CVE</span></p></article></section>
 <section id="c-policy" data-group="policy">
   <h2>Chính sách &amp; đạo đức AI</h2>
@@ -311,9 +338,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T21:17:03+00:00">04:17 01/11</time>
   </div>
   <h4>
-    <a href="https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" target="_blank" rel="noopener noreferrer" lang="en">Judge allows NAACP lawsuit over xAI data center pollution to move forward</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.</p>
+    <a href="https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/" target="_blank" rel="noopener noreferrer">Thẩm phán cho phép NAACP kiện về ô nhiễm trung tâm dữ liệu xAI để tiếp tục</a>
+  </h4>
+<p class="orig" lang="en">Judge allows NAACP lawsuit over xAI data center pollution to move forward</p>    <p class="summary">Một vụ kiện NAACP cáo buộc công ty AI thuộc sở hữu của SpaceX vi phạm Đạo luật Không khí Sạch.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.</p></details>
 <p class="kw"><span>AI</span></p></article></section>
 <section id="c-vietnam" data-group="vietnam">
   <h2>Việt Nam</h2>
@@ -389,9 +417,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T10:30:00+00:00">17:30 31/10</time>
   </div>
   <h4>
-    <a href="https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/" target="_blank" rel="noopener noreferrer" lang="en">Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.</p>
+    <a href="https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/" target="_blank" rel="noopener noreferrer">Muse của Meta có thể nâng cấp tất cả các loại hình doanh nghiệp. Nó vẫn chưa</a>
+  </h4>
+<p class="orig" lang="en">Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet</p>    <p class="summary">Các công ty đã dành vài tuần qua để cố gắng trấn an các nhà đầu tư rằng Muse và các AI agents khác đặt ra nhiều cơ hội hơn là một mối đe dọa.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.</p></details>
 <p class="kw"><span>AI agents</span><span>AI</span></p></article><article class="story" id="s-9f56e268b0" data-label="notable" data-cat="other"
          data-srcs="techcrunch-ai">
   <div class="meta">
@@ -401,9 +430,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T21:41:00+00:00">04:41 01/11</time>
   </div>
   <h4>
-    <a href="https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" target="_blank" rel="noopener noreferrer" lang="en">Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Apple&#39;s new CEO defended the company&#39;s current position in the AI landscape.</p>
+    <a href="https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" target="_blank" rel="noopener noreferrer">Giám đốc điều hành Apple cho biết công ty không ‘muốn vận chuyển AI vì lợi ích của AI’</a>
+  </h4>
+<p class="orig" lang="en">Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’</p>    <p class="summary">Giám đốc điều hành mới của Apple đã bảo vệ vị trí hiện tại của công ty trong bối cảnh AI.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Apple&#39;s new CEO defended the company&#39;s current position in the AI landscape.</p></details>
 <p class="kw"><span>AI</span></p></article><article class="story" id="s-ee9f8f39be" data-label="notable" data-cat="other"
          data-srcs="verge-ai">
   <div class="meta">
@@ -413,9 +443,10 @@ section[data-group] { scroll-margin-top: 64px; }
     <time datetime="2026-10-31T16:05:00+00:00">23:05 31/10</time>
   </div>
   <h4>
-    <a href="https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code" target="_blank" rel="noopener noreferrer" lang="en">I built an AI Tamagotchi before Meta could</a>
-<span class="badge untranslated">chưa dịch</span>  </h4>
-    <p class="summary" lang="en">Mark Zuckerberg&#39;s Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won&#39;t be buying one, because we have Muse Charm at home. It</p>
+    <a href="https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code" target="_blank" rel="noopener noreferrer">Tôi đã xây dựng một Tamagotchi AI trước khi Meta có thể</a>
+  </h4>
+<p class="orig" lang="en">I built an AI Tamagotchi before Meta could</p>    <p class="summary">Meta của Mark Zuckerberg đã khiến AI trông thật dễ thương bằng cách cho nó một khuôn mặt nhỏ nhắn - và mùa lễ này, anh ấy muốn bán cho bạn một Bùa chú Muse để bạn có thể mang theo người trợ giúp AI vui vẻ của mình như một Tamagotchi. Nhưng tôi sẽ không mua một cái, bởi vì chúng tôi có Muse Charm ở nhà. Nó</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Mark Zuckerberg&#39;s Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won&#39;t be buying one, because we have Muse Charm at home. It</p></details>
 <p class="kw"><span>AI</span></p></article></section>
 </main>
 <footer>
@@ -617,7 +648,7 @@ section[data-group] { scroll-margin-top: 64px; }
   </tbody>
 </table>
 </div>
-<p>Dịch: Claude 0 · Google 0 · MyMemory 0 · dùng lại bản dịch cũ 0 · chưa dịch 13.</p>
+<p>Dịch: Claude 0 · Google 0 · MyMemory 13 · dùng lại bản dịch cũ 0 · chưa dịch 0.</p>
 <p>Tạo lúc 12:09 01/11.</p>
 <p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
 </footer>

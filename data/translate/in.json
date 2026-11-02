@@ -1,242 +1,67 @@
 [
   {
-    "id": "a1765f446c5b64b5bbced0cf22070e131e3557ee",
-    "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
-    "summary": "The French AI lab claims its latest release matches or outperforms even the best models from DeepSeek and Z.ai in coding and cybersecurity."
+    "id": "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e",
+    "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+    "summary": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts."
   },
   {
-    "id": "0c49eb4fc30298f014f2732cdf1ea4427e4dbec2",
-    "title": "We urgently need to monitor AI agents’ actions in real time",
-    "summary": "This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully hacked Hugging Face, a site that they believed held clues about how they’d be graded. Around the same time, another OpenAI agent accessed private files from an Australian government website. It’s a problem…"
+    "id": "fb9fb5a975e9eb28458d3f11e66dc7b0af3ef891",
+    "title": "Northflank security breach leads to abuse of customers' AI API keys",
+    "summary": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys."
   },
   {
-    "id": "a85ae40a50205c8789917a9a89d390ddf3f132ac",
-    "title": "Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes",
-    "summary": "Streaming audio-visual target speaker extraction (AVTSE) is essential for latency-sensitive applications. However, current causal systems face two coupled gaps. First, standard benchmarks fix the number of speakers at two and ignore the near-/far-field interference, reverberation, and sudden noise of real scenes. Second, high-performance causal architectures are too heavy for edge deployment. Lightweight alternatives try to reclaim capacity by repeatedly invoking a small separator, which offsets the savings. To address the first gap, we release RealSSA, a realistic AVTSE benchmark consisting of RealSSA-Sim and RealSSA-Real. RealSSA-Sim provides controllable simulated scenes with 1--5 dynamic near-field interfering speakers; scenes with far-field interference additionally include 10--15 far-field interfering speakers. RealSSA-Real provides a held-out real-recorded evaluation set. To address the second gap, we propose Falcon, a causal AVTSE method. Its Separator performs multi-scale time-frequency separation in a single encoder--decoder pass. We train Falcon with an encoder-space speaker contrastive loss. This loss suppresses near-field leakage at zero inference cost and transfers…"
+    "id": "95dfb073e0ec8286880a017aaf1cebe747e1f321",
+    "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+    "summary": "Blockchain analytics firm Chainalysis disclosed a data breach after attackers used \"offensive agentic techniques\" to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles."
   },
   {
-    "id": "d039e7322fab508c059019bb2a358768023176b5",
-    "title": "TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving",
-    "summary": "Agentic services alternate between model inference on clustered GPUs and external tools on distributed CPUs. In this scenario, existing systems (1) overlook tool-return readiness in service evaluation, wasting limited resources, and (2) use heuristic strategies to decide admission and placement on GPUs, resulting in suboptimal scheduling decisions. To bridge this gap, we present TAO, a tool-aware joint scheduling framework for LLM-based agentic serving. Its value interface combines near-term tool readiness, node-specific cache credit with time-aware decay, and token footprint; a dynamic program jointly selects and places waiting sessions under capacity constraints. Across the 12 reported model-workload-concurrency settings, TAO reduces latency by up to 26.8%, reduces mean time to first token (TTFT) by up to 36.3%, and increases decode throughput by up to 29.5% relative to the best evaluated state-of-the-art baseline for each metric."
+    "id": "d5bb41b6ba041206b1410f5dbd278a1cd9bcfe74",
+    "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
+    "summary": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat."
   },
   {
-    "id": "b15471bb948feccc137537a930aad09b044896d9",
-    "title": "Amortizing Sequential Experimental Design in Reasoning LLMs",
-    "summary": "Despite their extensive pretraining knowledge and strong reasoning capabilities, large language models (LLMs) struggle to adaptively gather information in experimental design tasks. We study how to amortize sequential Bayesian experimental design (BED) into an LLM by explicitly training the reasoning that guides action selection using information-gain rewards. Our approach specifies the experimental generative model independently of the LLM's own beliefs, allowing us to optimize expected information gain under a model of our choosing. We investigate the design choices for amortization, including alternative generative-model constructions, reward estimation, hypothesis-space specification, multi-step objectives, and computational costs relative to training- and inference-time BED baselines. On Twenty Questions, the resulting policies improve information acquisition and task performance, outperform inference- and training-time BED baselines at substantially lower computational cost, and generalize to unseen categories. We further demonstrate positive transfer from Twenty Questions training to Medi-Q, a real-world clinical dialogue benchmark. These results suggest that information…"
+    "id": "edd821e09ba3cc5366f890405e2c7043fb0c3049",
+    "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+    "summary": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs."
   },
   {
-    "id": "34b0bf3f94c3851e6957dd11bedc60679d6c4b34",
-    "title": "Gemini 4 Carbon: Our next frontier model",
+    "id": "dd35d009aad680f7bdb8901c179d770026e55ae7",
+    "title": "How We Took Over ChatGPT Accounts",
+    "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn't directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…"
+  },
+  {
+    "id": "4c77a0dfd6338debf2fa3d6f68af301e16bc3b18",
+    "title": "datasette-llm 0.1a9",
+    "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent"
+  },
+  {
+    "id": "6bd209feefbeab17a3f5fb389d25b5a774e46e10",
+    "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
     "summary": ""
   },
   {
-    "id": "2b2f487795f0e5d2db0f0a071b84108898ab827b",
-    "title": "Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale",
-    "summary": "Over the last year we’ve been sharing our work leveraging large language models to catch bugs on the fly — a novel approach we call Catching Just-in-Time Tests (JiTTests). Now, we’re sharing the results and positive impact we’ve seen with Catching JiTTests deployed into production. Our paper, “Just-in-Time Catching Test Generation at Meta,” fully details"
+    "id": "74dc1ad06d2d1d6d64c61f482a0e7972b8af5593",
+    "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+    "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message."
   },
   {
-    "id": "2dc39333ee9758ee601f0aab4324d58a216759ff",
-    "title": "CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-    "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation."
+    "id": "9f56e268b05ea69134d92ef78e09b3b78f4b6f63",
+    "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+    "summary": "Apple's new CEO defended the company's current position in the AI landscape."
   },
   {
-    "id": "92644269214698b8d46c2fca399b8bbd0b6befb8",
-    "title": "CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-    "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition."
+    "id": "e07dacdb45dcc75e43fc5c0e372ea75eac8c7fbd",
+    "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+    "summary": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act."
   },
   {
-    "id": "7bf0065ceb1646f57aedf5f7d913738e013e364b",
-    "title": "An updated Model Spec for more capable and beneficial AI",
-    "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent."
+    "id": "ee9f8f39beac17095a41c387246bb008552d4c3a",
+    "title": "I built an AI Tamagotchi before Meta could",
+    "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It"
   },
   {
-    "id": "e1c742c1d925baf7505636d3c989a52bf3620d01",
-    "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
-    "summary": ""
-  },
-  {
-    "id": "f3538b6fb36f4f58fdca64e1b764cff7fa0ed810",
-    "title": "Granite Switch 4.1.1 — Update models like you update software",
-    "summary": ""
-  },
-  {
-    "id": "d28967fce9c692cd06eccf3709b27a584532abf2",
-    "title": "How we detect frontier model misalignment",
-    "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate."
-  },
-  {
-    "id": "a4cd3a37e20636a2801191c5235bcdcb0ffa6b0f",
-    "title": "Foundation model for particle collision data analysis",
-    "summary": "Nature Machine Intelligence, Published online: 29 October 2026; doi:10.1038/s42256-026-01322-9 Hsu et al. present EVENET, a foundation model pretrained on simulated particle collisions using both self-supervised learning and physics labels, which transfers across many analysis tasks and works on real collider data."
-  },
-  {
-    "id": "85d975255b4f9d004ddb3cbeee15f8e8556ffee6",
-    "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
-    "summary": ""
-  },
-  {
-    "id": "c6362bf7135f3723b6521af7b7c5827540643a8c",
-    "title": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
-    "summary": "Robot foundation models are typically evaluated through costly closed-loop rollouts, motivating low-cost offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To test this, we propose Sensorimotor Alignment (S^2), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that S^2 correlates positively with downstream robot task success across model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. S^2 can also identify promising vision-language model (VLM) backbones before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, S^2 offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With S^2, we extend PRH to robotics and…"
-  },
-  {
-    "id": "59ad7b959123620c17292738292fca875a72b6ef",
-    "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
-    "summary": "A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana starter kit on GitHub is positioned to trick AI coding agents into installing a NetSupport RAT."
-  },
-  {
-    "id": "02c43a1d4661e9d742f8095ca1105d12d7645eed",
-    "title": "OmniShowcase: Omnidirectional Subject-Consistent Video Generation from Multi-View Images",
-    "summary": "Generating videos of a specific subject from a few reference images remains challenging when the camera reveals surfaces that are not visible in the input. Early subject-to-video (S2V) methods condition on a single reference image and must therefore infer the subject's unseen appearance and geometry as the viewpoint changes. To address this limitation, recent methods extend S2V to multiple reference views, providing more information about the subject from different viewpoints. However, they do not explicitly specify the 3D structure that connects these observations. In addition, existing training data do not guarantee that viewpoint changes preserve the same underlying 3D subject. We present OmniShowcase, built on two components: (i) a fully automated data synthesis pipeline that produces training videos along diverse camera trajectories, with viewpoint variation driven by underlying subject geometry, even spanning full 360-degree orbits; and (ii) a geometry-conditioning method that provides the video model with a turntable of surface-normal maps reconstructed from the reference views without requiring temporal alignment with the generated frames. We construct Showcase-4K, a…"
-  },
-  {
-    "id": "9b7dd4a7a6853f5d5578ec65f1b81b44ef5537c2",
-    "title": "Google expands AI Search ads globally as core ad growth slows",
-    "summary": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion."
-  },
-  {
-    "id": "d8eb5a4b641ea994beef2b1309fa81df183ebf37",
-    "title": "We ran AI agent swarms in Minecraft and Mindustry",
-    "summary": ""
-  },
-  {
-    "id": "4c55e492d89731445e5c47e31486995313ac0b78",
-    "title": "A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System",
-    "summary": "Sources tell WIRED that an Accenture employee’s personal Claude agent ran on a DOD network for two months before it was identified and the vulnerability could be patched."
-  },
-  {
-    "id": "a80dd20eaec84f5f341eb60fdeaab95020df3189",
-    "title": "Building a multiplayer game world with autonomous Fable-class models",
-    "summary": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few minutes and was able to prompt a castle into existence, then a dragon, then ride the dragon to fly around that castle. By Jacob's telling, Spawn is now being developed autonomously by a swarm of Fable-powered agents costing over $3 million in tokens per month (\"we spend 30x payroll on AI tokens\"). Our agents change the live code directly and ship to production hourly, so they read every error, bug report and metric themselves. About 60% of our work starts from a production error, a Savi bug report (Savi is the AI you build games with in Spawn), something odd in our logs, or a feature request. Savi files bugs herself. When a user hits one, or Savi hits one in the product, she files it. It goes straight to an agent that decides whether…"
-  },
-  {
-    "id": "a9493e03c65cfd3b58e56cd1aa7cb0fb95f52ed4",
-    "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
-    "summary": "A top executive of a Singapore AI cloud company that was accused of illegally selling Nvidia chips to China could also have been a Chinese spy, sources have told the New York Times."
-  },
-  {
-    "id": "4dcfcc0d194323eb6d43206a9947da4afb65f2f5",
-    "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
-    "summary": "Dream is grounded in real physics and construction standards. Just as LLMs learn from text, Dream's world model is trained on more than 100 million square feet of building data gathered from permit archives across the United States."
-  },
-  {
-    "id": "739e0b5535e3ec061840356572d3233664c1c295",
-    "title": "LLM Voice",
-    "summary": ""
-  },
-  {
-    "id": "5c450d9a985fdd096989ecf4cfc40ba6c5871dc6",
-    "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
-    "summary": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation."
-  },
-  {
-    "id": "21518626117371ecac93735f6fc302de0d7590b5",
-    "title": "RealCLI: Toward a Unified Evaluation of Human-Agent Collaboration for CLI Agents",
-    "summary": "Command-line interface (CLI) agents increasingly execute longer-horizon tasks, yet existing benchmarks either assume that user instructions remain fixed throughout execution or evaluate task outcomes without capturing runtime collaboration quality. In this paper, we present REALCLI, a paired benchmark that unifies the evaluation of task execution and human-agent collaboration quality on realistic CLI tasks. To comprehensively measure collaboration, REALCLI builds a five-dimensional framework, operationalized into 22 sub-dimensions and 51 interaction scenario templates. REALCLI provides two modes for paired comparison: REALCLI-EXEC supplies complete specifications upfront, whereas REALCLI-COLLAB introduces a scripted user that delivers progressive information, corrections, constraint revisions, and authorization decisions. Evaluations reveal profound capability gaps in frontier agents: the best configuration attains an average score of only 49.2%, and when evaluated by the joint collaboration score (J_{collab}), the peak performance reaches merely 37.6%. These results show that task effectiveness diverges sharply from collaboration quality, with models consistently struggling in…"
-  },
-  {
-    "id": "fc442ec296e344dbac30d602a98d03a01a6e36bf",
-    "title": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
-    "summary": "Computer-use agents (CUAs) are commonly evaluated against fixed task specifications, but users may omit requirements, add constraints, or require approval before consequential actions. Completing the benchmark instruction does not guarantee serving the person who asked. We introduce PersonaCUABench, which holds 74 tasks across 11 domains fixed and varies only who asks. A persona agent, playing one of 44 personas in four groups, rewrites each instruction in that user's own words and answers the CUA's questions, while the CUA sees only the dialogue, never the profile or the original instruction. Across nine backbones (3,330 runs), mean task completion falls by 36% relative to the original requests. The losses have two sources: in 59.9% of cells that lose points, the agent engages with what the user asked for and still gets it wrong, and 11.2% are stops the user requested that the checker scores as failures. Even when a persona request is fully completed, the user gives the top satisfaction rating in only 62.7% of cells, against 84.1% for the original requests. CUAs should therefore be evaluated not only on task completion but also on whether they meet the requirements and…"
-  },
-  {
-    "id": "6491aedb295f487d9bd87bb9a5e6096593e152df",
-    "title": "TauIndianBankBench: Procedure-Aware, Action-Oriented Evaluation of Tool-Using Conversational Agents",
-    "summary": "Many Indian banks serve customers through FAQ pages and scripted chatbots. Assistants based on language models could respond faster and carry out requests such as blocking a card, but only if they give correct information and follow the bank's rules. These rules prescribe a procedure, a set of required steps, such as obtaining a closure quote before closing a deposit. Adapting models to this domain requires measuring how well they follow the procedure, before and after training. Benchmarks usually judge only the records left at the end of a conversation. Many required steps, however, leave the records unchanged, so an assistant that skips them can still be judged successful. We present TauIndianBankBench, an action-oriented benchmark of 1,000 Indian retail-banking tasks where an assistant helps a simulated customer. Besides the final records, it checks that the assistant took every required step and made no unrequested change. For every model, 6.5-12.0% of sessions are judged successful when only the final records are checked, although the assistant skipped a required step or made an unrequested change. Scoring both procedure and outcome shows more accurately how well language…"
-  },
-  {
-    "id": "febfb3f21da3836caf73e6bc06261616e1293b1e",
-    "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
-    "summary": "Reinforcement learning (RL) is an effective way to strengthen the long-context reasoning of large language models (LLMs), but it needs training data that are long, diverse, challenging, and verifiable. Human annotation of such data is expensive, naturally occurring data are too scarce to sustain RL, and existing synthesis methods depend on external corpora or stronger teacher models, which become harder to obtain as the trained models get stronger. Recently, RL from zero data, in which a model learns from tasks it proposes itself, has achieved excellent performance, but existing methods target short-context tasks. Therefore, we propose LongZero, a method that lets an LLM improve its own long-context reasoning without any external data. Instead of writing questions and answers over existing documents, LongZero first has the model synthesize the question and answer with its supporting evidence in a compact structured form, and only then separately expands the evidence into a long multi-document context. LongZero combines these self-written multi-hop reasoning tasks with self-written multi-round retrieval tasks and trains the model with GRPO. We evaluate LongZero on two LLMs across…"
-  },
-  {
-    "id": "b5fbb5f96550546914385d547cbeeea63f14a57e",
-    "title": "Binance probes potential $5.8 billion crypto-theft hack",
-    "summary": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history."
-  },
-  {
-    "id": "dcfc83564a4e9795a92e7f676a04989e0afae0a6",
-    "title": "Japan Airlines suffers third-party data breach exposing passenger info",
-    "summary": "Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers."
-  },
-  {
-    "id": "f5009121caa2a01617efe9a788426ca1be056560",
-    "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
-    "summary": "Prediction market platform Polymarket temporarily suspended trading on Thursday after hackers compromised a third-party service to distribute cryptocurrency-draining JavaScript, with approximately $2.5 million in assets traced to a suspected attacker wallet."
-  },
-  {
-    "id": "1e09943a421e9246b3e0b8e89cf39f0de8ae649c",
-    "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
-    "summary": "As AI transforms how people find information online, Reddit is rethinking its open-web roots to protect its audience and business."
-  },
-  {
-    "id": "c1d5df7fdedb914fc58a48904729bcf6157b5569",
-    "title": "Microsoft Research Focus – Edition #97",
-    "summary": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting."
-  },
-  {
-    "id": "e0b2e2dd2025508b74b1c3a3596e9f7c6de6fd5d",
-    "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
-    "summary": "A newly identified advanced persistent threat (APT) group tracked as UAT-11473 was observed exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers, to deploy a custom malware framework called KeyDrift."
-  },
-  {
-    "id": "8df56ffee5c880b1b26b79b0ed72902558f8fa20",
-    "title": "Massive leak exposes 41,000 DHS workers and undercover ICE agents",
-    "summary": "The leak reveals undercover agents, surveillance groups, and sensitive DHS access."
-  },
-  {
-    "id": "b8568a0a8eb66f364c1eb01f587e8a332009f315",
-    "title": "Hackers expose the identities of more than 40k DHS employees",
-    "summary": ""
-  },
-  {
-    "id": "2d9928289658e98658f7f3e71e7d1e4d989180d1",
-    "title": "How Ropes & Gray is developing AI for transactional diligence",
-    "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients."
-  },
-  {
-    "id": "720b04b8c5b9a5a8cb9c64d61c06458931da3434",
-    "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
-    "summary": "Amazon wants to be the king of AI cloud computing and become the first $1 trillion revenue business. But to do that it will have to continue on its capex spending spree, its CEO said Thursday."
-  },
-  {
-    "id": "7587406daf7d14d3030ba887665a0c517452eec6",
-    "title": "Rivian expands joint venture with VW to include AI assistant",
-    "summary": "Rivian doesn't disclose if the value of its $5.8 billion joint venture will expand as a result."
-  },
-  {
-    "id": "bde015e58f3737fa35432c99a4d3fde247a09577",
-    "title": "Meta quietly launches an AI fashion app called Style Sketch",
-    "summary": "The app connects to Instagram to build a virtual closet from photos you’ve already shared, or lets you add items manually by snapping a photo, recording a quick video, or uploading images from your camera roll."
-  },
-  {
-    "id": "066f3bd17c5f1eff64a81b5b3942605b74aafa4c",
-    "title": "Granola crunches up a dictation feature to compete with Wispr",
-    "summary": "Uno reverse! After Wispr added meeting notes to its dictation app, Granola is adding dictation to its meeting notetaker. The voice AI wars are getting interesting."
-  },
-  {
-    "id": "169aca9d9c2aff8c3eb6d873f911c97cca8b1d31",
-    "title": "Microsoft’s AI future has fewer jobs",
-    "summary": "To anyone listening closely to what Microsoft CEO Satya Nadella has been saying over the past couple of years, this week felt like the clearest sign yet that AI is about to fundamentally change the size of Microsoft's workforce. Microsoft is now offering voluntary buyouts to around 60,000 employees across the US, UK, Canada, and"
-  },
-  {
-    "id": "cec407323f5f073bc9434b6cb6ea8f06a92c34ba",
-    "title": "The NYT Cooking app is testing AI recipe modifications",
-    "summary": "The New York Times is testing a new AI feature for its Cooking app that helps users to modify recipes, and it has sparked some drama among users. Last Friday, NYT Cooking senior editor Genevieve Ko announced the feature, which can be used to recommend substitutions for ingredients and cooking equipment, scale recipes to any"
-  },
-  {
-    "id": "01b61253f2f19e4cd6a5f3e6a307b2a02a6f303a",
-    "title": "Anthropic is asking Wall Street to believe in AGI",
-    "summary": "Today on Decoder, I’m joined by Joey Brookhart, an analyst at the chip and AI research firm SemiAnalysis, to help me dig into the story inside the numbers of the Anthropic IPO filing — a document known as an S-1. Anthropic just filed its S-1 to go public on the Nasdaq, and it could start"
-  },
-  {
-    "id": "d0e2301d55a343cce8142210a89d4b9267e2049f",
-    "title": "Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure",
-    "summary": "With Pipecat, Deepgram will likely gain a deeper understanding of real-time voice and video infrastructure."
-  },
-  {
-    "id": "ed230ac810bddf59e09d3ab2c03eaeaaddefa782",
-    "title": "I Gave My Blood to the AI Death Clock",
-    "summary": "Death Clock promises to predict when you’re going to die and help you extend your time on Earth. After a month, I felt like it was sucking the life out of me."
+    "id": "c6b2d3ea79170b2aaebd03c698f22e18c5fd0ff8",
+    "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+    "summary": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan."
   }
 ]

@@ -41,6 +41,13 @@
     "hash": "8e1a1a519e509ced",
     "translated_at": "2026-11-02T14:13:09+00:00"
   },
+  "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e": {
+    "title_vi": "Spooky New Infostealer Malware Sử dụng AI cho nạn nhân ‘Autodox’",
+    "summary_vi": "Được đặt tên là \"Volta-Autodoxer\", malware được phát hiện gần đây sử dụng các công cụ AI để thu thập dữ liệu về nạn nhân, từ thông tin đăng nhập và số thẻ tín dụng đến các phiên Discord và biên lai UberEats.",
+    "source": "mymemory",
+    "hash": "1de30ff47d7f9070",
+    "translated_at": "2026-11-02T15:37:47+00:00"
+  },
   "1e09943a421e9246b3e0b8e89cf39f0de8ae649c": {
     "title_vi": "Khi lưu lượng tìm kiếm cạn kiệt, Reddit thông báo sẽ chuyển sang trải nghiệm đã đăng nhập",
     "summary_vi": "Khi AI thay đổi cách mọi người tìm kiếm thông tin trực tuyến, Reddit đang xem xét lại nguồn gốc web mở của mình để bảo vệ khán giả và doanh nghiệp của mình.",
@@ -97,6 +104,13 @@
     "hash": "58a7e6985f53ee5f",
     "translated_at": "2026-11-02T15:35:46+00:00"
   },
+  "4c77a0dfd6338debf2fa3d6f68af301e16bc3b18": {
+    "title_vi": "datasette-llm 0.1a9",
+    "summary_vi": "Phát hành: datasette-llm 0.1a9 Tôi có một số nâng cấp lớn cho Datasette Agent, nhưng trong thời gian chờ đợi, đây là một cải tiến nhỏ về trải nghiệm người dùng đối với plugin datasette-llm cơ bản.",
+    "source": "mymemory",
+    "hash": "8da5b1d591947ac3",
+    "translated_at": "2026-11-02T15:38:11+00:00"
+  },
   "4dcfcc0d194323eb6d43206a9947da4afb65f2f5": {
     "title_vi": "Ex-Palantir giám đốc điều hành khởi động Dream với 17 TRIỆU $ từ a16z để xây dựng các mô hình thế giới AI cho xây dựng",
     "summary_vi": "Giấc mơ dựa trên các tiêu chuẩn vật lý và xây dựng thực tế. Cũng giống như LLMs học hỏi từ văn bản, mô hình thế giới của Dream được đào tạo trên hơn 100 triệu feet vuông dữ liệu xây dựng được thu thập từ kho lưu trữ giấy phép trên khắp Hoa Kỳ.",
@@ -132,6 +146,13 @@
     "hash": "6aeb3bf82b2889d4",
     "translated_at": "2026-11-02T15:36:11+00:00"
   },
+  "6bd209feefbeab17a3f5fb389d25b5a774e46e10": {
+    "title_vi": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "2a9f5e875d948d91",
+    "translated_at": "2026-11-02T15:38:13+00:00"
+  },
   "720b04b8c5b9a5a8cb9c64d61c06458931da3434": {
     "title_vi": "AWS sẽ là một doanh nghiệp trị giá $ 1T, Jassy nói — nhưng trước tiên, nó sẽ chi tiêu lớn",
     "summary_vi": "Amazon muốn trở thành vua của điện toán đám mây AI và trở thành doanh nghiệp có doanh thu 1 nghìn tỷ $ đầu tiên. Nhưng để làm điều đó, nó sẽ phải tiếp tục chi tiêu chi tiêu, Giám đốc điều hành của nó cho biết hôm thứ Năm.",
@@ -145,6 +166,13 @@
     "source": "mymemory",
     "hash": "8afd267f35b10af7",
     "translated_at": "2026-11-02T15:35:59+00:00"
+  },
+  "74dc1ad06d2d1d6d64c61f482a0e7972b8af5593": {
+    "title_vi": "Khai thác Android SMS of Death mới có thể làm hỏng điện thoại chưa được vá từ xa",
+    "summary_vi": "Một nhà nghiên cứu bảo mật đã phát hành một khai thác bằng chứng về khái niệm cho một lỗ hổng Android được vá gần đây, được gọi là \"SMS of Death\" và được theo dõi là CVE-2026-58882, cho phép kẻ tấn công làm gián đoạn từ xa dịch vụ di động hoặc làm sập điện thoại bằng cách gửi một tin nhắn văn bản được tạo đặc biệt.",
+    "source": "mymemory",
+    "hash": "d542b1cf61e9a15d",
+    "translated_at": "2026-11-02T15:38:18+00:00"
   },
   "7587406daf7d14d3030ba887665a0c517452eec6": {
     "title_vi": "Rivian mở rộng liên doanh với VW để bao gồm trợ lý AI",
@@ -188,12 +216,26 @@
     "hash": "f3f3b1b60f6be566",
     "translated_at": "2026-11-02T15:35:22+00:00"
   },
+  "95dfb073e0ec8286880a017aaf1cebe747e1f321": {
+    "title_vi": "Phân tích chuỗi tiết lộ vi phạm dữ liệu từ \"các kỹ thuật agentic tấn công\"",
+    "summary_vi": "Công ty phân tích Blockchain Chainalysis tiết lộ một vụ vi phạm dữ liệu sau khi kẻ tấn công sử dụng \"kỹ thuật tấn công agentic\" để truy cập các hệ thống và công cụ nội bộ, tiết lộ tên khách hàng, địa chỉ email, ID người dùng và vai trò của tổ chức.",
+    "source": "mymemory",
+    "hash": "6b67abe6fcd8c244",
+    "translated_at": "2026-11-02T15:37:54+00:00"
+  },
   "9b7dd4a7a6853f5d5578ec65f1b81b44ef5537c2": {
     "title_vi": "Google mở rộng quảng cáo Tìm kiếm AI trên toàn cầu khi tốc độ tăng trưởng quảng cáo cốt lõi chậm lại",
     "summary_vi": "Thông báo này được đưa ra cùng với báo cáo thu nhập quý 3 của công ty mẹ Alphabet, cho thấy doanh thu tăng 25% so với cùng kỳ năm ngoái lên 127,6 tỷ $.",
     "source": "mymemory",
     "hash": "1e2edb5bb1760354",
     "translated_at": "2026-11-02T15:35:42+00:00"
+  },
+  "9f56e268b05ea69134d92ef78e09b3b78f4b6f63": {
+    "title_vi": "Giám đốc điều hành Apple cho biết công ty không ‘muốn vận chuyển AI vì lợi ích của AI’",
+    "summary_vi": "Giám đốc điều hành mới của Apple đã bảo vệ vị trí hiện tại của công ty trong bối cảnh AI.",
+    "source": "mymemory",
+    "hash": "8f0ada07c54ac663",
+    "translated_at": "2026-11-02T15:38:23+00:00"
   },
   "a1765f446c5b64b5bbced0cf22070e131e3557ee": {
     "title_vi": "Chào mừng Lê Chonk: Mistral Lớn 4 trên Hugging Face",
@@ -279,6 +321,13 @@
     "hash": "e3c38e158bab3ec0",
     "translated_at": "2026-11-02T15:35:34+00:00"
   },
+  "c6b2d3ea79170b2aaebd03c698f22e18c5fd0ff8": {
+    "title_vi": "Nvidia cân nhắc chơi cosigner cho trung tâm dữ liệu AI của Nscale ở Tây Virginia",
+    "summary_vi": "Khi các nhà đầu tư cảm thấy lo lắng về chi tiêu AI, sẽ rất hữu ích khi nhà sản xuất chip bán đề nghị cung cấp chip để ký hợp đồng cho vay.",
+    "source": "mymemory",
+    "hash": "f6c13129de65b0f4",
+    "translated_at": "2026-11-02T15:38:32+00:00"
+  },
   "cec407323f5f073bc9434b6cb6ea8f06a92c34ba": {
     "title_vi": "Ứng dụng NYT Cooking đang thử nghiệm sửa đổi công thức AI",
     "summary_vi": "Thời báo New York đang thử nghiệm một tính năng AI mới cho ứng dụng Nấu ăn của mình giúp người dùng sửa đổi công thức nấu ăn và nó đã gây ra một số kịch tính giữa những người dùng. Thứ Sáu tuần trước, biên tập viên cao cấp của NYT Cooking Genevieve Ko đã công bố tính năng này, có thể được sử dụng để đề xuất thay thế cho các thành phần và thiết bị nấu ăn, công thức nấu ăn theo tỷ lệ cho bất kỳ",
@@ -307,6 +356,13 @@
     "hash": "d28bcc8a1a132b47",
     "translated_at": "2026-11-02T15:35:28+00:00"
   },
+  "d5bb41b6ba041206b1410f5dbd278a1cd9bcfe74": {
+    "title_vi": "Muse của Meta có thể nâng cấp tất cả các loại hình doanh nghiệp. Nó vẫn chưa",
+    "summary_vi": "Các công ty đã dành vài tuần qua để cố gắng trấn an các nhà đầu tư rằng Muse và các AI agents khác đặt ra nhiều cơ hội hơn là một mối đe dọa.",
+    "source": "mymemory",
+    "hash": "7ac5bf6092cd2220",
+    "translated_at": "2026-11-02T15:37:59+00:00"
+  },
   "d8eb5a4b641ea994beef2b1309fa81df183ebf37": {
     "title_vi": "Chúng tôi đã chạy AI agent swarms trong Minecraft và Mindustry",
     "summary_vi": "",
@@ -320,6 +376,20 @@
     "source": "mymemory",
     "hash": "27f73f8d48a7e0ef",
     "translated_at": "2026-11-02T15:36:21+00:00"
+  },
+  "dd35d009aad680f7bdb8901c179d770026e55ae7": {
+    "title_vi": "Cách chúng tôi tiếp quản tài khoản ChatGPT",
+    "summary_vi": "Cách chúng tôi tiếp quản thông số tài khoản ChatGPT Labs mô tả một khai thác mà họ tìm thấy đối với việc triển khai mẫu tạo tác của ChatGPT (OpenAI được sử dụng để gọi đây là \"Canvas\" nhưng có vẻ như bản sửa đổi mới nhất được gọi là bản xem trước HTML), nơi các ứng dụng HTML tùy chỉnh tương tác được hiển thị trong khung nội tuyến hộp cát. Điều quan trọng là HTML trong các tệp này phải được đóng hộp cát chặt chẽ để tránh mã không đáng tin cậy tương tác với các API OpenAI và truy cập dữ liệu riêng tư.",
+    "source": "mymemory",
+    "hash": "1a1a6c08349c5e84",
+    "translated_at": "2026-11-02T15:38:08+00:00"
+  },
+  "e07dacdb45dcc75e43fc5c0e372ea75eac8c7fbd": {
+    "title_vi": "Thẩm phán cho phép NAACP kiện về ô nhiễm trung tâm dữ liệu xAI để tiếp tục",
+    "summary_vi": "Một vụ kiện NAACP cáo buộc công ty AI thuộc sở hữu của SpaceX vi phạm Đạo luật Không khí Sạch.",
+    "source": "mymemory",
+    "hash": "8d3ef9cab27200a0",
+    "translated_at": "2026-11-02T15:38:26+00:00"
   },
   "e0b2e2dd2025508b74b1c3a3596e9f7c6de6fd5d": {
     "title_vi": "Tin tặc khai thác lỗ hổng Cisco SD-WAN để triển khai KeyDrift malware tùy chỉnh",
@@ -349,6 +419,20 @@
     "hash": "b78cbc482eaf3588",
     "translated_at": "2026-11-02T15:37:14+00:00"
   },
+  "edd821e09ba3cc5366f890405e2c7043fb0c3049": {
+    "title_vi": "Một AI Agent đã tiêm thuốc vào não chuột sống",
+    "summary_vi": "Một công ty khởi nghiệp công nghệ sinh học cho phép agent chọn liệu pháp gen và tiêm thành công phương pháp điều trị, mang đến một cái nhìn đáng ngạc nhiên về tương lai của các phòng thí nghiệm nghiên cứu.",
+    "source": "mymemory",
+    "hash": "e735ccc0285444ad",
+    "translated_at": "2026-11-02T15:38:04+00:00"
+  },
+  "ee9f8f39beac17095a41c387246bb008552d4c3a": {
+    "title_vi": "Tôi đã xây dựng một Tamagotchi AI trước khi Meta có thể",
+    "summary_vi": "Meta của Mark Zuckerberg đã khiến AI trông thật dễ thương bằng cách cho nó một khuôn mặt nhỏ nhắn - và mùa lễ này, anh ấy muốn bán cho bạn một Bùa chú Muse để bạn có thể mang theo người trợ giúp AI vui vẻ của mình như một Tamagotchi. Nhưng tôi sẽ không mua một cái, bởi vì chúng tôi có Muse Charm ở nhà. Nó",
+    "source": "mymemory",
+    "hash": "07a46ec49d4c224a",
+    "translated_at": "2026-11-02T15:38:29+00:00"
+  },
   "f3538b6fb36f4f58fdca64e1b764cff7fa0ed810": {
     "title_vi": "Granite Switch 4.1.1 — Cập nhật mô hình như bạn cập nhật phần mềm",
     "summary_vi": "",
@@ -362,6 +446,13 @@
     "source": "mymemory",
     "hash": "28e79d71eb1b49da",
     "translated_at": "2026-11-02T15:36:24+00:00"
+  },
+  "fb9fb5a975e9eb28458d3f11e66dc7b0af3ef891": {
+    "title_vi": "Vi phạm an ninh Northflank dẫn đến lạm dụng khóa AI API của khách hàng",
+    "summary_vi": "Nền tảng lưu trữ ứng dụng đám mây Northflank đang cảnh báo khách hàng xoay vòng tất cả thông tin đăng nhập và bí mật được lưu trữ trên nền tảng của mình sau khi vi phạm bảo mật dẫn đến việc sử dụng trái phép khóa AI API của khách hàng.",
+    "source": "mymemory",
+    "hash": "1efa99093d3e8ddb",
+    "translated_at": "2026-11-02T15:37:50+00:00"
   },
   "fc442ec296e344dbac30d602a98d03a01a6e36bf": {
     "title_vi": "PersonaCUABench: Benchmarking Computer-Use Agents Phục vụ các Personas đa dạng",
