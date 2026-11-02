@@ -16,15 +16,15 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Dịch bằng Claude (khuyến nghị):** cài [Claude Code](https://code.claude.com) và đăng nhập bằng gói Claude của bạn. Chương trình tự gọi lệnh `claude` để dịch, với quyền tối thiểu (chỉ đọc file tin cần dịch và ghi file kết quả, không chạy lệnh, không truy cập mạng). Nếu không có Claude, chương trình dịch dự phòng bằng Google Translate. Lưu ý: Google đôi khi chặn máy chủ trung tâm dữ liệu bằng CAPTCHA; khi cả hai cách đều lỗi, tin hiện tiếng Anh với nhãn “chưa dịch” và được dịch lại ở lần chạy sau.
+**Dịch:** nếu máy có [Claude Code](https://code.claude.com) đã đăng nhập, chương trình gọi lệnh `claude` để dịch, với quyền tối thiểu (chỉ đọc file tin cần dịch và ghi file kết quả, không chạy lệnh, không truy cập mạng). Không có Claude thì dịch máy dự phòng: Google Translate, rồi MyMemory (miễn phí, 50.000 ký tự/ngày). Google hay chặn máy chủ trung tâm dữ liệu (kể cả GitHub Actions) bằng CAPTCHA. Khi mọi cách đều lỗi, tin hiện tiếng Anh với nhãn “chưa dịch” và được dịch lại ở lần chạy sau.
 
 ## Chạy
 
 ```bash
 python main.py daily                      # bản tin hôm nay (giờ Việt Nam)
 python main.py daily --date 2026-10-30    # tạo lại bản của một ngày
-python main.py daily --no-claude          # chỉ dịch bằng Google
-python main.py daily --no-claude --no-google   # không dịch (để kiểm tra nhanh)
+python main.py daily --no-claude          # chỉ dịch máy (Google, MyMemory)
+python main.py daily --no-claude --no-google --no-mymemory   # không dịch (để kiểm tra nhanh)
 ```
 
 Kết quả:
@@ -60,6 +60,6 @@ Test dùng dữ liệu mẫu trong `tests/fixtures/`, không gọi mạng; Claud
 
 ## Lộ trình
 
-1. **Bản ngày** (xong, chờ duyệt)
-2. **Chạy tự động trên GitHub Actions + GitHub Pages** — hướng dẫn bật Actions và Pages sẽ được bổ sung ở đây. Hiện workflow dịch bằng Google Translate; muốn dịch bằng Claude thì thêm secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`), workflow sẽ tự dùng.
+1. **Bản ngày** (xong)
+2. **Chạy tự động trên GitHub Actions + GitHub Pages** — hướng dẫn bật Actions và Pages sẽ được bổ sung ở đây. Hiện workflow dịch bằng Google Translate, rồi MyMemory; muốn dịch bằng Claude thì thêm secret `CLAUDE_CODE_OAUTH_TOKEN` (tạo bằng `claude setup-token`), workflow sẽ tự dùng.
 3. **Bản tổng hợp** tuần, tháng, quý, năm.

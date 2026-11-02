@@ -23,6 +23,13 @@ def stories(sources, settings):
     return filters.cluster(arts, sources, settings)
 
 
+def translate_offline(*args, **kwargs):
+    """translate_stories không gọi mạng: MyMemory tắt trừ khi test truyền bản giả lập."""
+    if "mymemory" not in kwargs:
+        kwargs.setdefault("use_mymemory", False)
+    return translator.translate_stories(*args, **kwargs)
+
+
 def by_title(stories, title):
     return next(s for s in stories if s.primary.title == title)
 
@@ -162,7 +169,7 @@ def test_full_flow_claude_then_google_then_untranslated(stories, settings, tmp_p
             raise ConnectionError("Google lỗi")
         return "[vi] " + text
 
-    report = translator.translate_stories(stories, settings, load_glossary(), tmp_path, runner=run,
+    report = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
                                           google=GoogleBackend(load_glossary(), translate_fn=google_fn))
     assert len(run.calls) == 1
     assert (lab.translation_source, lab.title_vi) == ("claude", "Apple phát hành LLM open-weight")
@@ -170,9 +177,9 @@ def test_full_flow_claude_then_google_then_untranslated(stories, settings, tmp_p
     assert startup.translated is False and startup.title_vi == ""
     vn = by_title(stories, "Việt Nam đẩy mạnh AI")
     assert vn.translation_source == "original" and vn.title_vi == "Việt Nam đẩy mạnh AI"
-    assert report.counts == {"original": 1, "cache": 0, "claude": 1, "google": 1, "untranslated": 1}
+    assert report.counts == {"original": 1, "cache": 0, "claude": 1, "google": 1, "mymemory": 0, "untranslated": 1}
     assert report.claude["ok"] and report.claude["translated"] == 1
-    assert report.claude_problems and report.google_errors
+    assert report.claude_problems and report.machine_errors
 
     # Bộ nhớ đệm ghi nguồn dịch; tin chưa dịch không được lưu để lần sau dịch lại
     cache = json.loads((tmp_path / "data/translations_cache.json").read_text(encoding="utf-8"))
@@ -182,16 +189,16 @@ def test_full_flow_claude_then_google_then_untranslated(stories, settings, tmp_p
     # Lần chạy sau: chỉ còn tin chưa dịch được gửi cho Claude
     run2 = claude_runner(lambda inputs: [{"id": i["id"], "title_vi": "Khởi nghiệp gọi vốn", "summary_vi": ""}
                                          for i in inputs])
-    report2 = translator.translate_stories(stories, settings, load_glossary(), tmp_path, runner=run2,
+    report2 = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run2,
                                            google=GoogleBackend(load_glossary(), translate_fn=google_fn))
     sent = json.loads((tmp_path / "data/translate/in.json").read_text(encoding="utf-8"))
     assert [i["id"] for i in sent] == [startup.id]
-    assert report2.counts == {"original": 1, "cache": 2, "claude": 1, "google": 0, "untranslated": 0}
+    assert report2.counts == {"original": 1, "cache": 2, "claude": 1, "google": 0, "mymemory": 0, "untranslated": 0}
 
 
 def test_claude_off_google_takes_over(stories, settings, tmp_path):
     run = claude_runner(lambda inputs: [])
-    report = translator.translate_stories(stories, settings, load_glossary(), tmp_path, use_claude=False,
+    report = translate_offline(stories, settings, load_glossary(), tmp_path, use_claude=False,
                                           runner=run, google=GoogleBackend(load_glossary(), translate_fn=fake_google))
     assert run.calls == []
     assert report.counts["google"] == 3 and report.counts["untranslated"] == 0
@@ -201,7 +208,7 @@ def test_claude_off_google_takes_over(stories, settings, tmp_path):
 def test_claude_off_by_env(stories, settings, tmp_path, monkeypatch):
     monkeypatch.setenv("DIGEST_NO_CLAUDE", "1")
     run = claude_runner(lambda inputs: [])
-    translator.translate_stories(stories, settings, load_glossary(), tmp_path, runner=run,
+    translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
                                  google=GoogleBackend(load_glossary(), translate_fn=fake_google))
     assert run.calls == []
 
@@ -209,7 +216,7 @@ def test_claude_off_by_env(stories, settings, tmp_path, monkeypatch):
 def test_claude_fails_google_takes_over(stories, settings, tmp_path):
     run = claude_runner(lambda inputs: None, returncode=1,
                         payload={"type": "result", "subtype": "error_max_turns", "is_error": True})
-    report = translator.translate_stories(stories, settings, load_glossary(), tmp_path, runner=run,
+    report = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
                                           google=GoogleBackend(load_glossary(), translate_fn=fake_google))
     assert report.claude["ran"] and not report.claude["ok"]
     assert report.counts["google"] == 3
@@ -220,7 +227,7 @@ def test_stale_out_json_is_removed(stories, settings, tmp_path):
     out.parent.mkdir(parents=True)
     lab = by_title(stories, "Apple releases an open-weight LLM")
     out.write_text(json.dumps([{"id": lab.id, "title_vi": "cũ", "summary_vi": "cũ"}]), encoding="utf-8")
-    report = translator.translate_stories(stories, settings, load_glossary(), tmp_path, use_claude=False,
+    report = translate_offline(stories, settings, load_glossary(), tmp_path, use_claude=False,
                                           google=GoogleBackend(load_glossary(), translate_fn=fake_google))
     assert lab.translation_source == "google" and not out.exists()
     assert report.counts["claude"] == 0
@@ -258,3 +265,59 @@ def test_run_claude_logs_permission_denials(settings, tmp_path):
                                 runner=claude_runner(lambda i: None, payload=payload))
     assert log["permission_denials"][0]["tool"] == "Write"
     assert "không ghi được" in log["result_tail"]
+
+
+# ---------------------------------------------------------------- MyMemory và chuỗi dự phòng
+
+
+def test_mymemory_used_when_google_blocked(stories, settings, tmp_path):
+    def blocked(text):
+        raise ConnectionError("CAPTCHA")
+
+    report = translate_offline(
+        stories, settings, load_glossary(), tmp_path, use_claude=False,
+        google=GoogleBackend(load_glossary(), translate_fn=blocked),
+        mymemory=translator.MyMemoryBackend(load_glossary(), translate_fn=lambda t: "[mm] " + t))
+    assert report.counts["mymemory"] == 3 and report.counts["untranslated"] == 0
+    # Google lỗi 3 lần thì ngừng, không thử lại cho các tin sau
+    assert sum(e.startswith("google") for e in report.machine_errors) == GoogleBackend.MAX_CONSECUTIVE_ERRORS
+    cache = json.loads((tmp_path / "data/translations_cache.json").read_text(encoding="utf-8"))
+    assert {e["source"] for e in cache.values()} == {"mymemory"}
+
+
+def test_mymemory_shortens_long_summary():
+    seen = []
+    m = translator.MyMemoryBackend(load_glossary(), max_chars=60, translate_fn=lambda t: seen.append(t) or t)
+    text = "First sentence is here. Second sentence is a bit longer than that. Third one."
+    m.translate(text)
+    assert seen == ["First sentence is here."]
+
+
+def test_mymemory_http_parsing(monkeypatch):
+    import requests
+
+    class Resp:
+        def __init__(self, payload):
+            self.payload = payload
+
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return self.payload
+
+    calls = []
+
+    def fake_get(url, params, timeout, headers):
+        calls.append(params)
+        if params["q"].startswith("quota"):
+            return Resp({"responseData": {"translatedText": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE "
+                                                            "TRANSLATIONS FOR TODAY"}, "responseStatus": 429})
+        return Resp({"responseData": {"translatedText": "Xin ch&agrave;o ZZ0ZZ"}, "responseStatus": 200})
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    m = translator.MyMemoryBackend(load_glossary(), email="me@example.com", user_agent="ua")
+    assert m.translate("Hello OpenAI") == "Xin chào OpenAI"
+    assert calls[0]["langpair"] == "en|vi" and calls[0]["de"] == "me@example.com"
+    with pytest.raises(RuntimeError):
+        m.translate("quota exceeded")

@@ -1,6 +1,6 @@
 """Điểm khởi động của ai-daily-digest.
 
-    python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google]
+    python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google] [--no-mymemory]
     python main.py weekly | monthly | quarterly | yearly [--date YYYY-MM-DD]   (giai đoạn 3)
 """
 
@@ -39,7 +39,9 @@ def run_daily(
     use_google: bool = True,
     getter: fetcher.Getter | None = None,
     runner: translator.Runner = subprocess.run,
-    google: translator.GoogleBackend | None = None,
+    google: translator.MachineBackend | None = None,
+    use_mymemory: bool = True,
+    mymemory: translator.MachineBackend | None = None,
     now: datetime | None = None,
     log=print,
 ) -> DailyResult:
@@ -94,7 +96,8 @@ def run_daily(
     # Dịch
     report = translator.translate_stories(
         kept, settings, storage.load_glossary(), root,
-        use_claude=use_claude, use_google=use_google, runner=runner, google=google)
+        use_claude=use_claude, use_google=use_google, runner=runner, google=google,
+        use_mymemory=use_mymemory, mymemory=mymemory, user_agent=storage.user_agent(settings))
     log(f"[dịch] {report.counts}" + (f" — Claude: {report.claude['error']}" if report.claude.get("error") else ""))
 
     # Bước 6: lưu JSON, lịch sử, trạng thái sitemap
@@ -145,6 +148,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                    help="ngày cần tạo (YYYY-MM-DD); mặc định là hôm nay theo giờ Việt Nam")
     p.add_argument("--no-claude", action="store_true", help="không dịch bằng Claude (Google dịch thay)")
     p.add_argument("--no-google", action="store_true", help="không dùng Google Translate dự phòng")
+    p.add_argument("--no-mymemory", action="store_true", help="không dùng MyMemory dự phòng")
     return p.parse_args(argv)
 
 
@@ -153,7 +157,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.kind != "daily":
         print(f"'{args.kind}' thuộc giai đoạn 3, chưa làm.", file=sys.stderr)
         return 2
-    result = run_daily(args.date, use_claude=not args.no_claude, use_google=not args.no_google)
+    result = run_daily(args.date, use_claude=not args.no_claude, use_google=not args.no_google,
+                       use_mymemory=not args.no_mymemory)
     print(f"Xong bản tin {result.day} trong {result.summary['duration_seconds']} giây.")
     return 0
 

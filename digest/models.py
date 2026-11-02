@@ -28,6 +28,8 @@ class Source:
     url: str
     enabled: bool = True
     options: dict[str, Any] = field(default_factory=dict)
+    # Địa chỉ dự phòng, thử lần lượt khi địa chỉ chính lỗi
+    fallback_urls: list[str] = field(default_factory=list)
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> Source:
@@ -43,6 +45,7 @@ class Source:
             url=d["url"],
             enabled=bool(d.get("enabled", True)),
             options=d.get("options") or {},
+            fallback_urls=list(d.get("fallback_urls") or []),
         )
 
 

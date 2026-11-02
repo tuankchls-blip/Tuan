@@ -26,6 +26,7 @@
 #   url       địa chỉ feed/API
 #   enabled   false để tạm tắt nguồn
 #   options   tùy chọn riêng cho từng type (xem từng nguồn)
+#   fallback_urls  (tùy chọn) địa chỉ dự phòng, thử lần lượt khi địa chỉ chính lỗi
 #
 # Kết quả kiểm tra ngày 30/10/2026: cả 31 nguồn đều đọc được.
 
@@ -371,6 +372,8 @@ sources:
     lang: en
     type: rss
     url: https://importai.substack.com/feed
+    # Substack chặn máy chủ GitHub Actions (403); tác giả đăng cùng nội dung trên blog riêng
+    fallback_urls: [https://jack-clark.net/feed/]
     enabled: true
 
   # ---------------------------------------------------------------- Cộng đồng

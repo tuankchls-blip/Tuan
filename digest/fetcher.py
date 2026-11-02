@@ -14,7 +14,7 @@ import re
 import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import date, datetime, timedelta, timezone
 from typing import Any, Callable
 from urllib.parse import urlsplit
@@ -105,6 +105,9 @@ def fetch_rss(source: Source, ctx: FetchContext, get: Getter) -> tuple[list[Arti
     feed = feedparser.parse(get(source.url, None))
     if not feed.entries:
         problem = feed.get("bozo_exception")
+        if feed.get("version") and not problem:
+            # Feed hợp lệ nhưng trống (ví dụ arXiv không công bố bài vào cuối tuần)
+            return [], "feed trống"
         raise ValueError(f"feed không có mục nào{': ' + str(problem)[:80] if problem else ''}")
     skip_types = set(source.options.get("skip_announce_types", []))
     articles: list[Article] = []
@@ -370,17 +373,28 @@ def short_error(exc: Exception) -> str:
 
 
 def fetch_source(source: Source, ctx: FetchContext, get: Getter) -> FetchResult:
+    """Đọc một nguồn; địa chỉ chính lỗi thì thử lần lượt các địa chỉ dự phòng (fallback_urls)."""
     start = time.monotonic()
-    try:
-        fn = FETCHERS.get(source.type)
-        if fn is None:
-            raise ValueError(f"không hỗ trợ type '{source.type}'")
-        out = fn(source, ctx, get)
-        result = FetchResult(source.id, ok=True, articles=out[0], note=out[1])
+    fn = FETCHERS.get(source.type)
+    first_error: str | None = None
+    result: FetchResult | None = None
+    for i, url in enumerate([source.url, *source.fallback_urls]):
+        try:
+            if fn is None:
+                raise ValueError(f"không hỗ trợ type '{source.type}'")
+            out = fn(replace(source, url=url), ctx, get)
+        except Exception as exc:  # một nguồn lỗi không làm dừng chương trình
+            first_error = first_error or short_error(exc)
+            continue
+        note = out[1]
+        if i > 0:
+            note = "; ".join(filter(None, [f"dùng địa chỉ dự phòng (địa chỉ chính: {first_error})", note]))
+        result = FetchResult(source.id, ok=True, articles=out[0], note=note)
         if source.type == "sitemap":
             result.sitemap_urls = out[2]
-    except Exception as exc:  # một nguồn lỗi không làm dừng chương trình
-        result = FetchResult(source.id, ok=False, error=short_error(exc))
+        break
+    if result is None:
+        result = FetchResult(source.id, ok=False, error=first_error)
     result.seconds = round(time.monotonic() - start, 2)
     return result
 

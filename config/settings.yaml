@@ -276,11 +276,23 @@ translation:
     max_turns: 15         # giới hạn số lượt
     timeout_seconds: 900  # quá thời gian thì bỏ, chuyển sang Google
 
-  # Dự phòng: Google Translate qua deep-translator (không cần khóa API).
-  # Tắt: chạy với --no-google.
+  # Dịch máy dự phòng khi không có bản dịch của Claude: thử lần lượt theo thứ tự này.
+  # Dịch vụ lỗi 3 lần liên tiếp thì ngừng gọi trong lần chạy đó.
+  fallback_order: [google, mymemory]
+
+  # Google Translate qua deep-translator (không cần khóa API).
+  # Lưu ý: Google hay chặn máy chủ GitHub Actions bằng CAPTCHA. Tắt: --no-google.
   google:
     enabled: true
     max_chars: 4500       # giới hạn mỗi lần gửi (dịch vụ cho tối đa 5.000)
+
+  # MyMemory (miễn phí, không cần khóa): 50.000 ký tự/ngày khi khai email (project.contact_email).
+  # Mỗi lần gửi tối đa 500 ký tự, nên tóm tắt dài được cắt ở ranh giới câu trước khi dịch
+  # (bản gốc đầy đủ vẫn xem được bằng nút "Xem bản gốc"). Tắt: --no-mymemory.
+  mymemory:
+    enabled: true
+    max_chars: 450
+    timeout_seconds: 15
 
 # ---------------------------------------------------------------- Đường dẫn
 paths:

@@ -37,6 +37,7 @@ def no_claude_runner(*args, **kwargs):
 
 def run(tmp_path, **kw):
     kw.setdefault("google", GoogleBackend(load_glossary(), translate_fn=lambda t: "[vi] " + t))
+    kw.setdefault("use_mymemory", False)  # không gọi mạng
     return main.run_daily(DAY, root=tmp_path, getter=fake_get, now=NOW, use_claude=False,
                           runner=no_claude_runner, log=lambda *a: None, **kw)
 
@@ -92,7 +93,8 @@ def test_next_day_skips_published_stories(tmp_path):
     run(tmp_path)
     r2 = main.run_daily(date(2026, 10, 31), root=tmp_path, getter=fake_get,
                         now=datetime(2026, 10, 31, 0, 5, tzinfo=timezone.utc), use_claude=False,
-                        google=GoogleBackend(load_glossary(), translate_fn=lambda t: t), log=lambda *a: None)
+                        google=GoogleBackend(load_glossary(), translate_fn=lambda t: t), use_mymemory=False,
+                        log=lambda *a: None)
     first_ids = set(json.loads((tmp_path / "data/2026/2026-10-30.json").read_text())["stories"][0]["article_ids"])
     second = json.loads(r2.json_path.read_text(encoding="utf-8"))
     assert not any(set(s["article_ids"]) & first_ids for s in second["stories"])

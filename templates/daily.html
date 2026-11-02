@@ -78,7 +78,7 @@
 </table>
 </div>
 {% if translation %}
-<p>Dịch: Claude {{ translation.claude }} · Google {{ translation.google }} · dùng lại bản dịch cũ {{ translation.cache }} · chưa dịch {{ translation.untranslated }}.</p>
+<p>Dịch: Claude {{ translation.claude or 0 }} · Google {{ translation.google or 0 }} · MyMemory {{ translation.mymemory or 0 }} · dùng lại bản dịch cũ {{ translation.cache or 0 }} · chưa dịch {{ translation.untranslated or 0 }}.</p>
 {% endif %}
 <p>Tạo lúc {{ generated_at | vn_time }}.</p>
 {% endblock %}

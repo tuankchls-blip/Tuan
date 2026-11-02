@@ -12,6 +12,7 @@ Luồng mỗi ngày:
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import os
 import re
@@ -196,11 +197,12 @@ def read_output(path: Path, inputs: list[dict[str, str]]) -> tuple[dict[str, tup
 PLACEHOLDER_RE = re.compile(r"Z\s*Z\s*(\d+)\s*Z\s*Z", re.IGNORECASE)
 
 
-class GoogleBackend:
-    """Dịch bằng Google Translate; thuật ngữ trong glossary được giữ nguyên bằng mã giữ chỗ."""
+class MachineBackend:
+    """Dịch máy (Google, MyMemory…); thuật ngữ trong glossary được giữ nguyên bằng mã giữ chỗ."""
 
-    # Lỗi liên tiếp bấy nhiêu lần thì ngừng gọi Google trong lần chạy này
-    # (ví dụ Google chặn IP máy chủ bằng trang CAPTCHA)
+    name = "machine"
+    # Lỗi liên tiếp bấy nhiêu lần thì ngừng gọi dịch vụ này trong lần chạy
+    # (ví dụ Google chặn IP máy chủ bằng trang CAPTCHA, MyMemory hết hạn mức ngày)
     MAX_CONSECUTIVE_ERRORS = 3
 
     def __init__(self, glossary: dict[str, Any], max_chars: int = 4500,
@@ -216,12 +218,23 @@ class GoogleBackend:
         self.max_chars = max_chars
         self._translate_fn = translate_fn
 
+    def _make_fn(self) -> Callable[[str], str]:
+        raise NotImplementedError
+
     def _fn(self) -> Callable[[str], str]:
         if self._translate_fn is None:
-            from deep_translator import GoogleTranslator
-
-            self._translate_fn = GoogleTranslator(source="en", target="vi").translate
+            self._translate_fn = self._make_fn()
         return self._translate_fn
+
+    def shorten(self, text: str) -> str:
+        """Cắt văn bản dài ở ranh giới câu (hoặc từ) cho vừa giới hạn của dịch vụ."""
+        if len(text) <= self.max_chars:
+            return text
+        cut = text[: self.max_chars]
+        end = max(cut.rfind(". "), cut.rfind("? "), cut.rfind("! "))
+        if end > self.max_chars // 3:
+            return cut[: end + 1]
+        return cut.rsplit(" ", 1)[0].rstrip(" ,;:") + "…"
 
     def protect(self, text: str) -> tuple[str, list[str]]:
         """Thay thuật ngữ bằng ZZ0ZZ, ZZ1ZZ…; trả về (văn bản mới, danh sách thuật ngữ gốc)."""
@@ -259,12 +272,12 @@ class GoogleBackend:
         if not text.strip():
             return ""
         if self.disabled:
-            raise RuntimeError("Google đã ngừng sau nhiều lỗi liên tiếp")
+            raise RuntimeError(f"{self.name} đã ngừng sau nhiều lỗi liên tiếp")
         try:
-            protected, kept = self.protect(text[: self.max_chars])
+            protected, kept = self.protect(self.shorten(text))
             translated = self._fn()(protected)
             if not translated:
-                raise ValueError("Google trả về rỗng")
+                raise ValueError(f"{self.name} trả về rỗng")
             result = self.restore(translated, kept)
         except Exception:
             self.consecutive_errors += 1
@@ -273,23 +286,71 @@ class GoogleBackend:
         return result
 
 
+class GoogleBackend(MachineBackend):
+    """Google Translate qua deep-translator (không cần khóa API)."""
+
+    name = "google"
+
+    def _make_fn(self) -> Callable[[str], str]:
+        from deep_translator import GoogleTranslator
+
+        return GoogleTranslator(source="en", target="vi").translate
+
+
+class MyMemoryBackend(MachineBackend):
+    """MyMemory (api.mymemory.translated.net): miễn phí, không cần khóa.
+
+    Mỗi lần gửi tối đa 500 ký tự; khai email (tham số de) thì được 50.000 ký tự/ngày.
+    Gọi thẳng bằng requests để có timeout (deep-translator không đặt timeout).
+    """
+
+    name = "mymemory"
+    URL = "https://api.mymemory.translated.net/get"
+
+    def __init__(self, glossary: dict[str, Any], email: str = "", user_agent: str = "",
+                 max_chars: int = 450, timeout: float = 15,
+                 translate_fn: Callable[[str], str] | None = None) -> None:
+        super().__init__(glossary, max_chars, translate_fn)
+        self.email, self.user_agent, self.timeout = email, user_agent, timeout
+
+    def _make_fn(self) -> Callable[[str], str]:
+        import requests
+
+        def translate(text: str) -> str:
+            params = {"q": text, "langpair": "en|vi"}
+            if self.email:
+                params["de"] = self.email
+            r = requests.get(self.URL, params=params, timeout=self.timeout,
+                             headers={"User-Agent": self.user_agent} if self.user_agent else None)
+            r.raise_for_status()
+            data = r.json()
+            out = (data.get("responseData") or {}).get("translatedText") or ""
+            status = str(data.get("responseStatus", 200))
+            # Hết hạn mức hoặc lỗi: MyMemory vẫn có thể trả HTTP 200 kèm thông báo trong bản dịch
+            if status != "200" or out.upper().startswith(("MYMEMORY WARNING", "QUERY LENGTH LIMIT")):
+                raise RuntimeError(f"MyMemory: {status} {out[:120]}")
+            return html.unescape(out)
+
+        return translate
+
+
 # ---------------------------------------------------------------- Ghép lại
 
 
 @dataclass
 class TranslationReport:
     counts: dict[str, int] = field(default_factory=lambda: {
-        "original": 0, "cache": 0, "claude": 0, "google": 0, "untranslated": 0})
+        "original": 0, "cache": 0, "claude": 0, "google": 0, "mymemory": 0, "untranslated": 0})
     claude: dict[str, Any] = field(default_factory=dict)
     claude_problems: list[str] = field(default_factory=list)
-    google_errors: list[str] = field(default_factory=list)
+    machine_errors: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "counts": self.counts,
             "claude": self.claude,
             "claude_problems": self.claude_problems[:20],
-            "google_errors": self.google_errors[:20],
+            "machine_errors": self.machine_errors[:20],
         }
 
 
@@ -298,10 +359,11 @@ def apply_translations(
     cache: TranslationCache,
     source_langs: list[str],
     claude_out: dict[str, tuple[str, str]],
-    google: GoogleBackend | None,
+    machines: list[MachineBackend],
     report: TranslationReport,
 ) -> None:
-    """Gán bản dịch cho từng tin theo thứ tự: bộ nhớ đệm → Claude → Google → chưa dịch."""
+    """Gán bản dịch cho từng tin theo thứ tự: bộ nhớ đệm → Claude → dịch máy (Google, MyMemory…)
+    → chưa dịch."""
     for s in stories:
         p = s.primary
         if p.lang not in source_langs:
@@ -314,18 +376,20 @@ def apply_translations(
             s.translated, s.translation_source = True, entry["source"]
             report.counts["cache"] += 1
             continue
+        source = None
         if s.id in claude_out:
             title_vi, summary_vi = claude_out[s.id]
             source = "claude"
-        elif google is not None:
-            try:
-                title_vi, summary_vi = google.translate(p.title), google.translate(s.summary)
-                source = "google"
-            except Exception as exc:  # Google lỗi: để tiếng Anh, lần sau dịch lại
-                report.google_errors.append(f"{s.id[:8]}: {type(exc).__name__}: {str(exc)[:100]}")
-                source = None
         else:
-            source = None
+            for m in machines:
+                if m.disabled:
+                    continue
+                try:
+                    title_vi, summary_vi = m.translate(p.title), m.translate(s.summary)
+                    source = m.name
+                    break
+                except Exception as exc:  # lỗi thì thử dịch vụ kế tiếp; hết cách thì lần sau dịch lại
+                    report.machine_errors.append(f"{m.name} {s.id[:8]}: {type(exc).__name__}: {str(exc)[:100]}")
         if source is None:
             s.title_vi, s.summary_vi, s.translated, s.translation_source = "", "", False, None
             report.counts["untranslated"] += 1
@@ -343,7 +407,10 @@ def translate_stories(
     use_claude: bool = True,
     use_google: bool = True,
     runner: Runner = subprocess.run,
-    google: GoogleBackend | None = None,
+    google: MachineBackend | None = None,
+    use_mymemory: bool = True,
+    mymemory: MachineBackend | None = None,
+    user_agent: str = "",
 ) -> TranslationReport:
     """Chạy toàn bộ luồng dịch cho các tin của một ngày; ghi bộ nhớ đệm."""
     cfg = settings["translation"]
@@ -367,11 +434,19 @@ def translate_stories(
         report.claude = {"ran": False, "ok": False,
                          "error": None if not inputs else "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"}
 
-    if google is None and use_google and cfg["google"].get("enabled", True):
-        google = GoogleBackend(glossary, cfg["google"].get("max_chars", 4500))
-    elif not use_google:
-        google = None
+    # Dịch máy dự phòng theo thứ tự trong cấu hình (bỏ qua dịch vụ bị tắt)
+    machines: list[MachineBackend] = []
+    for name in cfg.get("fallback_order", ["google", "mymemory"]):
+        mcfg = cfg.get(name) or {}
+        if not mcfg.get("enabled", True):
+            continue
+        if name == "google" and use_google:
+            machines.append(google or GoogleBackend(glossary, mcfg.get("max_chars", 4500)))
+        elif name == "mymemory" and use_mymemory:
+            machines.append(mymemory or MyMemoryBackend(
+                glossary, email=settings["project"].get("contact_email", ""), user_agent=user_agent,
+                max_chars=mcfg.get("max_chars", 450), timeout=mcfg.get("timeout_seconds", 15)))
 
-    apply_translations(stories, cache, source_langs, claude_out, google, report)
+    apply_translations(stories, cache, source_langs, claude_out, machines, report)
     cache.save()
     return report

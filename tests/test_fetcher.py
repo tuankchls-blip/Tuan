@@ -163,3 +163,30 @@ def test_hf_papers_does_not_ask_future_dates(sources, ctx):
     get = fixture_getter("hf_papers.json")
     fetcher.fetch_hf_papers(sources["hf-papers"], ctx, get)
     assert [p["date"] for _, p in get.calls] == ["2026-10-28", "2026-10-29"]
+
+
+def test_empty_valid_feed_is_ok(sources, ctx):
+    empty = b'<?xml version="1.0"?><rss version="2.0"><channel><title>cs.AI</title></channel></rss>'
+    r = fetch_source(sources["arxiv"], ctx, lambda url, params: empty)
+    assert r.ok and r.articles == [] and r.note == "feed trống"
+
+
+def test_fallback_url_used_when_primary_fails(sources, ctx):
+    src = sources["expert"]
+    src.fallback_urls = ["https://mirror.example.com/feed"]
+
+    def get(url, params):
+        if "mirror" not in url:
+            resp = requests.Response()
+            resp.status_code = 403
+            raise requests.HTTPError(response=resp)
+        return fixture_getter("atom_sample.xml")(url, params)
+
+    r = fetch_source(src, ctx, get)
+    assert r.ok and r.articles and "dự phòng" in r.note and "HTTP 403" in r.note
+
+    def all_fail(url, params):
+        raise ConnectionError("down")
+
+    r = fetch_source(src, ctx, all_fail)
+    assert not r.ok and "down" in r.error
