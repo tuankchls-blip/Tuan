@@ -1,0 +1,17 @@
+{# Một tin trong bản tổng hợp. Biến: h (tin), root (đường dẫn về docs/) #}
+<article class="story" id="h-{{ h.id[:10] }}">
+  <div class="meta">
+    <span class="badge {{ h.label }}">{{ label_names[h.label] }}</span>
+    <span>{{ source_name(h.source_id) }}</span>
+    {% if h.n_sources > 1 %}<span>· {{ h.n_sources }} nguồn</span>{% endif %}
+    <span>·</span>
+    <a class="daylink" href="{{ root }}daily/{{ h.day[:4] }}/{{ h.day }}.html#s-{{ h.id[:10] }}">bản ngày {{ h.day | vn_short_date }}</a>
+  </div>
+  {% set show_vi = h.translated and h.title_vi %}
+  <h4>
+    <a href="{{ h.url | safe_url }}" target="_blank" rel="noopener noreferrer"{% if not show_vi %} lang="{{ h.lang }}"{% endif %}>{{ h.title_vi if show_vi else h.title_orig }}</a>
+    {% if not h.translated %}<span class="badge untranslated">chưa dịch</span>{% endif %}
+  </h4>
+  {% if show_vi and h.lang != 'vi' %}<p class="orig" lang="{{ h.lang }}">{{ h.title_orig }}</p>{% endif %}
+  {% if show_vi and h.summary_vi and with_summary %}<p class="summary">{{ h.summary_vi }}</p>{% endif %}
+</article>

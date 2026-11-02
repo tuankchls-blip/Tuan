@@ -1,0 +1,9 @@
+{# Biểu đồ thanh. Biến: rows = [(tên, số)] #}
+{% set peak = (rows | map(attribute=1) | max) if rows else 0 %}
+<ul class="bars">
+  {% for name, n in rows %}
+  <li><span class="name" title="{{ name }}">{{ name }}</span>
+      <span class="track"><span class="fill" style="width: {{ (100 * n / peak) | round(1) if peak else 0 }}%"></span></span>
+      <span class="n">{{ n }}</span></li>
+  {% endfor %}
+</ul>

@@ -95,3 +95,51 @@ def test_index_and_search(tmp_path, settings):
     assert "weekly/2026-W44.html" in html
     js = r.write_search_index(st).read_text(encoding="utf-8")
     assert js.startswith("window.DIGEST_SEARCH=") and js.index("Tiêu đề 2") < js.index("Tiêu đề 1")
+
+
+# ---------------------------------------------------------------- Bản tổng hợp
+
+
+def test_summary_titles():
+    t = Renderer.summary_title
+    assert t("weekly", "2026-W53") == "Tuần 53/2026"
+    assert t("monthly", "2026-01") == "Tháng 1/2026"
+    assert t("quarterly", "2026-Q4") == "Quý IV/2026"
+    assert t("yearly", "2026") == "Năm 2026"
+
+
+def test_summary_pages_render(tmp_path, settings):
+    from datetime import datetime, timezone
+
+    from digest.aggregator import Aggregator, period_for
+
+    st = Storage(tmp_path / "data")
+    for d in (date(2026, 12, 30), date(2027, 1, 2)):
+        evil = make_story(9, title_vi="<script>x</script>", url="javascript:alert(1)", score=9)
+        st.save_daily(d, make_data(d, [make_story(d.day, score=8, category="models"), evil]))
+    agg = Aggregator(st, settings, now=datetime(2027, 1, 10, tzinfo=timezone.utc))
+    r = renderer(tmp_path, settings)
+    pages = {}
+    for kind in ("weekly", "monthly", "quarterly", "yearly"):
+        p = period_for(kind, date(2026, 12, 30))
+        agg.build_and_save(p)
+        pages[kind] = r.render_summary_and_neighbors(st, kind, p.key).read_text(encoding="utf-8")
+
+    w = pages["weekly"]
+    assert "Bản tin tuần 53/2026" in w and "28/12/2026 – 03/01/2027" in w
+    assert 'href="../daily/2027/2027-01-02.html#s-' in w      # link về bản ngày năm sau
+    assert "&lt;script&gt;" in w and 'href="javascript:' not in w
+    assert "Chủ đề so với tuần 52/2026" in w
+    assert "Kỳ chưa kết thúc" not in w
+    assert "Dòng thời gian" in pages["yearly"] and "Tháng 12/2026" in pages["yearly"]
+    assert "Xu hướng theo tháng" in pages["quarterly"] and "Bản tin quý IV/2026" in pages["quarterly"]
+    assert "Xu hướng theo tuần" in pages["monthly"] and "Tuần 53/2026 (28/12–03/01)" in pages["monthly"]
+
+    # Kỳ sau được tạo thì kỳ trước có link "kỳ sau"
+    agg.build_and_save(period_for("weekly", date(2027, 1, 5)))
+    r.render_summary_and_neighbors(st, "weekly", "2027-W01")
+    assert 'href="2027-W01.html"' in (tmp_path / "docs/weekly/2026-W53.html").read_text(encoding="utf-8")
+
+    index = r.render_index(st).read_text(encoding="utf-8")
+    for text in ("Tuần 53/2026", "Tháng 12/2026", "Quý IV/2026", "Năm 2026", 'href="weekly/2026-W53.html"'):
+        assert text in index

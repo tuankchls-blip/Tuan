@@ -185,3 +185,14 @@ def test_build_and_save(agg, store):
     agg.build_and_save(period_for("weekly", date(2027, 1, 1)))
     assert store.load_summary("weekly", "2026-W53")["end"] == "2027-01-03"
     assert "2026-W53" in store.list_summaries("weekly")
+
+
+def test_days_expected_ignores_days_before_project_and_future(store, settings):
+    # Dữ liệu giả bắt đầu 01/12/2025; "hôm nay" là 05/01/2027
+    agg = Aggregator(store, settings, now=datetime(2027, 1, 5, 3, tzinfo=timezone.utc))
+    nov = agg.build(period_for("monthly", date(2025, 11, 20)))
+    assert nov["days_expected"] == [] and nov["complete"]
+    mar = agg.build(period_for("monthly", date(2026, 3, 1)))
+    assert len(mar["days_expected"]) - len(mar["days_with_data"]) == 2   # hai ngày thiếu thật
+    jan = agg.build(period_for("monthly", date(2027, 1, 1)))
+    assert not jan["complete"] and jan["days_expected"][-1] == "2027-01-05"

@@ -28,6 +28,11 @@ def safe_url(url: str | None) -> str:
     return "#"
 
 
+def lower_first(text: str) -> str:
+    """Viết thường chữ cái đầu ("Quý IV/2026" -> "quý IV/2026"), giữ nguyên phần còn lại."""
+    return text[:1].lower() + text[1:]
+
+
 def _as_date(value: date | str) -> date:
     return value if isinstance(value, date) else date.fromisoformat(value)
 
@@ -51,8 +56,15 @@ class Renderer:
             vn_long_date=lambda d: self.vn_long_date(_as_date(d)),
             vn_short_date=lambda d: _as_date(d).strftime("%d/%m/%Y"),
         )
+        cat_labels = settings["categories"]["labels"]
+        self.env.filters.update(
+            category_row=lambda kv: (cat_labels.get(kv[0], kv[0]), kv[1]),
+            source_row=lambda kv: (self.source_names.get(kv[0], kv[0]), kv[1]),
+        )
         self.env.globals.update(
             source_name=lambda sid: self.source_names.get(sid, sid),
+            category_label=lambda c: cat_labels.get(c, c),
+            series_label=self.series_label,
             label_names=LABEL_NAMES,
             repo_url=settings["project"]["repo_url"],
         )
@@ -135,6 +147,58 @@ class Renderer:
         )
         return self._write(self.daily_path(day), html)
 
+    # ---------------------------------------------------------------- Bản tổng hợp
+
+    @staticmethod
+    def summary_title(kind: str, key: str) -> str:
+        """Tên kỳ: 2026-W44 -> "Tuần 44/2026", 2026-10 -> "Tháng 10/2026", 2026-Q4 -> "Quý IV/2026"."""
+        if kind == "weekly":
+            year, week = key.split("-W")
+            return f"Tuần {int(week)}/{year}"
+        if kind == "monthly":
+            year, month = key.split("-")
+            return f"Tháng {int(month)}/{year}"
+        if kind == "quarterly":
+            year, q = key.split("-Q")
+            return f"Quý {['I', 'II', 'III', 'IV'][int(q) - 1]}/{year}"
+        return f"Năm {key}"
+
+    def series_label(self, row: dict[str, Any]) -> str:
+        key = row["key"]
+        if "-W" in key:
+            start, end = date.fromisoformat(row["start"]), date.fromisoformat(row["end"])
+            return f"{self.summary_title('weekly', key)} ({start:%d/%m}–{end:%d/%m})"
+        return self.summary_title("monthly", key)
+
+    def render_summary(self, summary: dict[str, Any], prev_key: str | None, next_key: str | None) -> Path:
+        kind, key = summary["kind"], summary["key"]
+        html = self.env.get_template(f"{kind}.html").render(
+            root="../",
+            s=summary,
+            title=f"Bản tin {lower_first(self.summary_title(kind, key))}",
+            prev_period_name=lower_first(self.summary_title(kind, summary["previous_key"])),
+            series_unit="tuần" if kind == "monthly" else "tháng",
+            prev_title=self.summary_title(kind, prev_key) if prev_key else None,
+            next_title=self.summary_title(kind, next_key) if next_key else None,
+            prev_href=f"{prev_key}.html" if prev_key else None,
+            next_href=f"{next_key}.html" if next_key else None,
+        )
+        return self._write(self.docs_dir / kind / f"{key}.html", html)
+
+    def render_summary_and_neighbors(self, storage: Storage, kind: str, key: str) -> Path:
+        """Dựng bản tổng hợp đã lưu và vẽ lại hai kỳ lân cận để cập nhật link trước/sau."""
+        keys = storage.list_summaries(kind)
+        i = keys.index(key)
+        path = Path()
+        for j in (i - 1, i, i + 1):
+            if 0 <= j < len(keys):
+                data = storage.load_summary(kind, keys[j])
+                out = self.render_summary(data, keys[j - 1] if j > 0 else None,
+                                          keys[j + 1] if j + 1 < len(keys) else None)
+                if j == i:
+                    path = out
+        return path
+
     # ---------------------------------------------------------------- Mục lục và tìm kiếm
 
     def render_index(self, storage: Storage) -> Path:
@@ -143,7 +207,8 @@ class Renderer:
         for level, label in SUMMARY_LEVELS:
             folder = self.docs_dir / level
             files = sorted(folder.glob("*.html"), reverse=True) if folder.exists() else []
-            summaries.append({"label": label, "entries": [{"name": f.stem, "href": f"{level}/{f.name}"} for f in files]})
+            summaries.append({"label": label, "entries": [
+                {"name": self.summary_title(level, f.stem), "href": f"{level}/{f.name}"} for f in files]})
 
         months: dict[str, list[dict[str, Any]]] = {}
         latest = None

@@ -170,6 +170,14 @@ class Aggregator:
     def days_with_data(self, period: Period) -> list[str]:
         return [d.isoformat() for d in period.days if self.daily(d)]
 
+    def days_expected(self, period: Period) -> list[str]:
+        """Các ngày lẽ ra có bản tin: từ ngày có bản tin đầu tiên của dự án đến hôm nay."""
+        all_days = self.storage.list_days()
+        if not all_days:
+            return []
+        today = self.now.astimezone(self.tz).date()
+        return [d.isoformat() for d in period.days if all_days[0] <= d <= today]
+
     # ---- Tin nổi bật
 
     def highlights(self, period: Period) -> list[dict[str, Any]]:
@@ -281,7 +289,9 @@ class Aggregator:
             "previous_key": prev.key,
             "generated_at": self.now.astimezone(self.tz).isoformat(timespec="seconds"),
             "days_with_data": self.days_with_data(period),
+            "days_expected": self.days_expected(period),
             "days_total": len(period.days),
+            "complete": period.end < self.now.astimezone(self.tz).date(),
             "highlights": highlights,
             "stats": self.stats(entries),
             "topics": self.topics(entries, self.entries(prev)),

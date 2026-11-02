@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block description %}{{ s.stats.labels.important }} tin Quan trọng, {{ s.stats.stories }} tin trong {{ title[8:] }}{% endblock %}
+{% block nav %}
+  {% if prev_href %}<a href="{{ prev_href }}">← {{ prev_title }}</a>{% endif %}
+  {% if next_href %}<a href="{{ next_href }}">{{ next_title }} →</a>{% endif %}
+{% endblock %}
+{% block header %}
+<h1>{{ title }}<br><small>{{ s.start | vn_short_date }} – {{ s.end | vn_short_date }}</small></h1>
+<div class="stats">
+  <span class="stat"><b>{{ s.stats.stories }}</b> tin</span>
+  <span class="stat"><b>{{ s.stats.labels.important }}</b> Quan trọng</span>
+  <span class="stat"><b>{{ s.stats.labels.notable }}</b> Đáng chú ý</span>
+  <span class="stat"><b>{{ s.days_with_data | length }}</b> ngày có bản tin</span>
+</div>
+{% set missing = (s.days_expected | length) - (s.days_with_data | length) %}
+{% if not s.complete %}
+<p class="note">Kỳ chưa kết thúc: số liệu tính đến {{ s.generated_at | vn_time }}.</p>
+{% endif %}
+{% if missing > 0 %}
+<p class="note">Thiếu bản tin của {{ missing }} ngày; số liệu chỉ tính trên các ngày có dữ liệu.</p>
+{% endif %}
+<ul class="toc">
+  <li><a href="#noi-bat">Tin nổi bật</a></li>
+  {% if s.timeline %}<li><a href="#dong-thoi-gian">Dòng thời gian</a></li>{% endif %}
+  {% if s.multi_day_events %}<li><a href="#nhieu-ngay">Đưa tin nhiều ngày</a></li>{% endif %}
+  {% if s.major_releases %}<li><a href="#cong-bo-lon">Mô hình & công bố lớn</a></li>{% endif %}
+  <li><a href="#chu-de">Chủ đề</a></li>
+  {% if s.research %}<li><a href="#nghien-cuu">Nghiên cứu đáng đọc</a></li>{% endif %}
+  {% if s.series %}<li><a href="#xu-huong">Xu hướng</a></li>{% endif %}
+  <li><a href="#so-lieu">Số liệu</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+
+{% if s.timeline %}
+<section id="dong-thoi-gian" class="timeline">
+  <h2>Dòng thời gian</h2>
+  {% for m in s.timeline %}
+  <h3>Tháng {{ m.month[5:] | int }}/{{ m.month[:4] }}</h3>
+  {% for h in m.highlights %}{% set with_summary = false %}{% include "_entry.html" %}{% endfor %}
+  {% endfor %}
+</section>
+{% endif %}
+
+<section id="noi-bat">
+  <h2>Tin nổi bật</h2>
+  {% for h in s.highlights %}{% set with_summary = true %}{% include "_entry.html" %}{% else %}
+  <p class="empty">Không có tin Quan trọng nào trong kỳ này.</p>
+  {% endfor %}
+</section>
+
+{% if s.multi_day_events %}
+<section id="nhieu-ngay">
+  <h2>Sự kiện được đưa tin nhiều ngày</h2>
+  {% for ev in s.multi_day_events %}
+  <div class="event">
+    <h4>{{ ev.title_vi if (ev.translated and ev.title_vi) else ev.title_orig }}</h4>
+    <ul>
+      {% for h in ev.stories %}
+      <li><a href="{{ root }}daily/{{ h.day[:4] }}/{{ h.day }}.html#s-{{ h.id[:10] }}">{{ h.day | vn_short_date }}</a>:
+        {{ h.title_vi if (h.translated and h.title_vi) else h.title_orig }} <span class="note">({{ source_name(h.source_id) }})</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if s.major_releases %}
+<section id="cong-bo-lon">
+  <h2>Mô hình & công bố lớn</h2>
+  {% for h in s.major_releases %}{% set with_summary = false %}{% include "_entry.html" %}{% endfor %}
+</section>
+{% endif %}
+
+<section id="chu-de">
+  <h2>Chủ đề so với {{ prev_period_name }}</h2>
+  {% if s.topics %}
+  <div class="table-scroll">
+  <table class="status">
+    <thead><tr><th>Chủ đề</th><th class="n">Kỳ này</th><th class="n">Kỳ trước</th><th class="n">Thay đổi</th></tr></thead>
+    <tbody>
+    {% for t in s.topics %}
+      <tr><td>{{ t.topic }}</td><td class="n">{{ t.count }}</td><td class="n">{{ t.previous }}</td>
+        <td class="n {{ 'up' if t.delta > 0 else ('down' if t.delta < 0 else 'flat') }}">{{ '▲ +' ~ t.delta if t.delta > 0 else ('▼ ' ~ t.delta if t.delta < 0 else '—') }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}<p class="empty">Chưa có dữ liệu chủ đề.</p>{% endif %}
+</section>
+
+{% if s.research %}
+<section id="nghien-cuu">
+  <h2>Nghiên cứu đáng đọc</h2>
+  {% for h in s.research %}{% set with_summary = true %}{% include "_entry.html" %}{% endfor %}
+</section>
+{% endif %}
+
+{% if s.series %}
+<section id="xu-huong">
+  <h2>Xu hướng theo {{ series_unit }}</h2>
+  <div class="table-scroll">
+  <table class="status">
+    <thead><tr><th>{{ series_unit | capitalize }}</th><th class="n">Số tin</th><th class="n">Quan trọng</th><th>Mục nhiều tin nhất</th></tr></thead>
+    <tbody>
+    {% for r in s.series %}
+      <tr><td>{{ series_label(r) }}</td><td class="n">{{ r.stories }}</td><td class="n">{{ r.important }}</td>
+        <td>{% set top = r.categories | dictsort(by='value', reverse=true) | first %}{% if top %}{{ category_label(top[0]) }} ({{ top[1] }}){% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+{% endif %}
+
+<section id="so-lieu">
+  <h2>Số liệu</h2>
+  <div class="grid2">
+    <div>
+      <h3 class="sub">Theo mục</h3>
+      {% set rows = s.stats.categories | dictsort(by='value', reverse=true) | map('category_row') | list %}
+      {% include "_bars.html" %}
+    </div>
+    <div>
+      <h3 class="sub">Theo nguồn gốc</h3>
+      {% set rows = s.stats.sources | dictsort(by='value', reverse=true) | map('source_row') | list %}
+      {% include "_bars.html" %}
+    </div>
+  </div>
+  {% if s.stats.keywords %}
+  <h3 class="sub">Từ khóa xuất hiện nhiều</h3>
+  <p class="kw">{% for k, n in s.stats.keywords | dictsort(by='value', reverse=true) %}<span>{{ k }} · {{ n }}</span>{% endfor %}</p>
+  {% endif %}
+</section>
+{% endblock %}
+{% block footer %}
+<div class="pager">
+  <span>{% if prev_href %}<a href="{{ prev_href }}">← {{ prev_title }}</a>{% endif %}</span>
+  <span>{% if next_href %}<a href="{{ next_href }}">{{ next_title }} →</a>{% endif %}</span>
+</div>
+<p>Số liệu tính từ các bản ngày trong kỳ. Tạo lúc {{ s.generated_at | vn_time }}.</p>
+{% endblock %}
