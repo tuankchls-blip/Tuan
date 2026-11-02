@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-02",
+  "runs": [
+    {
+      "generated_at": "2026-11-02T12:09:43+07:00",
+      "duration_seconds": 6.7,
+      "sources_ok": 30,
+      "sources_failed": [
+        "importai"
+      ],
+      "stories": {
+        "important": 1,
+        "notable": 9,
+        "dropped": 21
+      },
+      "translation": {
+        "counts": {
+          "original": 3,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "untranslated": 7
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "google_errors": [
+          "38343bf4: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "7a065140: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "1cc70eeb: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "594f44f4: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "0dbf0226: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "bb264206: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp",
+          "e3c2e19a: RuntimeError: Google đã ngừng sau nhiều lỗi liên tiếp"
+        ]
+      }
+    }
+  ]
+}

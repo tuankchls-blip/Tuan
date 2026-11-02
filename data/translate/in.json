@@ -1,67 +1,37 @@
 [
   {
-    "id": "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e",
-    "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
-    "summary": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts."
-  },
-  {
-    "id": "fb9fb5a975e9eb28458d3f11e66dc7b0af3ef891",
-    "title": "Northflank security breach leads to abuse of customers' AI API keys",
-    "summary": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys."
-  },
-  {
-    "id": "95dfb073e0ec8286880a017aaf1cebe747e1f321",
-    "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
-    "summary": "Blockchain analytics firm Chainalysis disclosed a data breach after attackers used \"offensive agentic techniques\" to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles."
-  },
-  {
-    "id": "d5bb41b6ba041206b1410f5dbd278a1cd9bcfe74",
-    "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
-    "summary": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat."
-  },
-  {
-    "id": "edd821e09ba3cc5366f890405e2c7043fb0c3049",
-    "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
-    "summary": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs."
-  },
-  {
-    "id": "dd35d009aad680f7bdb8901c179d770026e55ae7",
-    "title": "How We Took Over ChatGPT Accounts",
-    "summary": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn't directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only…"
-  },
-  {
-    "id": "4c77a0dfd6338debf2fa3d6f68af301e16bc3b18",
-    "title": "datasette-llm 0.1a9",
-    "summary": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent"
-  },
-  {
-    "id": "6bd209feefbeab17a3f5fb389d25b5a774e46e10",
-    "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+    "id": "38343bf46fe3ff86c7fe7f54901d0e7366ade0aa",
+    "title": "Scientists wonder is my ai stealing my ideas",
     "summary": ""
   },
   {
-    "id": "74dc1ad06d2d1d6d64c61f482a0e7972b8af5593",
-    "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
-    "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message."
+    "id": "7a06514023fd7da46cc275af453cfd3d44351c84",
+    "title": "Quoting Kyle Kingsbury",
+    "summary": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: kyle-kingsbury , llms , ai , generative-ai , ai-misuse"
   },
   {
-    "id": "9f56e268b05ea69134d92ef78e09b3b78f4b6f63",
-    "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
-    "summary": "Apple's new CEO defended the company's current position in the AI landscape."
+    "id": "1cc70eeb84cf8fefdc0ea8416012b2928496eae9",
+    "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+    "summary": "Hackers attempted to exploit a critical GitLab vulnerability in Alpine Linux's development infrastructure on October 20-21, prompting the open-source project to rebuild its GitLab server and reset all passwords over concerns of a possible compromise."
   },
   {
-    "id": "e07dacdb45dcc75e43fc5c0e372ea75eac8c7fbd",
-    "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
-    "summary": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act."
+    "id": "594f44f4d3492479847fdc2d840dc1d1aa62e02c",
+    "title": "Guarding the Gates of Knowledge",
+    "summary": "A recent scroll through social media got me thinking about trust. About half my feed was filled with AI slop that astute users would call out as being machine-generated, often to the embarrassment of the rube who unknowingly spread it and sometimes to the delight of the poster who shared it deliberately because they found it amusing or useful for sowing confusion. Remember the good old days of GPT-3 when we could ask the chatbot anything and it would almost instantly and very confidently spit back a plausible but false answer? That’s when the word “hallucination” as applied to AI answers entered the lexicon. Six years and several versions of a few different chatbots later, I still can’t trust the answers I get, even though Claude or Gemini often do useful work for me. That’s the thing about current AI: Trust but verify. And verify you must. Apply that maxim at scale to maintain the integrity of the scientific record and you get an idea of the challenge facing publishers of peer-reviewed scholarship. In “ I Used AI to Fake a Scientific Paper ,” freelance writer and doctor of applied mathematics Benjamin Skuse tells the story of the human gatekeepers trying to beat back the rising…"
   },
   {
-    "id": "ee9f8f39beac17095a41c387246bb008552d4c3a",
-    "title": "I built an AI Tamagotchi before Meta could",
-    "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It"
+    "id": "0dbf0226aa90a12c5a2161ad1c244a578bd24b7d",
+    "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+    "summary": "Data centers are deeply unpopular. But what if we called them something else?"
   },
   {
-    "id": "c6b2d3ea79170b2aaebd03c698f22e18c5fd0ff8",
-    "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
-    "summary": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan."
+    "id": "bb2642061f374db81b63843af50a0f70ef36e8e4",
+    "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+    "summary": "On Equity, we discuss why tech CEO statements can seem so tone deaf."
+  },
+  {
+    "id": "e3c2e19ab9b4b96414fdacad5433a70a343d8c2f",
+    "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
+    "summary": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry."
   }
 ]

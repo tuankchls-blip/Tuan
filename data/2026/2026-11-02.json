@@ -1,0 +1,530 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T12:09:43+07:00",
+  "window": {
+    "start": "2026-11-01T07:00:00+07:00",
+    "end": "2026-11-02T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 479,
+      "error": null,
+      "note": "bỏ 280 mục cập nhật bài cũ"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 14,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 1,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1341,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 894,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 2,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": false,
+      "items": 0,
+      "error": "HTTP 403",
+      "note": null
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "38343bf46fe3ff86c7fe7f54901d0e7366ade0aa",
+      "url": "https://hai.stanford.edu/news/scientists-wonder-is-my-ai-stealing-my-ideas",
+      "source_id": "stanford-hai",
+      "published_at": "2026-11-01T20:04:34+00:00",
+      "lang": "en",
+      "title_orig": "Scientists wonder is my ai stealing my ideas",
+      "summary_orig": "",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn stanford-hai +3",
+        "luôn đưa vào: công bố gốc từ stanford-hai"
+      ],
+      "article_ids": [
+        "38343bf46fe3ff86c7fe7f54901d0e7366ade0aa"
+      ]
+    },
+    {
+      "id": "7a06514023fd7da46cc275af453cfd3d44351c84",
+      "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "source_id": "simonwillison",
+      "published_at": "2026-11-01T16:49:04+00:00",
+      "lang": "en",
+      "title_orig": "Quoting Kyle Kingsbury",
+      "summary_orig": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: kyle-kingsbury , llms , ai , generative-ai , ai-misuse",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLMs"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn simonwillison +2",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "7a06514023fd7da46cc275af453cfd3d44351c84"
+      ]
+    },
+    {
+      "id": "1cc70eeb84cf8fefdc0ea8416012b2928496eae9",
+      "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-01T15:11:21+00:00",
+      "lang": "en",
+      "title_orig": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+      "summary_orig": "Hackers attempted to exploit a critical GitLab vulnerability in Alpine Linux's development infrastructure on October 20-21, prompting the open-source project to rebuild its GitLab server and reset all passwords over concerns of a possible compromise.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "RCE",
+        "hackers"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "1cc70eeb84cf8fefdc0ea8416012b2928496eae9"
+      ]
+    },
+    {
+      "id": "594f44f4d3492479847fdc2d840dc1d1aa62e02c",
+      "url": "https://spectrum.ieee.org/ai-slop-trust-science",
+      "source_id": "ieee-spectrum-ai",
+      "published_at": "2026-11-01T14:00:01+00:00",
+      "lang": "en",
+      "title_orig": "Guarding the Gates of Knowledge",
+      "summary_orig": "A recent scroll through social media got me thinking about trust. About half my feed was filled with AI slop that astute users would call out as being machine-generated, often to the embarrassment of the rube who unknowingly spread it and sometimes to the delight of the poster who shared it deliberately because they found it amusing or useful for sowing confusion. Remember the good old days of GPT-3 when we could ask the chatbot anything and it would almost instantly and very confidently spit back a plausible but false answer? That’s when the word “hallucination” as applied to AI answers entered the lexicon. Six years and several versions of a few different chatbots later, I still can’t trust the answers I get, even though Claude or Gemini often do useful work for me. That’s the thing about current AI: Trust but verify. And verify you must. Apply that maxim at scale to maintain the integrity of the scientific record and you get an idea of the challenge facing publishers of peer-reviewed scholarship. In “ I Used AI to Fake a Scientific Paper ,” freelance writer and doctor of applied mathematics Benjamin Skuse tells the story of the human gatekeepers trying to beat back the rising…",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "chatbot"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ieee-spectrum-ai +3",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "594f44f4d3492479847fdc2d840dc1d1aa62e02c"
+      ]
+    },
+    {
+      "id": "bbc95b623ac931b149cda3a9fef45746bff14f36",
+      "url": "https://vnexpress.net/elon-musk-tac-nhan-ai-se-hack-he-thong-de-kiem-tien-cho-chinh-chung-5139352.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-01T08:54:30+00:00",
+      "lang": "vi",
+      "title_orig": "Elon Musk: Tác nhân AI sẽ hack hệ thống để kiếm tiền cho chính chúng",
+      "summary_orig": "Sau thông tin Binance bị tin tặc đánh cắp 6,3 tỷ USD tiền số, Elon Musk bình luận tác nhân AI có thể làm điều tương tự trong tương lai.",
+      "title_vi": "Elon Musk: Tác nhân AI sẽ hack hệ thống để kiếm tiền cho chính chúng",
+      "summary_vi": "Sau thông tin Binance bị tin tặc đánh cắp 6,3 tỷ USD tiền số, Elon Musk bình luận tác nhân AI có thể làm điều tương tự trong tương lai.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hack",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "bbc95b623ac931b149cda3a9fef45746bff14f36"
+      ]
+    },
+    {
+      "id": "0dbf0226aa90a12c5a2161ad1c244a578bd24b7d",
+      "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-01T21:55:23+00:00",
+      "lang": "en",
+      "title_orig": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "summary_orig": "Data centers are deeply unpopular. But what if we called them something else?",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "0dbf0226aa90a12c5a2161ad1c244a578bd24b7d"
+      ]
+    },
+    {
+      "id": "bb2642061f374db81b63843af50a0f70ef36e8e4",
+      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-01T20:57:58+00:00",
+      "lang": "en",
+      "title_orig": "AI can make tech CEOs’ lives easier. What about everyone else?",
+      "summary_orig": "On Equity, we discuss why tech CEO statements can seem so tone deaf.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "bb2642061f374db81b63843af50a0f70ef36e8e4"
+      ]
+    },
+    {
+      "id": "e3c2e19ab9b4b96414fdacad5433a70a343d8c2f",
+      "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-01T10:30:00+00:00",
+      "lang": "en",
+      "title_orig": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
+      "summary_orig": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry.",
+      "title_vi": "",
+      "summary_vi": "",
+      "translated": false,
+      "translation_source": null,
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "e3c2e19ab9b4b96414fdacad5433a70a343d8c2f"
+      ]
+    },
+    {
+      "id": "b2d48589ec8d46dfbd5d0f9c256ee16e18ba4679",
+      "url": "https://vnexpress.net/binance-da-bu-duoc-90-thiet-hai-tu-vu-hack-6-3-ty-usd-5139320.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-01T05:36:03+00:00",
+      "lang": "vi",
+      "title_orig": "Binance: 'Đã bù được 90% thiệt hại từ vụ hack 6,3 tỷ USD'",
+      "summary_orig": "Richard Teng, đồng CEO Binance, thông báo có thể bù đắp phần lớn thiệt hại cho người dùng trong vụ hack, hiện được FBI quy trách nhiệm cho tin tặc Triều Tiên.",
+      "title_vi": "Binance: 'Đã bù được 90% thiệt hại từ vụ hack 6,3 tỷ USD'",
+      "summary_vi": "Richard Teng, đồng CEO Binance, thông báo có thể bù đắp phần lớn thiệt hại cho người dùng trong vụ hack, hiện được FBI quy trách nhiệm cho tin tặc Triều Tiên.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hack"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "b2d48589ec8d46dfbd5d0f9c256ee16e18ba4679"
+      ]
+    },
+    {
+      "id": "771c44fd37d106ead0cd47ce3df488d0c13ea954",
+      "url": "https://vnexpress.net/ve-tinh-ai-cua-google-gui-phan-hoi-dau-tien-tu-khong-gian-5139248.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-01T04:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Vệ tinh AI của Google gửi phản hồi đầu tiên từ không gian",
+      "summary_orig": "Vệ tinh đầu tiên trang bị bộ xử lý Tensor (TPU) của Google đang hoạt động tốt trên quỹ đạo Trái Đất, gửi về thơ và dữ liệu kỹ thuật.",
+      "title_vi": "Vệ tinh AI của Google gửi phản hồi đầu tiên từ không gian",
+      "summary_vi": "Vệ tinh đầu tiên trang bị bộ xử lý Tensor (TPU) của Google đang hoạt động tốt trên quỹ đạo Trái Đất, gửi về thơ và dữ liệu kỹ thuật.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Chủ đề AI chung (giúp lọc feed tổng như Ars Technica, VnExpress) +1"
+      ],
+      "article_ids": [
+        "771c44fd37d106ead0cd47ce3df488d0c13ea954"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 3,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "untranslated": 7
+    }
+  }
+}
