@@ -3,12 +3,12 @@
 import json
 from datetime import date, datetime, timezone
 
+import pytest
 import requests
 
 import main
-from digest.translator import GoogleBackend
-from digest.storage import load_glossary
 
+from . import fake_dichviet as fd
 from .conftest import FIXTURES
 
 NOW = datetime(2026, 10, 30, 0, 5, tzinfo=timezone.utc)  # 07:05 giờ VN
@@ -31,15 +31,19 @@ def fake_get(url, params):
     raise requests.HTTPError(response=resp)
 
 
-def no_claude_runner(*args, **kwargs):
-    raise AssertionError("không được gọi Claude")
+@pytest.fixture(autouse=True)
+def fake_engines(monkeypatch):
+    """Máy dịch giả: Claude không được gọi (use_claude=False), Google trả "[vi] " + gốc."""
+    def no_claude(text):
+        raise AssertionError("không được gọi Claude")
+
+    return fd.install(monkeypatch, claude_cli=no_claude)
 
 
 def run(tmp_path, **kw):
-    kw.setdefault("google", GoogleBackend(load_glossary(), translate_fn=lambda t: "[vi] " + t))
-    kw.setdefault("use_mymemory", False)  # không gọi mạng
+    kw.setdefault("use_mymemory", False)  # MyMemory giả không cần, giữ chuỗi gọn
     return main.run_daily(DAY, root=tmp_path, getter=fake_get, now=NOW, use_claude=False,
-                          runner=no_claude_runner, log=lambda *a: None, **kw)
+                          dichviet=fd.make_translator(), log=lambda *a: None, **kw)
 
 
 def test_daily_end_to_end(tmp_path):
@@ -93,8 +97,7 @@ def test_next_day_skips_published_stories(tmp_path):
     run(tmp_path)
     r2 = main.run_daily(date(2026, 10, 31), root=tmp_path, getter=fake_get,
                         now=datetime(2026, 10, 31, 0, 5, tzinfo=timezone.utc), use_claude=False,
-                        google=GoogleBackend(load_glossary(), translate_fn=lambda t: t), use_mymemory=False,
-                        log=lambda *a: None)
+                        dichviet=fd.make_translator(), use_mymemory=False, log=lambda *a: None)
     first_ids = set(json.loads((tmp_path / "data/2026/2026-10-30.json").read_text())["stories"][0]["article_ids"])
     second = json.loads(r2.json_path.read_text(encoding="utf-8"))
     assert not any(set(s["article_ids"]) & first_ids for s in second["stories"])
@@ -103,11 +106,9 @@ def test_next_day_skips_published_stories(tmp_path):
     assert 'href="../2026/2026-10-30.html"' in r2.html_path.read_text()
 
 
-def test_untranslated_when_both_translators_fail(tmp_path):
-    def broken(text):
-        raise ConnectionError("blocked")
-
-    r = run(tmp_path, google=GoogleBackend(load_glossary(), translate_fn=broken))
+def test_untranslated_when_both_translators_fail(tmp_path, monkeypatch):
+    fd.install(monkeypatch, google=fd.quota, mymemory=fd.quota)
+    r = run(tmp_path, use_mymemory=True)
     data = json.loads(r.json_path.read_text(encoding="utf-8"))
     en = [s for s in data["stories"] if s["lang"] == "en"]
     assert en and all(not s["translated"] for s in en)

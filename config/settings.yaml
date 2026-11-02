@@ -266,41 +266,31 @@ translation:
   # Ngôn ngữ cần dịch sang tiếng Việt (tin tiếng Việt giữ nguyên)
   source_langs: [en]
 
-  # Dịch chính: Claude Code chạy không tương tác, theo skill dich-tin-ai.
-  # Chỉ được đọc in.json, glossary.yaml, SKILL.md và ghi out.json; không shell, không mạng.
+  # Dịch bằng thư viện dichviet (cấu hình chi tiết: config/dichviet.yaml).
+  # Dịch chính: Claude Code CLI (claude -p, không công cụ, không MCP; mô hình haiku).
   # Tắt tạm thời: chạy với --no-claude hoặc đặt biến môi trường DIGEST_NO_CLAUDE=1.
   claude:
     enabled: true
-    command: claude
-    model: null           # null = mô hình mặc định của gói Claude
-    max_turns: 15         # giới hạn số lượt
-    timeout_seconds: 900  # quá thời gian thì bỏ, chuyển sang Google
 
-  # Dịch máy dự phòng khi không có bản dịch của Claude: thử lần lượt theo thứ tự này.
-  # Dịch vụ lỗi 3 lần liên tiếp thì ngừng gọi trong lần chạy đó.
+  # Dịch máy dự phòng khi Claude không dịch được: thử lần lượt theo thứ tự này.
+  # Google gặp 429/CAPTCHA một lần, MyMemory hết hạn mức một lần là bị bỏ qua cho cả lần chạy.
   fallback_order: [google, mymemory]
 
   # Google Translate qua deep-translator (không cần khóa API).
-  # Lưu ý: Google hay chặn máy chủ GitHub Actions bằng CAPTCHA. Tắt: --no-google.
+  # Lưu ý: Google hay chặn máy chủ GitHub Actions. Tắt: --no-google.
   google:
     enabled: true
-    max_chars: 4500       # giới hạn mỗi lần gửi (dịch vụ cho tối đa 5.000)
 
-  # MyMemory (miễn phí, không cần khóa): 50.000 ký tự/ngày khi khai email (project.contact_email).
-  # Mỗi lần gửi tối đa 500 ký tự, nên tóm tắt dài được cắt ở ranh giới câu trước khi dịch
-  # (bản gốc đầy đủ vẫn xem được bằng nút "Xem bản gốc"). Tắt: --no-mymemory.
+  # MyMemory (miễn phí, không cần khóa): 50.000 ký tự/ngày khi khai email; email lấy từ
+  # project.contact_email (đặt vào biến môi trường MYMEMORY_EMAIL). dichviet tự tách mỗi lần
+  # gửi ≤ 500 byte nên không còn cắt tóm tắt. Tắt: --no-mymemory.
   mymemory:
     enabled: true
-    max_chars: 450
-    timeout_seconds: 15
 
 # ---------------------------------------------------------------- Đường dẫn
 paths:
   data_dir: data
   docs_dir: docs
   templates_dir: templates
-  translate_in: data/translate/in.json
-  translate_out: data/translate/out.json
   translations_cache: data/translations_cache.json
-  skill_file: .claude/skills/dich-tin-ai/SKILL.md
-  glossary_file: config/glossary.yaml
+  dichviet_config: config/dichviet.yaml

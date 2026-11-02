@@ -1,8 +1,10 @@
-# Thuật ngữ dùng khi dịch tin sang tiếng Việt.
-# - Claude đọc file này qua skill dich-tin-ai.
-# - Với Google Translate, các từ trong keep_terms và proper_nouns được thay bằng
-#   mã giữ chỗ trước khi dịch rồi trả lại nguyên văn sau khi dịch.
-# So khớp không phân biệt hoa thường, theo ranh giới từ; cụm dài được ưu tiên trước.
+# Thuật ngữ riêng của bản tin, nạp vào dichviet qua config/dichviet.yaml (extra_glossary),
+# đè lên các bảng có sẵn của dichviet (ai, cntt, an-ninh-mang).
+# - Claude nhận các mục xuất hiện trong lô kèm system prompt.
+# - Với Google, MyMemory: keep_terms và proper_nouns được thay bằng mã giữ chỗ trước khi
+#   dịch rồi trả lại nguyên văn; preferred_translations được thay bằng từ Việt.
+# So khớp không phân biệt hoa thường, theo nguyên từ; cụm dài được ưu tiên trước.
+# Kiểm tra mục trùng, mâu thuẫn: dichviet glossary lint --config config/dichviet.yaml
 
 # Thuật ngữ kỹ thuật giữ nguyên tiếng Anh
 keep_terms:
@@ -31,7 +33,6 @@ keep_terms:
   - CPU
   - CUDA
   - open-weight
-  - open-source
   - CVE
   - zero-day
   - API
@@ -65,7 +66,6 @@ proper_nouns:
   - Microsoft
   - Apple
   - NVIDIA
-  - Nvidia
   - AMD
   - Intel
   - TSMC
@@ -118,7 +118,9 @@ proper_nouns:
   - Android
   - iOS
 
-# Thuật ngữ có từ tiếng Việt phổ biến: dịch theo bảng này
+# Thuật ngữ có từ tiếng Việt phổ biến: dịch theo bảng này.
+# Các thuật ngữ chung (open-source, large language model, alignment…) do bảng có sẵn của
+# dichviet quyết định; chỉ ghi ở đây mục riêng của bản tin hoặc mục muốn đè lên dichviet.
 preferred_translations:
   machine learning: học máy
   deep learning: học sâu
@@ -126,15 +128,10 @@ preferred_translations:
   dataset: bộ dữ liệu
   datasets: bộ dữ liệu
   neural network: mạng nơ-ron
-  reinforcement learning: học tăng cường
   computer vision: thị giác máy tính
-  natural language processing: xử lý ngôn ngữ tự nhiên
-  large language model: mô hình ngôn ngữ lớn
   reasoning: suy luận
   training: huấn luyện
   vulnerability: lỗ hổng
   data center: trung tâm dữ liệu
   semiconductor: bán dẫn
   open source: mã nguồn mở
-  alignment: căn chỉnh (alignment)
-  interpretability: khả năng diễn giải

@@ -7,7 +7,6 @@
 from __future__ import annotations
 
 import argparse
-import subprocess
 import sys
 import time
 from dataclasses import dataclass
@@ -38,10 +37,8 @@ def run_daily(
     use_claude: bool = True,
     use_google: bool = True,
     getter: fetcher.Getter | None = None,
-    runner: translator.Runner = subprocess.run,
-    google: translator.MachineBackend | None = None,
     use_mymemory: bool = True,
-    mymemory: translator.MachineBackend | None = None,
+    dichviet: translator.Translator | None = None,
     now: datetime | None = None,
     log=print,
 ) -> DailyResult:
@@ -95,10 +92,11 @@ def run_daily(
 
     # Dịch
     report = translator.translate_stories(
-        kept, settings, storage.load_glossary(), root,
-        use_claude=use_claude, use_google=use_google, runner=runner, google=google,
-        use_mymemory=use_mymemory, mymemory=mymemory, user_agent=storage.user_agent(settings))
-    log(f"[dịch] {report.counts}" + (f" — Claude: {report.claude['error']}" if report.claude.get("error") else ""))
+        kept, settings, root, use_claude=use_claude, use_google=use_google,
+        use_mymemory=use_mymemory, translator=dichviet)
+    log(f"[dịch] {report.counts} — máy dịch: {', '.join(report.engines) or 'không có'}")
+    for note in report.dichviet.get("notes", []):
+        log(f"    {note}")
 
     # Bước 6: lưu JSON, lịch sử, trạng thái sitemap
     generated_at = now.astimezone(tz).isoformat(timespec="seconds")

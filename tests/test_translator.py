@@ -1,14 +1,14 @@
-"""Test dịch: Claude và Google đều được giả lập, không gọi mạng."""
+"""Test dịch qua dichviet: các máy dịch đều là máy giả (tests/fake_dichviet.py), không gọi mạng."""
 
 import json
-import subprocess
+import os
 
 import pytest
 
 from digest import filters, translator
-from digest.storage import load_glossary
-from digest.translator import GoogleBackend, TranslationCache, read_output
+from digest.translator import TranslationCache, engine_chain
 
+from . import fake_dichviet as fd
 from .conftest import art
 
 
@@ -23,214 +23,107 @@ def stories(sources, settings):
     return filters.cluster(arts, sources, settings)
 
 
-def translate_offline(*args, **kwargs):
-    """translate_stories không gọi mạng: MyMemory tắt trừ khi test truyền bản giả lập."""
-    if "mymemory" not in kwargs:
-        kwargs.setdefault("use_mymemory", False)
-    return translator.translate_stories(*args, **kwargs)
-
-
 def by_title(stories, title):
     return next(s for s in stories if s.primary.title == title)
 
 
-def fake_google(text):
-    """Google giả: thêm tiền tố [vi] và làm xô lệch khoảng trắng của mã giữ chỗ."""
-    return "[vi] " + text.replace("ZZ0ZZ", "zz 0 ZZ")
+def run(stories, settings, tmp_path, **kw):
+    kw.setdefault("use_mymemory", False)
+    return translator.translate_stories(stories, settings, tmp_path, translator=fd.make_translator(), **kw)
 
 
-def claude_runner(write_items, returncode=0, payload=None):
-    """Claude giả: ghi out.json do test chỉ định, trả JSON như --output-format json."""
-    calls = []
-
-    def run(cmd, cwd, **kwargs):
-        calls.append(cmd)
-        inputs = json.loads((cwd / "data/translate/in.json").read_text(encoding="utf-8"))
-        items = write_items(inputs)
-        if items is not None:
-            (cwd / "data/translate/out.json").write_text(json.dumps(items, ensure_ascii=False), encoding="utf-8")
-        out = payload or {"type": "result", "subtype": "success", "is_error": False, "num_turns": 4,
-                          "total_cost_usd": 0.12, "usage": {"input_tokens": 1000, "output_tokens": 800}}
-        return subprocess.CompletedProcess(cmd, returncode, stdout=json.dumps(out), stderr="")
-
-    run.calls = calls
-    return run
-
-
-# ---------------------------------------------------------------- Lệnh Claude
-
-
-def test_claude_command_is_restricted(settings):
-    cmd = translator.claude_command(settings["translation"]["claude"], settings["paths"])
-    assert cmd[:2] == ["claude", "-p"]
-    assert cmd[cmd.index("--tools") + 1] == "Read,Write"
-    assert cmd[cmd.index("--permission-mode") + 1] == "dontAsk"
-    assert "Edit(./data/translate/out.json)" in cmd  # luật ghi file của Claude Code
-    assert "Read(./data/translate/in.json)" in cmd
-    assert "--strict-mcp-config" in cmd and "--max-turns" in cmd
-    assert not any("Bash" in c or "WebFetch" in c for c in cmd)
-
-
-def test_run_claude_parses_usage(settings, tmp_path):
-    (tmp_path / "data/translate").mkdir(parents=True)
-    (tmp_path / "data/translate/in.json").write_text("[]", encoding="utf-8")
-    run = claude_runner(lambda inputs: [])
-    log = translator.run_claude(settings["translation"]["claude"], settings["paths"], tmp_path, runner=run)
-    assert log["ok"] and log["num_turns"] == 4 and log["total_cost_usd"] == 0.12
-    assert log["usage"]["output_tokens"] == 800
-
-
-def test_run_claude_reports_errors(settings, tmp_path):
-    def broken(cmd, cwd, **kwargs):
-        return subprocess.CompletedProcess(cmd, 1, stdout="not json", stderr="rate limit")
-
-    log = translator.run_claude(settings["translation"]["claude"], settings["paths"], tmp_path, runner=broken)
-    assert not log["ok"] and "rate limit" in log["error"]
-
-    def slow(cmd, cwd, **kwargs):
-        raise subprocess.TimeoutExpired(cmd, 1)
-
-    log = translator.run_claude(settings["translation"]["claude"], settings["paths"], tmp_path, runner=slow)
-    assert log["error"] == "quá thời gian chờ"
-
-
-# ---------------------------------------------------------------- Kiểm tra out.json
-
-
-def test_read_output_validates(tmp_path):
-    inputs = [{"id": "a", "title": "T1", "summary": "S1"},
-              {"id": "b", "title": "T2", "summary": "S2"},
-              {"id": "c", "title": "T3", "summary": ""},
-              {"id": "d", "title": "T4", "summary": "S4"}]
-    out = tmp_path / "out.json"
-    out.write_text(json.dumps([
-        {"id": "a", "title_vi": "Tiêu đề 1", "summary_vi": "Tóm tắt 1"},
-        {"id": "b", "title_vi": "", "summary_vi": "x"},          # thiếu tiêu đề
-        {"id": "c", "title_vi": "Tiêu đề 3", "summary_vi": ""},  # gốc rỗng thì được rỗng
-        {"id": "d", "title_vi": "Tiêu đề 4", "summary_vi": ""},  # gốc có tóm tắt mà dịch rỗng
-        {"id": "zzz", "title_vi": "lạ", "summary_vi": ""},       # mã không có trong in.json
-    ]), encoding="utf-8")
-    valid, problems = read_output(out, inputs)
-    assert set(valid) == {"a", "c"}
-    assert any("2 tin thiếu" in p for p in problems)
-
-
-def test_read_output_bad_files(tmp_path):
-    inputs = [{"id": "a", "title": "T", "summary": ""}]
-    assert read_output(tmp_path / "none.json", inputs) == ({}, ["không có out.json"])
-    bad = tmp_path / "bad.json"
-    bad.write_text("Here is your translation: [", encoding="utf-8")
-    valid, problems = read_output(bad, inputs)
-    assert valid == {} and "JSON" in problems[0]
-
-
-# ---------------------------------------------------------------- Google
-
-
-def test_google_keeps_glossary_terms():
-    g = GoogleBackend(load_glossary(), translate_fn=fake_google)
-    protected, kept = g.protect("Apple ships an open-weight LLM on NVIDIA GPU; apple pie is unrelated.")
-    assert "Apple" not in protected and "apple pie" in protected
-    assert set(kept) == {"Apple", "open-weight", "LLM", "NVIDIA", "GPU"}
-    out = g.translate("Apple ships an open-weight LLM on NVIDIA GPU.")
-    assert out.startswith("[vi] ")
-    for term in ("Apple", "open-weight", "LLM", "NVIDIA", "GPU"):
-        assert term in out
-
-
-def test_google_detects_lost_terms():
-    g = GoogleBackend(load_glossary(), translate_fn=lambda text: "bản dịch làm rơi mã")
-    with pytest.raises(ValueError):
-        g.translate("Claude is here")
-
-
-def test_google_prefers_longer_phrase():
-    g = GoogleBackend(load_glossary(), translate_fn=lambda t: t)
-    _, kept = g.protect("Google DeepMind and Google")
-    assert kept == ["Google DeepMind", "Google"]
-
-
-# ---------------------------------------------------------------- Toàn luồng
-
-
-def test_full_flow_claude_then_google_then_untranslated(stories, settings, tmp_path):
+def test_full_flow_claude_then_google_then_untranslated(stories, settings, tmp_path, monkeypatch):
+    # Claude dịch được tin của lab; trả rỗng cho tin robots và startup (không qua kiểm tra)
+    fakes = fd.install(monkeypatch,
+                       claude_cli=lambda t: "" if ("Robots" in t or "robots" in t or "Startup" in t) else "[vi] " + t,
+                       google=lambda t: "" if "raises money" in t else "[gg] " + t)
     lab = by_title(stories, "Apple releases an open-weight LLM")
     robots = by_title(stories, "Robots learn to fold laundry")
     startup = by_title(stories, "Startup raises money")
 
-    # Claude chỉ dịch được tin của lab, và dịch sai tin robots (thiếu tiêu đề)
-    run = claude_runner(lambda inputs: [
-        {"id": lab.id, "title_vi": "Apple phát hành LLM open-weight", "summary_vi": "Chạy trên GPU."},
-        {"id": robots.id, "title_vi": "", "summary_vi": "x"},
-    ])
-
-    def google_fn(text):
-        if "Startup" in text:
-            raise ConnectionError("Google lỗi")
-        return "[vi] " + text
-
-    report = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
-                                          google=GoogleBackend(load_glossary(), translate_fn=google_fn))
-    assert len(run.calls) == 1
-    assert (lab.translation_source, lab.title_vi) == ("claude", "Apple phát hành LLM open-weight")
-    assert robots.translation_source == "google" and robots.title_vi.startswith("[vi]")
+    report = run(stories, settings, tmp_path)
+    assert report.engines == ["claude-cli", "google"]
+    assert (lab.translation_source, lab.title_vi) == ("claude", "[vi] Apple releases an open-weight LLM")
+    assert robots.translation_source == "google" and robots.title_vi.startswith("[gg]")
     assert startup.translated is False and startup.title_vi == ""
     vn = by_title(stories, "Việt Nam đẩy mạnh AI")
     assert vn.translation_source == "original" and vn.title_vi == "Việt Nam đẩy mạnh AI"
     assert report.counts == {"original": 1, "cache": 0, "claude": 1, "google": 1, "mymemory": 0, "untranslated": 1}
-    assert report.claude["ok"] and report.claude["translated"] == 1
-    assert report.claude_problems and report.machine_errors
+    # tin chưa dịch có lý do; nhật ký có số lần gọi của dichviet
+    assert report.untranslated and "bản dịch rỗng" in report.untranslated[0]
+    assert report.dichviet["engine_calls"] >= 2
 
-    # Bộ nhớ đệm ghi nguồn dịch; tin chưa dịch không được lưu để lần sau dịch lại
     cache = json.loads((tmp_path / "data/translations_cache.json").read_text(encoding="utf-8"))
     assert cache[lab.id]["source"] == "claude" and cache[robots.id]["source"] == "google"
     assert startup.id not in cache
 
-    # Lần chạy sau: chỉ còn tin chưa dịch được gửi cho Claude
-    run2 = claude_runner(lambda inputs: [{"id": i["id"], "title_vi": "Khởi nghiệp gọi vốn", "summary_vi": ""}
-                                         for i in inputs])
-    report2 = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run2,
-                                           google=GoogleBackend(load_glossary(), translate_fn=google_fn))
-    sent = json.loads((tmp_path / "data/translate/in.json").read_text(encoding="utf-8"))
-    assert [i["id"] for i in sent] == [startup.id]
+    # Lần chạy sau: chỉ còn tin chưa dịch được gửi đi
+    fakes2 = fd.install(monkeypatch)
+    report2 = run(stories, settings, tmp_path)
+    assert fakes2["claude-cli"].calls == [["Startup raises money"]]
     assert report2.counts == {"original": 1, "cache": 2, "claude": 1, "google": 0, "mymemory": 0, "untranslated": 0}
 
 
-def test_claude_off_google_takes_over(stories, settings, tmp_path):
-    run = claude_runner(lambda inputs: [])
-    report = translate_offline(stories, settings, load_glossary(), tmp_path, use_claude=False,
-                                          runner=run, google=GoogleBackend(load_glossary(), translate_fn=fake_google))
-    assert run.calls == []
+def test_google_receives_protected_terms(stories, settings, tmp_path, monkeypatch):
+    fakes = fd.install(monkeypatch, google=lambda t: "[gg] " + t)
+    lab = by_title(stories, "Apple releases an open-weight LLM")
+    run(stories, settings, tmp_path, use_claude=False)
+    sent = " ".join(t for call in fakes["google"].calls for t in call)
+    # thuật ngữ và tên riêng (bảng của dichviet + config/glossary.yaml) được thay bằng mã giữ chỗ
+    assert "LLM" not in sent and "Apple" not in sent and "GPU" not in sent
+    assert lab.title_vi == "[gg] Apple releases an open-weight LLM"
+
+
+def test_claude_off_google_takes_over(stories, settings, tmp_path, monkeypatch):
+    fakes = fd.install(monkeypatch)
+    report = run(stories, settings, tmp_path, use_claude=False)
+    assert fakes["claude-cli"].calls == []
+    assert report.engines == ["google"]
     assert report.counts["google"] == 3 and report.counts["untranslated"] == 0
-    assert "đã tắt" in report.claude["error"]
 
 
 def test_claude_off_by_env(stories, settings, tmp_path, monkeypatch):
     monkeypatch.setenv("DIGEST_NO_CLAUDE", "1")
-    run = claude_runner(lambda inputs: [])
-    translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
-                                 google=GoogleBackend(load_glossary(), translate_fn=fake_google))
-    assert run.calls == []
+    fakes = fd.install(monkeypatch)
+    run(stories, settings, tmp_path)
+    assert fakes["claude-cli"].calls == []
 
 
-def test_claude_fails_google_takes_over(stories, settings, tmp_path):
-    run = claude_runner(lambda inputs: None, returncode=1,
-                        payload={"type": "result", "subtype": "error_max_turns", "is_error": True})
-    report = translate_offline(stories, settings, load_glossary(), tmp_path, runner=run,
-                                          google=GoogleBackend(load_glossary(), translate_fn=fake_google))
-    assert report.claude["ran"] and not report.claude["ok"]
-    assert report.counts["google"] == 3
+def test_mymemory_used_when_google_blocked(stories, settings, tmp_path, monkeypatch):
+    fakes = fd.install(monkeypatch, google=fd.quota, mymemory=lambda t: "[mm] " + t)
+    report = run(stories, settings, tmp_path, use_claude=False, use_mymemory=True)
+    assert report.engines == ["google", "mymemory"]
+    assert report.counts["mymemory"] == 3 and report.counts["untranslated"] == 0
+    assert len(fakes["google"].calls) == 1  # Google bị chặn một lần là bỏ qua cho cả lần chạy
+    cache = json.loads((tmp_path / "data/translations_cache.json").read_text(encoding="utf-8"))
+    assert {e["source"] for e in cache.values()} == {"mymemory"}
 
 
-def test_stale_out_json_is_removed(stories, settings, tmp_path):
-    out = tmp_path / "data/translate/out.json"
-    out.parent.mkdir(parents=True)
-    lab = by_title(stories, "Apple releases an open-weight LLM")
-    out.write_text(json.dumps([{"id": lab.id, "title_vi": "cũ", "summary_vi": "cũ"}]), encoding="utf-8")
-    report = translate_offline(stories, settings, load_glossary(), tmp_path, use_claude=False,
-                                          google=GoogleBackend(load_glossary(), translate_fn=fake_google))
-    assert lab.translation_source == "google" and not out.exists()
-    assert report.counts["claude"] == 0
+def test_all_engines_off(stories, settings, tmp_path, monkeypatch):
+    fakes = fd.install(monkeypatch)
+    report = run(stories, settings, tmp_path, use_claude=False, use_google=False)
+    assert all(f.calls == [] for f in fakes.values())
+    assert report.counts["untranslated"] == 3 and report.counts["original"] == 1
+
+
+def test_engine_chain_follows_settings(settings, monkeypatch):
+    cfg = settings["translation"]
+    assert engine_chain(cfg, True, True, True) == ["claude-cli", "google", "mymemory"]
+    assert engine_chain(cfg, False, False, True) == ["mymemory"]
+    off = {**cfg, "google": {"enabled": False}, "fallback_order": ["mymemory", "google"]}
+    assert engine_chain(off, True, True, True) == ["claude-cli", "mymemory"]
+    monkeypatch.setenv("DIGEST_NO_CLAUDE", "1")
+    assert engine_chain(cfg, True, True, True) == ["google", "mymemory"]
+
+
+def test_default_translator_reads_config_and_email(settings, monkeypatch):
+    monkeypatch.delenv("MYMEMORY_EMAIL", raising=False)
+    tr = translator.default_translator(settings, fd.ROOT)
+    assert tr.config.style == "tin-cong-nghe" and tr.config.cache["backend"] == "none"
+    assert os.environ["MYMEMORY_EMAIL"] == settings["project"]["contact_email"]
+    monkeypatch.setenv("MYMEMORY_EMAIL", "khac@example.com")  # biến đặt sẵn từ ngoài được giữ nguyên
+    translator.default_translator(settings, fd.ROOT)
+    assert os.environ["MYMEMORY_EMAIL"] == "khac@example.com"
 
 
 def test_cache_invalidated_when_text_changes(stories, tmp_path):
@@ -240,84 +133,3 @@ def test_cache_invalidated_when_text_changes(stories, tmp_path):
     assert cache.get(s) is not None
     s.primary.summary += " (cập nhật)"
     assert cache.get(s) is None
-
-
-def test_google_stops_after_repeated_errors():
-    calls = []
-
-    def blocked(text):
-        calls.append(text)
-        raise ConnectionError("CAPTCHA")
-
-    g = GoogleBackend(load_glossary(), translate_fn=blocked)
-    for _ in range(5):
-        with pytest.raises(Exception):
-            g.translate("hello")
-    assert len(calls) == GoogleBackend.MAX_CONSECUTIVE_ERRORS and g.disabled
-
-
-def test_run_claude_logs_permission_denials(settings, tmp_path):
-    (tmp_path / "data/translate").mkdir(parents=True)
-    (tmp_path / "data/translate/in.json").write_text("[]", encoding="utf-8")
-    payload = {"type": "result", "subtype": "success", "is_error": False, "result": "Tôi không ghi được file.",
-               "permission_denials": [{"tool_name": "Write", "tool_input": {"file_path": "data/translate/out.json"}}]}
-    log = translator.run_claude(settings["translation"]["claude"], settings["paths"], tmp_path,
-                                runner=claude_runner(lambda i: None, payload=payload))
-    assert log["permission_denials"][0]["tool"] == "Write"
-    assert "không ghi được" in log["result_tail"]
-
-
-# ---------------------------------------------------------------- MyMemory và chuỗi dự phòng
-
-
-def test_mymemory_used_when_google_blocked(stories, settings, tmp_path):
-    def blocked(text):
-        raise ConnectionError("CAPTCHA")
-
-    report = translate_offline(
-        stories, settings, load_glossary(), tmp_path, use_claude=False,
-        google=GoogleBackend(load_glossary(), translate_fn=blocked),
-        mymemory=translator.MyMemoryBackend(load_glossary(), translate_fn=lambda t: "[mm] " + t))
-    assert report.counts["mymemory"] == 3 and report.counts["untranslated"] == 0
-    # Google lỗi 3 lần thì ngừng, không thử lại cho các tin sau
-    assert sum(e.startswith("google") for e in report.machine_errors) == GoogleBackend.MAX_CONSECUTIVE_ERRORS
-    cache = json.loads((tmp_path / "data/translations_cache.json").read_text(encoding="utf-8"))
-    assert {e["source"] for e in cache.values()} == {"mymemory"}
-
-
-def test_mymemory_shortens_long_summary():
-    seen = []
-    m = translator.MyMemoryBackend(load_glossary(), max_chars=60, translate_fn=lambda t: seen.append(t) or t)
-    text = "First sentence is here. Second sentence is a bit longer than that. Third one."
-    m.translate(text)
-    assert seen == ["First sentence is here."]
-
-
-def test_mymemory_http_parsing(monkeypatch):
-    import requests
-
-    class Resp:
-        def __init__(self, payload):
-            self.payload = payload
-
-        def raise_for_status(self):
-            pass
-
-        def json(self):
-            return self.payload
-
-    calls = []
-
-    def fake_get(url, params, timeout, headers):
-        calls.append(params)
-        if params["q"].startswith("quota"):
-            return Resp({"responseData": {"translatedText": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE "
-                                                            "TRANSLATIONS FOR TODAY"}, "responseStatus": 429})
-        return Resp({"responseData": {"translatedText": "Xin ch&agrave;o ZZ0ZZ"}, "responseStatus": 200})
-
-    monkeypatch.setattr(requests, "get", fake_get)
-    m = translator.MyMemoryBackend(load_glossary(), email="me@example.com", user_agent="ua")
-    assert m.translate("Hello OpenAI") == "Xin chào OpenAI"
-    assert calls[0]["langpair"] == "en|vi" and calls[0]["de"] == "me@example.com"
-    with pytest.raises(RuntimeError):
-        m.translate("quota exceeded")
