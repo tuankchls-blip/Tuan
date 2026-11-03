@@ -4,7 +4,7 @@
     python main.py weekly | monthly | quarterly | yearly [--date YYYY-MM-DD]
     python main.py due [--date YYYY-MM-DD]          # các bản tổng hợp đến hạn (workflow gọi sau bản ngày)
     python main.py retranslate --date YYYY-MM-DD    # dịch bù tin "chưa dịch" của một bản ngày đã lưu
-    python main.py llm-check                        # kiểm tra GitHub Models (chạy trong GitHub Actions)
+    python main.py llm-check                        # kiểm tra Gemini API (cần secret GEMINI_API_KEY)
 """
 
 from __future__ import annotations
@@ -213,7 +213,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                                      "llm-check"],
                    help="daily: bản ngày; weekly/monthly/quarterly/yearly: bản tổng hợp; "
                         "due: các bản tổng hợp đến hạn hôm nay; retranslate: dịch bù một bản ngày đã lưu; "
-                        "llm-check: kiểm tra GitHub Models")
+                        "llm-check: kiểm tra Gemini API")
     p.add_argument("--date", type=date.fromisoformat, default=None,
                    help="daily/due/retranslate: ngày (mặc định hôm nay theo giờ VN); "
                         "bản tổng hợp: một ngày bất kỳ trong kỳ (mặc định kỳ vừa kết thúc)")
@@ -231,8 +231,7 @@ def main(argv: list[str] | None = None) -> int:
         run_summary(args.kind, args.date)
         return 0
     if args.kind == "llm-check":
-        cfg = storage.load_settings()["llm"]
-        report = llm.check(llm.LLMClient(cfg), cfg["candidates"])
+        report = llm.check(llm.LLMClient(storage.load_settings()["llm"]))
         return 0 if any(m.get("ok") for m in report["models"].values()) else 1
     if args.kind == "due":
         run_due(args.date)

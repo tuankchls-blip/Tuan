@@ -339,7 +339,7 @@ File `data/2026/2026-10-31.json` là đầu vào duy nhất cho bản HTML của
 
 Viết ngày 02/11/2026 sau khi giai đoạn 3 được duyệt. Các lựa chọn đã chốt với chủ dự án:
 
-- **AI dùng GitHub Models** (miễn phí trong hạn mức ngày, xác thực bằng `GITHUB_TOKEN` có sẵn trong Actions, không cần thêm khóa). Không dùng token Claude trên GitHub.
+- **AI dùng Gemini API** với khóa miễn phí tạo ở Google AI Studio (secret `GEMINI_API_KEY`). *Cập nhật 03/11/2026:* ban đầu chọn GitHub Models nhưng dịch vụ này đã ngừng từ 30/07/2026; gói Google AI Pro (Jio) của chủ dự án không cấp hạn mức cho khóa API. Không dùng token Claude trên GitHub.
 - **Nhận định bằng lời** ở cả bản ngày (“điểm nhanh hôm nay”, 2–3 câu) và bản tổng hợp (3–5 câu).
 - **App iOS dạng web app cài được (PWA)** trên nền GitHub Pages, không cần máy Mac hay tài khoản Apple Developer.
 - **Trang phân tích dữ liệu** dài hạn từ kho JSON.
@@ -350,9 +350,9 @@ Viết ngày 02/11/2026 sau khi giai đoạn 3 được duyệt. Các lựa ch�
 - Bản ngày khoảng 10–60 tin; tiêu đề + tóm tắt khoảng 25.000–35.000 ký tự/ngày.
 - Mọi dữ liệu nằm trong `data/` (JSON), trang web trong `docs/`.
 
-### Giai đoạn 4 · AI qua GitHub Models
+### Giai đoạn 4 · AI qua Gemini API
 
-**Module mới `digest/llm.py`**: gọi API chat của GitHub Models (`https://models.github.ai/inference/chat/completions`) bằng `requests`, có timeout, đếm số lần gọi và token, dừng khi hết hạn mức (lỗi 429) thay vì làm hỏng lần chạy. Tên mô hình, giới hạn số lần gọi và token mỗi lần nằm trong `config/settings.yaml` (mục `llm`). Workflow thêm quyền `models: read`.
+**Module `digest/llm.py`**: gọi Gemini API (`generateContent`, khóa gửi qua header, không nằm trong URL hay nhật ký) bằng `requests`, có timeout, đếm token, dừng khi hết hạn mức (429) thay vì làm hỏng lần chạy. Tên mô hình nằm trong `config/settings.yaml` (mục `llm`), chọn bằng `python main.py llm-check` (liệt kê mô hình do chính API báo là dùng được, thử dịch hai tiêu đề thật). Workflow truyền secret `GEMINI_API_KEY`.
 
 **4a · Dịch bằng mô hình AI.** Thêm `llm` vào đầu `translation.fallback_order` (trước Google, MyMemory):
 
@@ -373,7 +373,7 @@ Viết ngày 02/11/2026 sau khi giai đoạn 3 được duyệt. Các lựa ch�
 
 | Tiêu chí | Cách kiểm tra |
 | --- | --- |
-| Gọi được GitHub Models từ workflow chỉ bằng `GITHUB_TOKEN` | Chạy thật trên GitHub, nhật ký ghi số lần gọi và token |
+| Gọi được Gemini API từ workflow bằng secret `GEMINI_API_KEY` | Chạy thật trên GitHub, nhật ký ghi số lần gọi và token |
 | Bản ngày được dịch bằng mô hình AI; tên riêng và thuật ngữ giữ đúng | Chạy thật; so vài tin với bản MyMemory cũ |
 | Hết hạn mức hoặc API lỗi thì MyMemory dịch thay, lần chạy vẫn thành công | Test giả lập lỗi 429 và lỗi mạng |
 | Bản ngày có “Điểm nhanh hôm nay”, bản tổng hợp có nhận định; mọi ý trích đúng mã tin có thật | Test với mô hình giả lập (cả trường hợp trích sai mã) và chạy thật |
@@ -406,9 +406,9 @@ Viết ngày 02/11/2026 sau khi giai đoạn 3 được duyệt. Các lựa ch�
 
 ### Thứ tự làm và việc cần chủ dự án
 
-1. **4a:** kiểm tra thật GitHub Models trên GitHub (mô hình nào dùng được, hạn mức) → `llm.py` → dịch bằng AI.
+1. **4a:** kiểm tra thật Gemini API trên GitHub (`llm-check`: mô hình nào dùng được, hạn mức) → `llm.py` → dịch bằng AI.
 2. **4b:** nhận định cho bản ngày và bản tổng hợp.
 3. **5a:** PWA → thông báo đẩy (chủ dự án tạo secret VAPID và dán mã đăng ký của iPhone).
 4. **5b:** trang phân tích.
 
-Rủi ro: danh mục mô hình và hạn mức miễn phí của GitHub Models có thể thay đổi; mọi tính năng AI đều có đường lùi (MyMemory cho dịch, bỏ đoạn nhận định) để bản tin không bao giờ ngừng.
+Rủi ro: danh mục mô hình và hạn mức miễn phí của Gemini API có thể thay đổi (bài học GitHub Models: kiểm tra thật trước khi viết code phụ thuộc); mọi tính năng AI đều có đường lùi (MyMemory cho dịch, bỏ đoạn nhận định) để bản tin không bao giờ ngừng.

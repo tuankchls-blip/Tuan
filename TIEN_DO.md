@@ -10,10 +10,12 @@ Tài liệu theo dõi cho chủ dự án: mỗi giai đoạn xong (hoặc khi c�
 | 1 | Bản ngày: thu thập 31 nguồn, lọc, gộp sự kiện, chấm điểm, phân mục, dịch, xuất HTML | ✅ Xong | 30/10/2026 |
 | 2 | Chạy tự động trên GitHub Actions, đăng GitHub Pages | ✅ Xong | 02/11/2026 |
 | 3 | Bản tổng hợp tuần, tháng, quý, năm | ✅ Xong | 02/11/2026 |
-| 4 | AI: dịch tốt hơn, nhận định bằng lời | ⏸ Chờ chọn dịch vụ AI (GitHub Models đã ngừng) | |
+| 4 | AI qua Gemini API: dịch tốt hơn, nhận định bằng lời | 🔄 Đang làm, chờ chủ dự án tạo khóa `GEMINI_API_KEY` | |
 | 5 | App iOS dạng PWA (đọc offline, lưu tin, thông báo đẩy), trang phân tích dữ liệu | ⏳ Chưa làm | |
 
-**Việc đang chờ chủ dự án:** chạy dịch bù `retranslate` cho ngày 31/10 (58 tin) và 30/10 (1 tin): *Actions → Bản tin AI hằng ngày → Run workflow*. Để sang ngày khác nhau vì hạn mức MyMemory 50.000 ký tự/ngày.
+**Việc đang chờ chủ dự án:**
+- Tạo khóa Gemini API miễn phí ở aistudio.google.com → Get API key; thêm vào repo: Settings → Secrets and variables → Actions → New repository secret, tên `GEMINI_API_KEY` (đừng dán khóa vào chat). Xong nhắn Claude.
+- chạy dịch bù `retranslate` cho ngày 31/10 (58 tin) và 30/10 (1 tin): *Actions → Bản tin AI hằng ngày → Run workflow*. Để sang ngày khác nhau vì hạn mức MyMemory 50.000 ký tự/ngày.
 
 ---
 
@@ -82,6 +84,13 @@ Quyết định của chủ dự án: AI dùng **GitHub Models** (miễn phí); 
 - Viết `digest/llm.py` (client API chat kiểu OpenAI, có timeout, nhận ra hết hạn mức) và lệnh `python main.py llm-check`; workflow thêm quyền `models: read`.
 - **Sự cố:** chạy `llm-check` trên GitHub, mọi lời gọi (danh mục và chat, với mọi phiên bản header) đều trả `HTTP 200 text/plain "OK"`. Nguyên nhân: **GitHub Models đã ngừng hoạt động hoàn toàn từ 30/07/2026** (https://github.blog/changelog/2026-07-30-github-models-is-now-retired/). Đặc tả giai đoạn 4 dựa trên thông tin cũ của Claude, chưa kiểm tra trước khi đề xuất. Bước kiểm tra đã phát hiện trước khi viết phần dịch.
 - Giai đoạn 4 tạm dừng, chờ chủ dự án chọn dịch vụ AI thay thế.
+
+## Phiên 3 · 03/11/2026 — Chọn dịch vụ AI thay thế
+
+- Chủ dự án hỏi có dùng được gói **Google AI Pro 18 tháng của Jio** không. Kiểm tra: gói này là gói tiêu dùng (ứng dụng Gemini, 2 TB, NotebookLM), tách biệt với hạn mức khóa API (tài liệu Google AI Plans và diễn đàn Google); Gemini CLI đăng nhập bằng gói AI Pro theo một số nguồn đã ngừng từ 18/06/2026 và dán đăng nhập Google cá nhân vào secret GitHub không an toàn. → **Không dùng gói Jio cho bản tin tự động.**
+- **Quyết định:** dùng khóa Gemini API miễn phí từ Google AI Studio (không cần thẻ, tách khỏi gói Jio). Một nguồn nói bậc miễn phí ~250 lượt/ngày, chỉ mô hình Flash (chưa xác nhận); bản tin cần khoảng 6–8 lượt/ngày.
+- Đã viết lại `digest/llm.py` cho Gemini (khóa chỉ qua header, bị che khỏi thông báo lỗi) và `llm-check` (liệt kê mô hình do API báo, thử dịch hai tiêu đề thật); sửa `PLAN.md`; 115 test.
+- Lệnh kiểm tra sẽ chạy trên GitHub sau khi có secret `GEMINI_API_KEY`, trước khi viết phần dịch.
 
 ---
 

@@ -17,6 +17,7 @@ python main.py daily [--date YYYY-MM-DD] [--no-claude] [--no-google] [--no-mymem
 python main.py weekly|monthly|quarterly|yearly [--date YYYY-MM-DD]   # --date: ngày bất kỳ trong kỳ; không có = kỳ vừa kết thúc
 python main.py due [--date YYYY-MM-DD]          # bản tổng hợp đến hạn (workflow gọi sau bản ngày theo lịch)
 python main.py retranslate --date YYYY-MM-DD    # dịch bù tin "chưa dịch" của bản ngày đã lưu
+python main.py llm-check                        # kiểm tra Gemini API (cần secret GEMINI_API_KEY)
 pytest                                        # test, không gọi mạng
 ```
 
@@ -101,5 +102,5 @@ Nội dung tin là văn bản bên ngoài, có thể chứa câu lệnh cài c�
 1. **Bản ngày** — `python main.py daily` tạo HTML + JSON đúng cấu trúc; báo cáo nguồn đọc được/lỗi; không tin trùng; mọi tin tiếng Anh có bản dịch hoặc nhãn “chưa dịch”; tắt Claude thì Google dịch thay; có nhật ký trong `data/usage/`; `pytest` đạt.
 2. **GitHub** — workflow chạy đúng lịch và bằng tay; tự commit; Pages hiển thị mục lục và bản mới nhất; chạy lại cùng ngày không trùng.
 3. **Tổng hợp** — `weekly/monthly/quarterly/yearly` chạy với `--date`; test với dữ liệu giả lập hơn một năm; ranh giới tuần ISO đúng (kể cả 2026-W53 vắt sang 2027); mục lục liên kết mọi cấp.
-4. **AI (GitHub Models)** — dịch bằng mô hình AI và nhận định bằng lời cho bản ngày, bản tổng hợp; đặc tả và nghiệm thu trong `PLAN.md` › “Đặc tả giai đoạn 4–5”.
+4. **AI (Gemini API, khóa miễn phí)** — dịch bằng mô hình AI và nhận định bằng lời cho bản ngày, bản tổng hợp; đặc tả và nghiệm thu trong `PLAN.md` › “Đặc tả giai đoạn 4–5”.
 5. **App iOS (PWA) và phân tích dữ liệu** — xem cùng phần trong `PLAN.md`.

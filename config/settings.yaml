@@ -316,20 +316,16 @@ translation:
     timeout_seconds: 15
 
 # ---------------------------------------------------------------- Mô hình AI (giai đoạn 4)
-# GitHub Models: miễn phí trong hạn mức ngày, xác thực bằng GITHUB_TOKEN (workflow cần quyền models: read).
-# Chạy `python main.py llm-check` để xem mô hình nào dùng được và hạn mức còn lại.
+# Gemini API (khóa miễn phí tạo ở Google AI Studio, lưu làm secret GEMINI_API_KEY trong repo).
+# GitHub Models đã ngừng hoạt động từ 30/07/2026; gói Google AI Pro (Jio) không cấp hạn mức cho khóa API.
+# Chạy `python main.py llm-check` để xem mô hình nào dùng được và thử dịch.
 llm:
-  endpoint: https://models.github.ai/inference/chat/completions
-  catalog_url: https://models.github.ai/catalog/models
-  token_env: GITHUB_TOKEN
-  api_version: "2026-03-10"  # header X-GitHub-Api-Version (theo tài liệu REST mới nhất)
-  model: null              # chốt sau khi chạy llm-check
-  candidates:              # mô hình thử trong llm-check
-    - openai/gpt-4.1-mini
-    - openai/gpt-4o-mini
-    - openai/gpt-4.1
-    - meta/Llama-3.3-70B-Instruct
-    - mistral-ai/mistral-small-2503
+  api_base: https://generativelanguage.googleapis.com/v1beta
+  key_env: GEMINI_API_KEY
+  model: null              # chốt sau khi chạy llm-check (chỉ mô hình có generateContent)
+  # Tên chứa một trong các từ này thì được ưu tiên thử trước (rẻ và đủ cho dịch/tóm tắt)
+  prefer: [flash-lite, flash]
+  max_check_models: 4      # llm-check thử tối đa bấy nhiêu mô hình
   timeout_seconds: 60
   temperature: 0.2
 

@@ -27,7 +27,6 @@ on:
 
 permissions:
   contents: write # để commit kết quả
-  models: read # gọi GitHub Models (giai đoạn 4)
 
 concurrency:
   group: digest # không cho hai lần chạy chồng nhau
@@ -67,7 +66,7 @@ jobs:
       - name: Tạo bản tin
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Models
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # giai đoạn 4 (tùy chọn)
           # Giá trị nhập tay được truyền qua biến môi trường, không chèn thẳng vào lệnh
           KIND: ${{ inputs.kind || 'daily' }}
           DIGEST_DATE: ${{ inputs.date }}
