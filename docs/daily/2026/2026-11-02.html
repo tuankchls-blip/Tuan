@@ -116,6 +116,25 @@ section[data-group] { scroll-margin-top: 64px; }
   section[data-group] { scroll-margin-top: 8px; }
   .story { padding: 12px; }
   .filters .count { width: 100%; margin-left: 0; }
+}
+/* Bản tổng hợp: biểu đồ thanh bằng CSS, bảng chủ đề, dòng thời gian */
+.bars { list-style: none; padding: 0; margin: 8px 0; }
+.bars li { display: grid; grid-template-columns: minmax(7em, 34%) 1fr 3.2em; gap: 8px; align-items: center; padding: 3px 0; font-size: .9rem; }
+.bars .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { background: var(--surface-2); border-radius: 4px; height: 10px; overflow: hidden; }
+.bars .fill { display: block; height: 100%; background: var(--link); border-radius: 4px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--muted); }
+.daylink { font-size: .8rem; }
+.event { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin: 10px 0; }
+.event h4 { margin: 0 0 6px; font-size: 1rem; }
+.event ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.timeline h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); }
+.note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: minmax(8em, 50%) 1fr 2.6em; }
 }</style>
 <script>
 // Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
@@ -147,7 +166,7 @@ section[data-group] { scroll-margin-top: 64px; }
   <div class="topbar">
     <nav>
       <a href="../../index.html">Mục lục</a>
-<a href="../2026/2026-11-01.html">← Ngày trước</a>    </nav>
+<a href="../2026/2026-11-01.html">← Ngày trước</a><a href="../2026/2026-11-03.html">Ngày sau →</a>    </nav>
     <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
   </div>
 <h1>Bản tin AI & CNTT<br><small>Thứ Hai, 02/11/2026</small></h1>
@@ -325,7 +344,7 @@ section[data-group] { scroll-margin-top: 64px; }
 <footer>
 <div class="pager">
   <span><a href="../2026/2026-11-01.html">← 01/11/2026</a></span>
-  <span></span>
+  <span><a href="../2026/2026-11-03.html">03/11/2026 →</a></span>
 </div>
 <h2>Tình trạng nguồn</h2>
 <div class="table-scroll">
