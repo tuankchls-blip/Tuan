@@ -20,6 +20,13 @@
     "hash": "c388aab8cd3ee3aa",
     "translated_at": "2026-11-02T15:35:39+00:00"
   },
+  "041f8a0c39a50a9b71266acaaa14339eca9e9f1a": {
+    "title_vi": "Mage-VL-Cowork: Công thức đào tạo đầy đủ để học cách sử dụng máy tính lai từ dây nịt tiến hóa",
+    "summary_vi": "agents (CUAs) sử dụng máy tính hiệu quả nên kết hợp liền mạch tương tác GUI trực quan với mã và thực thi thiết bị đầu cuối trong một chính sách duy nhất. Chúng tôi trình bày Mage-VL-Cowork, một cua lai 4B được đào tạo từ một trạm kiểm soát liên kết đa phương thức chung thông qua một chương trình giảng dạy năm giai đoạn từ đầu đến cuối, tiến bộ trên đào tạo giữa kỳ, SFT và RL.",
+    "source": "mymemory",
+    "hash": "4720b0b264bc4d21",
+    "translated_at": "2026-11-05T06:56:24+00:00"
+  },
   "066f3bd17c5f1eff64a81b5b3942605b74aafa4c": {
     "title_vi": "Granola tạo ra một tính năng chính tả để cạnh tranh với Wispr",
     "summary_vi": "Uno đảo ngược! Sau khi Wispr thêm ghi chú cuộc họp vào ứng dụng đọc chính tả của mình, Granola đang thêm chính tả vào ghi chú cuộc họp của mình. Các cuộc chiến AI bằng giọng nói đang trở nên thú vị.",
@@ -48,6 +55,13 @@
     "hash": "be4f2c79f77b17fc",
     "translated_at": "2026-11-04T06:35:04+00:00"
   },
+  "0914d818aa9e8968a9b1f8e044d103184a29379f": {
+    "title_vi": "CISA gắn cờ lỗ hổng WordPress RCE khi bị khai thác tích cực trong các cuộc tấn công",
+    "summary_vi": "Cơ quan An ninh Cơ sở hạ tầng và An ninh mạng Hoa Kỳ (CISA) đã cảnh báo các cơ quan liên bang rằng những kẻ tấn công đã bắt đầu khai thác lỗ hổng WordPress có mức độ nghiêm trọng cao được vá gần đây trong tự nhiên.",
+    "source": "mymemory",
+    "hash": "fb65b27999f6a2b0",
+    "translated_at": "2026-11-05T06:57:15+00:00"
+  },
   "092980ff0e8f3940d8c57d78b3740d43487f4c04": {
     "title_vi": "Ivanti vá thêm hai bản Connect Secure zero-day bị xích trong các cuộc tấn công",
     "summary_vi": "Ivanti đã phát hành các bản cập nhật bảo mật để vá thêm hai lỗ hổng cổng truy cập từ xa Connect Secure (ICS) đã bị xích trong các cuộc tấn công zero-day kể từ ít nhất ngày 1 tháng 10.",
@@ -61,6 +75,13 @@
     "source": "mymemory",
     "hash": "86d42cf462b1020a",
     "translated_at": "2026-11-04T06:36:24+00:00"
+  },
+  "0a437d67f2effbc5f98d2d1d1dd7d2cef925d7b4": {
+    "title_vi": "Giới thiệu hình ảnh 2.6",
+    "summary_vi": "Hình ảnh 2.6 mang lại khả năng tạo hình ảnh nhanh hơn, tạo GIF, chỉnh sửa chính xác hơn và các điều khiển API mới trên ChatGPT, Codex và API.",
+    "source": "mymemory",
+    "hash": "42b3c4a24b2c6a85",
+    "translated_at": "2026-11-05T06:56:13+00:00"
   },
   "0ab17d3655febf39c5364c1911670115b19f53e7": {
     "title_vi": "GEPA-Curator: Học tập được tuyển chọn để cải thiện bản thân Agents",
@@ -97,6 +118,13 @@
     "hash": "83bd078497641fdc",
     "translated_at": "2026-11-02T14:13:12+00:00"
   },
+  "0ded2053c0deea80a78344a664623c34829bd24d": {
+    "title_vi": "ChatGPT bây giờ sẽ làm cho bạn GIF động",
+    "summary_vi": "ChatGPT giờ đây có thể tạo GIF bằng prompt hoặc ảnh được tải lên chatbot AI. Bản cập nhật, được triển khai cùng với mô hình Hình ảnh 2.6 mới của OpenAI, cho phép bạn điều chỉnh tốc độ hoạt ảnh của GIF, chỉnh sửa từng khung hình và chia sẻ với người khác. Trước khi thay đổi này, ChatGPT không thể tự tạo GIF trong một",
+    "source": "mymemory",
+    "hash": "c5476f4700881976",
+    "translated_at": "2026-11-05T06:57:33+00:00"
+  },
   "11029e559b6add875662f59d776270e0f0263262": {
     "title_vi": "SIMIT: Các mô hình thị giác - ngôn ngữ tự cải thiện thông qua trí tưởng tượng trong thời gian thử nghiệm",
     "summary_vi": "Chúng tôi giới thiệu SIMIT, một khung tự cải thiện thời gian thử nghiệm, trong đó một mô hình ngôn ngữ thị giác tạo ra dữ liệu đào tạo dành riêng cho truy vấn của riêng nó trước khi trả lời một truy vấn thử nghiệm không được gắn nhãn. Mục tiêu của chúng tôi là cải thiện hiệu suất trên một bộ kiểm tra mục tiêu nhất định mà không cần chú thích hoặc mô hình bên ngoài. Để theo đuổi mục tiêu này, một số phương pháp kiểm tra thời gian cải thiện câu trả lời thông qua lý luận dài hơn hoặc lấy mẫu lặp đi lặp lại nhưng để lại mô hình không thay đổi.",
@@ -125,6 +153,20 @@
     "hash": "e099221f043bd0c7",
     "translated_at": "2026-11-03T06:56:05+00:00"
   },
+  "150a39b9eb9ad0c3b77f705a6c129fe29f15e39f": {
+    "title_vi": "Nói với HN: Gemini đào tạo về lịch sử trò chuyện, ngay cả đối với người đăng ký (tài khoản cá nhân)",
+    "summary_vi": "Nếu bạn có đăng ký Google AI cá nhân, tất cả lịch sử trò chuyện đã lưu của bạn trong Gemini có thể được sử dụng để đào tạo và không có cách nào để chọn không tham gia trừ khi bạn tắt lịch sử trò chuyện hoặc sử dụng các phiên trò chuyện tạm thời. Những bản ghi trò chuyện này thậm chí có thể được đọc bởi những người đánh giá trực tiếp. Mặc dù Google tuyên bố sẽ ngắt kết nối chúng khỏi tài khoản của bạn khi được con người xem xét, nhưng họ cảnh báo rõ ràng không được nhập thông tin bí mật.",
+    "source": "mymemory",
+    "hash": "5d86010d34bec430",
+    "translated_at": "2026-11-05T06:57:16+00:00"
+  },
+  "1588513a3cf1e79bcf726778652b3c84e7766a7e": {
+    "title_vi": "Các thử nghiệm nghiên cứu mới cho thấy các mô hình AI có biết suy nghĩ của chính mình hay không",
+    "summary_vi": "Bằng cách đưa \"suy nghĩ\" trực tiếp vào các mô hình ngôn ngữ lớn, các nhà nghiên cứu đang cố gắng vạch ra khả năng hướng nội của AI. Bài viết Các thử nghiệm nghiên cứu mới về việc liệu các mô hình AI có biết suy nghĩ của chính mình lần đầu tiên xuất hiện trên Tạp chí Quanta hay không",
+    "source": "mymemory",
+    "hash": "eaf7fec20a2cc70d",
+    "translated_at": "2026-11-05T06:56:28+00:00"
+  },
   "1698bcd7482e838839a947a307649173679615cc": {
     "title_vi": "Thư viện các lớp (LoL): Sắp xếp theo thứ tự thích ứng các lớp Transformer trong thời gian chạy",
     "summary_vi": "Các lập trình viên máy tính kết hợp các nguyên thủy tính toán có thể tái sử dụng giống nhau, ví dụ, các câu lệnh hoặc vòng lặp có điều kiện, nhưng theo các thứ tự khác nhau để thực hiện các thuật toán khác nhau. Ngược lại, các kiến trúc mô hình ngôn ngữ hiện có luôn thực thi các lớp của chúng theo cùng một thứ tự. Chúng tôi giới thiệu Library of Layers (LoL), một kiến trúc tự động sắp xếp các lớp của nó trong quá trình suy luận để giải quyết vấn đề trong tầm tay.",
@@ -138,6 +180,13 @@
     "source": "mymemory",
     "hash": "88ef2beb55bdf1bc",
     "translated_at": "2026-11-04T06:34:42+00:00"
+  },
+  "18ae6f5695666ebd10c1708f8b08997287240cf7": {
+    "title_vi": "RoboColosseum: Đánh giá trí thông minh thể chất theo quy mô In-The-Wild",
+    "summary_vi": "Các chính sách rô bốt đa năng phải hoạt động trên các rô bốt, nhiệm vụ và môi trường, tuy nhiên sự thay đổi làm cho các thử nghiệm vật lý có nhiều thông tin cũng khiến chúng khó tái tạo. Chúng tôi giới thiệu RoboColosseum, một khung đánh giá phân tán kết hợp phục vụ chính sách thống nhất và các giao thức chuẩn hóa trên một mạng lưới robot hoạt động tại địa phương trong các môi trường đa dạng.",
+    "source": "mymemory",
+    "hash": "317c4ebc32e9d21d",
+    "translated_at": "2026-11-05T06:55:56+00:00"
   },
   "19244c7aa2063fd3d4e1eb3724d79665ede4b949": {
     "title_vi": "Giới thiệu Chương trình Người bảo vệ Lưới điện",
@@ -153,12 +202,26 @@
     "hash": "8e1a1a519e509ced",
     "translated_at": "2026-11-02T14:13:09+00:00"
   },
+  "1d3d711fc36a71f65e297808a2ce7a31e1c4ff98": {
+    "title_vi": "ParetoSaddler: Tối ưu hóa hướng dẫn Pareto của khai thác Agent về chất lượng và chi phí",
+    "summary_vi": "Tối ưu hóa bộ dây về cơ bản có thể cải thiện LLM agents mà không cần sửa đổi trọng lượng mô hình, nhưng các phương pháp hiện có chủ yếu tối ưu hóa chất lượng phản hồi. Mở rộng chúng sang chất lượng chung - tối ưu hóa chi phí đưa ra một thách thức: áp dụng tùy chọn triển khai trong các bản cập nhật trung gian có thể sớm từ chối các ứng viên có giá trị cho các cải tiến sau này.",
+    "source": "mymemory",
+    "hash": "57c393bcda9b42ad",
+    "translated_at": "2026-11-05T06:56:48+00:00"
+  },
   "1d78de13bdeab01c224b4b7e4ecce85ec6042d3e": {
     "title_vi": "Spooky New Infostealer Malware Sử dụng AI cho nạn nhân ‘Autodox’",
     "summary_vi": "Được đặt tên là \"Volta-Autodoxer\", malware được phát hiện gần đây sử dụng các công cụ AI để thu thập dữ liệu về nạn nhân, từ thông tin đăng nhập và số thẻ tín dụng đến các phiên Discord và biên lai UberEats.",
     "source": "mymemory",
     "hash": "1de30ff47d7f9070",
     "translated_at": "2026-11-02T15:37:47+00:00"
+  },
+  "1d83ea98ce0c30cf6589dc633c859d16aaae420a": {
+    "title_vi": "datasette-llm 0.1a10",
+    "summary_vi": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Thẻ: datasette , llm",
+    "source": "mymemory",
+    "hash": "5c88303055e95429",
+    "translated_at": "2026-11-05T06:57:13+00:00"
   },
   "1e09943a421e9246b3e0b8e89cf39f0de8ae649c": {
     "title_vi": "Khi lưu lượng tìm kiếm cạn kiệt, Reddit thông báo sẽ chuyển sang trải nghiệm đã đăng nhập",
@@ -173,6 +236,13 @@
     "source": "mymemory",
     "hash": "a810aa35d4b32c79",
     "translated_at": "2026-11-03T06:56:46+00:00"
+  },
+  "201b2063f67ce9cb455de22e7a00e9c91d0cad11": {
+    "title_vi": "trình quản lý mật khẩu mSecure hack cảnh báo đặt lại mật khẩu prompts",
+    "summary_vi": "phần mềm mSeven đang cảnh báo các khách hàng hiện tại và trước đây của trình quản lý mật khẩu mSecure thay đổi mật khẩu, đặt lại xác thực hai yếu tố và xóa khóa mật khẩu sau một cuộc tấn công mạng được cho là đã làm lộ cơ sở dữ liệu khách hàng được mã hóa.",
+    "source": "mymemory",
+    "hash": "0baf8a214cd7551d",
+    "translated_at": "2026-11-05T06:57:12+00:00"
   },
   "20954e3ac0ff87f74efda3333b11cedb4f109ce2": {
     "title_vi": "CWE-bench v2: Độ bao phủ, chất lượng và tính minh bạch cao hơn",
@@ -208,6 +278,20 @@
     "source": "mymemory",
     "hash": "5eab7185098e038a",
     "translated_at": "2026-11-04T06:34:53+00:00"
+  },
+  "25bdd6e9b6c3afc06d6a5e97b0a048fa8865f827": {
+    "title_vi": "MLLM Embeddings được yếu tố hóa để truy xuất hình ảnh được sáng tác",
+    "summary_vi": "Composed Image Retrieval (CIR) nhằm mục đích truy xuất hình ảnh mục tiêu với hình ảnh tham chiếu và văn bản sửa đổi. Mặc dù các phương pháp tiếp cận gần đây tận dụng Mô hình Ngôn ngữ Lớn Đa phương thức (MLLM) đã cho thấy sự tiến bộ đáng kể, chúng tôi cho rằng sự hiểu biết về thành phần của MLLM vẫn chưa được sử dụng đúng mức.",
+    "source": "mymemory",
+    "hash": "4571ac0768f6a2c8",
+    "translated_at": "2026-11-05T06:56:01+00:00"
+  },
+  "260ca5f876d619259f6bc4be9eae6e3cd4d375fe": {
+    "title_vi": "\"Chúng ta có nên phê duyệt không?\" Phê duyệt nhận thức về hậu quả đối với mã hóa tự trị Agents",
+    "summary_vi": "Mã hóa agents ngày càng dựa vào người phê duyệt tự động để quyết định xem lệnh shell được đề xuất có thể chạy hay không. Những người phê duyệt hiện tại, từ người kiểm tra dựa trên quy tắc đến các mô hình lan can bảo vệ và bộ phân loại quyền được triển khai, đưa ra quyết định dựa trên văn bản của yêu cầu và lệnh.",
+    "source": "mymemory",
+    "hash": "c51dcf3e99a3eac1",
+    "translated_at": "2026-11-05T06:56:49+00:00"
   },
   "262cfa35f4308cc0bcff01a56dd97410d48892c0": {
     "title_vi": "Chuẩn bị cuộc chạy nước rút bảo mật tiếp theo của chúng tôi để củng cố OpenAI",
@@ -258,6 +342,27 @@
     "hash": "4a1e7956fd669172",
     "translated_at": "2026-11-02T15:35:20+00:00"
   },
+  "2fae88055112861ab8ba9054cc252160cec1b54b": {
+    "title_vi": "Switch-SWE: Mã hóa Agents có giữ tiêu điểm khi chuyển đổi giữa các tác vụ chưa hoàn thành không?",
+    "summary_vi": "Các phiên phát triển phần mềm thường liên quan đến một số nhiệm vụ chưa hoàn thành thay vì một vấn đề được chuyển qua để hoàn thành. Khi mã hóa agents đảm nhận phát triển cấp kho lưu trữ, họ cần khôi phục các yêu cầu của nhiệm vụ trước đó và tiến độ một phần sau khi can thiệp công việc.",
+    "source": "mymemory",
+    "hash": "f656194c6d864515",
+    "translated_at": "2026-11-05T06:57:00+00:00"
+  },
+  "30cffd020de48ee582a3e880b2313628aa30a29e": {
+    "title_vi": "Tin tặc sử dụng khai thác n-day trong các cuộc tấn công zero-click trên các thiết bị iOS, Android",
+    "summary_vi": "Một cuộc tấn công watering hole quy mô lớn liên quan đến tin tặc Nga đã nhắm mục tiêu người dùng iOS và Android truy cập các trang web bị xâm nhập hoặc những trang web giả mạo cổng thông tin hợp pháp.",
+    "source": "mymemory",
+    "hash": "48618ed743a26d34",
+    "translated_at": "2026-11-05T06:56:46+00:00"
+  },
+  "31bba1eca5b3b896c69ca0adc74df6a9cfd2f809": {
+    "title_vi": "Texas là tâm điểm mới của việc xây dựng trung tâm dữ liệu AI. Đó có thể là kaput.",
+    "summary_vi": "Texas là thị trường trung tâm dữ liệu phát triển nhanh nhất ở Mỹ và là nền tảng cho các dự án xây dựng AI lớn nhất của Big Tech. Nhưng làn sóng xanh quét qua bang Lone Star có thể gây nguy hiểm cho vị trí đó. Đảng Dân chủ James Talarico đã giành được ghế Thượng viện Hoa Kỳ trước Ken Paxton. Gina Hinojosa đã giành chiến thắng trong cuộc đua tranh chức thống đốc chống lại đương nhiệm của đảng Cộng hòa,…",
+    "source": "mymemory",
+    "hash": "ecac6514d839d2ab",
+    "translated_at": "2026-11-05T06:57:07+00:00"
+  },
   "34b0bf3f94c3851e6957dd11bedc60679d6c4b34": {
     "title_vi": "Gemini 4 Carbon: Mô hình biên giới tiếp theo của chúng tôi",
     "summary_vi": "",
@@ -279,12 +384,26 @@
     "hash": "b9c6c30e55134712",
     "translated_at": "2026-11-02T14:13:05+00:00"
   },
+  "3a06f84c0f51a102b02f8b5a5ff865c2013898ad": {
+    "title_vi": "OpenAI mua lại Pierre Computer Company, Inc.",
+    "summary_vi": "OpenAI sẽ mua lại Công ty Máy tính Pierre, mở rộng các công cụ của Codex để xây dựng, hiểu và xem xét mã.",
+    "source": "mymemory",
+    "hash": "aa5d43667540af5f",
+    "translated_at": "2026-11-05T06:56:08+00:00"
+  },
   "3ca89e3a8361fa8c9e3ac6835ca14e569bf75ee6": {
     "title_vi": "CrossSWE: Benchmarking Cross-Repository Joint Development for Coding Agents",
     "summary_vi": "Khi mã hóa agents đạt được tỷ lệ thành công ngày càng cao đối với công nghệ phần mềm benchmarks, những nỗ lực gần đây đã tìm cách tăng độ phức tạp của nhiệm vụ thông qua các tầm nhìn dài hơn và sửa đổi mã mở rộng hơn. Tuy nhiên, phát triển phần mềm trong thế giới thực thường kéo dài nhiều kho phụ thuộc lẫn nhau, đưa ra những thách thức bổ sung trong lý luận phụ thuộc, tuyên truyền thay đổi và tính nhất quán của giao diện.",
     "source": "mymemory",
     "hash": "3c2c64f84389676a",
     "translated_at": "2026-11-04T06:34:54+00:00"
+  },
+  "3d39bad411aadc777147a5ff7e33394022c7e382": {
+    "title_vi": "Cách NVIDIA sử dụng AI Agents để hợp lý hóa hoạt động của nhà máy AI",
+    "summary_vi": "Khi các cụm GPU mở rộng, các hoạt động tính toán, mạng, phần cứng và lập lịch. Các kỹ sư độ tin cậy của công trường (SRE) thường phải kiểm tra nhiều bảng điều khiển...",
+    "source": "mymemory",
+    "hash": "836856ddb31af7ff",
+    "translated_at": "2026-11-05T06:56:25+00:00"
   },
   "3d509e27bae229a3dde138610d19636ab5dd9495": {
     "title_vi": "OpenAI bổ nhiệm Jill Hazelbaker làm Giám đốc Công ty",
@@ -293,12 +412,40 @@
     "hash": "bb448452b2735952",
     "translated_at": "2026-11-04T06:35:12+00:00"
   },
+  "3d56adb16bb8d2a50690c7c7be4c91b6669a5b10": {
+    "title_vi": "Mỗi Token cần một giáo viên riêng: Tự phân loại theo chính sách thích ứng với nhiều giáo viên",
+    "summary_vi": "Tự phân loại theo chính sách (OPSD) đã được chứng minh là có hiệu quả đối với các mô hình ngôn ngữ lớn sau đào tạo bằng cách xây dựng một giáo viên có điều kiện dựa trên các tài liệu tham khảo đặc quyền. Tuy nhiên, các phương pháp tiếp cận hiện tại giữ cho giáo viên cố định trong suốt quá trình đào tạo bằng cách liên tục cho giáo viên tiếp xúc với tài liệu tham khảo đầy đủ hoặc trong mỗi câu trả lời bằng cách chỉ tiếp xúc với tài liệu tham khảo một phần thay đổi theo cách thích ứng giữa các câu trả lời. Trong bài báo này, chúng tôi lập luận rằng không ai trong số họ là đủ.",
+    "source": "mymemory",
+    "hash": "2c109ae5f064c987",
+    "translated_at": "2026-11-05T06:56:52+00:00"
+  },
+  "3ddb3813bec16e63f882d8f556f6e5b9364b378f": {
+    "title_vi": "Mạng lưới Pro-AI Super PAC lớn nhất không thực sự ảnh hưởng đến bầu cử giữa kỳ",
+    "summary_vi": "Dẫn đầu tương lai, được hỗ trợ bởi các tỷ phú lớn nhất của Thung lũng Silicon, có giá trị 100 triệu $ và lập trường mạnh mẽ chống lại quy định AI. Tất cả đều không tăng lên nhiều vào tối thứ Ba.",
+    "source": "mymemory",
+    "hash": "9e46cecae93f0949",
+    "translated_at": "2026-11-05T06:57:27+00:00"
+  },
   "3fb867eacf79a74301626152b5067e196b5c1107": {
     "title_vi": "Hàng trăm ứng dụng AI trần tục đang ẩn các tính năng Deepfake lạm dụng tình dục",
     "summary_vi": "WIRED đã phát hiện ra khoảng 400 ứng dụng và trang web liên kết với các nhà phát triển tiếng Trung Quốc trông giống như các công cụ AI thông thường nhưng có các tính năng bí mật cho phép người dùng tạo ra hình ảnh và video bạo lực do AI tạo ra.",
     "source": "mymemory",
     "hash": "941fb8b0116e1cda",
     "translated_at": "2026-11-03T06:57:10+00:00"
+  },
+  "3fd5d1ee6f931a84d68811d70cd036cbae87fa5c": {
+    "title_vi": "Sam Altman giải quyết các nhận xét về RAM: Mọi người nên ‘đặt bao nhiêu tùy thích vào máy tính của họ’",
+    "summary_vi": "Giám đốc điều hành OpenAI Sam Altman đã dành đêm bầu cử để bảo vệ vị trí của mình trong việc mua RAM máy tính. Anh ấy đã đổi tên của mình trên X thành \"Ram Altman\" để đáp lại bình luận của một người dùng khác, nói rằng, \"Tôi thực sự muốn thế giới có hàng tấn bộ nhớ và mọi người đặt bao nhiêu tùy thích vào máy tính của họ, và nó",
+    "source": "mymemory",
+    "hash": "68a7921e4867d70e",
+    "translated_at": "2026-11-05T06:57:36+00:00"
+  },
+  "40bf0a146da2077e85650e47b043b3dc1ef3d987": {
+    "title_vi": "SpecPilot: Phát hiện thuật toán tự động và tối ưu hóa hệ thống để giải mã đầu cơ",
+    "summary_vi": "Giải mã đầu cơ tăng tốc độ giải mã LLM gắn trên bộ nhớ với một người soạn thảo nhẹ, và những người soạn thảo song song mở rộng tốc độ này bằng cách soạn thảo toàn bộ một khối trong một lần chuyển tiếp. Tuy nhiên, vẫn chưa rõ liệu các hệ thống (kho) được phát hành của họ có đạt được tốc độ đầy đủ mà giấy phép soạn thảo song song hay không. Chúng tôi xác định ba thách thức. Đầu tiên, với một yêu cầu, mỗi bước chấp nhận một vài tokens nhưng đọc mọi trọng số mục tiêu.",
+    "source": "mymemory",
+    "hash": "46d7b68195f7f69d",
+    "translated_at": "2026-11-05T06:56:34+00:00"
   },
   "41298b9a76b6a71096143fa1f4e2a10a9902964d": {
     "title_vi": "Netflix sẽ hiển thị cho bạn các đề xuất theo chủ đề thông qua tab ‘Khám phá AI’ mới",
@@ -307,6 +454,13 @@
     "hash": "e3bd3c0168fdc64f",
     "translated_at": "2026-11-04T06:35:57+00:00"
   },
+  "416b7eba9f32ddf48bbe6636b96842efba10031e": {
+    "title_vi": "Bảo vệ doanh nghiệp agentic với dòng dữ liệu",
+    "summary_vi": "Một đại diện bán hàng yêu cầu AI agent định giá cho khách hàng và agent lấy dữ liệu từ nhiều nguồn: hệ thống định giá bị hạn chế, thông tin liên lạc nội bộ và báo giá được lưu trữ. Đầu ra có vẻ chính xác với agent, vì vậy agent thứ hai sử dụng dữ liệu để soạn thảo đề xuất cho đại diện bán hàng. Không có con người kiểm tra một trong hai bàn giao. Khi nó...",
+    "source": "mymemory",
+    "hash": "83313fb73fc15b78",
+    "translated_at": "2026-11-05T06:56:29+00:00"
+  },
   "427d734a19acc5017995d7e97fc049e9a9ade125": {
     "title_vi": "Chẩn đoán khoảng cách tham chiếu: Những gì giàn giáo trực quan có thể và không thể khắc phục trong lý luận đa phương thức",
     "summary_vi": "Các mô hình ngôn ngữ lớn đa phương thức có thể nhận ra nội dung trực quan nhưng vẫn gặp khó khăn trong việc lý luận một cách đáng tin cậy qua nhiều bước. Khi đếm, một mô hình có thể nhìn thấy tất cả các đối tượng nhưng mất dấu những đối tượng mà nó đã đếm. Chúng tôi lập luận rằng những thất bại như vậy, thường được cho là do nhận thức, cho thấy một khoảng cách tham chiếu: không liên kết ngôn ngữ với các thực thể, khu vực hoặc địa điểm trực quan có liên quan.",
@@ -314,12 +468,61 @@
     "hash": "0544d327ccd95a7e",
     "translated_at": "2026-11-04T06:34:46+00:00"
   },
+  "42af486580e7c7d6e6e83457f052266fac39d0c7": {
+    "title_vi": "Không có gì trêu chọc một thiết bị AI không có màn hình trước khi ra mắt vào tháng tới",
+    "summary_vi": "Giám đốc điều hành Carl Pei cho biết trong một bài đăng trên X rằng công ty sẽ ra mắt thiết bị AI đầu tiên vào tháng 12. Chỉ hơn một năm sau khi Pei công bố kế hoạch cho các thiết bị \"bản địa AI\" và hệ điều hành AI. Anh ấy không cho biết nhiều về chính xác thiết bị mới là gì, chỉ có một tính năng đó",
+    "source": "mymemory",
+    "hash": "ae4752fb5dfe80f6",
+    "translated_at": "2026-11-05T06:57:09+00:00"
+  },
   "42ec3b43220bf36cb0466f5ca1ee074bb3f8d52c": {
     "title_vi": "Công ty khởi nghiệp suy luận AI Fal tăng gấp đôi giá trị lên 16 tỷ $ khi nhu cầu tăng vọt",
     "summary_vi": "Công ty khởi nghiệp năm tuổi này đã huy động được 1,3 tỷ $ do Bessemer dẫn đầu.",
     "source": "mymemory",
     "hash": "7c110c1a2003c0f2",
     "translated_at": "2026-11-04T06:35:56+00:00"
+  },
+  "42f4810ce57263f7d94c19cf4c1968169c51e9cf": {
+    "title_vi": "datasette-apps 0.3a0",
+    "summary_vi": "Phát hành: datasette-apps 0.3a0 Datasette Apps bổ sung hỗ trợ lưu trữ và chỉnh sửa các ứng dụng HTML tùy chỉnh bên trong Datasette. Chúng có thể được tạo bằng tay, nhưng việc tạo chúng dễ dàng hơn bằng cách sử dụng LLMs thông qua Datasette Agent . Bản phát hành này cải thiện khả năng tích hợp đó: Ứng dụng hiện có thể được gắn thẻ trong tin nhắn trò chuyện Datasette Agent bằng cách nhập # , tự động hoàn thành từ các ứng dụng mà người dùng có quyền xem.",
+    "source": "mymemory",
+    "hash": "0921aeb98c92b331",
+    "translated_at": "2026-11-05T06:57:19+00:00"
+  },
+  "44e59e6a26813ff64a90dedc406d8c541c260f0c": {
+    "title_vi": "Big Tech tuyên bố phản ứng dữ dội về AI của cử tri là \"chống Trump\" chứ không phải \"chống công nghệ\"",
+    "summary_vi": "Ngành công nghiệp công nghệ bị từ chối khi Hoa Kỳ áp đảo bỏ phiếu để hạn chế AI, trung tâm dữ liệu.",
+    "source": "mymemory",
+    "hash": "7c91510dfca5cec9",
+    "translated_at": "2026-11-05T06:57:26+00:00"
+  },
+  "462293a176e503e00752fa8f44ecf313ffeccd5f": {
+    "title_vi": "LOLPlay: Điểm chuẩn Agents trực quan thời gian thực trong Liên minh huyền thoại",
+    "summary_vi": "Visual agents cần phối hợp lý luận và hành động trong khi môi trường của họ phát triển trong quá trình suy luận. Chúng tôi giới thiệu LOLPlay, một benchmark trong Liên Minh Huyền Thoại bản địa với 36 nhiệm vụ dành riêng cho nhà vô địch bao gồm quản lý tài nguyên, chiến đấu, hợp tác và mục tiêu. Agents tương tác thông qua ảnh chụp màn hình và hành động bàn phím chuột; khởi tạo tự động và 82 kiểm tra mục tiêu phụ thực thi phân biệt tiến trình một phần với hoàn thành.",
+    "source": "mymemory",
+    "hash": "3c23aaeac9e5733d",
+    "translated_at": "2026-11-05T06:56:07+00:00"
+  },
+  "472484bded0ab565bcda4a29dd75596cea2aebf9": {
+    "title_vi": "Tôi đã thử Siri Recaps của Apple. Chúng hữu ích một cách đáng ngạc nhiên — và hơi đáng lo ngại",
+    "summary_vi": "Siri Recaps hỗ trợ AI của Apple đã chinh phục tôi chỉ trong một ngày, bất chấp những hạn chế về quyền riêng tư của tôi. Nhưng vẫn còn chỗ để cải thiện.",
+    "source": "mymemory",
+    "hash": "23dc1fe3da3c5746",
+    "translated_at": "2026-11-05T06:57:35+00:00"
+  },
+  "49c4f78acfc1d008ddba1f1df594be7e675b8334": {
+    "title_vi": "VidUEU-Agent: Agent quản lý dữ liệu cho các tác vụ đa phương thức, chỉnh sửa và hợp nhất",
+    "summary_vi": "Sự tiến bộ của học tập đa phương thức bị hạn chế rất nhiều bởi sự khan hiếm và chi phí chú thích cao của dữ liệu giảng dạy chất lượng cao. Mặc dù video thô cung cấp một nguồn kiến thức trực quan phong phú và năng động, việc chuyển đổi chúng thành dữ liệu hướng dẫn chính xác vẫn còn nhiều thách thức.",
+    "source": "mymemory",
+    "hash": "73226a75917bfe09",
+    "translated_at": "2026-11-05T06:56:22+00:00"
+  },
+  "49cf82dfae3508cd84ee50be091191259b7f9d40": {
+    "title_vi": "AI mã nguồn mở đang bùng nổ. Hugging Face giải thích ai kiếm được lợi nhuận.",
+    "summary_vi": "Các mô hình nguồn mở đang trở nên chủ đạo hơn khi các doanh nghiệp, chính phủ và các công ty khởi nghiệp đều dựa vào lời hứa giảm chi phí, kiểm soát nhiều hơn và linh hoạt hơn. Nhưng khi các mô hình ngày càng có khả năng trở nên tự do hơn, làm thế nào để các công ty nắm bắt giá trị? Và với các mô hình mở của Trung Quốc có được chỗ đứng, người chơi Mỹ có thể theo kịp không? Trong tập này của",
+    "source": "mymemory",
+    "hash": "6f12aa7216897ad3",
+    "translated_at": "2026-11-05T06:57:29+00:00"
   },
   "49d3fa00d3ef09bb00b4f4f3d1aa6740f29603af": {
     "title_vi": "Vi phạm dữ liệu của Đại học Harvard làm lộ thông tin của 851.000 tài khoản",
@@ -335,6 +538,13 @@
     "hash": "e291a23b042b109a",
     "translated_at": "2026-11-04T06:36:15+00:00"
   },
+  "4b23bf5aa6019f69d7a1eb5c0d928fcd2136d6a2": {
+    "title_vi": "Gần như bằng không Token Embeddings Âm thầm ngừng đào tạo trong các mô hình chuỗi có cổng",
+    "summary_vi": "Trong số 291 kho lưu trữ mô hình ngôn ngữ open-weight được khảo sát (280 bảng embedding riêng biệt), 52,6% các điểm kiểm tra kết hợp và không kết nối (20/38) chứa embeddings đầu vào có thể truy cập được với các chỉ tiêu dưới 10^{-6}, so với 0% các mô hình kết hợp trọng lượng. Các hàng gần như bằng không như vậy có thể phát sinh trong quá trình tiền xử lý khi mẫu tokens không nhìn thấy được hoặc mẫu tokens nhận được gradient đầu vào bằng 0 trong khi phân rã trọng lượng AdamW co lại embeddings không bị ràng buộc.",
+    "source": "mymemory",
+    "hash": "85d69377a17e541e",
+    "translated_at": "2026-11-05T06:56:59+00:00"
+  },
   "4c55e492d89731445e5c47e31486995313ac0b78": {
     "title_vi": "Một nhà thầu quốc phòng đã cho phép AI cá nhân Agent của họ truy cập vào một hệ thống Lầu Năm Góc an toàn",
     "summary_vi": "Các nguồn tin nói với WIRED rằng Claude agent cá nhân của một nhân viên Accenture đã chạy trên mạng DOD trong hai tháng trước khi nó được xác định và lỗ hổng có thể được vá.",
@@ -348,6 +558,13 @@
     "source": "mymemory",
     "hash": "8da5b1d591947ac3",
     "translated_at": "2026-11-02T15:38:11+00:00"
+  },
+  "4dcce518c56d27802a7c6df0eb82b205487e75e4": {
+    "title_vi": "Frontier VLM Agents đã sẵn sàng để trở thành Robot Generalists? Một nghiên cứu thực nghiệm với đấu trường Agent được thể hiện",
+    "summary_vi": "Một robot tổng quát phải diễn giải một cảnh, hành động trên đó và đáp ứng mọi điều kiện của một nhiệm vụ. Các mô hình ngôn ngữ tầm nhìn biên giới (VLM) đáp ứng những nhu cầu này đến mức nào? Chúng tôi giới thiệu Hiện thân Agent Arena, đánh giá mười VLM agents trên Hình học, Lý luận không gian, Khả năng chi trả, Lập kế hoạch nhiệm vụ và Thao tác. 1.000 vỏ của nó kết hợp 32 nguồn đã được thiết lập với GeoProbe, benchmark 168 vỏ của chúng tôi để ước tính máy ảnh, chuyển động, độ sâu và tỷ lệ.",
+    "source": "mymemory",
+    "hash": "a92f64242be2e4f9",
+    "translated_at": "2026-11-05T06:55:58+00:00"
   },
   "4dcfcc0d194323eb6d43206a9947da4afb65f2f5": {
     "title_vi": "Ex-Palantir giám đốc điều hành khởi động Dream với 17 TRIỆU $ từ a16z để xây dựng các mô hình thế giới AI cho xây dựng",
@@ -398,6 +615,13 @@
     "hash": "a56214b4d38b8331",
     "translated_at": "2026-11-02T15:35:36+00:00"
   },
+  "5afc49da7bd40515f91ccc5e3c3a6f8c07f56fb3": {
+    "title_vi": "Trình trích xuất trường Dharma: Bất kỳ tài liệu nào vào, các trường có cấu trúc trong JSON ra",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "39fb649ce17175b0",
+    "translated_at": "2026-11-05T06:56:16+00:00"
+  },
   "5c450d9a985fdd096989ecf4cfc40ba6c5871dc6": {
     "title_vi": "Wabi, AI agent xây dựng các ứng dụng nhỏ, hiện có giá trị 1,25tỷ $ sau vòng mới nhất",
     "summary_vi": "Hôm thứ Năm, ứng dụng AI Wabi, hiện tự mô tả mình là một \"agent cá nhân\", cho biết họ đã huy động được 55 triệu đô la với mức định giá 1,25 tỷ đô la.",
@@ -419,6 +643,13 @@
     "hash": "e560f3ee9d7ef08f",
     "translated_at": "2026-11-03T06:55:58+00:00"
   },
+  "61aa1110a2ecdbb7f35079e7a53d8822a9555c40": {
+    "title_vi": "YANAMI: Bộ dữ liệu đa phương thức quy mô lớn và Benchmark cho tương tác đa trạng thái",
+    "summary_vi": "Các mô hình đa phương thức thống nhất (UMM) tích hợp sự hiểu biết trực quan, tạo và chỉnh sửa trong một khuôn khổ thống nhất duy nhất. Tuy nhiên, các bộ dữ liệu đa phương thức thống nhất hiện có và benchmarks vẫn bị chi phối bởi các tác vụ một lượt. Ngay cả trong các bộ dữ liệu nhiều lượt gần đây, nhiều lượt có thể được giải quyết độc lập mà không cần theo dõi thông tin qua các lượt.",
+    "source": "mymemory",
+    "hash": "d6efcbd5a84b96df",
+    "translated_at": "2026-11-05T06:55:48+00:00"
+  },
   "624e23d0cdf0ab7706c47ff7ec200be064dc88d2": {
     "title_vi": "Regina Barzilay và Jim Collins giành giải thưởng Pritzker cho nghiên cứu khoa học và AI xuất sắc cho công việc phát hiện kháng sinh hỗ trợ AI",
     "summary_vi": "Các giáo sư của MIT đã hợp tác để xác định loại kháng sinh do AI phát hiện đầu tiên, một bước đột phá khoa học được công nhận rộng rãi là một cột mốc quan trọng trong khám phá thuốc do AI điều khiển.",
@@ -433,12 +664,33 @@
     "hash": "73fe6839bc2589d0",
     "translated_at": "2026-11-04T06:35:40+00:00"
   },
+  "63973ddb0548aa82759ac3f91ccaa5d42c2f8a9d": {
+    "title_vi": "Định tuyến bất cứ điều gì: Một nghiên cứu về mô hình và định tuyến chính sách cho các hệ thống AI đa năng",
+    "summary_vi": "Trí tuệ nhân tạo tổng quát (AGI) đòi hỏi một phương pháp có thể hiểu, tạo, suy luận và hành động trên các lĩnh vực và phương thức đa dạng. Thay vì dựa vào một mô hình duy nhất để làm chủ mọi khả năng, một con đường đầy hứa hẹn hướng tới AGI hiện nay là điều phối một hệ sinh thái không đồng nhất gồm các mô hình, công cụ và chính sách (ứng cử viên) chuyên biệt thành một hệ thống AI thống nhất.",
+    "source": "mymemory",
+    "hash": "75859aa28003dc2f",
+    "translated_at": "2026-11-05T06:55:59+00:00"
+  },
   "6491aedb295f487d9bd87bb9a5e6096593e152df": {
     "title_vi": "TauIndianBankBench: Nhận thức về quy trình, Đánh giá theo định hướng hành động về Agents đàm thoại sử dụng công cụ",
     "summary_vi": "Nhiều ngân hàng Ấn Độ phục vụ khách hàng thông qua các trang Câu hỏi thường gặp và chatbot theo kịch bản. Các trợ lý dựa trên các mô hình ngôn ngữ có thể phản hồi nhanh hơn và thực hiện các yêu cầu như chặn thẻ, nhưng chỉ khi họ cung cấp thông tin chính xác và tuân thủ các quy tắc của ngân hàng. Các quy tắc này quy định một quy trình, một tập hợp các bước cần thiết, chẳng hạn như nhận báo giá đóng cửa trước khi đóng khoản tiền gửi.",
     "source": "mymemory",
     "hash": "6aeb3bf82b2889d4",
     "translated_at": "2026-11-02T15:36:11+00:00"
+  },
+  "685e8104a6fb507b224507b8c2a1328a2588a103": {
+    "title_vi": "Đằng sau việc tạo video: Quan sát và hiểu biết sâu sắc về sự hiểu biết đa phương thức từ Kling",
+    "summary_vi": "Việc tạo video đã tiến triển từ các đoạn tách biệt sang các trình tự nghe nhìn dạng ngắn mạch lạc, và nút cổ chai đang chuyển từ kết xuất sang kiểm soát ngữ nghĩa. Báo cáo này tóm tắt các quan sát và hiểu biết sâu sắc về sự hiểu biết đa phương thức thu được từ các thế hệ Kling kế tiếp.",
+    "source": "mymemory",
+    "hash": "db86675b0fbba1ac",
+    "translated_at": "2026-11-05T06:55:54+00:00"
+  },
+  "68c44263a0af55942d00f413b692ebe06ba48987": {
+    "title_vi": "AI đang buộc chúng ta phải trả hết 40 năm nợ kỹ thuật",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "c21aa74c1ab3eed7",
+    "translated_at": "2026-11-05T06:56:44+00:00"
   },
   "6a2a421ddc0033da2e2470c7f389d8181b3448ea": {
     "title_vi": "Hơn 1.000 máy chủ GitLab dễ bị tấn công RCE đang diễn ra",
@@ -475,6 +727,13 @@
     "hash": "c5b2e156ba341f52",
     "translated_at": "2026-11-04T06:35:03+00:00"
   },
+  "7148f4c95139594f8f91d216dbd6c04d07e668ff": {
+    "title_vi": "MoviEdit: Chỉnh sửa video đa ảnh dạng dài dễ dàng",
+    "summary_vi": "Chỉnh sửa video đa cảnh dài đòi hỏi một chỉnh sửa dự định để duy trì sự mạch lạc giữa những thay đổi đột ngột về cảnh, quan điểm và chủ đề, trong khi xử lý bối cảnh trực quan dài hơn đáng kể so với các trình chỉnh sửa ảnh đơn thông thường. Chúng tôi giới thiệu MoviEdit, một khung công tác từ đầu đến cuối để chỉnh sửa video nhiều cảnh dài có thể mở rộng, cùng giải quyết các thách thức về dữ liệu, mô hình hóa và đánh giá.",
+    "source": "mymemory",
+    "hash": "51f9f5402a3bc331",
+    "translated_at": "2026-11-05T06:56:19+00:00"
+  },
   "71cc759a119ba5323f510f5f71247c2ae847fbc4": {
     "title_vi": "CEPO: Khuôn khổ chung để cải thiện tối ưu hóa Prompt trong các hệ thống Multi-Agent",
     "summary_vi": "Các hệ thống Multi-agent (MAS) yêu cầu cả sự phối hợp hiệu quả và thực hiện nhiệm vụ chuyên biệt. Các phương pháp tối ưu hóa prompt hiện có thường kết hợp các chức năng này trong prompts đặc hiệu với agent. Chúng tôi giới thiệu Coordinator-Executor Prompt Optimization (CEPO), một khuôn khổ chung để cải thiện tối ưu hóa prompt trong MAS.",
@@ -503,6 +762,13 @@
     "hash": "d542b1cf61e9a15d",
     "translated_at": "2026-11-02T15:38:18+00:00"
   },
+  "75679f5aa60bfcf88cfee2650e1fad6a696bd2d7": {
+    "title_vi": "Daybreak Red hiện có sẵn trong AWS GovCloud (US-East)",
+    "summary_vi": "Daybreak Red mang GPT-5.6 Cyber đến với khách hàng đã được phê duyệt tại AWS GovCloud (US-East) thông qua Amazon Bedrock để thực hiện công tác an ninh mạng được ủy quyền.",
+    "source": "mymemory",
+    "hash": "800d7b404d9e368e",
+    "translated_at": "2026-11-05T06:56:18+00:00"
+  },
   "7587406daf7d14d3030ba887665a0c517452eec6": {
     "title_vi": "Rivian mở rộng liên doanh với VW để bao gồm trợ lý AI",
     "summary_vi": "Rivian không tiết lộ liệu giá trị của liên doanh trị giá 5,8 tỷ $ có mở rộng hay không.",
@@ -517,12 +783,33 @@
     "hash": "72b1ebf87900a280",
     "translated_at": "2026-11-04T06:36:06+00:00"
   },
+  "771d04f9d14268e6c26dd9895fd6c1c15eabdb29": {
+    "title_vi": "Phần sụn được mã hóa Nvidia RTX Spark làm chậm tốc độ suy luận xuống 35% trên Linux",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "c41fdd52182e8dfc",
+    "translated_at": "2026-11-05T06:57:17+00:00"
+  },
+  "793baf0e54548beab99537f6123537f5cbfbb07f": {
+    "title_vi": "Hỏi HN: Thiết lập AI agentic hiện tại của bạn là gì?",
+    "summary_vi": "Tôi tò mò về cách mọi người trên HN đang sử dụng AI hàng ngày và đưa ra một danh sách các câu hỏi mà tôi nghĩ có thể thú vị để biết. Tất nhiên, không cần phải trả lời mọi câu hỏi, chỉ muốn cảm nhận được mọi người đang sử dụng AI như thế nào. 1) Cá nhân bạn đang trả tiền cho những đăng ký AI nào? (Claude, ChatGPT/Codex, Con trỏ, v.v.) - Cấp độ nào? - Bạn đã mua nhiều gói đăng ký từ cùng một nhà cung cấp (ví dụ: hai tài khoản Claude) chưa?",
+    "source": "mymemory",
+    "hash": "57dcbc51294ebfad",
+    "translated_at": "2026-11-05T06:56:44+00:00"
+  },
   "7a06514023fd7da46cc275af453cfd3d44351c84": {
     "title_vi": "Trích dẫn Kyle Kingsbury",
     "summary_vi": "Rộng hơn, việc sử dụng LLMs làm xói mòn niềm tin vào tài liệu, vào phần mềm và vào các tổ chức sản xuất ra chúng. Có lẽ các kỹ sư sẽ bắt đầu đối xử với bất kỳ dự án phần mềm mới nào với sự nghi ngờ - những tín hiệu mà chúng ta từng dựa vào như là dấu hiệu của một hệ thống trưởng thành giờ đây dễ bị làm giả hơn. [...] Trong thời đại LLMs, người bảo trì có thể làm gì để đảm bảo phần mềm và tài liệu chính xác?",
     "source": "mymemory",
     "hash": "369f1b4dfec84537",
     "translated_at": "2026-11-02T14:13:07+00:00"
+  },
+  "7b93706aafff65521429f5f085d2d79221c1f293": {
+    "title_vi": "Tiến độ suy luận có thể chứng minh cho các mô hình ngôn ngữ lớn",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "f10effb387e017f6",
+    "translated_at": "2026-11-05T06:56:38+00:00"
   },
   "7bf0065ceb1646f57aedf5f7d913738e013e364b": {
     "title_vi": "Thông số kỹ thuật mô hình được cập nhật để AI có khả năng và có lợi hơn",
@@ -559,12 +846,33 @@
     "hash": "b409a37ae482e6fd",
     "translated_at": "2026-11-03T06:56:13+00:00"
   },
+  "807d8e9928dea350486f02d166892309594a2172": {
+    "title_vi": "DreamX: Video Diffusion Model là một người học hành động tiềm ẩn phổ quát",
+    "summary_vi": "Học cách thể hiện hành động phổ quát từ video đòi hỏi động lực học mô hình hóa nhất quán giữa các lần thực hiện khác nhau của cùng một hành động nhưng không thay đổi so với những thay đổi về sáng chế và diện mạo. Các mô hình hành động tiềm ẩn hiện có suy ra các hành động từ quá trình chuyển đổi trực quan, nhưng các biểu diễn của chúng thường làm rối hành động cơ bản với các biến thể trực quan không liên quan, hạn chế chuyển qua các phương án.",
+    "source": "mymemory",
+    "hash": "271a9fa0c0292504",
+    "translated_at": "2026-11-05T06:56:21+00:00"
+  },
   "8188e62d153589ff3102963eed7177a283713bdd": {
     "title_vi": "HALO: Đánh giá chi tiết dựa trên con người về Agents chủ động",
     "summary_vi": "agents chủ động phải quyết định có hỗ trợ hay không, khi nào và bao lâu mà không có yêu cầu rõ ràng. Các đánh giá hiện có thường dựa trên điểm số tự động hoặc phán quyết nhị phân, cung cấp chẩn đoán hạn chế của con người về việc sử dụng bằng chứng và chất lượng can thiệp. Để giải quyết những khoảng trống này, chúng tôi giới thiệu HALO, GrAnular EvaLuation do con người tạo ra của PrOactive Agents.",
     "source": "mymemory",
     "hash": "afc36fcd3e0fb622",
     "translated_at": "2026-11-03T06:56:17+00:00"
+  },
+  "819b27561520df63503a71f4aa7456bd97da29d8": {
+    "title_vi": "Đệ quy: Hướng tới các hệ thống mô hình nền tảng tự cải thiện đệ quy",
+    "summary_vi": "Các mô hình nền tảng trong môi trường thay đổi có thể gặp phải kiến thức miền không quen thuộc mà khóa đào tạo ban đầu của họ không bao gồm. Tuy nhiên, các lĩnh vực mới hiếm khi cung cấp một lượng lớn dữ liệu đào tạo do chuyên gia tạo ra hoặc tín hiệu giám sát đáng tin cậy để đào tạo thêm. Chúng tôi giới thiệu Recursa, một hệ thống mô hình nền tảng thích ứng với các lĩnh vực mới bằng cách học hỏi từ kinh nghiệm của chính nó mà không cần các chuyên gia về con người hoặc một mô hình giáo viên mạnh mẽ hơn.",
+    "source": "mymemory",
+    "hash": "cc49e515c23d63e6",
+    "translated_at": "2026-11-05T06:56:51+00:00"
+  },
+  "83de50efad5d5595ae87127c2e0fc4f2f167ae26": {
+    "title_vi": "Những từ bị bắt trong trái tim: Mô phỏng biểu hiện cụ thể của con người đối với khách hàng tự làm mờ trong liệu pháp tâm lý",
+    "summary_vi": "Khách hàng trị liệu tâm lý có thể gặp đau khổ trước khi họ có thể mô tả nó một cách mạch lạc và biểu hiện của họ thay đổi theo cảm xúc, nhận thức về sự an toàn và tin tưởng. Trình mô phỏng khách hàng dựa trên mô hình ngôn ngữ lớn thường dựa trên các mô tả trường hợp được tổ chức lâm sàng, có thể khuyến khích các câu trả lời giải thích những khó khăn của khách hàng rõ ràng hơn so với các bảo đảm hiểu biết hiện tại của họ.",
+    "source": "mymemory",
+    "hash": "4fef66473a0b6551",
+    "translated_at": "2026-11-05T06:55:50+00:00"
   },
   "855688c450b204aa5d81d3dfbaa55b80a97f464c": {
     "title_vi": "Anthropic cảnh báo rằng nó rất gần với khả năng RSI, hay còn gọi là AI tự xây dựng",
@@ -587,6 +895,13 @@
     "hash": "74e8bb043707a2fa",
     "translated_at": "2026-11-04T06:35:17+00:00"
   },
+  "8a7965b7bae2e7d7290bbdd539f28a4387070018": {
+    "title_vi": "Ted Cruz đặt mục tiêu sắp xếp FCC với đảng Cộng hòa trước khi đảng Dân chủ nắm quyền kiểm soát Thượng viện",
+    "summary_vi": "Cruz và Trump dường như không có kế hoạch lấp đầy ghế Dân chủ trống của FCC.",
+    "source": "mymemory",
+    "hash": "d12b18441f0c881b",
+    "translated_at": "2026-11-05T06:57:04+00:00"
+  },
   "8a8c6b54c60471cb3c76810610400752386b1335": {
     "title_vi": "Đo AI Agents với tư cách là Đồng đội với Trí thông minh Hợp tác",
     "summary_vi": "Tiến bộ trong AI thường được đo lường bằng những gì một mô hình duy nhất có thể tự thực hiện. Tuy nhiên, các nhóm AI agents đang bắt đầu tạo ra những đột phá và khám phá trong khoa học, y học, toán học và công nghệ phần mềm. Khi AI bắt đầu hoạt động trong các nhóm của agents và con người, khả năng cộng tác trở thành một phần cốt lõi trong trí thông minh của họ. Nghiên cứu về các nhóm người đã đo lường khả năng này trong nhiều thập kỷ.",
@@ -600,6 +915,13 @@
     "source": "mymemory",
     "hash": "400280f29d8d1da9",
     "translated_at": "2026-11-03T06:56:33+00:00"
+  },
+  "8c285de741962e7a994a1b675dfed8856378bad1": {
+    "title_vi": "Những người đánh giá AI có thể thấy những nỗ lực của bạn để cải thiện bài báo của bạn không? Một nghiên cứu quy mô lớn về quỹ đạo sửa đổi giấy",
+    "summary_vi": "Các nhà đánh giá AI ngày càng được sử dụng để đánh giá các bản thảo khoa học, nhưng vẫn chưa rõ liệu các đánh giá của họ có phản ánh những cải tiến mà các tác giả thực hiện thông qua sửa đổi hay không. Chúng tôi điều tra câu hỏi này bằng cách sử dụng PaperTrajectory-2026, bản phát hành PaperTrajectory năm 2026, một bộ dữ liệu gồm 6.959 quỹ đạo giấy trên năm hội nghị AI, với chú thích tự động về các thay đổi theo 14 chiều và các đánh giá riêng biệt về chất lượng tổng thể.",
+    "source": "mymemory",
+    "hash": "2c32b853308ea896",
+    "translated_at": "2026-11-05T06:56:57+00:00"
   },
   "8d5004f62c9272bf71fb76b18fb4a9e45ac94966": {
     "title_vi": "Từ phân mảnh đến hợp nhất: Khảo sát và lộ trình cho Omnimodal Embeddings",
@@ -622,6 +944,27 @@
     "hash": "edb1e1a7c35658c4",
     "translated_at": "2026-11-04T06:35:23+00:00"
   },
+  "909a28edbf8e6470f122724aff7299dab5461a4d": {
+    "title_vi": "MoLRSI: AI tự cải tiến đệ quy agent cho khám phá phân tử",
+    "summary_vi": "Khám phá phân tử đòi hỏi phải điều hướng các không gian tìm kiếm tổ hợp rộng lớn trong khi cân bằng các mục tiêu sinh học cạnh tranh. AI agents có thể tự động hóa các giao thức thiết kế phân tử do chuyên gia xác định, nhưng tự động hóa không giải quyết được cách tối ưu hóa quy trình làm việc cho các nhiệm vụ mới hoặc cải thiện sự phát triển của chúng thông qua trải nghiệm.",
+    "source": "mymemory",
+    "hash": "f522425a2da55152",
+    "translated_at": "2026-11-05T06:56:36+00:00"
+  },
+  "916bde684bf426b145a216b34c6a68d19c7e5920": {
+    "title_vi": "EvoTeam: Hợp tác đa Agent thông qua các nhóm phát triển",
+    "summary_vi": "Các hệ thống multi-agent dựa trên LLM (MAS) dựa trên sự hợp tác giữa các agents chuyên biệt để giải quyết các nhiệm vụ phức tạp. Các phương pháp hiện có cải thiện MAS bằng cách tinh chỉnh prompts, kỹ năng và chiến lược thực hiện của từng agents dựa trên phản hồi nhiệm vụ. Tuy nhiên, việc cải thiện agents cá nhân không nhất thiết dẫn đến sự hợp tác nhóm tốt hơn.",
+    "source": "mymemory",
+    "hash": "3379f18ac0f1fd7f",
+    "translated_at": "2026-11-05T06:56:32+00:00"
+  },
+  "9237dfef9309031ee076ab24b629c807dce6ad80": {
+    "title_vi": "Qualcomm đang đặt cược lớn vào các trung tâm dữ liệu khi doanh số điện thoại thông minh sụt giảm",
+    "summary_vi": "Với doanh số điện thoại thông minh tăng khoảng 20% so với năm 2025, Qualcomm đang tìm đến các trung tâm dữ liệu để giúp thúc đẩy lợi nhuận của mình. Trong cuộc gọi thu nhập quý 4 năm 2026, công ty đã đặt ra kế hoạch tạo ra sự nổi bật trong hoạt động kinh doanh trung tâm dữ liệu AI, thông qua quan hệ đối tác với các công ty như Amazon và Meta đã công bố trước đó",
+    "source": "mymemory",
+    "hash": "2aac8ae9de36cb1a",
+    "translated_at": "2026-11-05T06:57:22+00:00"
+  },
   "92644269214698b8d46c2fca399b8bbd0b6befb8": {
     "title_vi": "CVE-2026-76418: Phần mềm Cisco Secure Firewall asa và Phần mềm Cisco Secure FTD Giá trị trả về không được kiểm soát đối với lỗ hổng NULL Pointer Dereference",
     "summary_vi": "Phần mềm Cisco Secure Firewall asa và Phần mềm Cisco Secure FTD chứa giá trị trả về không được kiểm soát đối với lỗ hổng tham chiếu con trỏ RỖNG có thể cho phép kẻ tấn công từ xa, chưa được xác thực khiến thiết bị tải lại bất ngờ, dẫn đến tình trạng từ chối dịch vụ (DoS).",
@@ -642,6 +985,20 @@
     "source": "mymemory",
     "hash": "9294d31de116a2be",
     "translated_at": "2026-11-04T06:35:48+00:00"
+  },
+  "94ac3c3bdec22b175eaad3822214dab50c652a41": {
+    "title_vi": "Vercel triển khai tính năng bảo vệ mới chống lại các cuộc tấn công cookie phiên bị đánh cắp",
+    "summary_vi": "Vercel đang dần triển khai Thông tin xác thực phiên giới hạn thiết bị (DBSC) trên nền tảng của mình như một biện pháp bảo vệ quan trọng chống lại kẻ đánh cắp thông tin malware.",
+    "source": "mymemory",
+    "hash": "ff284189a122e977",
+    "translated_at": "2026-11-05T06:57:02+00:00"
+  },
+  "94c502abbc467c466534b7b6a1aae88bea2009b7": {
+    "title_vi": "Công ty cho biết hầu như không có ai sử dụng AI agents để đặt Uber của họ",
+    "summary_vi": "Trong tuần lễ bận rộn nhất quý trước, Uber cho biết chỉ có bốn người đặt xe bằng AI agent.",
+    "source": "mymemory",
+    "hash": "8aeeff97eb296e8f",
+    "translated_at": "2026-11-05T06:56:37+00:00"
   },
   "95afc08ba069a5290ba23ed805077d30e17d4a0e": {
     "title_vi": "Tự chưng cất theo chính sách với sự phát triển của giáo viên",
@@ -664,6 +1021,13 @@
     "hash": "7937e5406b924fc1",
     "translated_at": "2026-11-04T06:36:04+00:00"
   },
+  "96eddcc208ed19b891b612d4f6565f6beb25fecf": {
+    "title_vi": "Xem trước Ripple-65B: SOTA Open-Weight của Hoa Kỳ trên Mã hóa Agentic",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "19694b4a76b4d57d",
+    "translated_at": "2026-11-05T06:56:26+00:00"
+  },
   "97605e4207d463d1e2c55fa697b499d1b6474bef": {
     "title_vi": "CaPtain: Một đường ống cho Robot hậu đào tạo Code-as-Policy Agents",
     "summary_vi": "Trên các tác vụ mã hóa, web và sử dụng công cụ, mô hình ngôn ngữ agents hiện được đào tạo thường xuyên với cùng một công thức: giám sát fine-tuning (SFT) để tìm hiểu giao diện, sau đó học tăng cường nhiều bước (RL) để làm chủ nó. Code-as-policy (CaP) tạo ra thao tác robot trong cùng một hình thức, vì chính sách viết mã chống lại các API robot và đọc lại kết quả, vì vậy công thức tương tự nên được áp dụng.",
@@ -677,6 +1041,13 @@
     "source": "mymemory",
     "hash": "c7bcb9e1ec679b0d",
     "translated_at": "2026-11-04T06:34:48+00:00"
+  },
+  "987ba3712202b5d9059546b0e79297f531886faa": {
+    "title_vi": "DreamHost xác nhận vi phạm dữ liệu đã làm lộ thông tin đăng nhập FTP và các phiên webmail",
+    "summary_vi": "DreamHost đang cảnh báo về vi phạm dữ liệu sau khi kẻ tấn công có được quyền truy cập vào nền tảng Trình quản lý tệp trong hai tháng và đánh cắp tên người dùng và mật khẩu FTP/SFTP của khách hàng.",
+    "source": "mymemory",
+    "hash": "da60dc0974a9b61c",
+    "translated_at": "2026-11-05T06:57:06+00:00"
   },
   "993e48dc4504c6f5debaa131b1992333c56f2fe1": {
     "title_vi": "Anthropic đang làm việc trên một hệ thống để chứng minh danh tính của các mô hình AI",
@@ -748,6 +1119,13 @@
     "hash": "4b73a83f3be6468e",
     "translated_at": "2026-11-02T15:34:59+00:00"
   },
+  "a1e153edc152696f993a24c829c6f05ca538e0ca": {
+    "title_vi": "OpenAI đã cố gắng định hình cuộc bầu cử năm 2028",
+    "summary_vi": "Chris Lehane của OpenAI muốn AI xác định cuộc bầu cử năm 2028, đề xuất một hợp đồng xã hội mới có thể mang lại lợi ích cho người Mỹ đồng thời thúc đẩy lợi ích kinh doanh của gã khổng lồ AI.",
+    "source": "mymemory",
+    "hash": "ea911d0e02ca9343",
+    "translated_at": "2026-11-05T06:57:23+00:00"
+  },
   "a2357e701f020223b3100435aeb5d89294fe9043": {
     "title_vi": "Cách Cisco bảo vệ tốc độ máy với OpenAI",
     "summary_vi": "Cisco kết hợp trí tuệ mạng với các mô hình OpenAI để tăng cường bảo mật doanh nghiệp. Tìm hiểu cách nó xây dựng các biện pháp phòng thủ thích ứng hơn.",
@@ -776,6 +1154,13 @@
     "hash": "03041c32a061285c",
     "translated_at": "2026-11-03T06:56:51+00:00"
   },
+  "a331696f9782d1ec7816f08a0f789ccffa6c3c3c": {
+    "title_vi": "AI PAC đã chi hàng triệu đô la để cố gắng định hình Quốc hội — đây là cách họ thực hiện",
+    "summary_vi": "Các PAC của ngành công nghiệp AI đã chi hàng triệu đô la ảnh hưởng đến các cuộc bầu cử giữa kỳ năm 2026, với kết quả hỗn hợp. Các nhóm chính trị đã đang hướng tới chu kỳ bầu cử tiếp theo.",
+    "source": "mymemory",
+    "hash": "ad52e5007b179d47",
+    "translated_at": "2026-11-05T06:57:20+00:00"
+  },
   "a34792daddb7dc3807cba4d1ff9ffd98f3ab157b": {
     "title_vi": "Google làm gián đoạn mạng botnet XCPE Android ZZ0Z triệu thiết bị, cấm nhà sản xuất hộp TV",
     "summary_vi": "Google và các đối tác trong ngành đã tháo dỡ botnet XCPE malware bao gồm hơn 1,3 triệu hộp truyền hình trực tuyến Android mà Google cho biết nhà sản xuất của họ đã cố tình lây nhiễm malware để tạo doanh thu thông qua các hoạt động tội phạm mạng.",
@@ -796,6 +1181,13 @@
     "source": "mymemory",
     "hash": "36ae02ce3795c6fc",
     "translated_at": "2026-11-02T15:35:30+00:00"
+  },
+  "a4f4c423c54260333db70d9834764f1b9740c579": {
+    "title_vi": "Ít hơn một nghìn con đường để bén rễ",
+    "summary_vi": "OpenAI đã xây dựng một đường ống tự động tìm kiếm, xác thực và tạo ra các bản vá cho 948 lỗ hổng leo thang đặc quyền cục bộ trong nhân Linux.",
+    "source": "mymemory",
+    "hash": "b2af17af2b89b15c",
+    "translated_at": "2026-11-05T06:56:12+00:00"
   },
   "a55665cf48953af7dc76daedcea9b4808e76b70d": {
     "title_vi": "StateBench: Kiểm tra cách các mô hình ngôn ngữ theo dõi sự thay đổi của trạng thái trên các tài liệu dài",
@@ -845,6 +1237,13 @@
     "source": "mymemory",
     "hash": "6689fde7e6a3aa92",
     "translated_at": "2026-11-03T06:56:40+00:00"
+  },
+  "ab542773cb8874d550b77ab1b88898380fd9767c": {
+    "title_vi": "Các quan chức Anh cho biết AI sẽ bổ sung 400 tỷ £ cho nền kinh tế. Con số đó chủ yếu đến từ Google",
+    "summary_vi": "Bộ trưởng AI hiện thừa nhận con số ước tính ít hơn một phần ba con số đó. Các nhà nghiên cứu đổ lỗi cho tỷ lệ nhận con nuôi chậm của đất nước.",
+    "source": "mymemory",
+    "hash": "02b8e22c35c1d17f",
+    "translated_at": "2026-11-05T06:57:38+00:00"
   },
   "aca6994d762728b1a50dc36b5fa1b8f3f34278cf": {
     "title_vi": "Làm thế nào một công ty khởi nghiệp Kenya đang suy nghĩ lại về AI cho các doanh nghiệp nhỏ",
@@ -916,6 +1315,20 @@
     "hash": "8b0694177db0e450",
     "translated_at": "2026-11-03T06:57:08+00:00"
   },
+  "b727f10c64045ca2a42ecbe6877d4cc49355fe93": {
+    "title_vi": "Axion 1.0: Các mô hình nền tảng Agent mở, được đơn giản hóa",
+    "summary_vi": "Chúng tôi giới thiệu Axion 1.0, một mô hình nền tảng agent mở hoàn toàn kết hợp các khả năng agentic mạnh mẽ và rộng rãi với một công thức đào tạo đơn giản đáng kể. Axion 1.0 được đào tạo chỉ trong ba giai đoạn: hai giai đoạn fine-tuning có giám sát nhẹ, sau đó là học tăng cường, không cần đào tạo giữa chừng chuyên dụng, tối ưu hóa ưu tiên trực tiếp (DPO) hoặc chưng cất theo chính sách (OPD).",
+    "source": "mymemory",
+    "hash": "b601f134aad95588",
+    "translated_at": "2026-11-05T06:56:02+00:00"
+  },
+  "b7494c226c5ffbc386dbf2a8d14e054362206f7e": {
+    "title_vi": "Trình khởi chạy trò chơi trên PC của NIKKE đã bị hack để truyền bá quyền truy cập từ xa, đánh cắp dữ liệu malware",
+    "summary_vi": "Các nhà phát triển của Goddess of Victory: NIKKE đã xác nhận rằng tin tặc đã giả mạo các tập lệnh trình khởi chạy PC của trò chơi trong một cuộc tấn công chuỗi cung ứng, phân phối malware có khả năng đánh cắp thông tin đăng nhập và dữ liệu ví tiền điện tử.",
+    "source": "mymemory",
+    "hash": "e9566fb255ace052",
+    "translated_at": "2026-11-05T06:57:10+00:00"
+  },
   "b8568a0a8eb66f364c1eb01f587e8a332009f315": {
     "title_vi": "Tin tặc tiết lộ danh tính của hơn 40 nghìn nhân viên DHS",
     "summary_vi": "",
@@ -929,6 +1342,13 @@
     "source": "mymemory",
     "hash": "374451b09b176fc9",
     "translated_at": "2026-11-04T06:35:00+00:00"
+  },
+  "b8fc016e940e5e7e0cd0a9504c6c438cf33c5f23": {
+    "title_vi": "Dory1.0-4B: Một vòng lặp được chuẩn hóa-GPT",
+    "summary_vi": "Chúng tôi giới thiệu Dory1.0-4B, một mô hình ngôn ngữ vòng lặp (latent-recurrent) 4 tỷ tham số với độ sâu đàn hồi: một điểm kiểm tra duy nhất phục vụ ngân sách tính toán suy luận khác nhau. Dory1.0-4B được xây dựng trên một xương sống Transformer (nGPT) được chuẩn hóa với các lớp cửa sổ trượt xen kẽ và các lớp chú ý đầy đủ, được tổ chức thành một khối đầu vào, một khối lặp lại được chia sẻ và một khối đầu ra. Theo suy luận, khối lặp lại có thể được áp dụng một số lần thay đổi.",
+    "source": "mymemory",
+    "hash": "27f3faebc0ed9367",
+    "translated_at": "2026-11-05T06:56:05+00:00"
   },
   "b91db1d100bf604d166dda1c45c3ef2eae572151": {
     "title_vi": "Tăng sức mạnh cho một thời điểm then chốt",
@@ -965,6 +1385,13 @@
     "hash": "a88f6f9fbb9b94b8",
     "translated_at": "2026-11-02T14:13:14+00:00"
   },
+  "bb779f39a67b00cc55d8535eb91ef8f874ede34e": {
+    "title_vi": "Xây dựng trên AI nguồn mở? Giám đốc chính sách của Hugging Face về chi phí, rủi ro và sự đánh đổi",
+    "summary_vi": "Các mô hình nguồn mở đang trở nên chủ đạo hơn khi các doanh nghiệp, chính phủ và các công ty khởi nghiệp đều dựa vào lời hứa giảm chi phí, kiểm soát nhiều hơn và linh hoạt hơn. Nhưng khi các mô hình ngày càng có khả năng trở nên tự do hơn, làm thế nào để các công ty nắm bắt giá trị? Và với các mô hình mở của Trung Quốc có được chỗ đứng, người chơi Mỹ có thể theo kịp không? Trong tập này của",
+    "source": "mymemory",
+    "hash": "aeef4654196a94ff",
+    "translated_at": "2026-11-05T06:57:32+00:00"
+  },
   "bc4177032a04e266005389ab50fe48dec84e39b0": {
     "title_vi": "Bảng màu: dạy một mô hình nhỏ để xây dựng các bộ bài bằng ngôn ngữ thiết kế của bạn",
     "summary_vi": "",
@@ -979,12 +1406,26 @@
     "hash": "1b551553ebf32ddb",
     "translated_at": "2026-11-02T15:36:51+00:00"
   },
+  "bf25be8f87794d7d4a5b1b85f0196d4373afd49a": {
+    "title_vi": "DevRev cung cấp khả năng tự phục vụ với GPT-6.1 Sol",
+    "summary_vi": "DevRev sử dụng GPT-6.1 Sol để cấp nguồn cho Máy tính và Người vận hành, cân bằng lý luận, tốc độ và chi phí cho dịch vụ doanh nghiệp.",
+    "source": "mymemory",
+    "hash": "ea8a084eec16024c",
+    "translated_at": "2026-11-05T06:56:14+00:00"
+  },
   "c13c96e83c9e05a1c3204fd899d7186ec5ebab7e": {
     "title_vi": "PhotoGuider: Cắt xén thành phần nhận biết và 360^{circ} Xem khung với các đánh giá nhiếp ảnh có thể giải thích",
     "summary_vi": "Cắt xén hình ảnh truyền thống giả sử ảnh đã chứa bố cục đáng giữ và chỉ hỏi nơi cắt. Một cảnh 360^{circ} đầy đủ không đảm bảo như vậy: hướng xem trong một cảnh phải được phát hiện trước khi bất cứ điều gì có thể được đóng khung. Chúng tôi trình bày PhotoGuider, một phương pháp đo lường sau đó trả lời cả hai câu hỏi với những người chấm điểm đã học nhỏ gọn trên một tập hợp các tính năng nhận biết thành phần được chia sẻ.",
     "source": "mymemory",
     "hash": "a214f538d94492aa",
     "translated_at": "2026-11-04T06:35:31+00:00"
+  },
+  "c183e075f0bc71b676d62865e7a5b3020b5bec1f": {
+    "title_vi": "Suy nghĩ ít hơn, tại địa phương: Học tập ưu tiên địa phương để nén lý luận",
+    "summary_vi": "Các mô hình lý luận lớn đạt được hiệu suất cao trong các nhiệm vụ đầy thách thức, nhưng chain-of-thought dài của họ thường phải chịu chi phí suy luận đáng kể bằng cách tiếp tục cân nhắc sau khi có đủ thông tin. Các phương pháp nén lý luận hiện có chủ yếu hoạt động trên quỹ đạo lý luận, ít chú ý đến quyết định của địa phương về việc liệu lý luận thêm có cần thiết với trạng thái hiện tại hay không.",
+    "source": "mymemory",
+    "hash": "e3569809b762a0d1",
+    "translated_at": "2026-11-05T06:55:53+00:00"
   },
   "c1d5df7fdedb914fc58a48904729bcf6157b5569": {
     "title_vi": "Microsoft Research Focus – Ấn bản #97",
@@ -1035,12 +1476,26 @@
     "hash": "4d89a4ff79ab8bf9",
     "translated_at": "2026-11-02T15:35:10+00:00"
   },
+  "d06ef060f8d2c107698ccfa22ac08ab02c1d6100": {
+    "title_vi": "ToolSpace: Scaling Tool-Centric Environment Synthesis cho Long-Horizon Agents",
+    "summary_vi": "Các mô hình ngôn ngữ lớn được triển khai dưới dạng agents đường chân trời dài, tạo ra các công cụ đa dạng trên các dịch vụ MCP thành các quy trình công việc có thể thực thi. Các phương pháp mở rộng môi trường MCP hiện tại lấy dữ liệu làm trung tâm: trước tiên chúng tổng hợp cơ sở dữ liệu và kịch bản, sau đó lấy các công cụ và nhiệm vụ từ chúng. Do đó, các giao diện công cụ có thể không khớp với các giao diện thực, các thành phần công cụ không được căn cứ vào việc thực thi và các tác vụ hiếm khi kéo dài hơn một môi trường.",
+    "source": "mymemory",
+    "hash": "2604f1212c6205e8",
+    "translated_at": "2026-11-05T06:56:31+00:00"
+  },
   "d0e2301d55a343cce8142210a89d4b9267e2049f": {
     "title_vi": "Deepgram mua lại Pipecat-maker Daily để tăng cường cơ sở hạ tầng AI thoại",
     "summary_vi": "Với Pipecat, Deepgram có thể sẽ hiểu sâu hơn về cơ sở hạ tầng thoại và video theo thời gian thực.",
     "source": "mymemory",
     "hash": "3741cd8d7506ff96",
     "translated_at": "2026-11-02T15:37:08+00:00"
+  },
+  "d23caa988630b0d1056a2b8cc8a8ffe640da2af9": {
+    "title_vi": "Meta mua lại công ty khởi nghiệp mã hóa AI Conductor",
+    "summary_vi": "Việc khởi động cho phép các kỹ sư phần mềm triển khai các nhóm của agents để làm việc trên các khía cạnh khác nhau của một dự án cùng một lúc.",
+    "source": "mymemory",
+    "hash": "8841f0c730f3bcec",
+    "translated_at": "2026-11-05T06:57:25+00:00"
   },
   "d28967fce9c692cd06eccf3709b27a584532abf2": {
     "title_vi": "Cách chúng tôi phát hiện sai lệch mô hình biên giới",
@@ -1069,6 +1524,13 @@
     "source": "mymemory",
     "hash": "9c449e9106ce6676",
     "translated_at": "2026-11-02T15:35:42+00:00"
+  },
+  "d8fa341b96c36837690d4e2b602a9ff3d67280b7": {
+    "title_vi": "Agile Deliberation: Cách AI giúp con người xác định các vùng xám",
+    "summary_vi": "Khai thác và mô hình hóa dữ liệu",
+    "source": "mymemory",
+    "hash": "b88cfa159276e523",
+    "translated_at": "2026-11-05T06:56:16+00:00"
   },
   "da9a5824109ffaf4d36b11b44e51a59070ea60b1": {
     "title_vi": "Postman âm thầm tự động cài đặt các plugin AI và cố gắng chia sẻ tất cả dữ liệu API",
@@ -1133,6 +1595,13 @@
     "hash": "e9469df81129bb97",
     "translated_at": "2026-11-02T15:35:25+00:00"
   },
+  "e2bf3d72acd936108cadae83fa9aaec554d5575d": {
+    "title_vi": "Kế hoạch chi tiết hoạt động của nhà máy NVIDIA phối hợp AI Agents để điều tra các vấn đề sản xuất",
+    "summary_vi": "Một báo cáo của Siemens ước tính rằng thời gian ngừng hoạt động ngoài kế hoạch tiêu tốn của một nhà máy lớn trung bình trong các lĩnh vực được khảo sát $ 253 triệu mỗi năm. Cho dù điều tra thất bại...",
+    "source": "mymemory",
+    "hash": "9348da04b09336c8",
+    "translated_at": "2026-11-05T06:56:40+00:00"
+  },
   "e3c2e19ab9b4b96414fdacad5433a70a343d8c2f": {
     "title_vi": "Chatbots đang dẫn dắt những người đi bộ lạc lối, với những hậu quả nguy hiểm",
     "summary_vi": "Lập kế hoạch thuê ngoài cho AI có thể khiến mọi người từ bỏ tư duy phê phán của chính họ, điều này có thể dẫn đến hậu quả chết người ở những nơi như vùng hẻo lánh.",
@@ -1154,12 +1623,26 @@
     "hash": "1b558a2c816be8b9",
     "translated_at": "2026-11-03T06:56:24+00:00"
   },
+  "e64d0791be6ff9db6a2f96a09ffa80b741a31855": {
+    "title_vi": "Uber chỉ hoàn thành 4 chuyến xe từ AI agents quý trước",
+    "summary_vi": "AI agents sẽ không ăn cắp bữa trưa của Uber trong thời gian tới. Chỉ có bốn chuyến xe được sắp xếp bởi AI agents của bên thứ ba trong quý 3 năm 2026, các giám đốc điều hành của Uber tiết lộ trong một cuộc họp báo cáo thu nhập sáng nay. Khối lượng đơn đặt hàng Uber Eats được thực hiện bởi AI agents cao hơn một chút, với công ty ghi nhận \"khoảng 500\" trong",
+    "source": "mymemory",
+    "hash": "c4167daf5d6a8b18",
+    "translated_at": "2026-11-05T06:56:42+00:00"
+  },
   "e6ee640da6ac33e39af1909bba64f9dd4e9d30bb": {
     "title_vi": "Tin tặc phá vỡ hệ thống làm lạnh tại các siêu thị châu Âu",
     "summary_vi": "Một cuộc tấn công mạng vào các hệ thống làm lạnh đã làm gián đoạn các cửa hàng do nhiều chuỗi siêu thị điều hành trên một số quốc gia châu Âu sau khi tin tặc thay đổi cài đặt nhiệt độ từ xa trên tủ đông và hệ thống làm mát.",
     "source": "mymemory",
     "hash": "d5a99a3fb440f0be",
     "translated_at": "2026-11-03T06:56:56+00:00"
+  },
+  "eaa8d66bc6fe860b12dab592b4aef47abb7e0bcd": {
+    "title_vi": "CVE-2024-27834: Lỗ hổng xác thực nhiều sản phẩm không đúng cách của Apple",
+    "summary_vi": "Apple iOS, iPadOS, macOS, Safari, tvOS và watchOS 10.5 chứa lỗ hổng xác thực không phù hợp, có thể cho phép kẻ tấn công có khả năng đọc và ghi tùy ý bỏ qua xác thực con trỏ.",
+    "source": "mymemory",
+    "hash": "e29aa87118c0f54b",
+    "translated_at": "2026-11-05T06:56:10+00:00"
   },
   "eb44481387680a8d838f53d26be21ab5ca8ceedc": {
     "title_vi": "Xem trước giọng nói APRIEL 27B: Một mô hình mở cho việc sử dụng lời nói, lý luận và công cụ",
@@ -1231,6 +1714,13 @@
     "hash": "0492305351ef5a1e",
     "translated_at": "2026-11-03T06:55:50+00:00"
   },
+  "f2814a2bd9aeb09d813b47b93bbaf2315fe70c9b": {
+    "title_vi": "FlowTranslator: Dịch máy trong hình ảnh không cần đào tạo với chỉnh sửa dựa trên luồng",
+    "summary_vi": "Dịch máy trong hình ảnh (IIMT) thay thế văn bản trong một hình ảnh bằng bản dịch của nó trong khi vẫn giữ được bối cảnh trực quan xung quanh. Các mô hình nhiệm vụ cụ thể hiện có đạt được hiệu suất thuyết phục nhưng yêu cầu hình ảnh đào tạo được ghép nối lớn trước và sau khi dịch.",
+    "source": "mymemory",
+    "hash": "053c83c5b86b5f8f",
+    "translated_at": "2026-11-05T06:56:54+00:00"
+  },
   "f3538b6fb36f4f58fdca64e1b764cff7fa0ed810": {
     "title_vi": "Granite Switch 4.1.1 — Cập nhật mô hình như bạn cập nhật phần mềm",
     "summary_vi": "",
@@ -1251,6 +1741,13 @@
     "source": "mymemory",
     "hash": "be430f5b59ab398f",
     "translated_at": "2026-11-03T06:56:32+00:00"
+  },
+  "f4f1ad10a87b9f6a967d942413a6bf0bd8499bad": {
+    "title_vi": "Zyxel sửa lỗi zero-day bị khai thác để hack gần 1.000 thiết bị chuyển mạch mạng",
+    "summary_vi": "Zyxel đã vá lỗ hổng zero-day trong các thiết bị chuyển mạch mạng GS1900 mà tin tặc đã khai thác để xâm phạm gần 1.000 thiết bị trên toàn thế giới và đánh cắp các tệp cấu hình và thông tin đăng nhập.",
+    "source": "mymemory",
+    "hash": "59398c2a286cb830",
+    "translated_at": "2026-11-05T06:57:03+00:00"
   },
   "f5009121caa2a01617efe9a788426ca1be056560": {
     "title_vi": "Polymarket tạm dừng giao dịch sau khi vi phạm kịch bản rút tiền điện tử, theo dõi 2,5 TRIỆU $",
@@ -1301,6 +1798,13 @@
     "hash": "6f59a863b9c7fb2b",
     "translated_at": "2026-11-03T06:56:22+00:00"
   },
+  "fd4911b90c9f4cbcf5dcb0266ebb18c9c17755e6": {
+    "title_vi": "Giám đốc điều hành của Hugging Face cho biết P(Doom) của anh ấy ‘gần bằng không’",
+    "summary_vi": "\"Hầu hết các rủi ro thực sự được tạo ra bởi một vài người chơi xây dựng đằng sau cánh cửa đóng kín,\" Clément Delangue nói về sự cần thiết của AI nguồn mở.",
+    "source": "mymemory",
+    "hash": "b1191ce4b3c0817d",
+    "translated_at": "2026-11-05T06:57:30+00:00"
+  },
   "fd4dd8ae78f23bd044d6b9c76406d6c790443492": {
     "title_vi": "Máy chủ BTCPay cảnh báo về hành vi trộm cắp tiền điện tử ví nóng trên các phiên bản lỗi thời",
     "summary_vi": "Nhà bảo trì của BTCPay Server, một bộ xử lý thanh toán tiền điện tử open-source, đã kêu gọi người dùng cài đặt phiên bản mới nhất vì tin tặc đã rút sạch \"ví nóng\" trên các phiên bản chạy các phiên bản cũ hơn.",
@@ -1328,5 +1832,19 @@
     "source": "mymemory",
     "hash": "15b587a83a391d84",
     "translated_at": "2026-11-03T06:55:41+00:00"
+  },
+  "ff7fc7821476c9099d3137f826555ddaf27c27bc": {
+    "title_vi": "Lý luận đầu cơ đối nghịch cải thiện tầm nhìn dài hạn Agents",
+    "summary_vi": "Giải mã suy đoán đã được coi hoàn toàn là một tối ưu hóa hệ thống giúp tăng tốc độ giải mã mô hình ngôn ngữ lớn mà không thay đổi hành vi của mô hình. Theo quan điểm này, nỗ lực ngày càng tăng để đào tạo các mô hình dự thảo tốt hơn chỉ tập trung vào tỷ lệ chấp nhận. Chúng tôi cho rằng quan điểm này không đúng với lý luận dài hạn của agent.",
+    "source": "mymemory",
+    "hash": "928a9b6f808231f5",
+    "translated_at": "2026-11-05T06:56:04+00:00"
+  },
+  "ffb9431d00e1ee2184803a256e551b474bf7d247": {
+    "title_vi": "Bạn không cần bối cảnh dài",
+    "summary_vi": "tokens sau này tốn kém hơn để tạo ra so với tokens trước đó. Trên các mô hình trọng lượng mở biên giới, sự chênh lệch về chi phí có thể tăng lên đến 7x. Thông qua việc nén thường xuyên, chúng tôi cho thấy trên một loạt các nhiệm vụ dài và đầu vào dài mà các mô hình ngôn ngữ biên giới hy sinh rất ít hoặc không có độ chính xác của nhiệm vụ khi duy trì các ngữ cảnh ngắn.",
+    "source": "mymemory",
+    "hash": "481eac1a9a994f0f",
+    "translated_at": "2026-11-05T06:56:55+00:00"
   }
 }
