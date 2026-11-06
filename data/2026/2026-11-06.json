@@ -1,0 +1,2742 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T13:55:09+07:00",
+  "window": {
+    "start": "2026-11-05T07:00:00+07:00",
+    "end": "2026-11-06T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 541,
+      "error": null,
+      "note": "bỏ 407 mục cập nhật bài cũ"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 105,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1366,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 898,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 2,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 51,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "3701202fe75e9758e9afe3b086332a6a5ad98ae8",
+      "url": "https://huggingface.co/papers/2611.06918",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "From Pixels to Actions - Towards Native Vision-Language-Action Policies",
+      "summary_orig": "Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on precisely the visual signals most vulnerable to this abstraction, e.g., local geometry, boundaries, depth, and subtle state changes. This raises a fundamental question: should action policies inherit a fixed visual endpoint, or directly access evolving visual computation? We introduce NEO-VLA, a structurally encoder-free vision-language-action framework. Images are tokenized by lightweight patch convolutional layers and evolve jointly with language throughout the backbone, allowing a flow-matching action expert to draw from instruction-conditioned visual representations at different depths. This simple change reveals a consistent pattern. Native architectures outperform encoder-based counterparts under controlled comparisons; full fine-tuning reduces but does not erase the gap, and additional scale alone cannot recover it. More strikingly, layer-wise probing shows that the action-critical signals often peak well before the final visual representation. Across diverse manipulation…",
+      "title_vi": "Từ Điểm ảnh đến Hành động - Hướng tới Chính sách Thị giác-Ngôn ngữ-Hành động Bản địa",
+      "summary_vi": "Các mô hình hành động thị giác-ngôn ngữ thường được xây dựng dựa trên một tiền đề đơn giản: nhận thức lần đầu tiên được nén bởi các bộ mã hóa trực quan và lý luận hành động chỉ bắt đầu sau đó. Tuy nhiên, thao tác thường dựa trên chính xác các tín hiệu trực quan dễ bị tổn thương nhất đối với sự trừu tượng này, ví dụ: hình học cục bộ, ranh giới, độ sâu và các thay đổi trạng thái tinh tế.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 9.0,
+      "label": "important",
+      "matched_keywords": [
+        "reasoning",
+        "vision-language"
+      ],
+      "signals": {
+        "hf_upvotes": 57
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 57 +3",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Đa phương thức & thị giác +2"
+      ],
+      "article_ids": [
+        "3701202fe75e9758e9afe3b086332a6a5ad98ae8"
+      ]
+    },
+    {
+      "id": "9dbadbfd450247508d4e6fb72e2f5b5c6249e667",
+      "url": "https://huggingface.co/papers/2611.06910",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "summary_orig": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.",
+      "title_vi": "FrontierPhysics: Đánh giá Agents cho nghiên cứu vật lý từ đầu đến cuối",
+      "summary_vi": "AI agents đang đóng một vai trò ngày càng quan trọng trong nghiên cứu vật lý. Tuy nhiên, benchmarks vật lý hiện tại chỉ đánh giá các câu hỏi cố định, các nhiệm vụ phụ bị cô lập hoặc tái tạo giấy với các giải pháp nhất định và hiếm khi kiểm tra chất lượng nghiên cứu cùng với tính chính xác.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 9.0,
+      "label": "important",
+      "matched_keywords": [
+        "reasoning",
+        "AI agents",
+        "benchmark",
+        "benchmarks",
+        "AI"
+      ],
+      "signals": {
+        "hf_upvotes": 48
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 48 +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "9dbadbfd450247508d4e6fb72e2f5b5c6249e667"
+      ]
+    },
+    {
+      "id": "6dcab18d3c47d9950438adc34b5e7eaf7bfec2a8",
+      "url": "https://huggingface.co/papers/2610.40131",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "VideoMemBench: How Well Do MLLMs Remember in Video Conversations?",
+      "summary_orig": "Multimodal large language models (MLLMs) can now process hour-long videos, making extended multi-turn dialogue over a single video a natural mode of use. Sustaining such a dialogue requires more than answering each question in isolation: the model must retrieve and reuse information established earlier in the conversation, both what it has seen and what it has said, an ability we term in-context video memory. Existing video QA benchmarks leave this ability unmeasured: their questions are mutually independent, never reference one another, and each is answerable from the video alone, so nothing ever requires carrying information across turns. We introduce VideoMemBench, in which each sample pairs a single video with a long multi-turn dialogue, whose turns are connected by typed cross-turn dependencies: an Episodic Dependency refers back to a visual episode described in an earlier turn, probing memory of what the model has seen, while an Answer Dependency builds on the model's own earlier answer, probing memory of what the model has said. Every dependency is verified considering two properties: 1) necessity, meaning the question cannot be answered without its earlier turns, and 2)…",
+      "title_vi": "VideoMemBench: MLLM nhớ tốt như thế nào trong các cuộc trò chuyện video?",
+      "summary_vi": "Các mô hình ngôn ngữ lớn đa phương thức (MLLM) hiện có thể xử lý các video kéo dài hàng giờ, làm cho cuộc đối thoại nhiều lượt mở rộng trên một video trở thành một phương thức sử dụng tự nhiên. Duy trì một cuộc đối thoại như vậy đòi hỏi nhiều hơn là chỉ trả lời riêng từng câu hỏi: mô hình phải truy xuất và sử dụng lại thông tin được thiết lập trước đó trong cuộc trò chuyện, cả những gì nó đã thấy và những gì nó đã nói, một khả năng mà chúng ta gọi là bộ nhớ video trong ngữ cảnh.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 9.0,
+      "label": "important",
+      "matched_keywords": [
+        "large language models",
+        "multimodal",
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 18
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 18 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Đa phương thức & thị giác +2",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "6dcab18d3c47d9950438adc34b5e7eaf7bfec2a8"
+      ]
+    },
+    {
+      "id": "ad7b3321364fee011cce74406aadfc4ea0f44793",
+      "url": "https://huggingface.co/papers/2611.06083",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
+      "summary_orig": "Omni models answer questions about videos by jointly processing sampled frames and audio in one turn, with progress driven largely by scaling model size and omni training data. We ask whether a model needs to hear the audio directly at all, and present SleuthVLM, an agent harness built on a VLM that never hears the audio directly: speech will be transcribed into text, and the VLM will sleuth the video on its own without any predefined workflow. On four omni benchmarks with videos up to 90 minutes, SleuthVLM achieves the best average accuracy: 75.0%, 2.6 points above Gemini 3.8 Flash, and it also tops the Video-MME-v2 leaderboard with 77.8%; with an open-source 27B VLM, it beats all open-source omni models. We draw three findings: SleuthVLM beats a model that glances; hearing is not the bottleneck, agentic ability is; omni understanding needs better agentic ability, not just more omni data for modality alignment. So we provide a simple but effective starting point for doing omni video understanding. Omni understanding needs better agents, not just bigger models that hear.",
+      "title_vi": "SleuthVLM: Chúng ta có thực sự cần âm thanh trong video để hiểu video Omni không?",
+      "summary_vi": "Các mô hình Omni trả lời các câu hỏi về video bằng cách cùng nhau xử lý các khung hình và âm thanh được lấy mẫu trong một lượt, với sự tiến bộ được thúc đẩy chủ yếu bằng cách mở rộng kích thước mô hình và dữ liệu đào tạo omni. Chúng tôi hỏi liệu một mô hình có cần nghe âm thanh trực tiếp hay không và trình bày SleuthVLM, một bộ khai thác agent được xây dựng trên một VLM không bao giờ nghe âm thanh trực tiếp: lời nói sẽ được phiên âm thành văn bản và VLM sẽ tự điều chỉnh video mà không có bất kỳ quy trình làm việc được xác định trước nào.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 8.0,
+      "label": "important",
+      "matched_keywords": [
+        "agentic",
+        "benchmarks",
+        "alignment"
+      ],
+      "signals": {
+        "hf_upvotes": 6
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 6 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2",
+        "từ khóa An toàn AI +1"
+      ],
+      "article_ids": [
+        "ad7b3321364fee011cce74406aadfc4ea0f44793"
+      ]
+    },
+    {
+      "id": "763a8148826c7aad4974cd8704c780ed6db144b1",
+      "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "source_id": "msr",
+      "published_at": "2026-11-05T16:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Formally verifying agent-written full-stack web apps with PDD Kit",
+      "summary_orig": "AI agents can generate code at a scale that’s hard for humans to review line-by-line. PDD Kit helps ensure the code is doing what the developer intended by creating formal specifications and testing against them. It converts developer intent into a Verus specification, proves AI-generated code meets it for every input, and uses tests where proofs aren't practical. Developers review intent, not every line.",
+      "title_vi": "Chính thức xác minh các ứng dụng web full-stack do agent viết với PDD Kit",
+      "summary_vi": "AI agents có thể tạo mã ở quy mô mà con người khó có thể xem xét từng dòng một. PDD Kit giúp đảm bảo mã đang thực hiện những gì nhà phát triển dự định bằng cách tạo ra các thông số kỹ thuật chính thức và thử nghiệm chống lại chúng. Nó chuyển đổi ý định của nhà phát triển thành đặc điểm kỹ thuật Verus, chứng minh mã do AI tạo ra đáp ứng nó cho mọi đầu vào và sử dụng các bài kiểm tra khi các bằng chứng không thực tế. Các nhà phát triển xem xét ý định, không phải mọi dòng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "software",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn msr +3",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ msr"
+      ],
+      "article_ids": [
+        "763a8148826c7aad4974cd8704c780ed6db144b1"
+      ]
+    },
+    {
+      "id": "7a69c1b89eda0814b73757a63fb89b12fb26d384",
+      "url": "https://machinelearning.apple.com/research/faster-retrieval",
+      "source_id": "apple-ml",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Faster Retrieval for Better, More Efficient RAG",
+      "summary_orig": "Maximum inner product search (MIPS) sits at the core of recommendation systems, search, and retrieval-augmented generation (RAG). Given a query vector, MIPS systems search within a database of millions of candidate key vectors for the one that best matches the query. The original data point associated with that best-matching key is then used to handle the query: in RAG, the document that is best suited to answer the question is typically prefixed to the query. As the number of keys grows to millions and vector dimensions reach thousands, the computational cost of running an exhaustive…",
+      "title_vi": "Truy xuất nhanh hơn để RAG tốt hơn, hiệu quả hơn",
+      "summary_vi": "Tìm kiếm sản phẩm bên trong tối đa (MIPS) nằm ở cốt lõi của các hệ thống đề xuất, tìm kiếm và tạo tăng cường truy xuất (RAG). Với một vectơ truy vấn, các hệ thống MIPS tìm kiếm trong cơ sở dữ liệu của hàng triệu vectơ khóa ứng viên cho vectơ phù hợp nhất với truy vấn.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "systems",
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "RAG"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn apple-ml +3",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "luôn đưa vào: công bố gốc từ apple-ml"
+      ],
+      "article_ids": [
+        "7a69c1b89eda0814b73757a63fb89b12fb26d384"
+      ]
+    },
+    {
+      "id": "89209ab642b10e254f0682f6d93ea473caa87b4e",
+      "url": "https://huggingface.co/blog/phonon-tts",
+      "source_id": "hf-blog",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+      "summary_orig": "",
+      "title_vi": "Xem xét kỹ hơn về Phonon TTS. Ra mắt bài phát biểu trên thiết bị chất lượng cao đứng đầu Benchmarks.",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "benchmarks"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn hf-blog +3",
+        "từ khóa Mô hình mở & đánh giá +2",
+        "luôn đưa vào: công bố gốc từ hf-blog"
+      ],
+      "article_ids": [
+        "89209ab642b10e254f0682f6d93ea473caa87b4e"
+      ]
+    },
+    {
+      "id": "b58fee4edbbb5f7a9c2c56052ead720c9a452069",
+      "url": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "source_id": "openai",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Australian universities are creating AI-native graduates",
+      "summary_orig": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+      "title_vi": "Các trường đại học Úc đang tạo ra những sinh viên tốt nghiệp có nguồn gốc từ AI",
+      "summary_vi": "Các trường đại học Úc đang mở rộng khả năng tiếp cận ChatGPT và đưa AI vào giảng dạy và học tập để chuẩn bị cho sinh viên sẵn sàng cho lực lượng lao động hỗ trợ AI.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "b58fee4edbbb5f7a9c2c56052ead720c9a452069"
+      ]
+    },
+    {
+      "id": "96943cb194ec14b4e8cde559ceb5b79c1b150097",
+      "url": "https://doi.org/10.1145/3849375",
+      "source_id": "cacm",
+      "published_at": "2026-11-05T16:09:21+00:00",
+      "lang": "en",
+      "title_orig": "AI Abundance or Luddite Revolution?",
+      "summary_orig": "Universal basic income is not a solution to AI-induced unemployment and a sovereign wealth fund is incapable of funding it.",
+      "title_vi": "Sự phong phú của AI hay Cuộc cách mạng Luddite?",
+      "summary_vi": "Thu nhập cơ bản phổ quát không phải là một giải pháp cho tình trạng thất nghiệp do AI gây ra và một quỹ tài sản có chủ quyền không có khả năng tài trợ cho nó.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn cacm +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ cacm"
+      ],
+      "article_ids": [
+        "96943cb194ec14b4e8cde559ceb5b79c1b150097"
+      ]
+    },
+    {
+      "id": "300d91101f21ec1db57e65e8d8390a93f01c350b",
+      "url": "https://openai.com/index/merge-builds-with-openai",
+      "source_id": "openai",
+      "published_at": "2026-11-05T08:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Merge builds product and business tools with OpenAI technology",
+      "summary_orig": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
+      "title_vi": "Hợp nhất xây dựng các công cụ sản phẩm và kinh doanh với công nghệ OpenAI",
+      "summary_vi": "Merge sử dụng GPT-6 Astra, ChatGPT và Codex để xem xét mã sản phẩm và hỗ trợ tiếp thị. Các nhóm của họ cũng sử dụng AI để lên kế hoạch cho các bữa tối của giám đốc điều hành và chuẩn bị cập nhật doanh số bán hàng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "300d91101f21ec1db57e65e8d8390a93f01c350b"
+      ]
+    },
+    {
+      "id": "f93567576105c7139347931d4fd5aa66d92f2c44",
+      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "source_id": "openai",
+      "published_at": "2026-11-05T02:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Setting a new standard for responsible AI infrastructure",
+      "summary_orig": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+      "title_vi": "Thiết lập một tiêu chuẩn mới cho cơ sở hạ tầng AI có trách nhiệm",
+      "summary_vi": "OpenAI giới thiệu Kế hoạch chi tiết chính sách khuôn viên trường điện toán và nhỏ gọn cộng đồng quốc gia để bảo vệ tài nguyên địa phương, tạo việc làm và hướng dẫn phát triển cơ sở hạ tầng AI có trách nhiệm.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "f93567576105c7139347931d4fd5aa66d92f2c44"
+      ]
+    },
+    {
+      "id": "9c88c21c46d5191c158ddd270e189f20f6163002",
+      "url": "https://www.nature.com/articles/s42256-026-01336-3",
+      "source_id": "nature-mi",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Fractal basin geometry and the limits to predictability and reproducibility in deep learning",
+      "summary_orig": "Nature Machine Intelligence, Published online: 05 November 2026; doi:10.1038/s42256-026-01336-3 Deep learning outcomes are hard to predict and reproduce. Ly and Gong propose fractal basin geometry as a mechanism: starting points leading to different outcomes interweave at arbitrarily fine scales, so greater precision yields little improvement.",
+      "title_vi": "Hình học lưu vực phân số và các giới hạn về khả năng dự đoán và khả năng tái tạo trong học sâu",
+      "summary_vi": "Nature Machine Intelligence, Xuất bản trực tuyến: 05 tháng 11 năm 2026; doi:10.1038/s42256-026-01336-3 Kết quả học tập sâu rất khó dự đoán và tái tạo. Ly và Gong đề xuất hình học lưu vực fractal như một cơ chế: điểm khởi đầu dẫn đến các kết quả khác nhau đan xen ở quy mô tốt tùy ý, do đó độ chính xác cao hơn mang lại ít cải thiện.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "deep learning"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn nature-mi +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ nature-mi"
+      ],
+      "article_ids": [
+        "9c88c21c46d5191c158ddd270e189f20f6163002"
+      ]
+    },
+    {
+      "id": "c0d7b0808284d1827cd12b53f4900061f689915d",
+      "url": "https://openai.com/index/franklin-templeton",
+      "source_id": "openai",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Franklin Templeton uses OpenAI to support investment research",
+      "summary_orig": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.",
+      "title_vi": "Franklin Templeton sử dụng OpenAI để hỗ trợ nghiên cứu đầu tư",
+      "summary_vi": "Bắt đầu với nghiên cứu vốn chủ sở hữu, Franklin Templeton đang phát triển quy trình công việc AI để giúp các nhà quản lý danh mục đầu tư so sánh quan điểm nghiên cứu và kiểm tra rủi ro đầu tư.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "business",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "c0d7b0808284d1827cd12b53f4900061f689915d"
+      ]
+    },
+    {
+      "id": "c88b52d0b21039c72dea8f05c76e66a260655c3b",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "source_id": "openai",
+      "published_at": "2026-11-05T20:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Cult.fit builds operational muscle with Codex",
+      "summary_orig": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "title_vi": "Cult.fit xây dựng cơ bắp hoạt động với Codex",
+      "summary_vi": "Cult.fit đang sử dụng Codex để giúp các nhóm trong các bộ phận chức năng xây dựng công cụ, di chuyển nhanh hơn và thay đổi cách hoàn thành công việc.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "c88b52d0b21039c72dea8f05c76e66a260655c3b"
+      ]
+    },
+    {
+      "id": "e8690f74b67f56983d288ac628cf8aa1b7f6cf1c",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source_id": "hf-blog",
+      "published_at": "2026-11-05T19:35:16+00:00",
+      "lang": "en",
+      "title_orig": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+      "summary_orig": "",
+      "title_vi": "Mô hình mở NVIDIA Cosmos 3 mới cho mô phỏng thế giới tương tác",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn hf-blog +3",
+        "luôn đưa vào: công bố gốc từ hf-blog"
+      ],
+      "article_ids": [
+        "e8690f74b67f56983d288ac628cf8aa1b7f6cf1c"
+      ]
+    },
+    {
+      "id": "003a6dd08e360129080d93f3bca690e956b6cbdf",
+      "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "source_id": "deepmind",
+      "published_at": "2026-11-05T17:05:16+00:00",
+      "lang": "en",
+      "title_orig": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "summary_orig": "",
+      "title_vi": "Gemini Omni 1.2 Flash: Nhanh và tiết kiệm chi phí với các clip dài hơn",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn deepmind +3",
+        "luôn đưa vào: công bố gốc từ deepmind"
+      ],
+      "article_ids": [
+        "003a6dd08e360129080d93f3bca690e956b6cbdf"
+      ]
+    },
+    {
+      "id": "56a03da12c0bbf17972ef5da6e3fe08f9bb1d5de",
+      "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+      "source_id": "google-research",
+      "published_at": "2026-11-05T16:01:08+00:00",
+      "lang": "en",
+      "title_orig": "Detecting signs of hypertension using wearable sensors",
+      "summary_orig": "Health & Bioscience",
+      "title_vi": "Phát hiện các dấu hiệu tăng huyết áp bằng cảm biến đeo được",
+      "summary_vi": "Sức khỏe & Khoa học sinh học",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn google-research +3",
+        "luôn đưa vào: công bố gốc từ google-research"
+      ],
+      "article_ids": [
+        "56a03da12c0bbf17972ef5da6e3fe08f9bb1d5de"
+      ]
+    },
+    {
+      "id": "53c56afbaf05f856eba574dee155263173cd7748",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "source_id": "openai",
+      "published_at": "2026-11-05T09:00:00+00:00",
+      "lang": "en",
+      "title_orig": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "summary_orig": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+      "title_vi": "GPT‑6 Cyber: Thúc đẩy biên giới của an ninh mạng phù hợp agents",
+      "summary_vi": "Giới thiệu GPT‑6 Cyber, mô hình an ninh mạng của OpenAI để tìm ra các lỗ hổng có thể khai thác và phát triển các bản sửa lỗi, được đào tạo để nằm trong phạm vi được phép.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "53c56afbaf05f856eba574dee155263173cd7748"
+      ]
+    },
+    {
+      "id": "16de4ca3c25d3eedbaa6b632b2a310c4b7a3d989",
+      "url": "https://news.mit.edu/2026/clearing-up-robot-fuzzy-memory-1105",
+      "source_id": "mit-news-ai",
+      "published_at": "2026-11-05T05:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Clearing up a robot’s fuzzy memory",
+      "summary_orig": "A new system identifies and corrects unreliable object descriptions stored in a robot’s memory, improving the robot’s ability to interact with its environment.",
+      "title_vi": "Xóa bộ nhớ mờ của robot",
+      "summary_vi": "Một hệ thống mới xác định và sửa chữa các mô tả đối tượng không đáng tin cậy được lưu trữ trong bộ nhớ của robot, cải thiện khả năng tương tác với môi trường của robot.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn mit-news-ai +3",
+        "luôn đưa vào: công bố gốc từ mit-news-ai"
+      ],
+      "article_ids": [
+        "16de4ca3c25d3eedbaa6b632b2a310c4b7a3d989"
+      ]
+    },
+    {
+      "id": "1f9981de57006417a4ebd14accd44878c1e9d158",
+      "url": "https://openai.com/ads/customers/flipsnack",
+      "source_id": "openai",
+      "published_at": "2026-11-05T00:45:15+00:00",
+      "lang": "en",
+      "title_orig": "Flipsnack grows product signups with conversion optimization",
+      "summary_orig": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.",
+      "title_vi": "Flipsnack phát triển đăng ký sản phẩm với tối ưu hóa chuyển đổi",
+      "summary_vi": "Flipsnack tập trung vào các chiến dịch Quảng cáo ChatGPT để thu hút mọi người dùng thử sản phẩm của mình, tăng số lượng đăng ký đồng thời giảm chi phí cho mỗi lần đăng ký.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "1f9981de57006417a4ebd14accd44878c1e9d158"
+      ]
+    },
+    {
+      "id": "9d7df512acbfc2d08b3ba2b024f47896cb8821d5",
+      "url": "https://huggingface.co/papers/2611.01926",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "TAC-CoT: Tool-Empowered Implicit Chain-of-Thought via Interleaving Explicit Tokens",
+      "summary_orig": "LLM-based agentic systems are increasingly combined with CoT reasoning to solve tasks that require accurate reasoning, external knowledge, and multi-step deliberation. Yet, explicit CoT incurs substantial generation overhead, while implicit CoT, which replaces textual rationales with compact continuous tokens, does not naturally support the explicit communication interface required for agentic tool-use. We propose TAC-CoT, a tool-empowered adaptive implicit CoT framework that replaces explicit reasoning traces with compact latent reasoning segments while retaining textual tokens only for tool calls, observations, and final answers. This interleaved design enables agentic tool-use without verbalizing every intermediate reasoning step. Experiments on agentic math and QA benchmarks show that TAC-CoT improves accuracy by up to 8.8 points while reducing model forward passes by up to 6.8x. Furthermore, analyses show that TAC-CoT improves tool-use quality in both single- and multi-tool settings.",
+      "title_vi": "TAC-CoT: Công cụ được trao quyền tiềm ẩn Chain-of-Thought thông qua Interleaving Explicit Tokens",
+      "summary_vi": "Các hệ thống agentic dựa trên LLM ngày càng được kết hợp với lý luận CoT để giải quyết các nhiệm vụ đòi hỏi lý luận chính xác, kiến thức bên ngoài và cân nhắc nhiều bước. Tuy nhiên, CoT rõ ràng phải chịu chi phí phát sinh đáng kể, trong khi CoT ngầm, thay thế các lý do văn bản bằng tokens liên tục nhỏ gọn, không tự nhiên hỗ trợ giao diện truyền thông rõ ràng cần thiết cho việc sử dụng công cụ agentic.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "reasoning",
+        "agentic",
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 14
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 14 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "9d7df512acbfc2d08b3ba2b024f47896cb8821d5"
+      ]
+    },
+    {
+      "id": "5a508fd1a86a55e903cf5df3410a50d9915bce80",
+      "url": "https://huggingface.co/papers/2611.06768",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World",
+      "summary_orig": "Coding agents powered by models such as GPT-6-Astra connect spatial reasoning with executable robot behavior, raising the question of how such agents can produce lasting improvements in robot capabilities from physical interaction. In this work, we study embodied recursive self-improvement (RSI) through real-world exploration, code refinement, and deployment using PyRUA-REAL, a framework in which coding agents retain interaction experience as persistent memory and reusable executable skills that inform subsequent exploration and improvement. Our empirical study places physical manipulation at the center of the improvement process, examining how agents collaborate, what kinds of execution feedback support effective code refinement, and how task specifications and previously acquired skills influence robustness and task transfer. We further investigate the efficiency and capability of the resulting programs when deployed without involving an online agent for decision-making. Across eight real-world tasks, PyRUA-REAL achieves an average success rate of 91.1%. In complementary evaluation on 42 tasks from the RoboDojo benchmark, it achieves an average success rate of 84.4%. This study…",
+      "title_vi": "PyRUA-REAL: Khám phá robot và học tập thích ứng thông qua RSI trong thế giới thực",
+      "summary_vi": "Mã hóa agents được hỗ trợ bởi các mô hình như GPT-6-Astra kết nối lý luận không gian với hành vi robot thực thi, đặt ra câu hỏi làm thế nào agents như vậy có thể tạo ra những cải tiến lâu dài về khả năng của robot từ tương tác vật lý.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "reasoning",
+        "benchmark"
+      ],
+      "signals": {
+        "hf_upvotes": 10
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 10 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "5a508fd1a86a55e903cf5df3410a50d9915bce80"
+      ]
+    },
+    {
+      "id": "4e75bda6d9bb389d221dfb3af4fe01dc9519d9b7",
+      "url": "https://huggingface.co/papers/2611.03330",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "The SIMPLE Law for Energy Cost of LLM Inference",
+      "summary_orig": "Generative AI is billed per token, yet tokens are not equally expensive. Each token enters the KV-cache and raises the cost of those that follow, so energy grows non-linearly along a sequence whose tokens look identical. No analytical model states what a token costs, and the most accurate SOTA model is a fit, not a law: it absorbs architecture into fitted coefficients, requiring per-LLM fitting. We derive closed-form expressions of the computational and memory-access complexity of LLM inference in terms of architectural hyperparameters, covering MHA and GQA, and compare a family of analytical models of increasing granularity. From these, we obtain the SIMPLE Inference Model to Predict LLMs Energy (SIMPLE), a four-parameter law that separates prefill from decode, and decode into KV-cache cost and next-token computation. Over traces of 13 dense LLMs from six families on NVIDIA H100 GPUs, it attains R2 = 0.969 and 11.97% MAPE, 3.1-3.5x below the SOTA, without per-LLM calibration. The SIMPLE law explains as well as predicts: prefill energy grows quadratically with the hidden dimension, so larger LLMs suffer most from long inputs; and more aggressive GQA KV grouping reduces the…",
+      "title_vi": "Định luật ĐƠN GIẢN về chi phí năng lượng của suy luận LLM",
+      "summary_vi": "AI sinh ra được lập hóa đơn cho mỗi token, nhưng tokens không đắt như nhau. Mỗi token đi vào bộ nhớ đệm KV và làm tăng chi phí của các bộ nhớ đệm tiếp theo, do đó năng lượng phát triển phi tuyến tính dọc theo một chuỗi có tokens trông giống hệt nhau. Không có mô hình phân tích nào nêu rõ chi phí của token và mô hình SOTA chính xác nhất là phù hợp, không phải là một định luật: nó hấp thụ kiến trúc thành các hệ số phù hợp, yêu cầu lắp trên mỗi LLM.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "LLMs",
+        "GPUs",
+        "inference",
+        "AI"
+      ],
+      "signals": {
+        "hf_upvotes": 7
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 7 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Hạ tầng +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "4e75bda6d9bb389d221dfb3af4fe01dc9519d9b7"
+      ]
+    },
+    {
+      "id": "043a21d4f55790e7a3a3ee2cba69b915a6931906",
+      "url": "https://huggingface.co/papers/2610.40516",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates",
+      "summary_orig": "Safety alignment for Large Language Models is heavily focused on English with limited multilingual representation, particularly damaging low-resource language performance. Related open training datasets are often limited in size or do not follow region-localized harmful topics to broaden the scope of alignment beyond cultures. We propose a scalable template-based augmentation pipeline to produce massive multilingual refusal and benign corpora, extracting safe templates from harmful prompts, translating them and then filling in the slots with culturally authentic entities, both harmful and benign. As a result, we release MSafeTemp, a validated corpus spanning 60 languages useful for multilingual safety alignment and evaluation. Using the dataset, we show that English-only evaluation misjudges multilingual safety: for several models, attacks that fail in English succeed once translated, while culturally localized variants expose further failures that translation alone misses. We also confirm that augmenting safety training data through templates allows for higher diversity and quality of alignment, resulting in improved safety performance beyond English. MSafeTemp and the respective…",
+      "title_vi": "Cách tôi căn chỉnh mô hình của bạn: Mở rộng quy mô đào tạo an toàn đa ngôn ngữ với các mẫu",
+      "summary_vi": "Sự liên kết an toàn cho các Mô hình Ngôn ngữ Lớn tập trung nhiều vào tiếng Anh với sự đại diện đa ngôn ngữ hạn chế, đặc biệt gây tổn hại đến hiệu suất ngôn ngữ có nguồn lực thấp. Các bộ dữ liệu đào tạo mở liên quan thường bị giới hạn về kích thước hoặc không tuân theo các chủ đề có hại theo khu vực để mở rộng phạm vi liên kết ngoài các nền văn hóa.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "safety",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "large language models",
+        "alignment",
+        "dataset",
+        "datasets"
+      ],
+      "signals": {
+        "hf_upvotes": 7
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 7 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa An toàn AI +1",
+        "từ khóa Dữ liệu +1"
+      ],
+      "article_ids": [
+        "043a21d4f55790e7a3a3ee2cba69b915a6931906"
+      ]
+    },
+    {
+      "id": "74824ef0b061dc6157daaf6530b0c5a3b57cbc62",
+      "url": "https://huggingface.co/papers/2611.04634",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "VeriSpoof: Beyond Real or Fake with One Audio LLM",
+      "summary_orig": "A speech deepfake detector estimates whether a recording is synthetic, but a forensic analyst also asks which system produced it, whether recordings share a source, and what evidence supports each conclusion. We present VeriSpoof, an audio language model that unifies five tasks with shared weights: deepfake detection, generator attribution (generator, acoustic model and vocoder), recording-condition analysis, synthesized-span localisation, and source verification. Each decision is supported by grounded rationales whose statements can be independently verified. Answers are scored by sentence likelihood, allowing detection and source verification to be thresholded without separate heads. Rationale statements can be checked against waveform measurements, span labels, or generator metadata. Counterfactual examples train decisions to follow the stated evidence. Across the 14 Speech-DF-Arena test sets, VeriSpoof-Plus achieves 2.14% pooled EER, ranking third of 28 systems and first among open-weight systems. VeriSpoof-Base, trained only on official training splits of eight corpora, achieves 4.43% EER, less than half that of the next open-weight detector. With the same weights…",
+      "title_vi": "VeriSpoof: Vượt ra ngoài thực tế hoặc giả mạo với One Audio LLM",
+      "summary_vi": "Một máy dò giọng nói deepfake ước tính liệu một bản ghi âm có phải là tổng hợp hay không, nhưng một nhà phân tích pháp y cũng hỏi hệ thống nào đã tạo ra nó, liệu các bản ghi âm có chia sẻ nguồn hay không và bằng chứng nào hỗ trợ cho mỗi kết luận.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "open-weight"
+      ],
+      "signals": {
+        "hf_upvotes": 5
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 5 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "74824ef0b061dc6157daaf6530b0c5a3b57cbc62"
+      ]
+    },
+    {
+      "id": "7dc2db70b4d9836f6c6f42ea5ce46c52885ce4a6",
+      "url": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-05T19:24:26+00:00",
+      "lang": "en",
+      "title_orig": "OpenAI’s GPT-6 Astra silently obstructed safety research tasks",
+      "summary_orig": "OpenAI has disclosed another AI alignment incident where GPT-6 Astra was found to sometimes quietly withhold help on safety research.",
+      "title_vi": "OpenAI của GPT-6 Astra âm thầm cản trở các nhiệm vụ nghiên cứu an toàn",
+      "summary_vi": "OpenAI đã tiết lộ một sự cố liên kết AI khác trong đó GPT-6 Astra đôi khi bị phát hiện âm thầm từ chối giúp đỡ về nghiên cứu an toàn.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50376313",
+          "title": "GPT-6 Astra covertly underperforms on safety research"
+        }
+      ],
+      "category": "security",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "alignment",
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 317
+      },
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 317 +1",
+        "từ khóa An toàn AI +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "7dc2db70b4d9836f6c6f42ea5ce46c52885ce4a6",
+        "3c63b1bd263a0a08195a66ff3ba4cc186a48f5f8"
+      ]
+    },
+    {
+      "id": "44341b90f2279fe767df1605cb6c2f3f0ee8b8b9",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "lang": "en",
+      "title_orig": "OpenAI says its new cybersecurity model is better at not hacking other companies",
+      "summary_orig": "OpenAI is launching GPT-6 Cyber, the latest version of its cybersecurity AI model, which it says is better at finding vulnerabilities and less likely to go rogue and hack other platforms in the process. OpenAI says that during testing, GPT-6 Cyber went out of bounds less than 1 percent of the time, down from around",
+      "title_vi": "OpenAI cho biết mô hình an ninh mạng mới của họ tốt hơn trong việc không hack các công ty khác",
+      "summary_vi": "OpenAI đang tung ra GPT-6 Cyber, phiên bản mới nhất của mô hình AI an ninh mạng, được cho là tốt hơn trong việc tìm kiếm các lỗ hổng và ít có khả năng lừa đảo và tấn công các nền tảng khác trong quá trình này. OpenAI nói rằng trong quá trình thử nghiệm, GPT-6 Cyber đã vượt quá giới hạn dưới 1% thời gian, giảm từ khoảng",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "techcrunch-ai",
+          "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+          "title": "OpenAI released a new cybersecurity model. Is that enough?"
+        }
+      ],
+      "category": "models",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hack",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "2 nguồn cùng đưa tin +1",
+        "từ khóa Bảo mật +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "44341b90f2279fe767df1605cb6c2f3f0ee8b8b9",
+        "ec73671ce52f6e9d29c52ce9c4022f44ad13f0d2"
+      ]
+    },
+    {
+      "id": "513dfed9debcff8807e9a23af22ae0546314f090",
+      "url": "https://spectrum.ieee.org/ai-watermark-openai-textgrain-europe",
+      "source_id": "ieee-spectrum-ai",
+      "published_at": "2026-11-05T15:00:03+00:00",
+      "lang": "en",
+      "title_orig": "AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules",
+      "summary_orig": "The European Union now requires AI-generated text to be watermarked so that it can be identified as such. But tests on OpenAI’s new textGrain watermark, released in October and developed to comply with the new E.U. law , show that these watermarks often do not survive additional editing of the text or when it’s under 150 words. With no clear legal benchmark for how well watermarks should work, it’s uncertain whether textGrain will meet Europe’s transparency rules, which could cost the company significantly and make it difficult to detect AI-generated text as models grow more sophisticated. AI models calculate the probabilities of different possible next “tokens” (the next word or word fragment it generates) based on the text already written, then select one and repeat that process until the response is complete. After the prompt “today the weather is…,” for example, says Xiang Li , coauthor of the textGrain technical report and a postdoctoral researcher at the University of Pennsylvania, the model might weigh “warm” or “cool” as possible next words. A watermark uses a secret key to generate pseudorandom values—numbers produced by a mathematical process that influence which token…",
+      "title_vi": "Hình mờ văn bản AI có thể không đáp ứng được các quy tắc mới của EU",
+      "summary_vi": "Liên minh châu Âu hiện yêu cầu văn bản do AI tạo ra phải có hình mờ để có thể xác định được văn bản đó. Nhưng các bài kiểm tra trên hình mờ textGrain mới của OpenAI, được phát hành vào tháng 10 và được phát triển để tuân thủ luật E.U. mới, cho thấy những hình mờ này thường không tồn tại khi chỉnh sửa thêm văn bản hoặc khi nó dưới 150 từ.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "benchmark",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ieee-spectrum-ai +3",
+        "từ khóa Mô hình mở & đánh giá +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "513dfed9debcff8807e9a23af22ae0546314f090"
+      ]
+    },
+    {
+      "id": "bbb3c5f7c06745fec24be5e6518aacc940a273ec",
+      "url": "https://www.wired.com/story/aina-smart-ring/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-05T14:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Exclusive: Aina’s Smart Ring Wants to Be a Remote Control for Your AI Agent",
+      "summary_orig": "The startup Aina bets you won’t need to rely on your phone to control virtual assistants. It’s making a smart ring that lets you control the actions of your autonomous agents with one tap.",
+      "title_vi": "Độc quyền: Nhẫn thông minh của Aina muốn trở thành điều khiển từ xa cho AI Agent của bạn",
+      "summary_vi": "Công ty khởi nghiệp Aina đặt cược bạn sẽ không cần phải dựa vào điện thoại của mình để điều khiển các trợ lý ảo. Nó tạo ra một chiếc nhẫn thông minh cho phép bạn điều khiển các hành động của agents tự động của mình chỉ bằng một cú chạm.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "techcrunch-ai",
+          "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
+          "title": "Aina’s smart ring has a screen, a joystick, and a mic so you can talk to AI agents"
+        }
+      ],
+      "category": "business",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "2 nguồn cùng đưa tin +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "bbb3c5f7c06745fec24be5e6518aacc940a273ec",
+        "c9efcd5ee343666eb78022dc1d181e0bd794e1da"
+      ]
+    },
+    {
+      "id": "4c33fbdd0dc4b6a41e57ed66798c2f1715678903",
+      "url": "https://huggingface.co/papers/2611.06483",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?",
+      "summary_orig": "While multi-turn agentic reinforcement learning (RL) excels on long-horizon tasks, its performance gains remain highly sensitive to interaction constraints. Evaluating across sampling breadth K and interaction depth T via Pass@(K,T), we show that trajectory-level RL advantages depend on sufficient turn budgets, diminishing significantly when budgets tighten. Besides, agentic RL does not uniformly elevate single-step decision quality; rather, its strength concentrates in error recovery and long-horizon resilience. To mitigate the deployment risks caused by this budget dependence, we provide a preliminary discussion on the benefits and limitations of process supervision signals and introduce BudgetMix RL as an alternative that varies interaction budgets during training. Experiments demonstrate that BudgetMix RL achieves robust performance across diverse execution settings. Project Page: https://rethinking-agentic-rl.github.io/",
+      "title_vi": "Học tăng cường nhiều lượt thực sự cải thiện điều gì trong LLM Agents?",
+      "summary_vi": "Mặc dù học tăng cường agentic nhiều lượt (RL) vượt trội trong các nhiệm vụ đường chân trời dài, hiệu suất của nó vẫn rất nhạy cảm với các ràng buộc tương tác. Đánh giá độ rộng lấy mẫu K và độ sâu tương tác T thông qua Pass@(K,T), chúng tôi chỉ ra rằng lợi thế RL mức quỹ đạo phụ thuộc vào ngân sách lần lượt đủ, giảm đáng kể khi ngân sách thắt chặt.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "agentic"
+      ],
+      "signals": {
+        "hf_upvotes": 35
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 35 +2",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "4c33fbdd0dc4b6a41e57ed66798c2f1715678903"
+      ]
+    },
+    {
+      "id": "358a04f018244145aa84ededb7ac29c7c59bfb4f",
+      "url": "https://huggingface.co/papers/2611.05320",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
+      "summary_orig": "Teleoperation remains the default way to collect robot demonstrations, but every episode costs robot and operator time, and every new task starts from scratch. We ask whether a coding agent can take over the teleoperator's job. In our DataFarm, the agent receives a data request and one calibration episode of the robot in the target scene and rebuilds the task in simulation: it writes the scene, an expert controller, and a success judge. The simulator supplies exact actions, and a video model conditioned on real images renders each rollout as photographic video, generating all camera views together consistently. The output is real-ready data: synchronized camera views labelled with the robot's actions, on which a policy can be trained directly and deployed on the real robot. Independent judges certify the expert and every rendered episode before admission. On five real-robot tasks, policies trained only on farm data match policies trained on as many teleoperated episodes (93 vs. 84 successes in 100 trials), and under an unseen tablecloth and coloured light they keep 87 successes where the teleoperation-trained policies fall to 46. Adapting a task is fully automatic and costs \\21 of…",
+      "title_vi": "PyRUA-DataFarm: LLM Agent là nhà khai thác viễn thông tiết kiệm chi phí cho dữ liệu robot sẵn sàng thực",
+      "summary_vi": "Vận hành từ xa vẫn là cách mặc định để thu thập các cuộc biểu tình của robot, nhưng mỗi tập phim đều tốn thời gian của robot và người vận hành, và mọi nhiệm vụ mới đều bắt đầu từ đầu. Chúng tôi hỏi liệu một agent mã hóa có thể tiếp quản công việc của nhà điều hành viễn thông hay không. Trong DataFarm của chúng tôi, agent nhận được yêu cầu dữ liệu và một tập hiệu chuẩn của robot trong cảnh mục tiêu và xây dựng lại nhiệm vụ trong mô phỏng: nó viết cảnh, một bộ điều khiển chuyên gia và một thẩm phán thành công.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM"
+      ],
+      "signals": {
+        "hf_upvotes": 24
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 24 +2",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "358a04f018244145aa84ededb7ac29c7c59bfb4f"
+      ]
+    },
+    {
+      "id": "de2d08d434a1a3b1033c7ec2cba0e7282597b333",
+      "url": "https://huggingface.co/papers/2610.41104",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "MUON-RT Reusing the Teacher's Trajectory for Momentum-Free Muon for LLM Self-Distillation",
+      "summary_orig": "Self-distillation methods for large language models with an exponential moving average (EMA) teacher already retain a history of student updates. Muon nevertheless stores a separate momentum buffer, increasing persistent training memory. We propose Muon with Reused Teacher (Muon-RT), which reuses the teacher-student displacement to eliminate momentum buffers for hidden weight matrices. We show that this displacement encodes an exponentially weighted history of applied updates and smooths temporally uncorrelated noise under a local model. Muon-RT removes its radial component, normalizes it spectrally, and mixes it with the current gradient after Newton-Schulz (NS) orthogonalization. Under explicit regularity and alignment assumptions, we establish linear contraction of an expected objective-gap bound toward a residual error level. With Self-Distillation Fine-Tuning (SDFT) on Qwen2.5-7B-Instruct, Muon-RT improves average accuracy over AdamW by 2.6 points with 42% less persistent memory, and over momentum Muon by 5.4 points with 27% less persistent memory. With Self-Distillation Policy Optimization (SDPO) on Olmo-3-7B-Instruct, it improves average accuracy over AdamW by 2.0 points.",
+      "title_vi": "MUON-RT Sử dụng lại quỹ đạo của giáo viên cho Muon không có xung lượng để tự chưng cất LLM",
+      "summary_vi": "Các phương pháp tự phân tách cho các mô hình ngôn ngữ lớn với giáo viên trung bình di chuyển theo cấp số nhân (EMA) đã lưu giữ lịch sử cập nhật của học sinh. Tuy nhiên, Muon lưu trữ một bộ đệm động lượng riêng biệt, tăng trí nhớ luyện tập liên tục. Chúng tôi đề xuất Muon với Giáo viên tái sử dụng (Muon-RT), sử dụng lại sự dịch chuyển của giáo viên-học sinh để loại bỏ các bộ đệm động lượng cho các ma trận trọng lượng ẩn.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "large language models",
+        "alignment"
+      ],
+      "signals": {
+        "hf_upvotes": 19
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 19 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa An toàn AI +1"
+      ],
+      "article_ids": [
+        "de2d08d434a1a3b1033c7ec2cba0e7282597b333"
+      ]
+    },
+    {
+      "id": "cb3455a82f101f9281d843415b2ab2c22704156a",
+      "url": "https://huggingface.co/papers/2611.02846",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding",
+      "summary_orig": "Speculative decoding (SD) accelerates large language model inference by reducing the sequential cost of token-by-token generation. Advanced SD methods reduce proposal cost with parallel drafters that predict entire blocks in one forward pass, but overall speedup still depends on acceptance length. On-policy distillation (OPD) can push well-trained drafters beyond acceptance-length plateaus, yet conventional pipelines collect supervision through sequential draft-and-verify rollouts. Our key insight is that on-policy supervision need not inherit these dependencies: a draft block can be supervised using only its reference prefix and draft-sampled history. We propose SpecOPD, a branch-parallel OPD framework that parallelizes draft sampling and target supervision across independent branches drawn from the evolving drafter policy at reference anchors. We pack these branches into proposal trees to share target-prefix computation, using tree masks for full attention, branch-consistent indexer groups for sparse attention, and indexed state replay for linear attention to preserve each branch's history. We train the drafter with an E2E-TV surrogate that directly targets acceptance length…",
+      "title_vi": "SpecOPD: Chưng cất song song theo chính sách để giải mã đầu cơ",
+      "summary_vi": "Giải mã suy đoán (SD) tăng tốc suy luận mô hình ngôn ngữ lớn bằng cách giảm chi phí tuần tự của thế hệ token-by-token. Các phương pháp SD tiên tiến giúp giảm chi phí đề xuất với các nhà soạn thảo song song dự đoán toàn bộ khối trong một lần chuyển tiếp, nhưng tốc độ tổng thể vẫn phụ thuộc vào độ dài chấp nhận.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "large language model",
+        "inference"
+      ],
+      "signals": {
+        "hf_upvotes": 13
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 13 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Hạ tầng +1"
+      ],
+      "article_ids": [
+        "cb3455a82f101f9281d843415b2ab2c22704156a"
+      ]
+    },
+    {
+      "id": "ce3c079ba603a31e291f40c19493531d3a249c46",
+      "url": "https://huggingface.co/papers/2611.04391",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Human-to-Robot Transfer via Bridging Representation and Action Space in VLAs",
+      "summary_orig": "Pretrained Vision-Language-Action (VLA) policies provide a strong starting point for deployment, but adapting them to a target robot and environment still requires costly embodiment-specific demonstrations. Human demonstrations are far easier to collect, yet directly leveraging them is challenging due to the substantial human-robot embodiment gap, particularly when the underlying VLA has been pretrained primarily on robot data. We introduce H2RB (Human-To-Robot Bridge), a human-robot co-training framework for adapting pretrained VLA policies from unpaired human and robot demonstrations. H2RB bridges the embodiment gap at both interfaces: geometry-anchored alignment grounds human and robot observations in a compatible representation, while a decoupled-decoder tokenizer shares action latents without forcing both domains through a single action mapping. This design allows human demonstrations to provide useful behavioral supervision while retaining the rich visual, semantic, and control priors of the pretrained VLA. Across real-world tasks, H2RB substantially improves object transfer performance from 8.0 to 51.8 and enables skill transfer to score 62.7, in settings where co-train…",
+      "title_vi": "Chuyển từ người sang robot thông qua không gian đại diện và hành động cầu nối trong VLA",
+      "summary_vi": "Các chính sách Tầm nhìn-Ngôn ngữ-Hành động (VLA) đã được chuẩn bị trước cung cấp một điểm khởi đầu mạnh mẽ để triển khai, nhưng việc điều chỉnh chúng cho phù hợp với robot và môi trường mục tiêu vẫn đòi hỏi các minh họa cụ thể theo phương án tốn kém. Các cuộc biểu tình của con người dễ thu thập hơn nhiều, nhưng việc tận dụng trực tiếp chúng là một thách thức do khoảng cách đáng kể giữa con người và robot, đặc biệt là khi VLA cơ bản đã được chuẩn bị trước chủ yếu dựa trên dữ liệu robot.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "nlp",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "vision-language",
+        "alignment"
+      ],
+      "signals": {
+        "hf_upvotes": 13
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 13 +1",
+        "từ khóa Đa phương thức & thị giác +2",
+        "từ khóa An toàn AI +1"
+      ],
+      "article_ids": [
+        "ce3c079ba603a31e291f40c19493531d3a249c46"
+      ]
+    },
+    {
+      "id": "1eac7fe42e873b214d34725a063d1c6dd8d3ef25",
+      "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T22:40:55+00:00",
+      "lang": "en",
+      "title_orig": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+      "summary_orig": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
+      "title_vi": "Airbnb cho biết họ sẽ ra mắt agent du lịch AI vào nửa đầu năm 2027",
+      "summary_vi": "Airbnb cho biết AI agent sắp tới của họ sẽ giúp du khách lên kế hoạch cho các chuyến đi, so sánh các lựa chọn, quản lý đặt phòng và nhận hỗ trợ trong suốt thời gian ở.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "1eac7fe42e873b214d34725a063d1c6dd8d3ef25"
+      ]
+    },
+    {
+      "id": "b9afbb2661b640b57d4e60312399981e75f0e5c7",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T22:26:50+00:00",
+      "lang": "en",
+      "title_orig": "Perplexity launches its own take on AI agents for work",
+      "summary_orig": "Perplexity is taking on OpenAI and Anthropic with its own work-focused AI agents. The startup's new always-on \"Teammates\" can take on multiple roles within a workspace, while pulling existing projects, skills, and memory from the Perplexity tools you already use. Teammates integrate with Perplexity Computer, an AI system that can deploy agents on your device",
+      "title_vi": "Perplexity ra mắt tính năng AI agents cho công việc của riêng mình",
+      "summary_vi": "Perplexity đang cạnh tranh với OpenAI và Anthropic với AI agents tập trung vào công việc của riêng mình. \"Đồng đội\" mới luôn hoạt động của startup có thể đảm nhận nhiều vai trò trong một không gian làm việc, đồng thời lấy các dự án, kỹ năng và bộ nhớ hiện có từ các công cụ Perplexity mà bạn đã sử dụng. Đồng đội tích hợp với Perplexity Computer, một hệ thống AI có thể triển khai agents trên thiết bị của bạn",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b9afbb2661b640b57d4e60312399981e75f0e5c7"
+      ]
+    },
+    {
+      "id": "3c0e84566a0e25faec8c7735bdef975da8b58d6a",
+      "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T19:48:28+00:00",
+      "lang": "en",
+      "title_orig": "Meta says US users can now video chat with their Muse AI avatar",
+      "summary_orig": "Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearable designed to bring Muse to life.",
+      "title_vi": "Meta cho biết người dùng Hoa Kỳ hiện có thể trò chuyện video với hình đại diện Muse AI của họ",
+      "summary_vi": "AI agent của Meta giờ đây có thể nhận cuộc gọi dưới dạng hình đại diện hoạt hình có thể tùy chỉnh, trước khi ra mắt thiết bị đeo giống Tamagotchi được thiết kế để đưa Muse vào cuộc sống.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "3c0e84566a0e25faec8c7735bdef975da8b58d6a"
+      ]
+    },
+    {
+      "id": "4051eda06776c72c0162b061eb6dcb92b41280ab",
+      "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T19:03:04+00:00",
+      "lang": "en",
+      "title_orig": "Muse has a voice mode now",
+      "summary_orig": "Meta now lets you have voice conversations with your Muse AI agent in real time, CEO Mark Zuckerberg announced today. The feature has been rolled out to me, and I gave it a spin on the iOS app while writing this article. As you chat with your Muse agent, the avatar at the top of",
+      "title_vi": "Muse hiện đã có chế độ giọng nói",
+      "summary_vi": "Meta hiện cho phép bạn trò chuyện bằng giọng nói với Muse AI agent của mình trong thời gian thực, Giám đốc điều hành Mark Zuckerberg đã công bố hôm nay. Tính năng này đã được triển khai cho tôi và tôi đã cho nó một vòng quay trên ứng dụng iOS trong khi viết bài viết này. Khi bạn trò chuyện với Muse agent của mình, hình đại diện ở đầu",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "4051eda06776c72c0162b061eb6dcb92b41280ab"
+      ]
+    },
+    {
+      "id": "2846e03446f423d72ed7490c15d4ee7c761f97cc",
+      "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T16:16:45+00:00",
+      "lang": "en",
+      "title_orig": "Axiom Math wants to keep AI slop out of mathematics",
+      "summary_orig": "As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
+      "title_vi": "Axiom Math muốn loại bỏ AI ra khỏi toán học",
+      "summary_vi": "Khi AI tràn ngập toán học với các bằng chứng không được kiểm soát, Axiom Math đang đặt cược vào việc xác minh. AI agents của startup vừa chính thức xác minh Dự án Stacks, một trong những thư viện lớn nhất của lĩnh vực này.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "business",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "2846e03446f423d72ed7490c15d4ee7c761f97cc"
+      ]
+    },
+    {
+      "id": "ab4d5776d474567661775b755ee7835b7037d853",
+      "url": "https://huggingface.co/papers/2611.04408",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Halley: A Predictive Control Plane for Optical AI Data Center Networks",
+      "summary_orig": "A frontier AI model is trained in an AI data center, on tens of thousands of accelerators joined by a dedicated network, and every training step ends with all of them exchanging data at once. Between racks, that network is optical, and each of its four layers, from lasers to switches, runs a fixed or after-the-fact policy. Lasers sharing an enclosure, cooling, and power can fail together. At a fixed spare ratio, correlated failure provably caps a pool's availability however large it grows. In this paper, we present a comprehensive predictive control plane framework, called Halley, that reads each resource's next state and acts before the failure occurs. It has four components, each carrying a formal guarantee: LightReserve that sizes the laser pool to provide a coverage bound, FoldFit that schedules the switch within 11/9 of the optimal, ThermaLead that holds a microring with one-step-ahead control, and TriageGuard that protects the highest-risk modules first. Halley gives each layer a predictive controller that defers to the deployed policy when unsure. Composed from simulations at that point, effective goodput, the share of ideal throughput kept, rises from 65.2\\% to 76.5\\% if a…",
+      "title_vi": "Halley: Mặt phẳng điều khiển dự đoán cho mạng trung tâm dữ liệu AI quang học",
+      "summary_vi": "Một mô hình AI biên giới được đào tạo trong một trung tâm dữ liệu AI, trên hàng chục nghìn máy gia tốc được kết nối bởi một mạng chuyên dụng và mỗi bước đào tạo kết thúc với tất cả chúng trao đổi dữ liệu cùng một lúc. Giữa các giá đỡ, mạng đó là quang học, và mỗi lớp trong bốn lớp của nó, từ laser đến công tắc, chạy một chính sách cố định hoặc sau thực tế. Laser dùng chung vỏ bọc, làm mát và nguồn điện có thể bị hỏng cùng nhau.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {
+        "hf_upvotes": 34
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 34 +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "ab4d5776d474567661775b755ee7835b7037d853"
+      ]
+    },
+    {
+      "id": "de3a5e89c5902828b3e0ec910c9126eaa6290fcd",
+      "url": "https://huggingface.co/papers/2610.37257",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "GameVerse: A Minute-Scale Gameplay Dataset for Long-Horizon Interactive World Modeling",
+      "summary_orig": "Recent advances in interactive world models have made it possible to generate controllable, dynamic environments from action inputs. Yet current models struggle to maintain coherence beyond roughly one minute of rollout, a limitation rooted not in model capacity but in the scarcity of long-horizon training data. Existing gameplay video datasets typically consist of clips under ten seconds, with captions that describe whole clips in coarse and undifferentiated text, which is insufficient for controllable long-horizon generation. We address this with GameVerse, a minute-scale gameplay video dataset purpose-built for long-horizon interactive world modeling. GameVerse contains 69.7K clips spanning 1,655 hours and 349.6 million frames across diverse first- and third-person gameplay, including 1,358 hours of continuous two-minute sequences, an order of magnitude longer than prior datasets. Clips pass through a unified pipeline of scene-consistent segmentation, quality filtering, camera pose estimation, and event-based caption annotation. Each clip is paired with a temporally stable camera trajectory that remains coherent across minutes, together with captions that separate static scene…",
+      "title_vi": "GameVerse: Bộ dữ liệu chơi trò chơi quy mô nhỏ cho mô hình hóa thế giới tương tác đường chân trời dài",
+      "summary_vi": "Những tiến bộ gần đây trong các mô hình thế giới tương tác đã giúp tạo ra các môi trường năng động, có thể kiểm soát được từ các yếu tố đầu vào hành động. Tuy nhiên, các mô hình hiện tại đấu tranh để duy trì sự gắn kết sau khoảng một phút triển khai, một giới hạn bắt nguồn không phải từ năng lực mô hình mà là sự khan hiếm dữ liệu đào tạo đường chân trời dài.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "dataset",
+        "datasets"
+      ],
+      "signals": {
+        "hf_upvotes": 33
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 33 +2",
+        "từ khóa Dữ liệu +1"
+      ],
+      "article_ids": [
+        "de3a5e89c5902828b3e0ec910c9126eaa6290fcd"
+      ]
+    },
+    {
+      "id": "83ae48ed87912c161817340ee4a235ddc5813e08",
+      "url": "https://huggingface.co/papers/2611.06518",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL",
+      "summary_orig": "Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression, often depends on subjective aesthetics and has no uniquely correct target. Existing approaches typically rely on fixed rewards for visual quality, motion quality, and text alignment that poorly capture emotional intent and can invite reward hacking, while RLHF is difficult to scale and subject to individual aesthetic differences that complicate the calibration of facial, body motion, and chromatic cues across narrative contexts. We introduce EmoReward, a new self-evolving training mechanism that distills evidence reliability from reward traces collected during an actual training run to adaptively guide multi-reward weight allocation in subsequent training by determining which emotional evidence to trust and how much to weight it. EmoReward first plans specific grounding cues from the emotional prompt to guide evaluation, then uses heterogeneous signal primitives to score the generated video during the act stage. Reflective Reward Gating calibrates their contributions through…",
+      "title_vi": "EmoReward: Hiệu chỉnh phần thưởng tự diễn biến cho việc tạo video cảm xúc RL",
+      "summary_vi": "Tối ưu hóa chính sách tương đối nhóm (GRPO) có mô hình phát sinh tiên tiến sau đào tạo trong các lĩnh vực có thể kiểm chứng như mã và toán học, nhưng việc đánh giá chất lượng video, đặc biệt là biểu hiện cảm xúc, thường phụ thuộc vào tính thẩm mỹ chủ quan và không có mục tiêu chính xác duy nhất.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "alignment"
+      ],
+      "signals": {
+        "hf_upvotes": 23
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 23 +2",
+        "từ khóa An toàn AI +1"
+      ],
+      "article_ids": [
+        "83ae48ed87912c161817340ee4a235ddc5813e08"
+      ]
+    },
+    {
+      "id": "f5b127198803740405c0bf26e6f11fc878ede8a4",
+      "url": "https://huggingface.co/papers/2611.05609",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "On the Generalization Limitation of On-Policy Distillation for Post-RL Consolidation",
+      "summary_orig": "Multi-teacher on-policy distillation (MOPD) extends on-policy distillation (OPD) to consolidate capabilities from multiple teachers. Although prior work reports near-perfect in-distribution (IND) distillation performance, we find that this can mask incomplete capability consolidation beyond the supervised distribution. A preliminary study on synthetic reasoning shows that OPD does not fully transfer teachers' generalization capabilities. We then extend this investigation to real-world tasks, evaluating extrapolative and compositional generalization across mathematical reasoning, coding, agent, and long-context capabilities using Qwen3 models. Across extrapolative settings, OPD and MOPD reach 96.04-102.73% of their teachers' IND scores. Yet their out-of-distribution (OOD) scores remain 2.45-16.25% below the base model's. Across three compositional settings, MOPD improves IND performance over the base model, but its performance on composed tasks as OOD remains 18.19-24.34% below that of the best teachers. To understand these gaps, we examine teacher capability and data coverage as two potential bottlenecks. Jointly alleviating these bottlenecks eliminates OOD forgetting in our…",
+      "title_vi": "Về việc khái quát hóa giới hạn chưng cất theo chính sách để hợp nhất sau RL",
+      "summary_vi": "Chưng cất đa giáo viên theo chính sách (MOPD) mở rộng việc chưng cất theo chính sách (OPD) để củng cố năng lực từ nhiều giáo viên. Mặc dù các báo cáo công việc trước đây cho thấy hiệu suất chưng cất trong phân phối gần như hoàn hảo (IND), chúng tôi nhận thấy rằng điều này có thể che giấu khả năng hợp nhất không đầy đủ ngoài việc phân phối có giám sát. Một nghiên cứu sơ bộ về lý luận tổng hợp cho thấy OPD không chuyển giao đầy đủ khả năng khái quát hóa của giáo viên.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "reasoning"
+      ],
+      "signals": {
+        "hf_upvotes": 19
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 19 +1",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "f5b127198803740405c0bf26e6f11fc878ede8a4"
+      ]
+    },
+    {
+      "id": "400e195ac374c00cf796f13ff24c5f16b5dc8cde",
+      "url": "https://huggingface.co/papers/2611.06425",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding",
+      "summary_orig": "Target-conditioned diffusion drafters predict candidate tokens in parallel, yet each new block must wait for updated target-model hidden states. This forces drafting and verification to run sequentially, limiting speedup even though each block is generated in one pass. We introduce D3D, a standalone diffusion drafter that removes this inter-round dependency. D3D combines blockwise denoising with auxiliary autoregressive supervision to achieve long accepted prefixes without target hidden states. This independence lets D3D draft successor blocks during verification in one packed pass, enabling asynchronous speculative decoding. We progressively prune layers according to their effect on acceptance length to reduce the cost of packed drafting. Removing five of 36 layers retains over 99\\% of mean acceptance length across three benchmarks with Qwen3-8B as the target. Across seven benchmarks, D3D averages 5.00times and 5.71times decoding speedup with Qwen3-8B and Qwen3-32B targets, compared with 4.03times and 3.67times for DFlash. On GSM8K with Qwen3-32B, speedup reaches 7.48times. Code is publicly available at https://github.com/fudan-generative-vision/D3D.",
+      "title_vi": "D3D: Soạn thảo khuếch tán tách rời để giải mã đầu cơ không đồng bộ",
+      "summary_vi": "Các nhà soạn thảo khuếch tán có điều kiện mục tiêu dự đoán song song ứng cử viên tokens, nhưng mỗi khối mới phải chờ các trạng thái ẩn mô hình mục tiêu được cập nhật. Điều này buộc việc soạn thảo và xác minh phải chạy liên tục, hạn chế tốc độ mặc dù mỗi khối được tạo ra trong một lượt. Chúng tôi giới thiệu D3D, một công cụ khuếch tán độc lập giúp loại bỏ sự phụ thuộc giữa các vòng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 9
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 9 +1",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "400e195ac374c00cf796f13ff24c5f16b5dc8cde"
+      ]
+    },
+    {
+      "id": "2ea25f0d803df3a7e6836a7f0592b667c6d5a03d",
+      "url": "https://huggingface.co/papers/2611.05304",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers",
+      "summary_orig": "Looped transformers are a parameter-efficient alternative to standard transformers for language modeling. By reapplying the same layers across multiple loop steps, recent looped language models match the performance of non-looped models several times their size. While this architecture effectively reduces parameter memory, each loop step still stores its own keys and values, so the key-value (KV) cache grows linearly with the number of loop steps and becomes the main memory bottleneck. We observe that the KV cache of looped models is highly redundant along the loop axis and that the loop steps differ substantially in their sensitivity to quantization. Based on these observations, we propose LoopVQ, a KV cache vector quantization method for looped transformers that codes channels of multiple loop steps jointly, and fine-tunes the codebooks to match the output of the full-precision model. At 0.5 bits per element, LoopVQ outperforms existing KV cache vector quantization methods for standard LLMs on general, long chain-of-thought reasoning, and long-context retrieval tasks with Ouro and Huginn models. Its design is orthogonal to these methods, and combined with TaSQ, it retains much…",
+      "title_vi": "LoopVQ: Định lượng bộ nhớ đệm KV 1 bit phụ cho Looped Transformers",
+      "summary_vi": "Looped transformers là một giải pháp thay thế hiệu quả tham số cho transformers tiêu chuẩn để lập mô hình ngôn ngữ. Bằng cách áp dụng lại các lớp giống nhau qua nhiều bước lặp, các mô hình ngôn ngữ lặp gần đây phù hợp với hiệu suất của các mô hình không lặp lại nhiều lần kích thước của chúng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLMs",
+        "reasoning"
+      ],
+      "signals": {
+        "hf_upvotes": 8
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 8 +1",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "2ea25f0d803df3a7e6836a7f0592b667c6d5a03d"
+      ]
+    },
+    {
+      "id": "e163a334b0bcb9513692df9250aeb4d5596228d9",
+      "url": "https://huggingface.co/papers/2611.05648",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "NitroFusion2: Bringing Adversarial Loss to the Text Stream of Multimodal Diffusion Transformers",
+      "summary_orig": "Adversarial diffusion distillation has conventionally relied on image features for discrimination. We revisit this choice for multimodal diffusion transformers (MMDiTs), whose text stream becomes image-dependent through joint attention. We introduce Text-Stream Adversarial Distillation (TSAD), which exploits intermediate text-token states as a new adversarial representation. Because the text stream has already read the image while remaining tied to the text condition, changing that condition changes what information it extracts from the image. Building on this property, we introduce Aspect-Cued Discrimination (ACD), which conditions the discriminator on different aspects of the sample, such as typography, objects, or style, to steer which properties are emphasized during adversarial training. Building on the expert-discriminator design of NitroFusion, we integrate TSAD and ACD in NitroFusion2. NitroFusion2 brings few-step distillation from the conventional 4-8-step regime down to just 1-2 steps at comparable quality. At one step, it produces sharp rendered text and rich fine-grained details, making one-step generation practical rather than merely a stress test for distillation. At…",
+      "title_vi": "NitroFusion2: Mang lại tổn thất đối nghịch cho luồng văn bản của khuếch tán đa phương thức Transformers",
+      "summary_vi": "Chưng cất khuếch tán đối nghịch thường dựa vào các đặc điểm hình ảnh để phân biệt đối xử. Chúng tôi xem xét lại lựa chọn này cho bộ khuếch tán đa phương thức transformers (MMDiT), có luồng văn bản trở nên phụ thuộc vào hình ảnh thông qua sự chú ý chung. Chúng tôi giới thiệu Text-Stream Adversarial Distillation (TSAD), khai thác các trạng thái văn bản trung gian-token như một đại diện đối nghịch mới.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "multimodal"
+      ],
+      "signals": {
+        "hf_upvotes": 7
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 7 +1",
+        "từ khóa Đa phương thức & thị giác +2"
+      ],
+      "article_ids": [
+        "e163a334b0bcb9513692df9250aeb4d5596228d9"
+      ]
+    },
+    {
+      "id": "8424b8cbc8e88fa1b7898ce6f2526f182b121e9c",
+      "url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+      "source_id": "ars",
+      "published_at": "2026-11-05T23:09:36+00:00",
+      "lang": "en",
+      "title_orig": "Meet *sshole, the vulnerability that lets hackers SSH into Linux devices",
+      "summary_orig": "Certain configurations of Alpine are affected. Other distros may be as well.",
+      "title_vi": "Gặp * sshole, lỗ hổng cho phép tin tặc SSH xâm nhập vào các thiết bị Linux",
+      "summary_vi": "Một số cấu hình nhất định của Alpine bị ảnh hưởng. Các bản phân phối khác cũng có thể như vậy.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hackers"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ars +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "8424b8cbc8e88fa1b7898ce6f2526f182b121e9c"
+      ]
+    },
+    {
+      "id": "d4ae1adfd1666843756b5358f75b3f60892483f0",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-05T21:30:30+00:00",
+      "lang": "en",
+      "title_orig": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
+      "summary_orig": "Hackers are using fake OpenAI, SpaceX, and Anthropic event invitations to lure employees into phishing attacks, using two different phishing-as-a-service platforms to steal Microsoft and Google account credentials and authentication sessions.",
+      "title_vi": "OpenAI giả, các sự kiện SpaceX được sử dụng để đánh cắp tài khoản Microsoft, Google",
+      "summary_vi": "Tin tặc đang sử dụng lời mời sự kiện OpenAI, SpaceX và Anthropic giả mạo để thu hút nhân viên vào các cuộc tấn công phishing, sử dụng hai nền tảng dịch vụ phishing khác nhau để đánh cắp thông tin đăng nhập tài khoản Microsoft và Google và các phiên xác thực.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hackers"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "d4ae1adfd1666843756b5358f75b3f60892483f0"
+      ]
+    },
+    {
+      "id": "f64f1ba40e2ae2bff446cec7305cb50f4ca633d3",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "source_id": "hackernews",
+      "published_at": "2026-11-05T20:43:42+00:00",
+      "lang": "en",
+      "title_orig": "MS Paint Remote Code Execution Vulnerability",
+      "summary_orig": "",
+      "title_vi": "Lỗ hổng thực thi mã từ xa MS Paint",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "remote code execution"
+      ],
+      "signals": {
+        "hn_points": 455
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 455 +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "f64f1ba40e2ae2bff446cec7305cb50f4ca633d3"
+      ]
+    },
+    {
+      "id": "9dc905a90c35587cfa9e3a18227b1cc4a5f0f432",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-05T16:24:26+00:00",
+      "lang": "en",
+      "title_orig": "Hackers backdoor Linux servers using trojanized CWP web server",
+      "summary_orig": "A new Linux malware called CWPdoor is being distributed through a trojanized version of cwpsrv, the web server behind the Control Web Panel (CWP) management interface.",
+      "title_vi": "Tin tặc backdoor máy chủ Linux sử dụng máy chủ web CWP trojanized",
+      "summary_vi": "Một Linux malware mới được gọi là CWPdoor đang được phân phối thông qua một phiên bản trojan hóa của cwpsrv, máy chủ web phía sau giao diện quản lý Bảng điều khiển Web (CWP).",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "backdoor",
+        "hackers",
+        "malware"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "9dc905a90c35587cfa9e3a18227b1cc4a5f0f432"
+      ]
+    },
+    {
+      "id": "5853e49f7990a77ed68cbe2d2308483bb2187205",
+      "url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-05T16:12:46+00:00",
+      "lang": "en",
+      "title_orig": "DigiCert data breach exposes customer information, identity documents",
+      "summary_orig": "DigiCert warns it suffered a data breach after a server migration mistakenly exposed an internal business system to the internet, allowing unauthorized access to customer information and identity documents.",
+      "title_vi": "Vi phạm dữ liệu DigiCert làm lộ thông tin khách hàng, tài liệu nhận dạng",
+      "summary_vi": "DigiCert cảnh báo họ bị vi phạm dữ liệu sau khi di chuyển máy chủ đã vô tình phơi bày một hệ thống kinh doanh nội bộ với internet, cho phép truy cập trái phép vào thông tin khách hàng và tài liệu nhận dạng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "data breach",
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "5853e49f7990a77ed68cbe2d2308483bb2187205"
+      ]
+    },
+    {
+      "id": "5df6ac6a50243f3474eafde7937c93048a0531ba",
+      "url": "https://arstechnica.com/gadgets/2026/11/motorolas-new-signature-27-has-it-all-if-you-can-stomach-the-1600-price-tag/",
+      "source_id": "ars",
+      "published_at": "2026-11-05T13:00:56+00:00",
+      "lang": "en",
+      "title_orig": "Motorola's new Signature 27 has it all if you can stomach the $1,600 price tag",
+      "summary_orig": "It has all the bells and whistles (and cameras).",
+      "title_vi": "Chữ ký 27 mới của Motorola có tất cả nếu bạn có thể chấp nhận mức giá 1.600 $",
+      "summary_vi": "Nó có tất cả các chuông và còi (và máy ảnh).",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50380810",
+          "title": "Motorola Signature 27 with GrapheneOS support"
+        }
+      ],
+      "category": "other",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [],
+      "signals": {
+        "hn_points": 446
+      },
+      "reasons": [
+        "nguồn ars +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 446 +1"
+      ],
+      "article_ids": [
+        "5df6ac6a50243f3474eafde7937c93048a0531ba",
+        "a6bbf4045967d4cc0caabd126f452ff96b9ca927"
+      ]
+    },
+    {
+      "id": "50809c07f522d0d8b4777f648739bdbc6906506d",
+      "url": "https://www.wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-04T20:06:21+00:00",
+      "lang": "en",
+      "title_orig": "Google Is Forcing AI Overviews in Classrooms. Schools Are Searching for a Way Out",
+      "summary_orig": "Google is tying up AI Overviews with traditional search, angering parents and educators who worry that easy, machine-generated answers are leaving kids less capable.",
+      "title_vi": "Google là Tổng quan về AI trong lớp học. Các trường học đang tìm kiếm một lối thoát",
+      "summary_vi": "Google đang kết hợp Tổng quan về AI với tìm kiếm truyền thống, khiến các bậc cha mẹ và nhà giáo dục tức giận, những người lo lắng rằng các câu trả lời dễ dàng, do máy móc tạo ra đang khiến trẻ kém năng lực hơn.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "ars",
+          "url": "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/",
+          "title": "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
+        }
+      ],
+      "category": "models",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "2 nguồn cùng đưa tin +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "50809c07f522d0d8b4777f648739bdbc6906506d",
+        "56b7bacf1dd0d65a0e5a1b0dd5a04dae95a8bd81"
+      ]
+    },
+    {
+      "id": "5aee68f36ad15a6b15d6e63e5bfa7a1aecfc0d64",
+      "url": "https://arstechnica.com/gadgets/2026/11/nasas-experimental-x-70-aircraft-is-a-big-question-mark/",
+      "source_id": "ars",
+      "published_at": "2026-11-05T22:49:03+00:00",
+      "lang": "en",
+      "title_orig": "NASA unveils mysterious X-70 experimental aircraft using AI-generated image",
+      "summary_orig": "NASA’s X-70 Fractal announcement comes as agency aims to grow X-plane fleet.",
+      "title_vi": "NASA tiết lộ máy bay thử nghiệm X-70 bí ẩn sử dụng hình ảnh do AI tạo ra",
+      "summary_vi": "Thông báo X-70 Fractal của NASA được đưa ra khi cơ quan này đặt mục tiêu phát triển đội máy bay X-plane.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ars +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "5aee68f36ad15a6b15d6e63e5bfa7a1aecfc0d64"
+      ]
+    },
+    {
+      "id": "b3c78967a13a03adbe70ac1baed53b2d8df7c78c",
+      "url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-05T21:37:18+00:00",
+      "lang": "en",
+      "title_orig": "Ads in Chatbots Have Arrived. Here’s What’s Working—and What’s Not",
+      "summary_orig": "As Anthropic maintains its vow to keep ads out of Claude, the rest of the AI chatbot industry is racing to win over advertisers without antagonizing users.",
+      "title_vi": "Đã có quảng cáo trong Chatbot. Đây là những gì đang hoạt động - và những gì không",
+      "summary_vi": "Vì Anthropic duy trì lời thề không cho quảng cáo vào Claude, phần còn lại của ngành công nghiệp chatbot AI đang chạy đua để giành chiến thắng trước các nhà quảng cáo mà không gây khó chịu cho người dùng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "chatbot"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b3c78967a13a03adbe70ac1baed53b2d8df7c78c"
+      ]
+    },
+    {
+      "id": "2e06a7a163b7d0a271f25e5ca663092b3c3a9a86",
+      "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T19:12:39+00:00",
+      "lang": "en",
+      "title_orig": "Meta warns that election backlash against data centers could make AI expansion harder",
+      "summary_orig": "Meta warns that growing political opposition to data centers could threaten future AI investments, as communities push back against massive infrastructure projects.",
+      "title_vi": "Meta cảnh báo rằng phản ứng dữ dội của cuộc bầu cử đối với các trung tâm dữ liệu có thể khiến việc mở rộng AI trở nên khó khăn hơn",
+      "summary_vi": "Meta cảnh báo rằng sự phản đối chính trị ngày càng tăng đối với các trung tâm dữ liệu có thể đe dọa các khoản đầu tư AI trong tương lai, khi các cộng đồng đẩy lùi các dự án cơ sở hạ tầng khổng lồ.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "2e06a7a163b7d0a271f25e5ca663092b3c3a9a86"
+      ]
+    },
+    {
+      "id": "4b216c6625249c325d02606a1bae96dce2cb3473",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T18:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Claude AI can plug directly into your bank account",
+      "summary_orig": "Anthropic has a new pitch for managing your personal finances: let Claude do it instead, with a new Personal Finance feature that connects it to your bank and card accounts via the Plaid bank bridging platform. You can ask the chatbot \"where did my money go this month,\" for example, and it'll create an overview",
+      "title_vi": "Claude AI có thể cắm trực tiếp vào tài khoản ngân hàng của bạn",
+      "summary_vi": "Anthropic có một cách mới để quản lý tài chính cá nhân của bạn: thay vào đó, hãy để Claude làm điều đó, với tính năng Tài chính cá nhân mới kết nối nó với tài khoản ngân hàng và thẻ của bạn thông qua nền tảng cầu nối ngân hàng Plaid. Ví dụ, bạn có thể hỏi chatbot \"tiền của tôi đã đi đâu trong tháng này\" và nó sẽ tạo ra một cái nhìn tổng quan",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "chatbot"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "4b216c6625249c325d02606a1bae96dce2cb3473"
+      ]
+    },
+    {
+      "id": "a231f12f9906a671e67187810e38673b9b010e12",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T17:51:52+00:00",
+      "lang": "en",
+      "title_orig": "‘Total repudiation’: The blue wave is about to hit AI",
+      "summary_orig": "On Tuesday night, Democrats made history as they took control of the House and the Senate, and a blue wave swept through traditionally red and swing states - with the nation's first Black woman governor elected in Georgia, the country's first Native American woman governor elected in New Mexico, and a Maine Senator ceding to",
+      "title_vi": "‘Tổng số từ chối’: Sóng xanh sắp chạm AI",
+      "summary_vi": "Vào tối thứ Ba, đảng Dân chủ đã làm nên lịch sử khi họ nắm quyền kiểm soát Hạ viện và Thượng viện, và một làn sóng màu xanh lam quét qua các bang đỏ và dao động truyền thống - với nữ thống đốc da đen đầu tiên của quốc gia được bầu ở Georgia, nữ thống đốc người Mỹ bản địa đầu tiên của đất nước được bầu ở New Mexico và một Thượng nghị sĩ Maine nhượng bộ",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "a231f12f9906a671e67187810e38673b9b010e12"
+      ]
+    },
+    {
+      "id": "db26b4769bbeb4f825ccce5d42cd54193857fe55",
+      "url": "https://arstechnica.com/gaming/2026/11/gamers-go-to-ridiculous-lengths-to-improve-gta-vi-with-nvidias-dlss-5/",
+      "source_id": "ars",
+      "published_at": "2026-11-05T17:40:27+00:00",
+      "lang": "en",
+      "title_orig": "Gamers go to ridiculous lengths to \"improve\" GTA VI with Nvidia's DLSS 5",
+      "summary_orig": "Using a capture card and open source software to run PS5 video through a PC GPU.",
+      "title_vi": "Game thủ đi đến độ dài vô lý để \"cải thiện\" GTA VI với DLSS 5 của Nvidia",
+      "summary_vi": "Sử dụng thẻ chụp và phần mềm nguồn mở để chạy video PS5 thông qua PC GPU.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "infra",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "GPU"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ars +2",
+        "từ khóa Hạ tầng +1"
+      ],
+      "article_ids": [
+        "db26b4769bbeb4f825ccce5d42cd54193857fe55"
+      ]
+    },
+    {
+      "id": "37e23ca10f7e7abfe4c4f2e4290c244a3e3d16e1",
+      "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Grimes is going to star in an AI movie that’s coming to theaters",
+      "summary_orig": "The AI-generated sci-fi film Gods Don't Give Gifts has added a bit of star power: Pop star Grimes is going to appear in the movie. Billed as \"the first AI film to come to theatres,\" Gods Don't Give Gifts is a notable test case for the commercial potential of AI films, and it releases on",
+      "title_vi": "Grimes sẽ đóng vai chính trong một bộ phim AI sắp ra rạp",
+      "summary_vi": "Bộ phim khoa học viễn tưởng do AI tạo ra Gods Don 't Give Gifts đã bổ sung thêm một chút sức mạnh của ngôi sao: ngôi sao nhạc pop Grimes sẽ xuất hiện trong phim. Được quảng cáo là \"bộ phim AI đầu tiên ra rạp\", Gods Don' t Give Gifts là một trường hợp thử nghiệm đáng chú ý về tiềm năng thương mại của phim AI và nó được phát hành trên",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "37e23ca10f7e7abfe4c4f2e4290c244a3e3d16e1"
+      ]
+    },
+    {
+      "id": "b5330d69bb523062d80137b404cf19de67475661",
+      "url": "https://www.theverge.com/podcast/1024438/willy-shih-supply-chain-ai-chips-ram-where-does-my-stuff-come-from-book",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T15:00:00+00:00",
+      "lang": "en",
+      "title_orig": "The hidden supply chain costs of the AI boom",
+      "summary_orig": "Today, I’m talking with Willy Shih, an economist, a professor of management practice at Harvard Business School, and the author of the upcoming book, Where Does My Stuff Come From? The Powerful Economics Behind Global Supply Chains. Willy is one of my all-time favorite Decoder guests — his way of looking at the world through",
+      "title_vi": "Chi phí chuỗi cung ứng ẩn của sự bùng nổ AI",
+      "summary_vi": "Hôm nay, tôi đang nói chuyện với Willy Shih, một nhà kinh tế học, giáo sư thực hành quản lý tại Trường Kinh doanh Harvard, và là tác giả của cuốn sách sắp xuất bản, Where Does My Stuff Come From? Nền kinh tế mạnh mẽ đằng sau chuỗi cung ứng toàn cầu. Willy là một trong những vị khách Bộ giải mã yêu thích nhất mọi thời đại của tôi — cách anh ấy nhìn thế giới thông qua",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b5330d69bb523062d80137b404cf19de67475661"
+      ]
+    },
+    {
+      "id": "89beac2608dd5e4421254596e8e0e617a00b5e3c",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027427/ai-music-soundcloud-elevenlabs",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-05T15:00:00+00:00",
+      "lang": "en",
+      "title_orig": "You can post AI music straight to SoundCloud from ElevenLabs",
+      "summary_orig": "After partnering with Moises earlier this year, SoundCloud is now adding integration with another AI music platform, ElevenLabs. Now, rather than having to export and download your outputs from ElevenLabs and then upload them to SoundCloud, you can publish them directly. As part of the partnership, SoundCloud Artist Pro subscribers are also getting three months",
+      "title_vi": "Bạn có thể đăng nhạc AI trực tiếp lên SoundCloud từ ElevenLabs",
+      "summary_vi": "Sau khi hợp tác với Moises vào đầu năm nay, SoundCloud hiện đang tích hợp với một nền tảng âm nhạc AI khác, ElevenLabs. Bây giờ, thay vì phải xuất và tải xuống đầu ra của bạn từ ElevenLabs và sau đó tải chúng lên SoundCloud, bạn có thể xuất bản chúng trực tiếp. Là một phần của quan hệ đối tác, người đăng ký SoundCloud Artist Pro cũng sẽ nhận được ba tháng",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "89beac2608dd5e4421254596e8e0e617a00b5e3c"
+      ]
+    },
+    {
+      "id": "e63b8d0c30c61c4147eec7fb5990c897410e951b",
+      "url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-05T13:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Finding New Drugs Is Laborious. This AI Startup Is Skipping The Lab Work",
+      "summary_orig": "Potential Sciences, a startup backed by the UK government, is betting that training AI models on computer-generated biochemical data can speed up the plodding process of developing new drugs.",
+      "title_vi": "Tìm kiếm các loại thuốc mới là công việc khó khăn. Công ty khởi nghiệp AI này đang bỏ qua công việc trong phòng thí nghiệm",
+      "summary_vi": "Potential Sciences, một công ty khởi nghiệp được hỗ trợ bởi chính phủ Anh, đang đặt cược rằng việc đào tạo các mô hình AI về dữ liệu sinh hóa do máy tính tạo ra có thể đẩy nhanh quá trình phát triển các loại thuốc mới.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "e63b8d0c30c61c4147eec7fb5990c897410e951b"
+      ]
+    },
+    {
+      "id": "fd04855a6f41c02e72e82b3c4afe6a4458ee687e",
+      "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T13:00:00+00:00",
+      "lang": "en",
+      "title_orig": "A YC startup is putting $1M behind 5 unsolved materials science problems for AI",
+      "summary_orig": "While frontier AI models have solved a remarkable series of outstanding mathematics problems and made progress in the life sciences, they have yet to truly plumb the complex physics in advanced materials.",
+      "title_vi": "Một công ty khởi nghiệp YC đang đặt $ 1 triệu đằng sau 5 vấn đề khoa học vật liệu chưa được giải quyết cho AI",
+      "summary_vi": "Mặc dù các mô hình AI tiên tiến đã giải quyết được một loạt các vấn đề toán học nổi bật và đạt được tiến bộ trong khoa học đời sống, nhưng chúng vẫn chưa thực sự đi sâu vào vật lý phức tạp trong các vật liệu tiên tiến.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "business",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "fd04855a6f41c02e72e82b3c4afe6a4458ee687e"
+      ]
+    },
+    {
+      "id": "d94f47b36633f79eaf60928d370b24cc84322af7",
+      "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
+      "summary_orig": "Agility arrives on the Nasdaq today as the first publicly traded pure-play humanoid robotics company.",
+      "title_vi": "Agility là công ty robot hình người thuần túy đầu tiên trên thị trường chứng khoán. Bạn có mua không?",
+      "summary_vi": "Agility xuất hiện trên sàn Nasdaq ngày hôm nay với tư cách là công ty robot hình người thuần túy được giao dịch công khai đầu tiên.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "ars",
+          "url": "https://arstechnica.com/ai/2026/11/agility-robotics-nasdaq-debut-invites-scrutiny-of-humanoid-robot-market/",
+          "title": "Agility Robotics' Nasdaq debut invites scrutiny of humanoid robot market"
+        }
+      ],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "2 nguồn cùng đưa tin +1"
+      ],
+      "article_ids": [
+        "d94f47b36633f79eaf60928d370b24cc84322af7",
+        "4513cd1ca7d87aeb19aa3361c8d10ee3e196ffdb"
+      ]
+    },
+    {
+      "id": "35aa0f6dd5885578325ee3a78a8e20554fe68731",
+      "url": "https://www.wired.com/story/wired-world-fair-2026-denise-herzing-wild-dolphin/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-05T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "AI’s Next Trick? Speaking Dolphin",
+      "summary_orig": "Denise Herzing, the founder and director of the Wild Dolphin Project, is using AI to help understand audio and video footage of the marine mammals.",
+      "title_vi": "Thủ thuật tiếp theo của AI? Nói chuyện với cá heo",
+      "summary_vi": "Denise Herzing, người sáng lập và giám đốc Dự án Cá heo hoang dã, đang sử dụng AI để giúp hiểu các cảnh quay âm thanh và video về động vật có vú biển.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "35aa0f6dd5885578325ee3a78a8e20554fe68731"
+      ]
+    },
+    {
+      "id": "c53afcafc43165069252f4bca8b40dc282326921",
+      "url": "https://www.wired.com/story/wired-world-fair-2026-evan-ratliff-and-husk/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-05T11:45:00+00:00",
+      "lang": "en",
+      "title_orig": "He Trolls AI Labs for a Living. Now They All Want to Work With Him",
+      "summary_orig": "OpenAI, Anthropic, and SpaceXSI have all reached out to Husk, an influencer who regularly goes viral by exposing the shortcomings of chatbots.",
+      "title_vi": "He Trolls AI Labs for a Living. Bây giờ tất cả họ đều muốn làm việc với Ngài",
+      "summary_vi": "OpenAI, Anthropic và SpaceXSI đều đã liên hệ với Husk, một người có ảnh hưởng thường xuyên lan truyền bằng cách phơi bày những thiếu sót của chatbot.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "c53afcafc43165069252f4bca8b40dc282326921"
+      ]
+    },
+    {
+      "id": "c7b283f105932103df9f6a43c088eadf6903e75c",
+      "url": "https://vnexpress.net/tin-tac-tan-cong-he-thong-lam-lanh-ngan-hang-mau-o-phap-5141115.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T06:11:14+00:00",
+      "lang": "vi",
+      "title_orig": "Tin tặc tấn công hệ thống làm lạnh ngân hàng máu ở Pháp",
+      "summary_orig": "Hacker tấn công mạng nhằm vào nhà cung cấp thiết bị làm lạnh, tăng nhiệt độ kho bảo quản sản phẩm của cơ quan truyền máu của Pháp từ -30°C lên 110°C.",
+      "title_vi": "Tin tặc tấn công hệ thống làm lạnh ngân hàng máu ở Pháp",
+      "summary_vi": "Hacker tấn công mạng nhằm vào nhà cung cấp thiết bị làm lạnh, tăng nhiệt độ kho bảo quản sản phẩm của cơ quan truyền máu của Pháp từ -30°C lên 110°C.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "tấn công mạng"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "c7b283f105932103df9f6a43c088eadf6903e75c"
+      ]
+    },
+    {
+      "id": "892924e768eb7e94abcb11fc9b573bab34381884",
+      "url": "https://vnexpress.net/tu-chiec-tu-lanh-den-nguy-co-tren-thiet-bi-cong-nghiep-thong-minh-5140821.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T05:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Từ chiếc tủ lạnh đến nguy cơ trên thiết bị công nghiệp thông minh",
+      "summary_orig": "Đợt tấn công mạng ảnh hưởng đến hệ thống làm lạnh siêu thị ở nhiều quốc gia châu Âu ngày 2/11 phơi bày rủi ro liên quan đến thiết bị công nghiệp kết nối với Internet.",
+      "title_vi": "Từ chiếc tủ lạnh đến nguy cơ trên thiết bị công nghiệp thông minh",
+      "summary_vi": "Đợt tấn công mạng ảnh hưởng đến hệ thống làm lạnh siêu thị ở nhiều quốc gia châu Âu ngày 2/11 phơi bày rủi ro liên quan đến thiết bị công nghiệp kết nối với Internet.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "tấn công mạng"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "892924e768eb7e94abcb11fc9b573bab34381884"
+      ]
+    },
+    {
+      "id": "5b76c387fb3a0c0566fe8f38e2ef3cf9044a9d02",
+      "url": "https://vnexpress.net/google-phat-hien-doi-tac-cai-ma-doc-vao-1-3-trieu-android-tv-box-5140877.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T02:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Google phát hiện đối tác cài mã độc vào 1,3 triệu Android TV box",
+      "summary_orig": "Videostrong, một đối tác phần cứng được chứng nhận của Google, bị phát hiện cố tình cài cửa hậu trên hơn một triệu đầu Android TV để bán quyền truy cập cho hacker.",
+      "title_vi": "Google phát hiện đối tác cài mã độc vào 1,3 triệu Android TV box",
+      "summary_vi": "Videostrong, một đối tác phần cứng được chứng nhận của Google, bị phát hiện cố tình cài cửa hậu trên hơn một triệu đầu Android TV để bán quyền truy cập cho hacker.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "mã độc"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "5b76c387fb3a0c0566fe8f38e2ef3cf9044a9d02"
+      ]
+    },
+    {
+      "id": "aa3b92b87c68cd1602d7780d571c5eb27beaf0dc",
+      "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-05T01:26:22+00:00",
+      "lang": "en",
+      "title_orig": "Apple is reportedly cutting budgets for its internal AI usage",
+      "summary_orig": "The tokenmaxxing frenzy has been short-lived as bills for said tokens came due, and companies decided that token rationing might be a more fiscally sensible approach.",
+      "title_vi": "Apple được cho là đang cắt giảm ngân sách cho việc sử dụng AI nội bộ",
+      "summary_vi": "Sự điên cuồng của tokenmaxxing đã tồn tại trong thời gian ngắn khi các hóa đơn cho tokens nói trên đến hạn, và các công ty quyết định rằng việc phân phối token có thể là một cách tiếp cận hợp lý hơn về mặt tài chính.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "aa3b92b87c68cd1602d7780d571c5eb27beaf0dc"
+      ]
+    },
+    {
+      "id": "7a388d9d6fe78ad03c951cd9398f13d8e8353787",
+      "url": "https://vnexpress.net/than-dong-toan-hoc-trung-quoc-roi-my-ve-nuoc-de-theo-duoi-ai-5141226.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Thần đồng toán học Trung Quốc rời Mỹ về nước để theo đuổi AI",
+      "summary_orig": "Ngôi sao toán học nổi tiếng Mã Tiêu cho biết sẽ trở về Trung Quốc để tập trung vào lĩnh vực AI thay vì nghiên cứu khoa học thuần túy.",
+      "title_vi": "Thần đồng toán học Trung Quốc rời Mỹ về nước để theo đuổi AI",
+      "summary_vi": "Ngôi sao toán học nổi tiếng Mã Tiêu cho biết sẽ trở về Trung Quốc để tập trung vào lĩnh vực AI thay vì nghiên cứu khoa học thuần túy.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "7a388d9d6fe78ad03c951cd9398f13d8e8353787"
+      ]
+    },
+    {
+      "id": "e41bc49114c522e72c7b1c671b6aa953d24dcf39",
+      "url": "https://vnexpress.net/5-tai-nang-viet-duoc-vinh-danh-tai-ai-awards-2026-5140792.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T13:40:00+00:00",
+      "lang": "vi",
+      "title_orig": "5 tài năng Việt được vinh danh tại AI Awards 2026",
+      "summary_orig": "Hạng mục Tài năng AI tại AI Awards 2026 ghi nhận những đóng góp và thành tích của các chuyên gia, kỹ sư, nhà nghiên cứu trong việc phát triển và ứng dụng trí tuệ nhân tạo.",
+      "title_vi": "5 tài năng Việt được vinh danh tại AI Awards 2026",
+      "summary_vi": "Hạng mục Tài năng AI tại AI Awards 2026 ghi nhận những đóng góp và thành tích của các chuyên gia, kỹ sư, nhà nghiên cứu trong việc phát triển và ứng dụng trí tuệ nhân tạo.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "e41bc49114c522e72c7b1c671b6aa953d24dcf39"
+      ]
+    },
+    {
+      "id": "bafd984c151fcc275f56f23dfc6243adda650996",
+      "url": "https://vnexpress.net/5-doanh-nghiep-ai-tieu-bieu-tai-ai-awards-2026-5140794.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T13:35:00+00:00",
+      "lang": "vi",
+      "title_orig": "5 doanh nghiệp AI tiêu biểu tại AI Awards 2026",
+      "summary_orig": "Hạng mục Doanh nghiệp AI tiêu biểu tại AI Awards 2026 vinh danh 5 công ty có đóng góp tích cực trong việc phát triển trí tuệ nhân tạo, tạo ra giá trị kinh tế, xã hội.",
+      "title_vi": "5 doanh nghiệp AI tiêu biểu tại AI Awards 2026",
+      "summary_vi": "Hạng mục Doanh nghiệp AI tiêu biểu tại AI Awards 2026 vinh danh 5 công ty có đóng góp tích cực trong việc phát triển trí tuệ nhân tạo, tạo ra giá trị kinh tế, xã hội.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "bafd984c151fcc275f56f23dfc6243adda650996"
+      ]
+    },
+    {
+      "id": "676000ed0e7b389022eb9087bc887bab9a558124",
+      "url": "https://vnexpress.net/6-san-pham-va-giai-phap-xuat-sac-tai-ai-awards-2026-5140746.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T13:30:00+00:00",
+      "lang": "vi",
+      "title_orig": "6 sản phẩm và giải pháp xuất sắc tại AI Awards 2026",
+      "summary_orig": "Giải thưởng AI Awards 2026, do VnExpress tổ chức, vinh danh ba sản phẩm và ba giải pháp AI xuất sắc, có tiềm năng lớn ứng dụng vào thực tế đời sống.",
+      "title_vi": "6 sản phẩm và giải pháp xuất sắc tại AI Awards 2026",
+      "summary_vi": "Giải thưởng AI Awards 2026, do VnExpress tổ chức, vinh danh ba sản phẩm và ba giải pháp AI xuất sắc, có tiềm năng lớn ứng dụng vào thực tế đời sống.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "676000ed0e7b389022eb9087bc887bab9a558124"
+      ]
+    },
+    {
+      "id": "e454cc76b7cd72e53e0e836b3a102e1b7e05e9be",
+      "url": "https://vnexpress.net/ai-awards-2026-vinh-danh-tai-nang-doanh-nghiep-va-ung-dung-ai-viet-5141329.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T13:28:19+00:00",
+      "lang": "vi",
+      "title_orig": "AI Awards 2026 vinh danh tài năng, doanh nghiệp và ứng dụng AI Việt",
+      "summary_orig": "AI Awards 2026 ghi nhận đóng góp nghiên cứu, ứng dụng công nghệ trong giáo dục, giao thông, tài chính và quản trị doanh nghiệp.",
+      "title_vi": "AI Awards 2026 vinh danh tài năng, doanh nghiệp và ứng dụng AI Việt",
+      "summary_vi": "AI Awards 2026 ghi nhận đóng góp nghiên cứu, ứng dụng công nghệ trong giáo dục, giao thông, tài chính và quản trị doanh nghiệp.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "e454cc76b7cd72e53e0e836b3a102e1b7e05e9be"
+      ]
+    },
+    {
+      "id": "84bec906129cf0d208f7c13e243acd50920c2720",
+      "url": "https://vnexpress.net/ai-cua-anthropic-lap-ban-do-vi-khuan-3d-dau-tien-the-gioi-5141146.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T11:41:05+00:00",
+      "lang": "vi",
+      "title_orig": "AI của Anthropic lập bản đồ vi khuẩn 3D đầu tiên thế giới",
+      "summary_orig": "Nhóm nghiên cứu Anthropic dùng Claude tái dựng thành công cấu trúc 3D đầu tiên của hạt vault vi khuẩn có nguồn gốc từ protein thực khuẩn thể.",
+      "title_vi": "AI của Anthropic lập bản đồ vi khuẩn 3D đầu tiên thế giới",
+      "summary_vi": "Nhóm nghiên cứu Anthropic dùng Claude tái dựng thành công cấu trúc 3D đầu tiên của hạt vault vi khuẩn có nguồn gốc từ protein thực khuẩn thể.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "84bec906129cf0d208f7c13e243acd50920c2720"
+      ]
+    },
+    {
+      "id": "40591fc459d89bf5b94b39e992dcd07eac4bedbb",
+      "url": "https://vnexpress.net/google-viet-nam-co-45-trieu-nguoi-dung-ai-tao-sinh-5141023.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T11:10:59+00:00",
+      "lang": "vi",
+      "title_orig": "Google: Việt Nam có 45 triệu người dùng AI tạo sinh",
+      "summary_orig": "Việt Nam có quy mô kinh tế số dự kiến đạt 49 tỷ USD, tăng trưởng cao nhất khu vực Đông Nam Á, đồng thời có 45 triệu người dùng AI tạo sinh.",
+      "title_vi": "Google: Việt Nam có 45 triệu người dùng AI tạo sinh",
+      "summary_vi": "Việt Nam có quy mô kinh tế số dự kiến đạt 49 tỷ USD, tăng trưởng cao nhất khu vực Đông Nam Á, đồng thời có 45 triệu người dùng AI tạo sinh.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "40591fc459d89bf5b94b39e992dcd07eac4bedbb"
+      ]
+    },
+    {
+      "id": "87b30313ad5e43b83f2c1a24238a11e69c738202",
+      "url": "https://vnexpress.net/cisco-giao-mot-nhan-vien-gen-z-viet-lai-98-ma-nguon-cu-5140846.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T04:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Cisco giao một nhân viên Gen Z viết lại 98% mã nguồn cũ",
+      "summary_orig": "Padmanabhan Krishnamurthy, 27 tuổi, được Chủ tịch Cisco giao phó nhiệm vụ quan trọng, trái với nhiều doanh nghiệp ưu tiên nhân sự giàu kinh nghiệm trong thời đại AI.",
+      "title_vi": "Cisco giao một nhân viên Gen Z viết lại 98% mã nguồn cũ",
+      "summary_vi": "Padmanabhan Krishnamurthy, 27 tuổi, được Chủ tịch Cisco giao phó nhiệm vụ quan trọng, trái với nhiều doanh nghiệp ưu tiên nhân sự giàu kinh nghiệm trong thời đại AI.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "87b30313ad5e43b83f2c1a24238a11e69c738202"
+      ]
+    },
+    {
+      "id": "24863bfb968eeaf7cd436b7f7744f899010b8cb0",
+      "url": "https://vnexpress.net/hom-nay-khai-mac-ngay-hoi-tri-tue-nhan-tao-viet-nam-2026-5140602.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Hôm nay khai mạc Ngày hội trí tuệ nhân tạo Việt Nam 2026",
+      "summary_orig": "Ngày hội Trí tuệ nhân tạo Việt Nam 2026 diễn ra lúc 14h ngày 5/11, với sự góp mặt của các nhà quản lý, chuyên gia, doanh nghiệp, bàn về AI và lễ vinh danh sản phẩm, giải pháp, tài năng AI Việt.",
+      "title_vi": "Hôm nay khai mạc Ngày hội trí tuệ nhân tạo Việt Nam 2026",
+      "summary_vi": "Ngày hội Trí tuệ nhân tạo Việt Nam 2026 diễn ra lúc 14h ngày 5/11, với sự góp mặt của các nhà quản lý, chuyên gia, doanh nghiệp, bàn về AI và lễ vinh danh sản phẩm, giải pháp, tài năng AI Việt.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "24863bfb968eeaf7cd436b7f7744f899010b8cb0"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 12,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 68,
+      "untranslated": 0
+    }
+  }
+}
