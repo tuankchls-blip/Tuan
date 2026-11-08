@@ -258,6 +258,13 @@
     "hash": "5c88303055e95429",
     "translated_at": "2026-11-05T06:57:13+00:00"
   },
+  "1de98537a9e614419bcb5a868e02a3ba5caa86f9": {
+    "title_vi": "Tại sao một báo cáo mới về Anthropic tự động hóa phát triển AI lại gây lo ngại cho các nhà nghiên cứu",
+    "summary_vi": "Anthropic đang sử dụng AI để xây dựng AI mạnh hơn. Và nó dường như đang hoạt động rất tốt, với các mô hình của công ty được cải thiện nhanh gấp đôi so với một năm trước, với rất ít dấu hiệu chậm lại. Đó là theo một báo cáo mới được công bố hôm thứ Năm bởi tổ chức nghiên cứu an toàn AI METR, sau một cuộc điều tra kéo dài 11 tuần",
+    "source": "mymemory",
+    "hash": "2f49b444a680153f",
+    "translated_at": "2026-11-08T06:11:07+00:00"
+  },
   "1e09943a421e9246b3e0b8e89cf39f0de8ae649c": {
     "title_vi": "Khi lưu lượng tìm kiếm cạn kiệt, Reddit thông báo sẽ chuyển sang trải nghiệm đã đăng nhập",
     "summary_vi": "Khi AI thay đổi cách mọi người tìm kiếm thông tin trực tuyến, Reddit đang xem xét lại nguồn gốc web mở của mình để bảo vệ khán giả và doanh nghiệp của mình.",
@@ -362,6 +369,13 @@
     "source": "mymemory",
     "hash": "4940f0b9f75f117e",
     "translated_at": "2026-11-03T06:55:33+00:00"
+  },
+  "2634a86d9aad18eed178678e0827456372301323": {
+    "title_vi": "Mỹ cho phép Nvidia bán chip cho một văn phòng trống ở Trung Quốc",
+    "summary_vi": "Những lo ngại đang được đưa ra rằng cả Bộ Thương mại và Nvidia đều không thực hiện thẩm định khi nói đến việc kiểm tra các công ty Trung Quốc đã được thông qua để xử lý các chip AI H200 của công ty. Theo The New York Times, New Matrix nằm trong danh sách các công ty được phê duyệt, nhưng văn phòng của nó trống rỗng, \"một vỏ màu xám rỗng",
+    "source": "mymemory",
+    "hash": "4b8fd8f1d88ae750",
+    "translated_at": "2026-11-08T06:11:03+00:00"
   },
   "26c6032e1d2677657b700d5fc3cfed3434f8516c": {
     "title_vi": "Tăng tốc kỹ thuật cho thế giới vật lý",
@@ -1014,6 +1028,13 @@
     "hash": "b9f96828c43beb94",
     "translated_at": "2026-11-07T06:07:06+00:00"
   },
+  "6af494ac81e1ddc61a9d2e1e36966cd0791f786f": {
+    "title_vi": "Tin tặc đã thực hiện vụ cướp ngân hàng trị giá $ 133 triệu của Pháp thông qua nhà cung cấp dịch vụ",
+    "summary_vi": "Ngân hàng hợp tác xã Pháp Crédit Mutuel Arkéa đã bị nhắm mục tiêu trong một cuộc tấn công mạng cho phép các giao dịch gian lận lên tới $ 133 triệu, buộc họ phải phản ứng bằng cách đình chỉ một số hệ thống nhất định.v",
+    "source": "mymemory",
+    "hash": "b69caa17b3e4db74",
+    "translated_at": "2026-11-08T06:11:05+00:00"
+  },
   "6bd209feefbeab17a3f5fb389d25b5a774e46e10": {
     "title_vi": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
     "summary_vi": "",
@@ -1111,6 +1132,13 @@
     "source": "mymemory",
     "hash": "d542b1cf61e9a15d",
     "translated_at": "2026-11-02T15:38:18+00:00"
+  },
+  "75033d6b18a041016defb8f632069a9bc19c7159": {
+    "title_vi": "Show HN: Coldframe, một honeypot giả làm bộ điều khiển tủ lạnh siêu thị",
+    "summary_vi": "Tôi đã xây dựng Coldframe, một hũ mật giả vờ là một bộ điều khiển làm lạnh siêu thị. Lấy cảm hứng từ các sự kiện về lắp đặt tủ lạnh công nghiệp trong những tuần qua, tôi muốn xem những gì mọi người sẽ cố gắng chống lại một giả thuyết phục. Để tìm hiểu thêm về điều này, tôi đã xây dựng một honeypot giống hoàn hảo với giao diện Danfoss AK-SM 800A VÀ Dixell XWeb. Cả hai đều được công nhận trên Shodan là có thật (và không phải là tổ ong).",
+    "source": "mymemory",
+    "hash": "4f447f94327c2fa0",
+    "translated_at": "2026-11-08T06:11:01+00:00"
   },
   "75679f5aa60bfcf88cfee2650e1fad6a696bd2d7": {
     "title_vi": "Daybreak Red hiện có sẵn trong AWS GovCloud (US-East)",
@@ -1763,6 +1791,13 @@
     "hash": "02b8e22c35c1d17f",
     "translated_at": "2026-11-05T06:57:38+00:00"
   },
+  "ac30c3ff268d6e3d97e1bed05174b1312bf4dee8": {
+    "title_vi": "AI đã phá vỡ thế giới an ninh mạng. Bước tiếp theo là gì?",
+    "summary_vi": "Hôm nay, tôi sẽ nói chuyện với Alex Stamos, giám đốc an ninh bảo mật tại Cognition và là chuyên gia an ninh mạng lâu năm, về tình trạng an ninh mạng lộn xộn hiện nay. Tập này là một phần của một loạt đặc biệt nhìn vào AI trong cuộc sống thực. Tôi luôn thích nói chuyện với Alex vì anh ấy rất thẳng thắn, và bạn sẽ nghe anh ấy nói",
+    "source": "mymemory",
+    "hash": "4fab2d877398569f",
+    "translated_at": "2026-11-08T06:11:11+00:00"
+  },
   "aca6994d762728b1a50dc36b5fa1b8f3f34278cf": {
     "title_vi": "Làm thế nào một công ty khởi nghiệp Kenya đang suy nghĩ lại về AI cho các doanh nghiệp nhỏ",
     "summary_vi": "Lần đầu tiên Mutembei Kariuki nghĩ về cách các mô hình AI có thể hoạt động ở Kenya, quê hương của mình, là vào năm 2019. Anh ấy đang tham dự một hội nghị tại Đại học Tokyo về tương lai của AI và tiếp tục nghe về cách công nghệ này sẽ biến đổi thế giới. \"Nhưng không ai đề cập đến châu Phi cả,\" ông nói.",
@@ -1959,6 +1994,13 @@
     "hash": "aeef4654196a94ff",
     "translated_at": "2026-11-05T06:57:32+00:00"
   },
+  "bb9dc983cfcbeb71cd2e49e7d82f7e844953dad6": {
+    "title_vi": "Trợ lý AI của NYT Cooking đã cứu con gà trong tuần của tôi, nhưng suýt làm hỏng bánh của tôi",
+    "summary_vi": "Khoảng 7 GIỜ TỐI mỗi tuần, tôi thấy mình đang đứng trước tủ lạnh, cố gắng quyết định điều gì đó cho bữa tối mà sẽ không khiến chồng tôi phàn nàn, \"Gà nữa à?\" Có, tôi nên lên kế hoạch cho bữa ăn nhiều hơn, nhưng tôi không, vì vậy đây là nơi tôi đang ở. Một trận chiến hàng đêm trong đó gà thường thắng. Gần đây, tốt nhất của tôi",
+    "source": "mymemory",
+    "hash": "9978496e3ac72482",
+    "translated_at": "2026-11-08T06:11:09+00:00"
+  },
   "bbb3c5f7c06745fec24be5e6518aacc940a273ec": {
     "title_vi": "Độc quyền: Nhẫn thông minh của Aina muốn trở thành điều khiển từ xa cho AI Agent của bạn",
     "summary_vi": "Công ty khởi nghiệp Aina đặt cược bạn sẽ không cần phải dựa vào điện thoại của mình để điều khiển các trợ lý ảo. Nó tạo ra một chiếc nhẫn thông minh cho phép bạn điều khiển các hành động của agents tự động của mình chỉ bằng một cú chạm.",
@@ -2077,6 +2119,13 @@
     "source": "mymemory",
     "hash": "593a8167b014d033",
     "translated_at": "2026-11-06T06:56:00+00:00"
+  },
+  "cd1f9840fc34f55b3f7540e1754e28a663030195": {
+    "title_vi": "Ứng dụng dành cho người chăm sóc nhận được một liều AI, nhưng điều đó có thể không đủ",
+    "summary_vi": "Các ứng dụng và nền tảng giúp người chăm sóc gia đình quản lý nhu cầu của người thân đang trở nên có khả năng hơn, nhưng vấn đề lớn hơn về sức khỏe của người chăm sóc vẫn chưa được giải quyết.",
+    "source": "mymemory",
+    "hash": "2ffca5dfa939f615",
+    "translated_at": "2026-11-08T06:11:13+00:00"
   },
   "ce3c079ba603a31e291f40c19493531d3a249c46": {
     "title_vi": "Chuyển từ người sang robot thông qua không gian đại diện và hành động cầu nối trong VLA",

@@ -1,0 +1,566 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T13:10:54+07:00",
+  "window": {
+    "start": "2026-11-07T07:00:00+07:00",
+    "end": "2026-11-08T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": "feed trống"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 32,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1368,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 899,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 1,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 37,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "75033d6b18a041016defb8f632069a9bc19c7159",
+      "url": "https://github.com/hedgerow-dev/coldframe",
+      "source_id": "hackernews",
+      "published_at": "2026-11-07T17:27:30+00:00",
+      "lang": "en",
+      "title_orig": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+      "summary_orig": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake. To learn more about this I built a honeypot that resembled perfectly the Danfoss AK-SM 800A and Dixell XWEB interfaces. Both of them are recognized on Shodan as real ones (an not as honeypots). It’s one Python file using only the standard library, and it builds on eppser/danfoss-ak-sm-decoy and public research by Synacktiv, Claroty and Ironhackers. Things that were fun to get right: - Matching real units. I used Shodan records of real devices to match header order, page titles, certificate fields and TLS versions. The Danfoss persona sends nginx headers in the same order as a real AK-SM 800A. The Dixell persona sends no Server header and pads its page to exactly 8,202 bytes. - Recognising exploit attempts. It recognises CVE-2025-41450, the Danfoss “code of the day” login bypass, and records whether the submitted code is correct for today. It also tags attempts targeting three other Danfoss CVEs and the XWEB vulnerabilities. - Letting them in. Default…",
+      "title_vi": "Show HN: Coldframe, một honeypot giả làm bộ điều khiển tủ lạnh siêu thị",
+      "summary_vi": "Tôi đã xây dựng Coldframe, một hũ mật giả vờ là một bộ điều khiển làm lạnh siêu thị. Lấy cảm hứng từ các sự kiện về lắp đặt tủ lạnh công nghiệp trong những tuần qua, tôi muốn xem những gì mọi người sẽ cố gắng chống lại một giả thuyết phục. Để tìm hiểu thêm về điều này, tôi đã xây dựng một honeypot giống hoàn hảo với giao diện Danfoss AK-SM 800A VÀ Dixell XWeb. Cả hai đều được công nhận trên Shodan là có thật (và không phải là tổ ong).",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "CVE"
+      ],
+      "signals": {
+        "hn_points": 212
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 212 +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "75033d6b18a041016defb8f632069a9bc19c7159"
+      ]
+    },
+    {
+      "id": "2634a86d9aad18eed178678e0827456372301323",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-07T15:43:45+00:00",
+      "lang": "en",
+      "title_orig": "The US let Nvidia sell chips to an empty office in China",
+      "summary_orig": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its offices are empty, \"a hollow gray shell",
+      "title_vi": "Mỹ cho phép Nvidia bán chip cho một văn phòng trống ở Trung Quốc",
+      "summary_vi": "Những lo ngại đang được đưa ra rằng cả Bộ Thương mại và Nvidia đều không thực hiện thẩm định khi nói đến việc kiểm tra các công ty Trung Quốc đã được thông qua để xử lý các chip AI H200 của công ty. Theo The New York Times, New Matrix nằm trong danh sách các công ty được phê duyệt, nhưng văn phòng của nó trống rỗng, \"một vỏ màu xám rỗng",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "infra",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI chips",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Hạ tầng +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "2634a86d9aad18eed178678e0827456372301323"
+      ]
+    },
+    {
+      "id": "6af494ac81e1ddc61a9d2e1e36966cd0791f786f",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-07T15:25:35+00:00",
+      "lang": "en",
+      "title_orig": "Hackers pull off $133 million French bank heist via service provider",
+      "summary_orig": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v",
+      "title_vi": "Tin tặc đã thực hiện vụ cướp ngân hàng trị giá $ 133 triệu của Pháp thông qua nhà cung cấp dịch vụ",
+      "summary_vi": "Ngân hàng hợp tác xã Pháp Crédit Mutuel Arkéa đã bị nhắm mục tiêu trong một cuộc tấn công mạng cho phép các giao dịch gian lận lên tới $ 133 triệu, buộc họ phải phản ứng bằng cách đình chỉ một số hệ thống nhất định.v",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hackers"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "6af494ac81e1ddc61a9d2e1e36966cd0791f786f"
+      ]
+    },
+    {
+      "id": "1de98537a9e614419bcb5a868e02a3ba5caa86f9",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-07T12:30:00+00:00",
+      "lang": "en",
+      "title_orig": "Why a new report on Anthropic automating AI development is alarming researchers",
+      "summary_orig": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation",
+      "title_vi": "Tại sao một báo cáo mới về Anthropic tự động hóa phát triển AI lại gây lo ngại cho các nhà nghiên cứu",
+      "summary_vi": "Anthropic đang sử dụng AI để xây dựng AI mạnh hơn. Và nó dường như đang hoạt động rất tốt, với các mô hình của công ty được cải thiện nhanh gấp đôi so với một năm trước, với rất ít dấu hiệu chậm lại. Đó là theo một báo cáo mới được công bố hôm thứ Năm bởi tổ chức nghiên cứu an toàn AI METR, sau một cuộc điều tra kéo dài 11 tuần",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "safety",
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI safety",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa An toàn AI +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "1de98537a9e614419bcb5a868e02a3ba5caa86f9"
+      ]
+    },
+    {
+      "id": "bb9dc983cfcbeb71cd2e49e7d82f7e844953dad6",
+      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-07T15:50:00+00:00",
+      "lang": "en",
+      "title_orig": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
+      "summary_orig": "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at. A nightly battle in which the chicken usually wins. Recently, my best",
+      "title_vi": "Trợ lý AI của NYT Cooking đã cứu con gà trong tuần của tôi, nhưng suýt làm hỏng bánh của tôi",
+      "summary_vi": "Khoảng 7 GIỜ TỐI mỗi tuần, tôi thấy mình đang đứng trước tủ lạnh, cố gắng quyết định điều gì đó cho bữa tối mà sẽ không khiến chồng tôi phàn nàn, \"Gà nữa à?\" Có, tôi nên lên kế hoạch cho bữa ăn nhiều hơn, nhưng tôi không, vì vậy đây là nơi tôi đang ở. Một trận chiến hàng đêm trong đó gà thường thắng. Gần đây, tốt nhất của tôi",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "bb9dc983cfcbeb71cd2e49e7d82f7e844953dad6"
+      ]
+    },
+    {
+      "id": "ac30c3ff268d6e3d97e1bed05174b1312bf4dee8",
+      "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-07T15:00:00+00:00",
+      "lang": "en",
+      "title_orig": "AI broke the cybersecurity world. What’s next?",
+      "summary_orig": "Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series looking at AI in real life. I’ve always enjoyed talking to Alex because he’s so direct, and you’re going to hear him say",
+      "title_vi": "AI đã phá vỡ thế giới an ninh mạng. Bước tiếp theo là gì?",
+      "summary_vi": "Hôm nay, tôi sẽ nói chuyện với Alex Stamos, giám đốc an ninh bảo mật tại Cognition và là chuyên gia an ninh mạng lâu năm, về tình trạng an ninh mạng lộn xộn hiện nay. Tập này là một phần của một loạt đặc biệt nhìn vào AI trong cuộc sống thực. Tôi luôn thích nói chuyện với Alex vì anh ấy rất thẳng thắn, và bạn sẽ nghe anh ấy nói",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "ac30c3ff268d6e3d97e1bed05174b1312bf4dee8"
+      ]
+    },
+    {
+      "id": "cd1f9840fc34f55b3f7540e1754e28a663030195",
+      "url": "https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-07T11:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
+      "summary_orig": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.",
+      "title_vi": "Ứng dụng dành cho người chăm sóc nhận được một liều AI, nhưng điều đó có thể không đủ",
+      "summary_vi": "Các ứng dụng và nền tảng giúp người chăm sóc gia đình quản lý nhu cầu của người thân đang trở nên có khả năng hơn, nhưng vấn đề lớn hơn về sức khỏe của người chăm sóc vẫn chưa được giải quyết.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "cd1f9840fc34f55b3f7540e1754e28a663030195"
+      ]
+    },
+    {
+      "id": "1a1971506218111a5475d9a6d9c0042d8b211f91",
+      "url": "https://vnexpress.net/mo-hinh-anthropic-cai-tien-nhanh-gap-doi-nho-ai-5141690.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-07T23:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Mô hình Anthropic cải tiến nhanh gấp đôi nhờ AI",
+      "summary_orig": "Nghiên cứu độc lập cho thấy các mô hình Anthropic đang cải tiến nhanh gấp 1,9 lần so với trước nhờ AI tham gia quá trình huấn luyện.",
+      "title_vi": "Mô hình Anthropic cải tiến nhanh gấp đôi nhờ AI",
+      "summary_vi": "Nghiên cứu độc lập cho thấy các mô hình Anthropic đang cải tiến nhanh gấp 1,9 lần so với trước nhờ AI tham gia quá trình huấn luyện.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "1a1971506218111a5475d9a6d9c0042d8b211f91"
+      ]
+    },
+    {
+      "id": "60660eb622de42f2824996d5935ed3c90e3c289a",
+      "url": "https://vnexpress.net/trung-quoc-buoc-vao-cuoc-dua-phat-trien-tri-nao-robot-5140231.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-07T17:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Trung Quốc bước vào cuộc đua phát triển trí não robot",
+      "summary_orig": "Làn sóng đầu tư vào AI hiện thân đang tràn qua các công ty Trung Quốc, thúc đẩy nỗ lực chuyển đổi từ tập trung vào phần cứng sang phát triển bộ não thông minh cho robot hình người.",
+      "title_vi": "Trung Quốc bước vào cuộc đua phát triển trí não robot",
+      "summary_vi": "Làn sóng đầu tư vào AI hiện thân đang tràn qua các công ty Trung Quốc, thúc đẩy nỗ lực chuyển đổi từ tập trung vào phần cứng sang phát triển bộ não thông minh cho robot hình người.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "60660eb622de42f2824996d5935ed3c90e3c289a"
+      ]
+    },
+    {
+      "id": "a83338c15a1f7d04784a9fcea3dd91d5a9f8f805",
+      "url": "https://vnexpress.net/robot-hinh-nguoi-dan-chuong-trinh-tin-tuc-dau-tien-tren-the-gioi-5141850.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-07T11:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Robot hình người dẫn chương trình tin tức đầu tiên trên thế giới",
+      "summary_orig": "Hãng thông tấn Trung Quốc Xinhua ra mắt hai robot AI có ngoại hình và năng lực gần giống người dẫn chương trình tin tức.",
+      "title_vi": "Robot hình người dẫn chương trình tin tức đầu tiên trên thế giới",
+      "summary_vi": "Hãng thông tấn Trung Quốc Xinhua ra mắt hai robot AI có ngoại hình và năng lực gần giống người dẫn chương trình tin tức.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "a83338c15a1f7d04784a9fcea3dd91d5a9f8f805"
+      ]
+    },
+    {
+      "id": "bfd12d6ae7d4a39f1d092759fa126d17dc8bc242",
+      "url": "https://vnexpress.net/thung-lung-silicon-chay-theo-thuat-ngu-ai-moi-cua-ong-trump-5141255.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-07T04:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Thung lũng Silicon 'chạy theo' thuật ngữ AI mới của ông Trump",
+      "summary_orig": "Tổng thống Mỹ Donald Trump tuyên chiến với thuật ngữ \"trí tuệ nhân tạo\" và muốn chuyển sang sử dụng \"siêu trí tuệ\", khiến Thung lũng Silicon phải thay đổi theo.",
+      "title_vi": "Thung lũng Silicon 'chạy theo' thuật ngữ AI mới của ông Trump",
+      "summary_vi": "Tổng thống Mỹ Donald Trump tuyên chiến với thuật ngữ \"trí tuệ nhân tạo\" và muốn chuyển sang sử dụng \"siêu trí tuệ\", khiến Thung lũng Silicon phải thay đổi theo.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "bfd12d6ae7d4a39f1d092759fa126d17dc8bc242"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 4,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 7,
+      "untranslated": 0
+    }
+  }
+}
