@@ -1,0 +1,474 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T13:44:51+07:00",
+  "window": {
+    "start": "2026-11-08T07:00:00+07:00",
+    "end": "2026-11-09T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 500,
+      "error": null,
+      "note": "bỏ 399 mục cập nhật bài cũ"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1368,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 899,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 1,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 28,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "a5b09ead90d4ea47200247d6604489293226c448",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-08T20:22:39+00:00",
+      "lang": "en",
+      "title_orig": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+      "summary_orig": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light",
+      "title_vi": "Nvidia đang điều tra mối quan hệ của Jensen Huang với một điệp viên Trung Quốc",
+      "summary_vi": "Nvidia đã thông báo rằng họ đang mở một cuộc điều tra về Giám đốc điều hành Jensen Huang và mối quan hệ của ông với giám đốc điều hành Megaspeed Alice Huang, người được Bộ An ninh Nhà nước Trung Quốc tuyển dụng để theo dõi công ty. Một tuyên bố được đăng bởi hội đồng quản trị có nội dung: Hội đồng quản trị NVIDIA đang bắt đầu một cuộc điều tra độc lập",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "techcrunch-ai",
+          "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+          "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy"
+        },
+        {
+          "source_id": "verge-ai",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+          "title": "Here’s the full text of Jensen Huang’s memo to Nvidia"
+        },
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50416801",
+          "title": "Nvidia Board of Directors Is Investigating Jensen Huang"
+        },
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50418016",
+          "title": "Nvidia CEO Jensen Huang's letter to staff about affair"
+        }
+      ],
+      "category": "policy",
+      "subcategory": null,
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 519
+      },
+      "reasons": [
+        "nguồn verge-ai +2",
+        "3 nguồn cùng đưa tin +2",
+        "Hacker News 519 +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "a5b09ead90d4ea47200247d6604489293226c448",
+        "45da7994669e5304c4a61eebac176cd114fa2bb1",
+        "0b3a357762c231aa2edd745e96ba2525c5b7bd27",
+        "a24fdfddefa6b5e43959db83295bc5951bdac094",
+        "9709ee9b2939f7735c603b054a0e7a301215998a"
+      ]
+    },
+    {
+      "id": "ce0a393f5bc7e60b54bcb9c5600668950cccd9e1",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-08T19:18:19+00:00",
+      "lang": "en",
+      "title_orig": "Apple is racing to make Siri more agentic",
+      "summary_orig": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's",
+      "title_vi": "Apple đang chạy đua để làm cho Siri thêm agentic",
+      "summary_vi": "Mark Gurman của Bloomberg cho biết Giám đốc điều hành John Ternus đang gây áp lực với chuyên gia AI Craig Federighi để đẩy nhanh lộ trình Siri và cung cấp một AI agent mạnh mẽ có thể cạnh tranh với Dots của OpenAI hoặc Muse của Meta. Trong khi Federighi đã cung cấp một phiên bản chức năng của Siri AI trên một dòng thời gian cực kỳ ngắn, công ty không có ảo tưởng rằng nó",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agent",
+        "agentic",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "ce0a393f5bc7e60b54bcb9c5600668950cccd9e1"
+      ]
+    },
+    {
+      "id": "4f1cb43783a396929abb53fe3f2345d7a4db479f",
+      "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-08T15:43:08+00:00",
+      "lang": "en",
+      "title_orig": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+      "summary_orig": "Japanese manufacturer Iris Ohyama, the operator of the Iris Plaza shopping platform, disclosed that personal information belonging to about 7.7 million people may have been exposed after unauthorized access to a third-party cloud service the company used.",
+      "title_vi": "Vi phạm đám mây dữ liệu Iris Ohyama làm lộ thông tin của 7,7 triệu khách hàng",
+      "summary_vi": "Nhà sản xuất Iris Ohyama của Nhật Bản, nhà điều hành nền tảng mua sắm Iris Plaza, tiết lộ rằng thông tin cá nhân của khoảng 7,7 triệu người có thể đã bị lộ sau khi truy cập trái phép vào dịch vụ đám mây của bên thứ ba mà công ty đã sử dụng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "4f1cb43783a396929abb53fe3f2345d7a4db479f"
+      ]
+    },
+    {
+      "id": "16495ea32bd44aad9638b746fdc098c684046f89",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-08T17:23:19+00:00",
+      "lang": "en",
+      "title_orig": "Elvis and Eminem rights holders are suing Suno",
+      "summary_orig": "Suno is facing yet another pair of lawsuits. A group of rights holders of Elvis Presley's music and the publisher of some of Eminem's biggest records are suing the AI music company, claiming it illegally generates music and lyrics that mimic those artists. The lawyers in the Presley suit claim that Suno has violated Tennessee's",
+      "title_vi": "Những người nắm giữ bản quyền Elvis và Eminem đang kiện Suno",
+      "summary_vi": "Suno đang phải đối mặt với một cặp vụ kiện khác. Một nhóm các chủ sở hữu bản quyền âm nhạc của Elvis Presley và nhà xuất bản của một số bản thu âm lớn nhất của Eminem đang kiện công ty âm nhạc AI, tuyên bố nó tạo ra âm nhạc và lời bài hát bắt chước những nghệ sĩ đó một cách bất hợp pháp. Các luật sư trong vụ kiện Presley cho rằng Suno đã vi phạm",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "16495ea32bd44aad9638b746fdc098c684046f89"
+      ]
+    },
+    {
+      "id": "6797542b56c02b570f36b6d4e4e0af8e15b82257",
+      "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-08T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
+      "summary_orig": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
+      "title_vi": "Tôi đã sử dụng công cụ sửa đổi công thức nấu ăn dựa trên trí tuệ nhân tạo mới của NYT Cooking và nó thực sự khá tốt",
+      "summary_vi": "The New York Times đã thêm một tính năng beta vào ứng dụng Nấu ăn của mình, giúp độc giả trao đổi nguyên liệu hoặc điều chỉnh công thức nấu ăn cho phù hợp với nhu cầu của họ. Nó chủ yếu đánh trúng mục tiêu.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "6797542b56c02b570f36b6d4e4e0af8e15b82257"
+      ]
+    },
+    {
+      "id": "b2811de866489491b8d04a0ba70c25987d6cc0c6",
+      "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-08T10:00:00+00:00",
+      "lang": "en",
+      "title_orig": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
+      "summary_orig": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality.",
+      "title_vi": "Người mẫu thế giới sẽ sớm trở thành điều không thể tránh khỏi. Dưới đây là những điều bạn cần biết",
+      "summary_vi": "Chuyển AI từ văn bản sang không gian 3D, các mô hình thế giới mô phỏng vật lý trong thế giới thực để dạy robot và xe tự lái cách điều hướng thực tế.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b2811de866489491b8d04a0ba70c25987d6cc0c6"
+      ]
+    },
+    {
+      "id": "9f3d3a3ed3fc79d4c7f4e471c68a82fa6cbadfd6",
+      "url": "https://vnexpress.net/ai-trong-y-sinh-ranh-gioi-giua-phep-mau-va-tham-hoa-5141687.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-08T22:10:00+00:00",
+      "lang": "vi",
+      "title_orig": "AI trong y sinh: ranh giới giữa phép màu và thảm họa",
+      "summary_orig": "Tại một phòng thí nghiệm ở phía nam San Francisco, nhóm nhà khoa học đang cố gắng đào tạo thế hệ kế nhiệm, nhưng không phải con người mà là robot.",
+      "title_vi": "AI trong y sinh: ranh giới giữa phép màu và thảm họa",
+      "summary_vi": "Tại một phòng thí nghiệm ở phía nam San Francisco, nhóm nhà khoa học đang cố gắng đào tạo thế hệ kế nhiệm, nhưng không phải con người mà là robot.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "9f3d3a3ed3fc79d4c7f4e471c68a82fa6cbadfd6"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 1,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 6,
+      "untranslated": 0
+    }
+  }
+}

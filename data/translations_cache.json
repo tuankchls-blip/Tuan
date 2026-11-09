@@ -188,6 +188,13 @@
     "hash": "eaf7fec20a2cc70d",
     "translated_at": "2026-11-05T06:56:28+00:00"
   },
+  "16495ea32bd44aad9638b746fdc098c684046f89": {
+    "title_vi": "Những người nắm giữ bản quyền Elvis và Eminem đang kiện Suno",
+    "summary_vi": "Suno đang phải đối mặt với một cặp vụ kiện khác. Một nhóm các chủ sở hữu bản quyền âm nhạc của Elvis Presley và nhà xuất bản của một số bản thu âm lớn nhất của Eminem đang kiện công ty âm nhạc AI, tuyên bố nó tạo ra âm nhạc và lời bài hát bắt chước những nghệ sĩ đó một cách bất hợp pháp. Các luật sư trong vụ kiện Presley cho rằng Suno đã vi phạm",
+    "source": "mymemory",
+    "hash": "2fa1f551072ec175",
+    "translated_at": "2026-11-09T06:45:04+00:00"
+  },
   "1698bcd7482e838839a947a307649173679615cc": {
     "title_vi": "Thư viện các lớp (LoL): Sắp xếp theo thứ tự thích ứng các lớp Transformer trong thời gian chạy",
     "summary_vi": "Các lập trình viên máy tính kết hợp các nguyên thủy tính toán có thể tái sử dụng giống nhau, ví dụ, các câu lệnh hoặc vòng lặp có điều kiện, nhưng theo các thứ tự khác nhau để thực hiện các thuật toán khác nhau. Ngược lại, các kiến trúc mô hình ngôn ngữ hiện có luôn thực thi các lớp của chúng theo cùng một thứ tự. Chúng tôi giới thiệu Library of Layers (LoL), một kiến trúc tự động sắp xếp các lớp của nó trong quá trình suy luận để giải quyết vấn đề trong tầm tay.",
@@ -811,6 +818,13 @@
     "hash": "4f1672fa560b4cc9",
     "translated_at": "2026-11-04T06:36:25+00:00"
   },
+  "4f1cb43783a396929abb53fe3f2345d7a4db479f": {
+    "title_vi": "Vi phạm đám mây dữ liệu Iris Ohyama làm lộ thông tin của 7,7 triệu khách hàng",
+    "summary_vi": "Nhà sản xuất Iris Ohyama của Nhật Bản, nhà điều hành nền tảng mua sắm Iris Plaza, tiết lộ rằng thông tin cá nhân của khoảng 7,7 triệu người có thể đã bị lộ sau khi truy cập trái phép vào dịch vụ đám mây của bên thứ ba mà công ty đã sử dụng.",
+    "source": "mymemory",
+    "hash": "fb5eb8a84e252c45",
+    "translated_at": "2026-11-09T06:45:02+00:00"
+  },
   "50809c07f522d0d8b4777f648739bdbc6906506d": {
     "title_vi": "Google là Tổng quan về AI trong lớp học. Các trường học đang tìm kiếm một lối thoát",
     "summary_vi": "Google đang kết hợp Tổng quan về AI với tìm kiếm truyền thống, khiến các bậc cha mẹ và nhà giáo dục tức giận, những người lo lắng rằng các câu trả lời dễ dàng, do máy móc tạo ra đang khiến trẻ kém năng lực hơn.",
@@ -992,6 +1006,13 @@
     "source": "mymemory",
     "hash": "6aeb3bf82b2889d4",
     "translated_at": "2026-11-02T15:36:11+00:00"
+  },
+  "6797542b56c02b570f36b6d4e4e0af8e15b82257": {
+    "title_vi": "Tôi đã sử dụng công cụ sửa đổi công thức nấu ăn dựa trên trí tuệ nhân tạo mới của NYT Cooking và nó thực sự khá tốt",
+    "summary_vi": "The New York Times đã thêm một tính năng beta vào ứng dụng Nấu ăn của mình, giúp độc giả trao đổi nguyên liệu hoặc điều chỉnh công thức nấu ăn cho phù hợp với nhu cầu của họ. Nó chủ yếu đánh trúng mục tiêu.",
+    "source": "mymemory",
+    "hash": "7b25ec5daf7d4d98",
+    "translated_at": "2026-11-09T06:45:06+00:00"
   },
   "685e8104a6fb507b224507b8c2a1328a2588a103": {
     "title_vi": "Đằng sau việc tạo video: Quan sát và hiểu biết sâu sắc về sự hiểu biết đa phương thức từ Kling",
@@ -1721,6 +1742,13 @@
     "hash": "7460044400ec2d47",
     "translated_at": "2026-11-04T06:35:07+00:00"
   },
+  "a5b09ead90d4ea47200247d6604489293226c448": {
+    "title_vi": "Nvidia đang điều tra mối quan hệ của Jensen Huang với một điệp viên Trung Quốc",
+    "summary_vi": "Nvidia đã thông báo rằng họ đang mở một cuộc điều tra về Giám đốc điều hành Jensen Huang và mối quan hệ của ông với giám đốc điều hành Megaspeed Alice Huang, người được Bộ An ninh Nhà nước Trung Quốc tuyển dụng để theo dõi công ty. Một tuyên bố được đăng bởi hội đồng quản trị có nội dung: Hội đồng quản trị NVIDIA đang bắt đầu một cuộc điều tra độc lập",
+    "source": "mymemory",
+    "hash": "95876ec851f18a0e",
+    "translated_at": "2026-11-09T06:44:58+00:00"
+  },
   "a5d359ab784659f1b00c8b5d867a6ee7428f18cc": {
     "title_vi": "Khai thác-S: Học hỏi từ khai thác anh chị em để đào tạo Agent tổng quát",
     "summary_vi": "Sự phát triển khai thác từ một cơ sở chung thể hiện tính địa phương, bổ sung và không liên tục: các biến thể sửa chữa các lỗi khác nhau và các thay đổi tiện ích của chúng khi chính sách tìm hiểu. Thay vì tìm kiếm một dây nịt vượt trội trên toàn cầu, chúng tôi giới thiệu Dây nịt-S để giải cứu một cách có chọn lọc các lỗi của hệ thống thực thi cơ sở thông qua dây nịt anh chị em và chuyển các khả năng thu được thành một chính sách duy nhất vẫn có hiệu quả theo dây nịt ban đầu.",
@@ -1846,6 +1874,13 @@
     "source": "mymemory",
     "hash": "2376eceef12d224d",
     "translated_at": "2026-11-03T06:57:03+00:00"
+  },
+  "b2811de866489491b8d04a0ba70c25987d6cc0c6": {
+    "title_vi": "Người mẫu thế giới sẽ sớm trở thành điều không thể tránh khỏi. Dưới đây là những điều bạn cần biết",
+    "summary_vi": "Chuyển AI từ văn bản sang không gian 3D, các mô hình thế giới mô phỏng vật lý trong thế giới thực để dạy robot và xe tự lái cách điều hướng thực tế.",
+    "source": "mymemory",
+    "hash": "8883bc1a1d8d5c3c",
+    "translated_at": "2026-11-09T06:45:07+00:00"
   },
   "b3c78967a13a03adbe70ac1baed53b2d8df7c78c": {
     "title_vi": "Đã có quảng cáo trong Chatbot. Đây là những gì đang hoạt động - và những gì không",
@@ -2126,6 +2161,13 @@
     "source": "mymemory",
     "hash": "2ffca5dfa939f615",
     "translated_at": "2026-11-08T06:11:13+00:00"
+  },
+  "ce0a393f5bc7e60b54bcb9c5600668950cccd9e1": {
+    "title_vi": "Apple đang chạy đua để làm cho Siri thêm agentic",
+    "summary_vi": "Mark Gurman của Bloomberg cho biết Giám đốc điều hành John Ternus đang gây áp lực với chuyên gia AI Craig Federighi để đẩy nhanh lộ trình Siri và cung cấp một AI agent mạnh mẽ có thể cạnh tranh với Dots của OpenAI hoặc Muse của Meta. Trong khi Federighi đã cung cấp một phiên bản chức năng của Siri AI trên một dòng thời gian cực kỳ ngắn, công ty không có ảo tưởng rằng nó",
+    "source": "mymemory",
+    "hash": "893dba43789354ad",
+    "translated_at": "2026-11-09T06:45:00+00:00"
   },
   "ce3c079ba603a31e291f40c19493531d3a249c46": {
     "title_vi": "Chuyển từ người sang robot thông qua không gian đại diện và hành động cầu nối trong VLA",

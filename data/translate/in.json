@@ -1,37 +1,32 @@
 [
   {
-    "id": "75033d6b18a041016defb8f632069a9bc19c7159",
-    "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
-    "summary": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake. To learn more about this I built a honeypot that resembled perfectly the Danfoss AK-SM 800A and Dixell XWEB interfaces. Both of them are recognized on Shodan as real ones (an not as honeypots). It’s one Python file using only the standard library, and it builds on eppser/danfoss-ak-sm-decoy and public research by Synacktiv, Claroty and Ironhackers. Things that were fun to get right: - Matching real units. I used Shodan records of real devices to match header order, page titles, certificate fields and TLS versions. The Danfoss persona sends nginx headers in the same order as a real AK-SM 800A. The Dixell persona sends no Server header and pads its page to exactly 8,202 bytes. - Recognising exploit attempts. It recognises CVE-2025-41450, the Danfoss “code of the day” login bypass, and records whether the submitted code is correct for today. It also tags attempts targeting three other Danfoss CVEs and the XWEB vulnerabilities. - Letting them in. Default…"
+    "id": "a5b09ead90d4ea47200247d6604489293226c448",
+    "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+    "summary": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light"
   },
   {
-    "id": "2634a86d9aad18eed178678e0827456372301323",
-    "title": "The US let Nvidia sell chips to an empty office in China",
-    "summary": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its offices are empty, \"a hollow gray shell"
+    "id": "ce0a393f5bc7e60b54bcb9c5600668950cccd9e1",
+    "title": "Apple is racing to make Siri more agentic",
+    "summary": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's"
   },
   {
-    "id": "6af494ac81e1ddc61a9d2e1e36966cd0791f786f",
-    "title": "Hackers pull off $133 million French bank heist via service provider",
-    "summary": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v"
+    "id": "4f1cb43783a396929abb53fe3f2345d7a4db479f",
+    "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+    "summary": "Japanese manufacturer Iris Ohyama, the operator of the Iris Plaza shopping platform, disclosed that personal information belonging to about 7.7 million people may have been exposed after unauthorized access to a third-party cloud service the company used."
   },
   {
-    "id": "1de98537a9e614419bcb5a868e02a3ba5caa86f9",
-    "title": "Why a new report on Anthropic automating AI development is alarming researchers",
-    "summary": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation"
+    "id": "16495ea32bd44aad9638b746fdc098c684046f89",
+    "title": "Elvis and Eminem rights holders are suing Suno",
+    "summary": "Suno is facing yet another pair of lawsuits. A group of rights holders of Elvis Presley's music and the publisher of some of Eminem's biggest records are suing the AI music company, claiming it illegally generates music and lyrics that mimic those artists. The lawyers in the Presley suit claim that Suno has violated Tennessee's"
   },
   {
-    "id": "bb9dc983cfcbeb71cd2e49e7d82f7e844953dad6",
-    "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
-    "summary": "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at. A nightly battle in which the chicken usually wins. Recently, my best"
+    "id": "6797542b56c02b570f36b6d4e4e0af8e15b82257",
+    "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
+    "summary": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark."
   },
   {
-    "id": "ac30c3ff268d6e3d97e1bed05174b1312bf4dee8",
-    "title": "AI broke the cybersecurity world. What’s next?",
-    "summary": "Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series looking at AI in real life. I’ve always enjoyed talking to Alex because he’s so direct, and you’re going to hear him say"
-  },
-  {
-    "id": "cd1f9840fc34f55b3f7540e1754e28a663030195",
-    "title": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
-    "summary": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved."
+    "id": "b2811de866489491b8d04a0ba70c25987d6cc0c6",
+    "title": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
+    "summary": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality."
   }
 ]
