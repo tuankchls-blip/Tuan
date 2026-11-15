@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-15",
+  "runs": [
+    {
+      "generated_at": "2026-11-15T13:42:27+07:00",
+      "duration_seconds": 20.9,
+      "sources_ok": 31,
+      "sources_failed": [],
+      "stories": {
+        "important": 0,
+        "notable": 8,
+        "dropped": 30
+      },
+      "translation": {
+        "counts": {
+          "original": 0,
+          "cache": 0,
+          "claude": 0,
+          "google": 0,
+          "mymemory": 8,
+          "untranslated": 0
+        },
+        "claude": {
+          "ran": false,
+          "ok": false,
+          "error": "đã tắt (--no-claude hoặc DIGEST_NO_CLAUDE)"
+        },
+        "claude_problems": [],
+        "machine_errors": [
+          "google b26717d4: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google 3f424bb6: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make ",
+          "google 205541d4: TooManyRequests: Server Error: You made too many requests to the server.According to google, you are allowed to make "
+        ]
+      }
+    }
+  ]
+}

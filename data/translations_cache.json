@@ -405,12 +405,26 @@
     "hash": "df65d3eecb3053ce",
     "translated_at": "2026-11-11T06:37:28+00:00"
   },
+  "19d3409769297d89a6a32d74846a5137e3ee4f76": {
+    "title_vi": "Thành viên hội đồng quản trị OpenAI đã sa thải Sam Altman cho biết chúng ta vẫn không thể tin tưởng các CEO AI",
+    "summary_vi": "Hôm nay, tôi sẽ trò chuyện với Helen Toner, Giám đốc điều hành của Trung tâm An ninh và Công nghệ Mới nổi tại Đại học Georgetown. Tập này là phần hai trong loạt bài của chúng tôi về AI trong đời thực. Helen là một nhân vật nổi tiếng trong cộng đồng an toàn và chính sách AI, mặc dù bà có lẽ được biết đến nhiều nhất vì đã từng tham gia",
+    "source": "mymemory",
+    "hash": "4ce77bef149b0504",
+    "translated_at": "2026-11-15T06:42:44+00:00"
+  },
   "1a4cf3cefec67deb0febe40ce6a955b6056c8a71": {
     "title_vi": "PREEN: Chuyển kiểu màu dựa trên ví dụ với cài đặt trước của trình chỉnh sửa điện thoại thông minh",
     "summary_vi": "Chúng tôi trình bày PREN (Preset Regression via an Exemplar-based Editor Network), trong đó chuyển giao kiểu màu như hồi quy lên 29 tham số của trình chỉnh sửa hình ảnh xác định. Với một hình ảnh nội dung và một tham chiếu phong cách, PREEN dự đoán một giá trị đặt trước, một vectơ của các giá trị thanh trượt trình chỉnh sửa có thể diễn giải và tiêu thụ trình chỉnh sửa, không phải là một hình ảnh raster. Trở ngại chính là giám sát, vì một tài liệu tham khảo thực tế tùy ý thiếu một sự thật cơ bản được đặt trước.",
     "source": "mymemory",
     "hash": "2e294104dc94c76a",
     "translated_at": "2026-11-10T07:26:45+00:00"
+  },
+  "1a55776cd7f3fa76a0c48c8c1c0699b3af144d75": {
+    "title_vi": "Hãy cảnh giác với sự bùng nổ Ransomware mới do AI thúc đẩy",
+    "summary_vi": "ransomware hoàn toàn tự động vẫn chưa xuất hiện – cho đến nay. Nhưng những kẻ tấn công dường như không tinh vi đang sử dụng các công cụ AI để gây thiệt hại.",
+    "source": "mymemory",
+    "hash": "41bf704fb59a09e0",
+    "translated_at": "2026-11-15T06:42:40+00:00"
   },
   "1b9119e805ea04ae4b241b26227784132028e08a": {
     "title_vi": "Các bản sao AI tiềm năng của GTA VI có thể buộc một cổng chính thức nhanh hơn không?",
@@ -516,6 +530,13 @@
     "source": "mymemory",
     "hash": "0baf8a214cd7551d",
     "translated_at": "2026-11-05T06:57:12+00:00"
+  },
+  "205541d416beff19858bf4bcaf447ba129dce693": {
+    "title_vi": "Cursor xác nhận lỗ hổng bảo mật đã dẫn đến phần mở rộng Claude Code độc hại",
+    "summary_vi": "Cursor đã xác nhận rằng họ đã bị vi phạm bảo mật, cho phép tin tặc phát tán một phần mở rộng độc hại có tên Claude Code thông qua chợ ứng dụng của họ sau khi đánh cắp thông tin đăng nhập từ nhà cung cấp cơ sở hạ tầng AI Fireworks AI.",
+    "source": "mymemory",
+    "hash": "df2110f9148bbcaf",
+    "translated_at": "2026-11-15T06:42:39+00:00"
   },
   "20954e3ac0ff87f74efda3333b11cedb4f109ce2": {
     "title_vi": "CWE-bench v2: Độ bao phủ, chất lượng và tính minh bạch cao hơn",
@@ -1049,6 +1070,13 @@
     "hash": "300a5f9216e6d3cd",
     "translated_at": "2026-11-13T06:53:21+00:00"
   },
+  "3f424bb62f49c6217ab104cf6013b9e9e5775ef3": {
+    "title_vi": "Chuyến bay Starship lần thứ 15 bay vào quỹ đạo – chuẩn bị cho khả năng hạ cánh vào thứ Bảy",
+    "summary_vi": "Dù bằng cách này hay cách khác, công ty sẽ nhận được thêm một số dữ liệu vào thứ Bảy.",
+    "source": "mymemory",
+    "hash": "e995be2bd5c05ea5",
+    "translated_at": "2026-11-15T06:42:36+00:00"
+  },
   "3fb867eacf79a74301626152b5067e196b5c1107": {
     "title_vi": "Hàng trăm ứng dụng AI trần tục đang ẩn các tính năng Deepfake lạm dụng tình dục",
     "summary_vi": "WIRED đã phát hiện ra khoảng 400 ứng dụng và trang web liên kết với các nhà phát triển tiếng Trung Quốc trông giống như các công cụ AI thông thường nhưng có các tính năng bí mật cho phép người dùng tạo ra hình ảnh và video bạo lực do AI tạo ra.",
@@ -1300,6 +1328,13 @@
     "source": "mymemory",
     "hash": "8da5b1d591947ac3",
     "translated_at": "2026-11-02T15:38:11+00:00"
+  },
+  "4cb83f2a325913879688e11b023a27349c96ba58": {
+    "title_vi": "Không có phi công. Rất ít kiểm soát viên không lưu. Điều gì có thể xảy ra sai sót?",
+    "summary_vi": "Thông thường, ngành hàng không chậm chấp nhận công nghệ mới – nhưng AI đã đến với bầu trời.",
+    "source": "mymemory",
+    "hash": "6cae70e56414cb5c",
+    "translated_at": "2026-11-15T06:42:48+00:00"
   },
   "4d16177dd74e8154f7f7c36d8b44a34244f3a661": {
     "title_vi": "N-able phát hành các bản sửa lỗi bảo mật cho các lỗ hổng zero-day",
@@ -3233,6 +3268,13 @@
     "hash": "ec09eff0b323d72f",
     "translated_at": "2026-11-13T06:52:28+00:00"
   },
+  "b08cefd9996dfc5a6f6dc1ddd91fe34424b098fa": {
+    "title_vi": "Nghĩa địa AI: danh sách liên tục cập nhật các dự án và công ty khởi nghiệp đã thất bại",
+    "summary_vi": "Từ việc trì hoãn nhiều lần ra mắt Siri AI của Apple đến sự ra mắt \"siêu ứng dụng\" lộn xộn của OpenAI, dưới đây là cái nhìn tổng quan về các dự án AI đã bị đóng cửa hoặc không đạt được kỳ vọng.",
+    "source": "mymemory",
+    "hash": "41a7bedc3e757ae7",
+    "translated_at": "2026-11-15T06:42:46+00:00"
+  },
   "b0e2183967c76e1d3dc94291c59bba735f80ea0e": {
     "title_vi": "Giám sát trạng thái hiển thị: Tách đại diện khỏi lựa chọn chế độ xem trong video phát trực tuyến",
     "summary_vi": "Một hành động được nhìn thấy một lần và cùng một hành động được nhìn thấy ba lần nhận được cùng một nhãn nhận dạng hành động, do đó việc giám sát không yêu cầu mô hình phải được tính. Các câu trả lời được chia sẻ trên các lịch sử khác nhau về thứ tự sự kiện, tích lũy hoặc mối quan hệ để lại những sự khác biệt đó không bị hạn chế; chúng tôi gọi đây là trạng thái dưới đặc điểm kỹ thuật.",
@@ -3267,6 +3309,13 @@
     "source": "mymemory",
     "hash": "2376eceef12d224d",
     "translated_at": "2026-11-03T06:57:03+00:00"
+  },
+  "b26717d449a421fa88c85772050927cb442473a2": {
+    "title_vi": "Nvidia bị cáo buộc đã dàn dựng tình trạng khan hiếm bằng cách tài trợ cho các công ty khởi nghiệp về AI mua GPUs của họ",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "95533beeb8201d93",
+    "translated_at": "2026-11-15T06:42:34+00:00"
   },
   "b2811de866489491b8d04a0ba70c25987d6cc0c6": {
     "title_vi": "Người mẫu thế giới sẽ sớm trở thành điều không thể tránh khỏi. Dưới đây là những điều bạn cần biết",
@@ -4541,6 +4590,13 @@
     "source": "mymemory",
     "hash": "e9c308897825c8f2",
     "translated_at": "2026-11-11T06:36:46+00:00"
+  },
+  "f9a3c449e5989b1d35e5805bde68b8ad845f3218": {
+    "title_vi": "datasette-llm 0.1a11",
+    "summary_vi": "Bản phát hành: datasette-llm 0.1a11 datasette-llm là plugin trung gian cho Datasette, hỗ trợ việc cấu hình LLMs để sử dụng với các plugin Datasette khác. Bản phát hành này bổ sung hỗ trợ cho các điểm cuối tương thích với OpenAI, nhờ đó bạn có thể cấu hình Datasette để sử dụng một LLM được lưu trữ ở bất kỳ đâu có sử dụng giao thức web giả tiêu chuẩn OpenAI.",
+    "source": "mymemory",
+    "hash": "b1b68d2c3545a4d6",
+    "translated_at": "2026-11-15T06:42:42+00:00"
   },
   "fa35658d4c7b58bc0af565aeb867b1b46682283f": {
     "title_vi": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",

@@ -1,192 +1,42 @@
 [
   {
-    "id": "aa4bf4548cc5dfc6ea7c2d95bc37d1d1e808b8fe",
-    "title": "Jensen Huang agrees to testify before Congress",
-    "summary": "Huang, who was ousted as CEO following reports of an alleged affair with a woman suspected of spying for China, agreed to testify Wednesday after several senior lawmakers threatened to subpoena him."
-  },
-  {
-    "id": "7afe22db314e8f379508d480bce891aa992c150d",
-    "title": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
-    "summary": "System One models promise fast, general-purpose decision-making without lengthy token generation. However, understanding their capability spectrum and decision reliability requires more than aggregate performance on current benchmarks. Existing evaluations often provide limited insight into the breadth of model capabilities and the reliability of their decisions. We introduce SO-Arena, a benchmark characterizing the capability spectrum and decision reliability of System One models across 11 domains and five capability families. For the capability spectrum, SO-Arena offers evidence-grounded evaluation through reliable sources and manual verification of reference labels against model-visible inputs; fine-grained capability assessment through domain-specific difficulty criteria; and realistic interactive evaluation, where models iteratively execute actions in sandboxes. Reasoning-intensive tasks further enable system one-two comparison. Beyond accuracy, SO-Arena assesses decision reliability through two complementary measures: decision stability under controlled option-set changes and missing-answer recognition when no valid option is available. Evaluations across 21 models reveal…"
-  },
-  {
-    "id": "abae26331e955754513e19c5e9795557700521bf",
-    "title": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
-    "summary": "Recent work suggests that pretrained image generators encode real-world understanding beyond image synthesis. Vision Banana exploits this by framing vision tasks as conditional image editing. However, its data, weights, code, and implementation details are not public. We present Open Vision Banana (OVB), a fully open and reproducible recipe for converting pretrained generators into unified multi-task perception systems. Our analyses identify the design choices that matter most for generalization, including color encoding, prompt design, parameter adaptation, and task balancing. These choices interact, so individually helpful choices can hurt when combined with others. Starting from 4B and 9B parameter open-weight base models and using 2.1M-3.8M training pairs from public datasets, OVB surpasses Vision Banana's reported Cityscapes zero-shot performance (73.9 vs. 69.9 mIoU) and rivals state-of-the-art affine-invariant depth estimators. Its non-zero-shot variants come within five points of Vision Banana on referring and reasoning segmentation but remain further behind on instance segmentation. All models largely retain the base model's image-editing abilities. With legend ensembling…"
-  },
-  {
-    "id": "5bf4951adbe9698dd9e45df17c29fd95e4f30a2d",
-    "title": "Introducing ChatGPT Wallet",
-    "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections."
-  },
-  {
-    "id": "9d279f8afefe2a55d2f221f4d9556c9cabd1af65",
-    "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
-    "summary": "Video generation models produce visually realistic videos but still struggle with physical dynamics and causal consistency. Learning from generated videos requires fine-grained physical supervision, yet reliable quality judgments, correction pairs, and controlled variations are difficult to obtain. Large language models (LLMs) possess physical knowledge, but struggle to reliably guide video generation models in producing their training videos. We present PhysLoop, a unified harness designed to support physically grounded self-improvement in video generation models. The harness guides and constrains LLMs throughout video generation, selection, and correction, distilling their physical knowledge into physically consistent videos. The framework supports controllable training-data construction and inference-time video repair. By identifying and correcting failures, PhysLoop marks a key milestone toward recursive self-improvement (RSI) in video generation models with limited human intervention. We release 100K videos spanning diverse, realistic indoor and outdoor scenes, along with generation tools and two evaluation datasets: PhysLoop-Gen and PhysLoop-Repair. We evaluate controllable…"
-  },
-  {
-    "id": "284da35216fbfbbfc00bcec4c544fcec15a23431",
-    "title": "WorldDraft: If Code Builds the World, Can Video Models Just Render It?",
-    "summary": "Multimodal coding agents decouple 4D world construction from visual generation, repurposing video models from world generators toward generative renderers. This division of labor raises a fundamental question: if code builds the world, can video models just render it? A reliable generative renderer hinges on two complementary criteria: (i) world preservation, retaining prescribed 4D kinematics and camera paths; and (ii) visual realization, persistently binding text-specified target attributes over time. To evaluate this capability, we introduce WorldDraft, a benchmark of 432 strictly paired test cases across 48 executable 4D world families spanning six dynamic challenge categories. Under a 3 times 3 factorial design, WorldDraft orthogonally crosses draft granularity (abstract proxy to previs) and appearance alignment (neutral to conflicting) under identical dynamics. Extensive evaluations across 12 representative models reveal that: (I) world preservation and visual realization remain in stark operational tension; (II) richer draft scaffolding anchors structure but paradoxically impairs appearance fidelity; and (III) conflicting source cues trigger severe source leakage (up to…"
-  },
-  {
-    "id": "dd9560d2d329bdc38e3c678b1f15d7453aee0609",
-    "title": "CVE-2026-114713: UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
-    "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority."
-  },
-  {
-    "id": "79fc68065bf3d9ced92f1e16ecca3068848bffcd",
-    "title": "CVE-2026-123039: Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
-    "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root."
-  },
-  {
-    "id": "606399e29c9ee7e90e0ce6fa5828edcccd9078b2",
-    "title": "New AI “copilot” helps engineers design better structures",
-    "summary": "The system asks humans for feedback to increase trust in machine-generated designs for buildings and bridges."
-  },
-  {
-    "id": "40e78db6601d46e62d9253d05213567fc448d804",
-    "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+    "id": "b26717d449a421fa88c85772050927cb442473a2",
+    "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
     "summary": ""
   },
   {
-    "id": "666c9ce2ae9f1142ca5aa5b4182fc8f7f4be48b9",
-    "title": "Helping robots fit into the human workplace",
-    "summary": "Founded by Anthony Jules ’92, SM ’92 and Professor Emeritus Rodney Brooks, Robust AI’s robots are designed to collaborate with humans in factories and warehouses."
+    "id": "3f424bb62f49c6217ab104cf6013b9e9e5775ef3",
+    "title": "Starship flight 15 powers to orbit—setting up a possible catch on Saturday",
+    "summary": "One way or another, the company will get some more data on Saturday."
   },
   {
-    "id": "be81354d8a302a35aaed2627d58a26fa2f7f60b7",
-    "title": "Advancing science & engineering with Antigravity’s /teamwork",
-    "summary": "Education Innovation"
+    "id": "205541d416beff19858bf4bcaf447ba129dce693",
+    "title": "Cursor confirms security breach led to malicious Claude Code extension",
+    "summary": "Cursor confirmed it suffered a security breach that let hackers distribute a malicious Claude Code extension through its marketplace after stealing credentials from AI infrastructure provider Fireworks AI."
   },
   {
-    "id": "2427bacb74a96b4b261bbbfd7ef785414a53a540",
-    "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
-    "summary": ""
+    "id": "1a55776cd7f3fa76a0c48c8c1c0699b3af144d75",
+    "title": "Beware the New AI-Fueled Ransomware Boom",
+    "summary": "Fully automated ransomware hasn’t arrived—yet. But seemingly unsophisticated attackers are using AI tools to wreak havoc."
   },
   {
-    "id": "8400bdfe1e2afd49cb164842f3acb314375cda23",
-    "title": "XYBench: Helping with the problem behind the question",
-    "summary": ""
+    "id": "f9a3c449e5989b1d35e5805bde68b8ad845f3218",
+    "title": "datasette-llm 0.1a11",
+    "summary": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.default_model ' { \"model\": \"lmstudio-qwen\", \"model_name\": \"qwen/qwen3.8-27b\", \"api_base\": \"http://localhost:1234/v1\" } ' content.db And you'll get a local server running a Datasette Agent instance powered by your local model! Tags: uv , datasette-agent , llm , datasette , llms , ai , generative-ai"
   },
   {
-    "id": "07ee971b0eeb1d811d3df3c303210db0e694faac",
-    "title": "Stanford hai backs ambitious ai projects with 2026 hoffman yee grants",
-    "summary": ""
+    "id": "19d3409769297d89a6a32d74846a5137e3ee4f76",
+    "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+    "summary": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on"
   },
   {
-    "id": "d1318183fe172893638959c7661c0c781ed07c8d",
-    "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-    "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment."
+    "id": "b08cefd9996dfc5a6f6dc1ddd91fe34424b098fa",
+    "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+    "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations."
   },
   {
-    "id": "aac4e777518bea919ec76afc13cc955907ecb495",
-    "title": "G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation",
-    "summary": "Discrete autoregressive models offer a scalable framework for image generation. However, they face a fundamental trade-off: long token sequences preserve representation quality but slow generation, while aggressive spatial compression reduces representation capacity. Based on product quantization, we show that, under a fixed nominal information budget, group size should scale quadratically with the per-axis spatial compression factor. Building on this principle, we propose GSTAR, a spatial--group co-scaling framework that enables \\(32\\times\\) and even effective \\(64\\times\\) compression while preserving strong reconstruction, understanding, and generation performance. Since larger groups introduce intra-group dependencies that must be modeled efficiently, we analyze their impact on inference latency and generation quality and introduce a semi-autoregressive decoder that combines parallel feature computation with lightweight causal modeling. With these designs, our highly compressed models perform competitively with leading models across five representative text-to-image benchmarks (GenEval, DPG-Bench, PRISM, LongText-Bench, and Qwen-Image-Bench). At \\(1024\\times1024\\) resolution…"
-  },
-  {
-    "id": "8fbf66c8f7081f86f4884e117ddf26d3426952ac",
-    "title": "Unbundling Multimodal Vision Encoding",
-    "summary": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion…"
-  },
-  {
-    "id": "254acb1cf38ba08b4c6c8f73cbc6effd9f3ce168",
-    "title": "Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction",
-    "summary": "Self-evolving agents improve their own skills, memory, and harness code from experience without retraining the base LLM, and group-evolving agents go further by sharing these lessons across agents. Yet most such systems overlook that sharing across users and heterogeneous agents requires deciding who can benefit from each lesson and what information must remain private. We present MixUA, a memory system that distills independent user-agent trajectories into lessons and assigns each lesson to a user-agent pair, user, agent, or global scope according to whom it benefits and what it may disclose. For evaluation, we introduce CrossLearnBench, a mixed-user-agent benchmark that pairs established agent tasks with user preferences and privacy probes that test whether private facts leak into memory other users can read. With five users and seven agents, MixUA raises pass rates by up to 16 points over no memory and 5 over a single global memory, even on tasks previously tried only by other users on other agents. It retains up to 90% of previously stated preferences, and at most 0.02% of privacy probes find a planted private fact in a forbidden scope. We hope MixUA offers a scalable path…"
-  },
-  {
-    "id": "fbde6006964fd0fb013f07adb9d3290273586ab8",
-    "title": "FAA has lifted its third-ever nationwide ground stop",
-    "summary": "Secretary of Transportation Sean Duffy blamed obsolete equipment for the outage."
-  },
-  {
-    "id": "2741c921d01961e0f8090191a39c7a8a00354ce4",
-    "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
-    "summary": "In this report, we introduce the Reciprocal World Model (RWM) and present Duo v1, a full-duplex world model that continuously perceives audiovisual inputs while responding to users in real time. The RWM treats intelligence and physical reality as equally fundamental to what constitutes a world. Existing world models largely focus on simulating the latter, leaving reasoning and decision-making as external controls rather than intrinsic parts of the world itself. In RWM, we identify two equally fundamental capabilities: Intent, which provides the cognition underlying world interactions, and Realization, which generates coherent audio-visual behavior. To realize this formulation, Duo v1 introduces three key technical designs: (1) Leveraging autoregressive modeling for continuous interaction reasoning and participation decisions, rather than restricting it to instruction understanding for diffusion models. (2) Constructing chunk-specific conditions and synchronize tokens across Intent and Realization on a unified timeline. Module-specific attention masks enforce causal dependencies both within and across chunks, preventing access to future inputs. (3) Mitigating distribution shift in…"
-  },
-  {
-    "id": "731431771b9cdea1259086cd2dde1d4231402f01",
-    "title": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
-    "summary": "Decision models answer a question with a typed output, such as a choice among options with a probability for each, so one model can choose an agent's actions, evaluate actions already taken, or score every action to teach a policy with reinforcement learning. Prior work has studied them mainly as actors, judging their usefulness by how well they act. We ask whether a decision model that acts poorly can still teach well. We compare three decision models and three general LLMs as actors and judges on ALFWorld, and use JEV as a teacher on ALFWorld and WebShop. As actors, all six models are pulled away from a subgoal that must come first by an easier one. As judges that see the whole trajectory, the same models credit the steps toward that subgoal, and asking whether each action helped, rather than whether the task will succeed, separates useful from useless actions. As a teacher, JEV raises a Qwen2.5-1.5B policy over GRPO from 72.8% to 82.9% success on ALFWorld and from 56.8% to 71.4% on WebShop. These results suggest that a poor actor can still teach well, because judging an action after the episode ends reveals the consequences that acting must anticipate. Code is available at…"
-  },
-  {
-    "id": "04469787bcf42b7f5de3197518ecb7d59ffc1fee",
-    "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
-    "summary": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup…"
-  },
-  {
-    "id": "38741df50e34ad2460eb78bac0180c24c6f90114",
-    "title": "AI agent startup LangChain hits $3B valuation",
-    "summary": "LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith."
-  },
-  {
-    "id": "9086aefe277038e84ca52817881543895ca445d4",
-    "title": "How one AI agent exposed five critical enterprise security gaps",
-    "summary": "An AI agent built to automate invoice processing could be manipulated into changing vendor bank details through a malicious email, without triggering traditional security alerts. Token Security examines five critical AI agent security gaps and shares practical guidance from industry security leaders on preventing them."
-  },
-  {
-    "id": "1bd099ba94a316570fd9f695e3ab841e81675d53",
-    "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
-    "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple"
-  },
-  {
-    "id": "d7b46d3d8c2d7def68b18efc4b6f16b700dc4777",
-    "title": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
-    "summary": "Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact-rich tasks in real-world environments. Further progress depends on two complementary resources: demonstrations of human behavior that supervise how tasks are performed, and interactive environments in which policies can be rolled out, evaluated, and improved in closed loop. Language models have advanced along well-characterized scaling laws; the corresponding question for physical AI is how capability scales with environments and behaviors, which first requires identifying which data to scale and how to produce and reuse such data continuously. To address this question, we introduce Ropedia Xperience 2, comprising 1,589 released metric-scale 3D scans and a collection of 4,230 egocentric recordings of 74 tasks (131 hours). We further show that each capture can be repurposed for robot learning: scenes are converted into physically interactive simulation environments, human motion is retargeted to whole-body robot trajectories, and additional robot behaviors are obtained through virtual…"
-  },
-  {
-    "id": "ce8ca897244b5652ef7e4b76d0dc298d1abcf785",
-    "title": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
-    "summary": "Self-improving embodied agents are increasingly being developed and compared on robot simulation benchmarks. Several recent works expose the benchmark's success criteria to the learning agent, a practice we call Criteria Exposure (CE). These criteria, originally written to verify policies trained by imitation learning, often demand more than the corresponding language instructions, so a score from such a verifier may not faithfully reflect whether the instructed task was completed, especially for robot-control programs written by an agent. As embodied coding agents report ever higher benchmark scores, a natural question arises: when a coding agent is exposed to the benchmark's criteria, does it generate code that better performs the instructed task, or code that simply overfits to the verification criteria? We conduct controlled experiments with a self-improving agent with and without CE, and find that with CE the agent quickly produces code with a higher success rate under the given criteria, but this advantage disappears when the criteria are changed slightly without departing from the original instructions. More importantly, the skills the agent develops under CE transfer…"
-  },
-  {
-    "id": "3c1c091f2df373b895a3729d6732e3de7189d85e",
-    "title": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
-    "summary": "We present UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understanding and generation. Built on a Mixture-of-Transformer-Experts backbone with approximately 9B parameters in each branch, UniSpark combines full attention for explicit token interactions with GatedDeltaNet linear attention for compact context propagation. Autoregressive text prediction and visual flow matching jointly support visual question answering, text-to-image generation, instruction-guided editing, and interleaved text-image prediction. In interleaved generation, noisy visual targets are isolated from subsequent predictions, while clean visual representations provide context for later outputs. A blockwise protocol enforces this distinction through attention masks in full-attention layers and recurrent-state retention rules in linear-attention layers. The selected training sources contain 159.7M generation samples, 213.4M understanding samples, and 624.8K interleaved sequences. A four-stage curriculum jointly trains multimodal understanding and visual generation, refining answer accuracy and instruction following while extending image synthesis to 2K. UniSpark scores…"
-  },
-  {
-    "id": "408f1e399c8022f8375bf16e22ff6e04fe96e0bb",
-    "title": "Run Native DLA Inference in Python on NVIDIA Jetson AGX Orin Using cuDLA",
-    "summary": "AI applications at the edge often need to run multiple neural networks within limited compute and power budgets. NVIDIA Deep Learning Accelerator (DLA)..."
-  },
-  {
-    "id": "59b7f6903a29d8eff009ba3b3ce6aa024879f808",
-    "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
-    "summary": "Vulnerable Check Point Security Gateway instances have been targeted in PHP2Shell attacks that deployed data-wiping malware on VMware ESXi hosts."
-  },
-  {
-    "id": "0baeaac39658de8c5d4bf3cb69a1187da1fa3b18",
-    "title": "Check Point warns of zero-day flaw exploited for root access",
-    "summary": "Check Point Software has released emergency hotfixes to address a high-severity flaw that hackers have been exploiting to gain root privileges and establish persistence on vulnerable devices since late October."
-  },
-  {
-    "id": "b3c84623c44d365525484d3d0cb6c4a25c49a8d2",
-    "title": "Brave Search API now accepts agentic payments via the x402 protocol",
-    "summary": ""
-  },
-  {
-    "id": "4ecfb44c1aedd9ae21362ab1c19013da4102a598",
-    "title": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
-    "summary": "Airlines praised the AI tool, but the air traffic controllers’ union wasn’t involved."
-  },
-  {
-    "id": "f17748102e2c4282790684de95422a1224afa0cf",
-    "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
-    "summary": "New research shows the most advanced AI models from China were trained on banned Nvidia chips."
-  },
-  {
-    "id": "c371d06a5231e17db6560fc5c919e9b7f03a3795",
-    "title": "OpenAI board member worries an AI \"takeover\" of society could be months away",
-    "summary": "Researcher traces a path from AI reward hacking to potential human extinction."
-  },
-  {
-    "id": "e00ed907e42f1c2aa472005630136ea327818ecc",
-    "title": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
-    "summary": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure."
-  },
-  {
-    "id": "f37c9d28309c96b11e5726c70af5a586f4115749",
-    "title": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
-    "summary": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out."
+    "id": "4cb83f2a325913879688e11b023a27349c96ba58",
+    "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
+    "summary": "Normally, aviation is slow to embrace new technology—but AI has come for the skies."
   }
 ]

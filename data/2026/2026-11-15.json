@@ -1,0 +1,492 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T13:42:27+07:00",
+  "window": {
+    "start": "2026-11-14T07:00:00+07:00",
+    "end": "2026-11-15T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": "feed trống"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 34,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1387,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 907,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 2,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 46,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "b26717d449a421fa88c85772050927cb442473a2",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "source_id": "hackernews",
+      "published_at": "2026-11-14T02:52:59+00:00",
+      "lang": "en",
+      "title_orig": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+      "summary_orig": "",
+      "title_vi": "Nvidia bị cáo buộc đã dàn dựng tình trạng khan hiếm bằng cách tài trợ cho các công ty khởi nghiệp về AI mua GPUs của họ",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "business",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "GPUs",
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 1062
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 1062 +3",
+        "từ khóa Hạ tầng +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b26717d449a421fa88c85772050927cb442473a2"
+      ]
+    },
+    {
+      "id": "3f424bb62f49c6217ab104cf6013b9e9e5775ef3",
+      "url": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/",
+      "source_id": "ars",
+      "published_at": "2026-11-14T00:49:13+00:00",
+      "lang": "en",
+      "title_orig": "Starship flight 15 powers to orbit—setting up a possible catch on Saturday",
+      "summary_orig": "One way or another, the company will get some more data on Saturday.",
+      "title_vi": "Chuyến bay Starship lần thứ 15 bay vào quỹ đạo – chuẩn bị cho khả năng hạ cánh vào thứ Bảy",
+      "summary_vi": "Dù bằng cách này hay cách khác, công ty sẽ nhận được thêm một số dữ liệu vào thứ Bảy.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50500963",
+          "title": "SpaceX catches the Starship to end Flight 15"
+        }
+      ],
+      "category": "other",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [],
+      "signals": {
+        "hn_points": 1030
+      },
+      "reasons": [
+        "nguồn ars +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 1030 +3"
+      ],
+      "article_ids": [
+        "3f424bb62f49c6217ab104cf6013b9e9e5775ef3",
+        "8605b79324d8e67824edc4e57b957d59ecdc1caf"
+      ]
+    },
+    {
+      "id": "205541d416beff19858bf4bcaf447ba129dce693",
+      "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-14T17:27:25+00:00",
+      "lang": "en",
+      "title_orig": "Cursor confirms security breach led to malicious Claude Code extension",
+      "summary_orig": "Cursor confirmed it suffered a security breach that let hackers distribute a malicious Claude Code extension through its marketplace after stealing credentials from AI infrastructure provider Fireworks AI.",
+      "title_vi": "Cursor xác nhận lỗ hổng bảo mật đã dẫn đến phần mở rộng Claude Code độc hại",
+      "summary_vi": "Cursor đã xác nhận rằng họ đã bị vi phạm bảo mật, cho phép tin tặc phát tán một phần mở rộng độc hại có tên Claude Code thông qua chợ ứng dụng của họ sau khi đánh cắp thông tin đăng nhập từ nhà cung cấp cơ sở hạ tầng AI Fireworks AI.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "hackers",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "205541d416beff19858bf4bcaf447ba129dce693"
+      ]
+    },
+    {
+      "id": "1a55776cd7f3fa76a0c48c8c1c0699b3af144d75",
+      "url": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-14T13:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Beware the New AI-Fueled Ransomware Boom",
+      "summary_orig": "Fully automated ransomware hasn’t arrived—yet. But seemingly unsophisticated attackers are using AI tools to wreak havoc.",
+      "title_vi": "Hãy cảnh giác với sự bùng nổ Ransomware mới do AI thúc đẩy",
+      "summary_vi": "ransomware hoàn toàn tự động vẫn chưa xuất hiện – cho đến nay. Nhưng những kẻ tấn công dường như không tinh vi đang sử dụng các công cụ AI để gây thiệt hại.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "ransomware",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa Bảo mật +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "1a55776cd7f3fa76a0c48c8c1c0699b3af144d75"
+      ]
+    },
+    {
+      "id": "f9a3c449e5989b1d35e5805bde68b8ad845f3218",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+      "source_id": "simonwillison",
+      "published_at": "2026-11-14T23:59:28+00:00",
+      "lang": "en",
+      "title_orig": "datasette-llm 0.1a11",
+      "summary_orig": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.default_model ' { \"model\": \"lmstudio-qwen\", \"model_name\": \"qwen/qwen3.8-27b\", \"api_base\": \"http://localhost:1234/v1\" } ' content.db And you'll get a local server running a Datasette Agent instance powered by your local model! Tags: uv , datasette-agent , llm , datasette , llms , ai , generative-ai",
+      "title_vi": "datasette-llm 0.1a11",
+      "summary_vi": "Bản phát hành: datasette-llm 0.1a11 datasette-llm là plugin trung gian cho Datasette, hỗ trợ việc cấu hình LLMs để sử dụng với các plugin Datasette khác. Bản phát hành này bổ sung hỗ trợ cho các điểm cuối tương thích với OpenAI, nhờ đó bạn có thể cấu hình Datasette để sử dụng một LLM được lưu trữ ở bất kỳ đâu có sử dụng giao thức web giả tiêu chuẩn OpenAI.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLM",
+        "LLMs"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn simonwillison +2",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "f9a3c449e5989b1d35e5805bde68b8ad845f3218"
+      ]
+    },
+    {
+      "id": "19d3409769297d89a6a32d74846a5137e3ee4f76",
+      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-14T15:00:00+00:00",
+      "lang": "en",
+      "title_orig": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+      "summary_orig": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on",
+      "title_vi": "Thành viên hội đồng quản trị OpenAI đã sa thải Sam Altman cho biết chúng ta vẫn không thể tin tưởng các CEO AI",
+      "summary_vi": "Hôm nay, tôi sẽ trò chuyện với Helen Toner, Giám đốc điều hành của Trung tâm An ninh và Công nghệ Mới nổi tại Đại học Georgetown. Tập này là phần hai trong loạt bài của chúng tôi về AI trong đời thực. Helen là một nhân vật nổi tiếng trong cộng đồng an toàn và chính sách AI, mặc dù bà có lẽ được biết đến nhiều nhất vì đã từng tham gia",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI safety",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa An toàn AI +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "19d3409769297d89a6a32d74846a5137e3ee4f76"
+      ]
+    },
+    {
+      "id": "b08cefd9996dfc5a6f6dc1ddd91fe34424b098fa",
+      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-14T17:30:00+00:00",
+      "lang": "en",
+      "title_orig": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "summary_orig": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "title_vi": "Nghĩa địa AI: danh sách liên tục cập nhật các dự án và công ty khởi nghiệp đã thất bại",
+      "summary_vi": "Từ việc trì hoãn nhiều lần ra mắt Siri AI của Apple đến sự ra mắt \"siêu ứng dụng\" lộn xộn của OpenAI, dưới đây là cái nhìn tổng quan về các dự án AI đã bị đóng cửa hoặc không đạt được kỳ vọng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "b08cefd9996dfc5a6f6dc1ddd91fe34424b098fa"
+      ]
+    },
+    {
+      "id": "4cb83f2a325913879688e11b023a27349c96ba58",
+      "url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-14T11:00:00+00:00",
+      "lang": "en",
+      "title_orig": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
+      "summary_orig": "Normally, aviation is slow to embrace new technology—but AI has come for the skies.",
+      "title_vi": "Không có phi công. Rất ít kiểm soát viên không lưu. Điều gì có thể xảy ra sai sót?",
+      "summary_vi": "Thông thường, ngành hàng không chậm chấp nhận công nghệ mới – nhưng AI đã đến với bầu trời.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "4cb83f2a325913879688e11b023a27349c96ba58"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 0,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 8,
+      "untranslated": 0
+    }
+  }
+}
