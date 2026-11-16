@@ -1,0 +1,1620 @@
+{
+  "kind": "weekly",
+  "key": "2026-W46",
+  "start": "2026-11-09",
+  "end": "2026-11-15",
+  "previous_key": "2026-W45",
+  "generated_at": "2026-11-16T13:40:15+07:00",
+  "days_with_data": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "days_expected": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "days_total": 7,
+  "complete": true,
+  "highlights": [
+    {
+      "day": "2026-11-14",
+      "id": "aa4bf4548cc5dfc6ea7c2d95bc37d1d1e808b8fe",
+      "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+      "source_id": "techcrunch-ai",
+      "lang": "en",
+      "title_orig": "Jensen Huang agrees to testify before Congress",
+      "title_vi": "Jensen Huang đồng ý ra điều trần trước Quốc hội",
+      "summary_vi": "Ông Huang, người đã bị cách chức CEO sau các cáo buộc về mối quan hệ tình cảm với một phụ nữ bị nghi ngờ làm gián điệp cho Trung Quốc, đã đồng ý ra làm chứng vào thứ Tư sau khi một số nghị sĩ cấp cao đe dọa triệu tập ông.",
+      "translated": true,
+      "category": "business",
+      "subcategory": null,
+      "label": "important",
+      "score": 11.0,
+      "n_sources": 4,
+      "matched_keywords": [
+        "open-weight",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "97138dfcf19d4bc700b707d2241ff32cdbe5e7bc",
+      "url": "https://huggingface.co/papers/2611.09124",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Toward the Era of Agentic Embodied Intelligence",
+      "title_vi": "Hướng tới kỷ nguyên của Agentic Thể hiện trí thông minh",
+      "summary_vi": "Các mô hình nền tảng ngày càng hướng dẫn các hành động của robot, nhưng quyền tự chủ bền vững đòi hỏi phải kiểm soát hiệu quả và khôi phục lỗi. Chúng tôi giới thiệu A2-MEAS, một khung đa agent được thể hiện được xây dựng xung quanh mã như một giao diện mở rộng. Các mã hiệu chỉnh đã học kết hợp ngôn ngữ hiệu chỉnh, bằng chứng không gian, lịch sử thực hiện và đề xuất hành động. MetaBrain cung cấp giám sát đào tạo và hướng dẫn thời gian chạy.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "agentic",
+        "vision-language",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "930c9f51b3fa5f4d70725171004636e6485227b3",
+      "url": "https://huggingface.co/papers/2611.12762",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery",
+      "title_vi": "Sage-Taiyi: Kiến trúc siêu nhận thức cho khám phá khoa học",
+      "summary_vi": "Chúng tôi giới thiệu Sage-Taiyi, một kiến trúc lấy cảm hứng từ siêu nhận thức sử dụng kiến thức khoa học tích lũy để hướng dẫn những gì cần điều tra tiếp theo và cách điều tra nó. Thông qua giám sát và kiểm soát rõ ràng, hệ thống sửa đổi sự hiểu biết của mình về bằng chứng, giả định và các câu hỏi chưa được giải quyết, sau đó sử dụng các đánh giá này để điều chỉnh các mục tiêu nghiên cứu và chọn các phương pháp lý luận có thể tái sử dụng.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "benchmark",
+        "benchmarks",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "2229db3291695b8eda60f98a02f47cbdced8f2ba",
+      "url": "https://huggingface.co/papers/2611.10015",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Micius-Flash: Lightweight Agentic Intelligence for Engineering",
+      "title_vi": "Micius-Flash: Trí tuệ nhân tạo Agentic nhẹ cho kỹ thuật",
+      "summary_vi": "Chúng tôi xin giới thiệu Micius-Flash, một mô hình 27 tỷ tham số dành cho kỹ thuật với đầu vào đa phương thức gốc, khả năng suy luận sâu và cửa sổ ngữ cảnh 256K-token. Chúng tôi thiết kế đường ống dữ liệu Micius như một bánh đà dữ liệu được điều khiển bởi cây tri thức, bao gồm ba giai đoạn: xây dựng và mở rộng cây tri thức, tổng hợp dữ liệu và xác thực chất lượng với sự tăng cường ví dụ khó.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "agentic",
+        "multimodal",
+        "benchmark",
+        "benchmarks",
+        "datasets"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "3ab674d00e1b28ce3740ba00b15680d9727dfec6",
+      "url": "https://www.wired.com/story/chinas-nvidia-honeypot-isnt-surprising-jensen-huang-fell-for-it-anyway/",
+      "source_id": "wired-ai",
+      "lang": "en",
+      "title_orig": "China’s Nvidia Honeypot Isn’t Surprising. Jensen Huang Fell for It Anyway",
+      "title_vi": "Bẫy Nvidia của Trung Quốc không có gì đáng ngạc nhiên. Dù vậy, Jensen Huang vẫn mắc bẫy",
+      "summary_vi": "Việc Trung Quốc sử dụng gián điệp tình dục là một chiến thuật tình báo đã được áp dụng từ lâu, với những ví dụ gần đây gây xôn xao dư luận. Vậy làm thế nào mà giám đốc điều hành AI quyền lực nhất thế giới lại sập bẫy?",
+      "translated": true,
+      "category": "policy",
+      "subcategory": null,
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 5,
+      "matched_keywords": [
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "85e69ee9d60b6746d8ec0b1fbc7539285f08de6c",
+      "url": "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates",
+      "source_id": "verge-ai",
+      "lang": "en",
+      "title_orig": "Adobe is going all in on agentic AI",
+      "title_vi": "Adobe sẽ tham gia vào agentic AI",
+      "summary_vi": "Adobe đang tự cam kết với quan niệm rằng chatbot và AI agents có thể là trợ lý thiết kế tiếp theo của bạn, hoặc thậm chí tự động hóa quy trình làm việc sáng tạo và các nhiệm vụ lặp đi lặp lại thay cho bạn. Một số công cụ và tính năng được công bố hôm nay tại hội nghị Max của Adobe ở Miami, Florida, bao gồm cho phép AI agents của bên thứ ba ưu tiên của bạn truy cập và thay đổi",
+      "translated": true,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 3,
+      "matched_keywords": [
+        "AI agents",
+        "agentic",
+        "RAG",
+        "multimodal",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "fcc02b9fa5cbb70a6e9a3848fd37dfeff721c542",
+      "url": "https://huggingface.co/papers/2611.12886",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning",
+      "title_vi": "Định dạng lại: Chưng cất theo chính sách đa giáo viên phù hợp với quan sát cho lý luận trực quan Agentic",
+      "summary_vi": "Học tăng cường Agentic (RL) và chưng cất đa giáo viên theo chính sách (MOPD) cung cấp các tuyến bổ sung cho đào tạo sau. Tuy nhiên, đối với agents trực quan, việc sử dụng công cụ đưa ra hai thách thức liên quan. Các mô hình có thể bỏ qua các quan sát được trả lại bằng công cụ hữu ích, trong khi các hành động có căn cứ kém có thể hạn chế bằng chứng có sẵn cho việc chưng cất tiếp theo.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "agentic",
+        "benchmarks",
+        "alignment"
+      ]
+    },
+    {
+      "day": "2026-11-13",
+      "id": "51fa12b3ef7c507b831005e18963a27f460a42be",
+      "url": "https://huggingface.co/papers/2611.13410",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+      "title_vi": "SteerDistill: Định lượng LLM Agents thông qua việc lái xe của người hướng dẫn trong vòng kín",
+      "summary_vi": "Lượng tử hóa số bit thấp làm giảm chi phí suy luận của LLM agents nhưng có thể ảnh hưởng đến sự thành công của nhiệm vụ. Khi xem xét các lần triển khai không thành công, chúng tôi nhận thấy rằng agents được lượng tử hóa bỏ qua các yêu cầu của nhiệm vụ hoặc các điều kiện môi trường, dẫn đến các quá trình chuyển đổi môi trường khác biệt so với các tham chiếu có độ chính xác đầy đủ thành công.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "agentic",
+        "benchmarks",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-11-14",
+      "id": "7afe22db314e8f379508d480bce891aa992c150d",
+      "url": "https://huggingface.co/papers/2611.15777",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+      "title_vi": "SO-Arena: So sánh đối chuẩn phổ năng lực và độ tin cậy của các mô hình System One",
+      "summary_vi": "Các mô hình Hệ thống Một hứa hẹn khả năng ra quyết định nhanh chóng, phục vụ mục đích chung mà không cần quá trình tạo token kéo dài. Tuy nhiên, để hiểu được phổ khả năng và độ tin cậy của quyết định của chúng đòi hỏi nhiều hơn là hiệu suất tổng hợp trên benchmarks hiện tại. Các đánh giá hiện có thường chỉ cung cấp cái nhìn hạn chế về phạm vi năng lực của mô hình và độ tin cậy của các quyết định của mô hình.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "benchmark",
+        "benchmarks"
+      ]
+    },
+    {
+      "day": "2026-11-14",
+      "id": "abae26331e955754513e19c5e9795557700521bf",
+      "url": "https://huggingface.co/papers/2611.15844",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+      "title_vi": "Open Vision Banana: Công thức hoàn toàn mở cho nhận thức thị giác tạo sinh",
+      "summary_vi": "Các nghiên cứu gần đây cho thấy các trình tạo hình ảnh được huấn luyện trước mã hóa sự hiểu biết về thế giới thực vượt ra ngoài việc tổng hợp hình ảnh. Vision Banana tận dụng điều này bằng cách xem các nhiệm vụ thị giác như là việc chỉnh sửa hình ảnh có điều kiện. Tuy nhiên, dữ liệu, trọng số, mã và chi tiết triển khai của nó không được công khai. Chúng tôi xin giới thiệu Open Vision Banana (OVB), một công thức hoàn toàn mở và có thể tái tạo để chuyển đổi các trình tạo được huấn luyện trước thành các hệ thống nhận thức đa nhiệm hợp nhất.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "open-weight",
+        "state-of-the-art",
+        "datasets"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "dd4da662fab5b63566c99cbec2409b3154c8681a",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+      "source_id": "verge-ai",
+      "lang": "en",
+      "title_orig": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+      "title_vi": "Anthropic ra mắt các mẫu Claude Fable và Mythos 5.2 mới",
+      "summary_vi": "Anthropic hôm nay công bố hai mô hình mới: Claude Fable 5.2 và Claude Mythos 5.2, được thiết kế để đối phó với những thách thức kỹ thuật \"khó khăn\". Công ty tuyên bố các mô hình mới cho thấy những cải tiến về mã hóa, lý luận và tầm nhìn, và có thể tạo ra kết quả đầu ra nhanh hơn các phiên bản 5.1 của các mô hình Fable và Mythos. Claude Fable",
+      "translated": true,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 3,
+      "matched_keywords": [
+        "reasoning"
+      ]
+    },
+    {
+      "day": "2026-11-14",
+      "id": "5bf4951adbe9698dd9e45df17c29fd95e4f30a2d",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "source_id": "openai",
+      "lang": "en",
+      "title_orig": "Introducing ChatGPT Wallet",
+      "title_vi": "Giới thiệu Ví ChatGPT",
+      "summary_vi": "Giới thiệu Ví ChatGPT, một cách an toàn để agents trong ChatGPT Work, Codex và dots hoàn tất giao dịch mua với sự chấp thuận của người dùng và các biện pháp bảo vệ thẻ hiện có.",
+      "translated": true,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 3,
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "7da1b2b4758f6148853c122ae7c8e20bc40537d5",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      "source_id": "deepmind",
+      "lang": "en",
+      "title_orig": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "title_vi": "Gemini Robotics 2.5 tăng tốc sự khéo léo nói chung trong thế giới thực",
+      "summary_vi": "Mô hình hành động thị giác-ngôn ngữ có khả năng nhất của chúng tôi giúp tăng cường sự khéo léo, độ tin cậy và an toàn của robot",
+      "translated": true,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 2,
+      "matched_keywords": [
+        "vision-language",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "d8ee9ab549e424bc70f972651e3c124313005bc0",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+      "source_id": "verge-ai",
+      "lang": "en",
+      "title_orig": "United won’t let your AI agent book your flight",
+      "title_vi": "United sẽ không cho phép AI agent đặt vé máy bay cho bạn",
+      "summary_vi": "United cho biết họ sẽ không cho phép các trợ lý AI cá nhân đặt vé trên hãng hàng không, với lý do lo ngại về cả quyền riêng tư và các quy định. Theo The Wall Street Journal, công ty cho biết họ vẫn chưa thấy nhiều người thử sử dụng AI agents để đặt vé máy bay, phù hợp với quan sát từ các doanh nghiệp khác như Doordash. Nhưng United vẫn lo ngại",
+      "translated": true,
+      "category": "other",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 2,
+      "matched_keywords": [
+        "AI agent",
+        "AI agents",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "186e511aaf3a910ea824095d610628560987c14e",
+      "url": "https://huggingface.co/papers/2611.08175",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?",
+      "title_vi": "PCBRouteAgent: LLM ZZ0Z có gần trở thành kỹ sư định tuyến PCB không?",
+      "summary_vi": "Tự động hóa định tuyến bảng mạch in (PCB) đòi hỏi phải phối hợp các quyết định kết nối cấp bảng với thực thi hình học theo các quy tắc thiết kế nghiêm ngặt. Mặc dù agents gần đây có thể tương tác với các công cụ định tuyến gốc, việc định tuyến đáng tin cậy trên các bo mạch phức tạp vẫn còn nhiều thách thức. Chúng tôi giới thiệu PCBRouteAgent, một định tuyến PCB đa phương thức agent lấy cảm hứng từ cách các kỹ sư con người phối hợp chiến lược toàn cầu với thực thi cục bộ.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "multimodal"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "2c6bc4052a8fe0648da9512cc13c025654718018",
+      "url": "https://huggingface.co/papers/2611.06808",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+      "title_vi": "LLMs Don 't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting (LLMs không biết những gì họ biết: Tự đánh giá theo thời gian để kiểm tra lại tài chính)",
+      "summary_vi": "Các bài kiểm tra tài chính của các mô hình ngôn ngữ lớn (LLMs) chỉ có ý nghĩa nếu mô hình chưa biết kết quả mà nó được yêu cầu dự đoán. Các học viên bảo vệ chống lại điều này bằng cách tin tưởng vào việc cắt giảm kiến thức đã nêu của nhà cung cấp, bằng cách hỏi mô hình những gì nó biết hoặc bằng cách hướng dẫn nó trả lời kể từ một ngày trong quá khứ. Để xác minh liệu có bất kỳ biện pháp bảo vệ nào trong số này có thể được tin cậy hay không, chúng tôi giới thiệu FinDendro, benchmark là 2.226 ngày",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLMs",
+        "large language models",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "63e56a7ba71b4d959f9f7cb68989312599a6551b",
+      "url": "https://huggingface.co/papers/2611.08264",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+      "title_vi": "SplatAnything: Chuẩn hóa khoảng cách Gauss cho 3DGS chuyển tiếp nguồn cấp dữ liệu qua các cảnh tùy ý",
+      "summary_vi": "Chúng tôi xác định một hạn chế chính của các phương pháp 3DGS chuyển tiếp nguồn cấp dữ liệu hiện có: Các thuộc tính Gaussian thường được dự đoán trong một không gian chuẩn hóa khoảng cách xuyên tâm để chuẩn hóa thống kê xuyên tâm toàn cầu của hình học được tái tạo, trong khi khoảng cách giữa các trung tâm Gaussian lân cận vẫn có thể thay đổi đáng kể giữa các thang đo cảnh và cấu hình camera.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "benchmark",
+        "state-of-the-art",
+        "datasets"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "a5222095df47cd50e2a59d28c8a37fe6d2c974a4",
+      "url": "https://huggingface.co/papers/2611.09382",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+      "title_vi": "Khám phá Lập trình không gian trọng lượng: Khả năng, khái quát hóa và hạn chế",
+      "summary_vi": "Lập trình không gian trọng lượng (WSP) cho phép agents suy luận trực tiếp kiểm tra và sửa đổi các tham số mạng nơ-ron, cung cấp một giải pháp thay thế cho việc điều chỉnh mô hình dựa trên gradient. Tuy nhiên, khả năng của nó, khái quát hóa nhiệm vụ chéo và những hạn chế thực tế vẫn chưa được hiểu đầy đủ. Chúng tôi điều tra một cách có hệ thống WSP thông qua 16 quỹ đạo chỉnh sửa trên bảy benchmarks và hai thang đo mô hình (Qwen3.5-0.8B và Qwen3.5-9B).",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "benchmarks",
+        "neural network"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "b628fa3f9186a33b33aec71db7fa85eff92fc439",
+      "url": "https://huggingface.co/papers/2611.08290",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "AutoCompress: Automated Hardware-Guided Model Compression",
+      "title_vi": "AutoCompress: Nén mô hình điều khiển phần cứng tự động",
+      "summary_vi": "Cắt tỉa LLM phải bảo toàn chất lượng trong khi đáp ứng các hạn chế cụ thể về phần cứng và khối lượng công việc về độ trễ, thông lượng và bộ nhớ. Các quy trình cắt tỉa hiện tại thường nhắm mục tiêu số lượng tham số, yêu cầu người thực hành chọn kích thước mô hình theo cách thủ công đáp ứng các giới hạn về độ trễ, thông lượng và bộ nhớ GPU. Tuy nhiên, chỉ riêng số lượng tham số không dự đoán được các số liệu này, điều này phụ thuộc vào kiến trúc mô hình, khối lượng công việc, phần cứng và công cụ phục vụ.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "benchmarks",
+        "state-of-the-art",
+        "GPU"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "6441feaeee62cad6b213214757b5320e7be7bff4",
+      "url": "https://huggingface.co/papers/2611.11995",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization",
+      "title_vi": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization",
+      "summary_vi": "Trong công việc này, chúng tôi nghiên cứu xem Frontier agent có thể liên tục cải thiện cơ sở hạ tầng AI trong thế giới thực qua các chân trời dài hay không. Chúng tôi giới thiệu Infrathon, một benchmark gồm các nhiệm vụ tối ưu hóa cơ sở hạ tầng AI đường dài, đa dạng ở các cấp độ khác nhau. Chúng tôi đánh giá sáu mô hình trên 150 lần chạy với ngân sách 24 giờ, tổng cộng hơn 10.000 GPU-giờ.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "benchmark",
+        "GPU",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "780eb58c952eb8cf0725babcb8c9238944101949",
+      "url": "https://huggingface.co/papers/2611.10771",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "WorldFoundry: Towards Unified Infrastructure for World Intelligence",
+      "title_vi": "WorldFoundry: Hướng tới cơ sở hạ tầng thống nhất cho tình báo thế giới",
+      "summary_vi": "Các mô hình tạo hình ảnh ngày càng làm mờ ranh giới giữa tổng hợp các quan sát và mô phỏng môi trường. Tuy nhiên, tính hợp lý trực quan một mình không tạo thành mô hình thế giới thành công: các kết quả đầu ra hấp dẫn có thể thiếu trạng thái liên tục, động lực vật lý hoặc phản ứng nhất quán về mặt nhân quả đối với các tương tác.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "benchmark",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "8e4a213d8b69b49bfbde4da3585e476a8ce4f5a0",
+      "url": "https://huggingface.co/papers/2610.36980",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "AutoVend: Benchmarking LLM Agents on Long-Horizon Autonomous Vending Operations",
+      "title_vi": "AutoVend: Điểm chuẩn LLM ZZ0Z về các hoạt động bán hàng tự động đường chân trời dài",
+      "summary_vi": "Mô hình ngôn ngữ lớn (LLM) agents đang mở rộng thương mại qua trung gian agent trên Web từ mua sắm cho người tiêu dùng sang điều hành doanh nghiệp cho người bán. Trong thương mại trực tuyến đến ngoại tuyến (O2O), các quyết định được đưa ra thông qua các nền tảng dựa trên Web nhưng được thực hiện thông qua việc thực thi vật lý tốn kém. Đánh giá agents như vậy đòi hỏi phải vượt ra ngoài các giao dịch cá nhân để hỏi liệu các quyết định được đưa ra trực tuyến có biến thành lợi nhuận kinh tế bền vững hay không.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "large language model",
+        "benchmark",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "974373c40fc722734a9c8286c9a867e1bd863fa1",
+      "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+      "source_id": "msr",
+      "lang": "en",
+      "title_orig": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+      "title_vi": "Lazare, veni foras: Lập trình lại các tế bào thần kinh không hoạt động cho Backdoor AI Agents",
+      "summary_vi": "Các nhà nghiên cứu của Microsoft đã phát hiện ra “Lazarus”, một kỹ thuật cửa hậu có thể lập trình lại các tế bào thần kinh không hoạt động trong mô hình AI, khiến AI agent bình thường thực hiện các lệnh độc hại khi một kích hoạt ẩn xuất hiện. Mối đe dọa đặc biệt nghiêm trọng đối với AI agents có quyền truy cập công cụ hoặc thiết bị đầu cuối. Một mô hình được kích hoạt có thể lặng lẽ tải xuống và chạy mã kẻ tấn công,",
+      "translated": true,
+      "category": "models",
+      "subcategory": null,
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "AI agent",
+        "AI agents",
+        "backdoor",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "1444e722ae2d0e03de0e2b31f7198a3631aa2f96",
+      "url": "https://huggingface.co/papers/2611.12177",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Embodied First Exam",
+      "title_vi": "Bài kiểm tra đầu tiên về cơ thể",
+      "summary_vi": "Những thành công ban đầu trong lĩnh vực robot agentic cho thấy khả năng có một sự chuyển đổi mô hình sang việc sử dụng lập trình agents để điều khiển robot. Các hệ thống robot benchmarks hiện có được xây dựng dựa trên việc học chính sách thị giác-vận động, khiến cho việc liệu lập trình agents có thể điều khiển đáng tin cậy các loại robot khác nhau trong các ràng buộc của thế giới thực hay không vẫn còn là một câu hỏi mở.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "rl",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "agentic",
+        "benchmarks"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "b32f33401f9221f2b75659b9ed61e710ab1500ba",
+      "url": "https://huggingface.co/papers/2611.14210",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+      "title_vi": "Tree-Ising: Sửa chữa các mô hình ngôn ngữ bằng các chỉnh sửa Ising ở cấp độ bit",
+      "summary_vi": "Lập trình không gian trọng số, được giới thiệu trong công trình MIT gần đây của Takehi và cộng sự, cho phép một LLM agent biên giới đọc các trọng số của mạng và ghi lại bản sửa lỗi. GPT-6 Astra agent của họ đã sửa các vòng suy luận của Qwen3.5-0.8B mà không cần gradient, sử dụng 158 lượt agent, 89,7 triệu tokens và 50 yêu cầu truyền xuôi. Phương pháp của chúng tôi, Tree-Ising, xem việc sửa lỗi này như một bài toán tối ưu hóa rời rạc thưa thớt trên chính các trọng số BF16 của mô hình.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "reasoning",
+        "GPU"
+      ]
+    }
+  ],
+  "stats": {
+    "stories": 323,
+    "labels": {
+      "important": 98,
+      "notable": 225
+    },
+    "categories": {
+      "models": 31,
+      "research": 115,
+      "infra": 11,
+      "software": 15,
+      "security": 57,
+      "policy": 11,
+      "business": 13,
+      "vietnam": 26,
+      "other": 44
+    },
+    "sources": {
+      "hf-papers": 77,
+      "bleepingcomputer": 42,
+      "techcrunch-ai": 32,
+      "vnexpress-sohoa": 26,
+      "verge-ai": 22,
+      "openai": 18,
+      "ars": 17,
+      "wired-ai": 14,
+      "cisa-kev": 12,
+      "hf-blog": 11,
+      "mit-news-ai": 7,
+      "hackernews": 7,
+      "deepmind": 5,
+      "nvidia": 5,
+      "simonwillison": 5
+    },
+    "keywords": {
+      "AI": 147,
+      "benchmark": 28,
+      "benchmarks": 22,
+      "agentic": 21,
+      "reasoning": 20,
+      "hackers": 20,
+      "inference": 19,
+      "LLM": 18,
+      "breach": 15,
+      "LLMs": 13,
+      "CVE": 13,
+      "AI agents": 10,
+      "AI agent": 9,
+      "large language models": 9,
+      "multimodal": 8
+    }
+  },
+  "topics": [
+    {
+      "topic": "Bảo mật",
+      "count": 58,
+      "previous": 46,
+      "delta": 12
+    },
+    {
+      "topic": "Hạ tầng",
+      "count": 27,
+      "previous": 27,
+      "delta": 0
+    },
+    {
+      "topic": "An toàn AI",
+      "count": 13,
+      "previous": 13,
+      "delta": 0
+    },
+    {
+      "topic": "Dữ liệu",
+      "count": 8,
+      "previous": 14,
+      "delta": -6
+    },
+    {
+      "topic": "Mô hình mở & đánh giá",
+      "count": 46,
+      "previous": 54,
+      "delta": -8
+    },
+    {
+      "topic": "Đa phương thức & thị giác",
+      "count": 13,
+      "previous": 25,
+      "delta": -12
+    },
+    {
+      "topic": "AI nói chung",
+      "count": 150,
+      "previous": 178,
+      "delta": -28
+    },
+    {
+      "topic": "Mô hình ngôn ngữ",
+      "count": 71,
+      "previous": 108,
+      "delta": -37
+    }
+  ],
+  "research": [
+    {
+      "day": "2026-11-10",
+      "id": "97138dfcf19d4bc700b707d2241ff32cdbe5e7bc",
+      "url": "https://huggingface.co/papers/2611.09124",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Toward the Era of Agentic Embodied Intelligence",
+      "title_vi": "Hướng tới kỷ nguyên của Agentic Thể hiện trí thông minh",
+      "summary_vi": "Các mô hình nền tảng ngày càng hướng dẫn các hành động của robot, nhưng quyền tự chủ bền vững đòi hỏi phải kiểm soát hiệu quả và khôi phục lỗi. Chúng tôi giới thiệu A2-MEAS, một khung đa agent được thể hiện được xây dựng xung quanh mã như một giao diện mở rộng. Các mã hiệu chỉnh đã học kết hợp ngôn ngữ hiệu chỉnh, bằng chứng không gian, lịch sử thực hiện và đề xuất hành động. MetaBrain cung cấp giám sát đào tạo và hướng dẫn thời gian chạy.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "agentic",
+        "vision-language",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "930c9f51b3fa5f4d70725171004636e6485227b3",
+      "url": "https://huggingface.co/papers/2611.12762",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery",
+      "title_vi": "Sage-Taiyi: Kiến trúc siêu nhận thức cho khám phá khoa học",
+      "summary_vi": "Chúng tôi giới thiệu Sage-Taiyi, một kiến trúc lấy cảm hứng từ siêu nhận thức sử dụng kiến thức khoa học tích lũy để hướng dẫn những gì cần điều tra tiếp theo và cách điều tra nó. Thông qua giám sát và kiểm soát rõ ràng, hệ thống sửa đổi sự hiểu biết của mình về bằng chứng, giả định và các câu hỏi chưa được giải quyết, sau đó sử dụng các đánh giá này để điều chỉnh các mục tiêu nghiên cứu và chọn các phương pháp lý luận có thể tái sử dụng.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "benchmark",
+        "benchmarks",
+        "AI"
+      ]
+    },
+    {
+      "day": "2026-11-12",
+      "id": "2229db3291695b8eda60f98a02f47cbdced8f2ba",
+      "url": "https://huggingface.co/papers/2611.10015",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Micius-Flash: Lightweight Agentic Intelligence for Engineering",
+      "title_vi": "Micius-Flash: Trí tuệ nhân tạo Agentic nhẹ cho kỹ thuật",
+      "summary_vi": "Chúng tôi xin giới thiệu Micius-Flash, một mô hình 27 tỷ tham số dành cho kỹ thuật với đầu vào đa phương thức gốc, khả năng suy luận sâu và cửa sổ ngữ cảnh 256K-token. Chúng tôi thiết kế đường ống dữ liệu Micius như một bánh đà dữ liệu được điều khiển bởi cây tri thức, bao gồm ba giai đoạn: xây dựng và mở rộng cây tri thức, tổng hợp dữ liệu và xác thực chất lượng với sự tăng cường ví dụ khó.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 10.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "agentic",
+        "multimodal",
+        "benchmark",
+        "benchmarks",
+        "datasets"
+      ]
+    },
+    {
+      "day": "2026-11-11",
+      "id": "fcc02b9fa5cbb70a6e9a3848fd37dfeff721c542",
+      "url": "https://huggingface.co/papers/2611.12886",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning",
+      "title_vi": "Định dạng lại: Chưng cất theo chính sách đa giáo viên phù hợp với quan sát cho lý luận trực quan Agentic",
+      "summary_vi": "Học tăng cường Agentic (RL) và chưng cất đa giáo viên theo chính sách (MOPD) cung cấp các tuyến bổ sung cho đào tạo sau. Tuy nhiên, đối với agents trực quan, việc sử dụng công cụ đưa ra hai thách thức liên quan. Các mô hình có thể bỏ qua các quan sát được trả lại bằng công cụ hữu ích, trong khi các hành động có căn cứ kém có thể hạn chế bằng chứng có sẵn cho việc chưng cất tiếp theo.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "agentic",
+        "benchmarks",
+        "alignment"
+      ]
+    },
+    {
+      "day": "2026-11-13",
+      "id": "51fa12b3ef7c507b831005e18963a27f460a42be",
+      "url": "https://huggingface.co/papers/2611.13410",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+      "title_vi": "SteerDistill: Định lượng LLM Agents thông qua việc lái xe của người hướng dẫn trong vòng kín",
+      "summary_vi": "Lượng tử hóa số bit thấp làm giảm chi phí suy luận của LLM agents nhưng có thể ảnh hưởng đến sự thành công của nhiệm vụ. Khi xem xét các lần triển khai không thành công, chúng tôi nhận thấy rằng agents được lượng tử hóa bỏ qua các yêu cầu của nhiệm vụ hoặc các điều kiện môi trường, dẫn đến các quá trình chuyển đổi môi trường khác biệt so với các tham chiếu có độ chính xác đầy đủ thành công.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "agentic",
+        "benchmarks",
+        "inference"
+      ]
+    },
+    {
+      "day": "2026-11-14",
+      "id": "7afe22db314e8f379508d480bce891aa992c150d",
+      "url": "https://huggingface.co/papers/2611.15777",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+      "title_vi": "SO-Arena: So sánh đối chuẩn phổ năng lực và độ tin cậy của các mô hình System One",
+      "summary_vi": "Các mô hình Hệ thống Một hứa hẹn khả năng ra quyết định nhanh chóng, phục vụ mục đích chung mà không cần quá trình tạo token kéo dài. Tuy nhiên, để hiểu được phổ khả năng và độ tin cậy của quyết định của chúng đòi hỏi nhiều hơn là hiệu suất tổng hợp trên benchmarks hiện tại. Các đánh giá hiện có thường chỉ cung cấp cái nhìn hạn chế về phạm vi năng lực của mô hình và độ tin cậy của các quyết định của mô hình.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "benchmark",
+        "benchmarks"
+      ]
+    },
+    {
+      "day": "2026-11-14",
+      "id": "abae26331e955754513e19c5e9795557700521bf",
+      "url": "https://huggingface.co/papers/2611.15844",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+      "title_vi": "Open Vision Banana: Công thức hoàn toàn mở cho nhận thức thị giác tạo sinh",
+      "summary_vi": "Các nghiên cứu gần đây cho thấy các trình tạo hình ảnh được huấn luyện trước mã hóa sự hiểu biết về thế giới thực vượt ra ngoài việc tổng hợp hình ảnh. Vision Banana tận dụng điều này bằng cách xem các nhiệm vụ thị giác như là việc chỉnh sửa hình ảnh có điều kiện. Tuy nhiên, dữ liệu, trọng số, mã và chi tiết triển khai của nó không được công khai. Chúng tôi xin giới thiệu Open Vision Banana (OVB), một công thức hoàn toàn mở và có thể tái tạo để chuyển đổi các trình tạo được huấn luyện trước thành các hệ thống nhận thức đa nhiệm hợp nhất.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "cv",
+      "label": "important",
+      "score": 9.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "reasoning",
+        "open-weight",
+        "state-of-the-art",
+        "datasets"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "186e511aaf3a910ea824095d610628560987c14e",
+      "url": "https://huggingface.co/papers/2611.08175",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?",
+      "title_vi": "PCBRouteAgent: LLM ZZ0Z có gần trở thành kỹ sư định tuyến PCB không?",
+      "summary_vi": "Tự động hóa định tuyến bảng mạch in (PCB) đòi hỏi phải phối hợp các quyết định kết nối cấp bảng với thực thi hình học theo các quy tắc thiết kế nghiêm ngặt. Mặc dù agents gần đây có thể tương tác với các công cụ định tuyến gốc, việc định tuyến đáng tin cậy trên các bo mạch phức tạp vẫn còn nhiều thách thức. Chúng tôi giới thiệu PCBRouteAgent, một định tuyến PCB đa phương thức agent lấy cảm hứng từ cách các kỹ sư con người phối hợp chiến lược toàn cầu với thực thi cục bộ.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "nlp",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLM",
+        "multimodal"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "2c6bc4052a8fe0648da9512cc13c025654718018",
+      "url": "https://huggingface.co/papers/2611.06808",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
+      "title_vi": "LLMs Don 't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting (LLMs không biết những gì họ biết: Tự đánh giá theo thời gian để kiểm tra lại tài chính)",
+      "summary_vi": "Các bài kiểm tra tài chính của các mô hình ngôn ngữ lớn (LLMs) chỉ có ý nghĩa nếu mô hình chưa biết kết quả mà nó được yêu cầu dự đoán. Các học viên bảo vệ chống lại điều này bằng cách tin tưởng vào việc cắt giảm kiến thức đã nêu của nhà cung cấp, bằng cách hỏi mô hình những gì nó biết hoặc bằng cách hướng dẫn nó trả lời kể từ một ngày trong quá khứ. Để xác minh liệu có bất kỳ biện pháp bảo vệ nào trong số này có thể được tin cậy hay không, chúng tôi giới thiệu FinDendro, benchmark là 2.226 ngày",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "LLMs",
+        "large language models",
+        "benchmark"
+      ]
+    },
+    {
+      "day": "2026-11-10",
+      "id": "63e56a7ba71b4d959f9f7cb68989312599a6551b",
+      "url": "https://huggingface.co/papers/2611.08264",
+      "source_id": "hf-papers",
+      "lang": "en",
+      "title_orig": "SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes",
+      "title_vi": "SplatAnything: Chuẩn hóa khoảng cách Gauss cho 3DGS chuyển tiếp nguồn cấp dữ liệu qua các cảnh tùy ý",
+      "summary_vi": "Chúng tôi xác định một hạn chế chính của các phương pháp 3DGS chuyển tiếp nguồn cấp dữ liệu hiện có: Các thuộc tính Gaussian thường được dự đoán trong một không gian chuẩn hóa khoảng cách xuyên tâm để chuẩn hóa thống kê xuyên tâm toàn cầu của hình học được tái tạo, trong khi khoảng cách giữa các trung tâm Gaussian lân cận vẫn có thể thay đổi đáng kể giữa các thang đo cảnh và cấu hình camera.",
+      "translated": true,
+      "category": "research",
+      "subcategory": "other",
+      "label": "important",
+      "score": 8.0,
+      "n_sources": 1,
+      "matched_keywords": [
+        "benchmark",
+        "state-of-the-art",
+        "datasets"
+      ]
+    }
+  ],
+  "multi_day_events": [
+    {
+      "title_orig": "China’s Nvidia Honeypot Isn’t Surprising. Jensen Huang Fell for It Anyway",
+      "title_vi": "Bẫy Nvidia của Trung Quốc không có gì đáng ngạc nhiên. Dù vậy, Jensen Huang vẫn mắc bẫy",
+      "translated": true,
+      "days": [
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-12"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-09",
+          "id": "a5b09ead90d4ea47200247d6604489293226c448",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+          "source_id": "verge-ai",
+          "lang": "en",
+          "title_orig": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+          "title_vi": "Nvidia đang điều tra mối quan hệ của Jensen Huang với một điệp viên Trung Quốc",
+          "summary_vi": "Nvidia đã thông báo rằng họ đang mở một cuộc điều tra về Giám đốc điều hành Jensen Huang và mối quan hệ của ông với giám đốc điều hành Megaspeed Alice Huang, người được Bộ An ninh Nhà nước Trung Quốc tuyển dụng để theo dõi công ty. Một tuyên bố được đăng bởi hội đồng quản trị có nội dung: Hội đồng quản trị NVIDIA đang bắt đầu một cuộc điều tra độc lập",
+          "translated": true,
+          "category": "policy",
+          "subcategory": null,
+          "label": "notable",
+          "score": 7.0,
+          "n_sources": 3,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-11",
+          "id": "c00a2b69f7cb1b5e2a07c3159e5de9e7760e495a",
+          "url": "https://arstechnica.com/gadgets/2026/11/nvidia-has-a-jensen-huang-problem-and-no-obvious-successor/",
+          "source_id": "ars",
+          "lang": "en",
+          "title_orig": "Nvidia has a Jensen Huang problem—and no obvious successor",
+          "title_vi": "Nvidia có vấn đề với Jensen Huang - và không có người kế nhiệm rõ ràng",
+          "summary_vi": "Huang phải đối mặt với một cuộc điều tra của hội đồng quản trị khi các nhà đầu tư lo lắng về việc ZZ0Z không có người kế nhiệm rõ ràng.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 2,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-12",
+          "id": "3ab674d00e1b28ce3740ba00b15680d9727dfec6",
+          "url": "https://www.wired.com/story/chinas-nvidia-honeypot-isnt-surprising-jensen-huang-fell-for-it-anyway/",
+          "source_id": "wired-ai",
+          "lang": "en",
+          "title_orig": "China’s Nvidia Honeypot Isn’t Surprising. Jensen Huang Fell for It Anyway",
+          "title_vi": "Bẫy Nvidia của Trung Quốc không có gì đáng ngạc nhiên. Dù vậy, Jensen Huang vẫn mắc bẫy",
+          "summary_vi": "Việc Trung Quốc sử dụng gián điệp tình dục là một chiến thuật tình báo đã được áp dụng từ lâu, với những ví dụ gần đây gây xôn xao dư luận. Vậy làm thế nào mà giám đốc điều hành AI quyền lực nhất thế giới lại sập bẫy?",
+          "translated": true,
+          "category": "policy",
+          "subcategory": null,
+          "label": "important",
+          "score": 9.0,
+          "n_sources": 5,
+          "matched_keywords": [
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Adobe is going all in on agentic AI",
+      "title_vi": "Adobe sẽ tham gia vào agentic AI",
+      "translated": true,
+      "days": [
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-10",
+          "id": "2bb18f2869ad4004e8be80ee4e07bc18f9723c4c",
+          "url": "https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership",
+          "source_id": "verge-ai",
+          "lang": "en",
+          "title_orig": "Disney and Adobe are building generative AI tools together",
+          "title_vi": "Disney và Adobe đang cùng nhau xây dựng các công cụ AI sáng tạo",
+          "summary_vi": "Công ty Walt Disney đã hợp tác với Adobe để phát triển các mô hình AI thế hệ \"do nghệ sĩ dẫn dắt\" độc quyền để hỗ trợ quy trình sản xuất của Disney. Quan hệ đối tác nhiều năm đã được công bố ngày hôm nay tại hội nghị MAX của Adobe và Adobe sẽ cung cấp cho Disney quyền truy cập sớm vào các công nghệ mới nhất của mình cho mọi thứ từ công viên giải trí và tàu du lịch của Disney đến",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-11",
+          "id": "85e69ee9d60b6746d8ec0b1fbc7539285f08de6c",
+          "url": "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates",
+          "source_id": "verge-ai",
+          "lang": "en",
+          "title_orig": "Adobe is going all in on agentic AI",
+          "title_vi": "Adobe sẽ tham gia vào agentic AI",
+          "summary_vi": "Adobe đang tự cam kết với quan niệm rằng chatbot và AI agents có thể là trợ lý thiết kế tiếp theo của bạn, hoặc thậm chí tự động hóa quy trình làm việc sáng tạo và các nhiệm vụ lặp đi lặp lại thay cho bạn. Một số công cụ và tính năng được công bố hôm nay tại hội nghị Max của Adobe ở Miami, Florida, bao gồm cho phép AI agents của bên thứ ba ưu tiên của bạn truy cập và thay đổi",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 9.0,
+          "n_sources": 3,
+          "matched_keywords": [
+            "AI agents",
+            "agentic",
+            "RAG",
+            "multimodal",
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-12",
+          "id": "6e40d6043154dab3ba515abdf7a1b00f3bc314f7",
+          "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+          "source_id": "verge-ai",
+          "lang": "en",
+          "title_orig": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+          "title_vi": "Các thử nghiệm AI của Adobe cho phép bạn đi dạo trong ảnh và phỏng vấn các nhân vật của mình",
+          "summary_vi": "Một số công nghệ ấn tượng nhất mà Adobe giới thiệu tại hội nghị Max thường niên mỗi năm là các tính năng thử nghiệm mà công ty đang phát triển, và những công cụ mới nhất trong số đó đang được công bố hôm nay: chúng có thể chuyển đổi hình ảnh thành các cảnh 3D có thể khám phá, thiết kế các nhân vật AI bằng cách trò chuyện với họ và biến việc chỉnh sửa ảnh thành một quy trình sao chép/dán.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time",
+      "title_vi": "Một mô hình thế giới cần bao nhiêu lần phơi nhiễm? Học Cơ chế trò chơi không nhìn thấy tại thời điểm kiểm tra",
+      "translated": true,
+      "days": [
+        "2026-11-09",
+        "2026-11-11"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-09",
+          "id": "b2811de866489491b8d04a0ba70c25987d6cc0c6",
+          "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
+          "source_id": "wired-ai",
+          "lang": "en",
+          "title_orig": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
+          "title_vi": "Người mẫu thế giới sẽ sớm trở thành điều không thể tránh khỏi. Dưới đây là những điều bạn cần biết",
+          "summary_vi": "Chuyển AI từ văn bản sang không gian 3D, các mô hình thế giới mô phỏng vật lý trong thế giới thực để dạy robot và xe tự lái cách điều hướng thực tế.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-11",
+          "id": "587ce80aa603fd1c8a467240c6fd00f234749017",
+          "url": "https://huggingface.co/papers/2611.12324",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time",
+          "title_vi": "Một mô hình thế giới cần bao nhiêu lần phơi nhiễm? Học Cơ chế trò chơi không nhìn thấy tại thời điểm kiểm tra",
+          "summary_vi": "Các mô hình thế giới cho phép agents lập kế hoạch và học hỏi từ kinh nghiệm tưởng tượng, nhưng trong một môi trường xa lạ, họ phải học cơ chế của nó từ sự tương tác hạn chế. Thợ máy là một quy tắc về cách một hành động hoặc tương tác thay đổi một phần của môi trường. Mỗi lần xuất hiện của một thợ cơ khí mà mô hình quan sát được là một lần phơi nhiễm. Chúng tôi hỏi một mô hình thế giới cần bao nhiêu lần phơi nhiễm để dự đoán tác động của cơ chế môi trường mới.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "cv",
+          "label": "notable",
+          "score": 5.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "benchmark"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Toward the Era of Agentic Embodied Intelligence",
+      "title_vi": "Hướng tới kỷ nguyên của Agentic Thể hiện trí thông minh",
+      "translated": true,
+      "days": [
+        "2026-11-10",
+        "2026-11-12"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-10",
+          "id": "97138dfcf19d4bc700b707d2241ff32cdbe5e7bc",
+          "url": "https://huggingface.co/papers/2611.09124",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "Toward the Era of Agentic Embodied Intelligence",
+          "title_vi": "Hướng tới kỷ nguyên của Agentic Thể hiện trí thông minh",
+          "summary_vi": "Các mô hình nền tảng ngày càng hướng dẫn các hành động của robot, nhưng quyền tự chủ bền vững đòi hỏi phải kiểm soát hiệu quả và khôi phục lỗi. Chúng tôi giới thiệu A2-MEAS, một khung đa agent được thể hiện được xây dựng xung quanh mã như một giao diện mở rộng. Các mã hiệu chỉnh đã học kết hợp ngôn ngữ hiệu chỉnh, bằng chứng không gian, lịch sử thực hiện và đề xuất hành động. MetaBrain cung cấp giám sát đào tạo và hướng dẫn thời gian chạy.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "cv",
+          "label": "important",
+          "score": 10.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "agentic",
+            "vision-language",
+            "benchmark"
+          ]
+        },
+        {
+          "day": "2026-11-12",
+          "id": "2229db3291695b8eda60f98a02f47cbdced8f2ba",
+          "url": "https://huggingface.co/papers/2611.10015",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "Micius-Flash: Lightweight Agentic Intelligence for Engineering",
+          "title_vi": "Micius-Flash: Trí tuệ nhân tạo Agentic nhẹ cho kỹ thuật",
+          "summary_vi": "Chúng tôi xin giới thiệu Micius-Flash, một mô hình 27 tỷ tham số dành cho kỹ thuật với đầu vào đa phương thức gốc, khả năng suy luận sâu và cửa sổ ngữ cảnh 256K-token. Chúng tôi thiết kế đường ống dữ liệu Micius như một bánh đà dữ liệu được điều khiển bởi cây tri thức, bao gồm ba giai đoạn: xây dựng và mở rộng cây tri thức, tổng hợp dữ liệu và xác thực chất lượng với sự tăng cường ví dụ khó.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "other",
+          "label": "important",
+          "score": 10.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "reasoning",
+            "agentic",
+            "multimodal",
+            "benchmark",
+            "benchmarks",
+            "datasets"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "An Ethics Ecosystem for AI",
+      "title_vi": "Một hệ sinh thái đạo đức cho AI",
+      "translated": true,
+      "days": [
+        "2026-11-10",
+        "2026-11-14"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-10",
+          "id": "894ddf58535146ceaa8bc546e3f0580189ea7029",
+          "url": "https://doi.org/10.1145/3812806",
+          "source_id": "cacm",
+          "lang": "en",
+          "title_orig": "An Ethics Ecosystem for AI",
+          "title_vi": "Một hệ sinh thái đạo đức cho AI",
+          "summary_vi": "Bài viết này chẩn đoán những thất bại về đạo đức liên quan đến AI là kết quả của việc thiếu một hệ sinh thái đạo đức mạnh mẽ. Dựa trên lĩnh vực y tế và chăm sóc sức khỏe, chúng tôi xác định các thành phần của một hệ sinh thái hoạt động và giải thích cách tiếp cận hệ sinh thái giúp quản lý quy mô của các thách thức đạo đức trong lĩnh vực AI so với các lựa chọn thay thế điển hình hơn.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "other",
+          "label": "important",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-14",
+          "id": "40e78db6601d46e62d9253d05213567fc448d804",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "source_id": "hf-blog",
+          "lang": "en",
+          "title_orig": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "title_vi": "llama.cpp v1.0.0 : Một nền tảng vững chắc hơn cho hệ sinh thái AI cục bộ",
+          "summary_vi": "",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
+      "title_vi": "AI Meta agent Muse của Apple Watch và Android Wear OS",
+      "translated": true,
+      "days": [
+        "2026-11-10",
+        "2026-11-11"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-10",
+          "id": "99d632aaa41667526b1d0c7d4eb67e0cd558fd99",
+          "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+          "source_id": "techcrunch-ai",
+          "lang": "en",
+          "title_orig": "Meta releases Muse Ember, a new lightweight model for agent execution",
+          "title_vi": "Meta phát hành Muse Ember, một mô hình nhẹ mới để thực thi agent",
+          "summary_vi": "Với giá 10 cent/triệu đầu vào tokens, Ember rẻ hơn đáng kể so với các đối thủ cạnh tranh như Haiku và Luna.",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 2,
+          "matched_keywords": []
+        },
+        {
+          "day": "2026-11-11",
+          "id": "a92c103556a0980302f5b00185be91d281dd77a6",
+          "url": "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
+          "source_id": "techcrunch-ai",
+          "lang": "en",
+          "title_orig": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
+          "title_vi": "AI Meta agent Muse của Apple Watch và Android Wear OS",
+          "summary_vi": "Giờ đây, người dùng có thể tương tác với trợ lý AI của Meta thông qua các cuộc gọi thoại, tin nhắn văn bản hoặc chính tả trên Đồng hồ Apple của họ.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 5.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI agent",
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Gemini 4 Carbon is now available",
+      "title_vi": "Gemini 4 Carbon hiện có sẵn",
+      "translated": true,
+      "days": [
+        "2026-11-11",
+        "2026-11-13"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-11",
+          "id": "fc6b6a56df7b365074b119338f18f53b82e8e233",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "source_id": "deepmind",
+          "lang": "en",
+          "title_orig": "Gemini 4 Carbon is now available",
+          "title_vi": "Gemini 4 Carbon hiện có sẵn",
+          "summary_vi": "Google đang tung ra mô hình AI mới nhất của mình, Gemini 4 Carbon, cho công chúng sau khi phát hành nó cho một nhóm \"những người bảo vệ an ninh mạng\" được chọn cách đây hai tuần. Google tuyên bố Carbon là \"mẫu xe mạnh nhất\" và có khả năng cạnh tranh với các hệ thống tốt nhất từ Anthropic và OpenAI. Google says Gemini 4 Carbon \"pushes",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 7.0,
+          "n_sources": 3,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-13",
+          "id": "a8d5fa7d24b3647f4501b383397b571abdcb6905",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "source_id": "deepmind",
+          "lang": "en",
+          "title_orig": "Introducing Gemini 4 Hydrogen",
+          "title_vi": "Giới thiệu Gemini 4 Hydrogen",
+          "summary_vi": "Gemini 4 Hydro không được phát hành chậm, chú trọng an ninh như Carbon và Argon.",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 7.0,
+          "n_sources": 3,
+          "matched_keywords": []
+        }
+      ]
+    },
+    {
+      "title_orig": "Decision Models in Hugging Face",
+      "title_vi": "Mô hình quyết định trong Hugging Face",
+      "translated": true,
+      "days": [
+        "2026-11-11",
+        "2026-11-14"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-11",
+          "id": "3229de0d919212c36c924a809a5e9d26c48f700b",
+          "url": "https://huggingface.co/blog/decision",
+          "source_id": "hf-blog",
+          "lang": "en",
+          "title_orig": "Decision Models in Hugging Face",
+          "title_vi": "Mô hình quyết định trong Hugging Face",
+          "summary_vi": "Giám đốc điều hành Hugging Face Irene Solaiman cảnh báo rằng các cuộc tấn công mạng ngày càng tăng trên các nền tảng AI mở có thể buộc các hạn chế bảo mật chặt chẽ hơn, đe dọa khả năng tiếp cận làm cho các cộng đồng nguồn mở có giá trị đối với các nhà phát triển trên toàn thế giới.",
+          "translated": true,
+          "category": "software",
+          "subcategory": null,
+          "label": "important",
+          "score": 5.0,
+          "n_sources": 2,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-14",
+          "id": "731431771b9cdea1259086cd2dde1d4231402f01",
+          "url": "https://huggingface.co/papers/2611.17167",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
+          "title_vi": "Diễn viên, thẩm phán hay giáo viên? Tìm hiểu các mô hình ra quyết định trong dài hạn Agents",
+          "summary_vi": "Các mô hình quyết định trả lời một câu hỏi bằng một kết quả đầu ra được nhập, chẳng hạn như lựa chọn giữa các phương án với xác suất cho từng phương án, để một mô hình có thể chọn các hành động của agent, đánh giá các hành động đã thực hiện hoặc chấm điểm mọi hành động để dạy một chính sách bằng phương pháp học tăng cường. Các công trình nghiên cứu trước đây chủ yếu xem chúng như những tác nhân, đánh giá mức độ hữu ích của chúng dựa trên mức độ hiệu quả của hành động. Chúng tôi đặt ra câu hỏi liệu một mô hình quyết định hoạt động kém có vẫn có thể giảng dạy tốt hay không.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "rl",
+          "label": "notable",
+          "score": 6.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "LLMs"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Introducing ChatGPT Wallet",
+      "title_vi": "Giới thiệu Ví ChatGPT",
+      "translated": true,
+      "days": [
+        "2026-11-11",
+        "2026-11-14"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-11",
+          "id": "5ca4dc7b6d88cb31d41f9b1c287b0178583121a9",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "source_id": "openai",
+          "lang": "en",
+          "title_orig": "Introducing Businesses in ChatGPT",
+          "title_vi": "Giới thiệu doanh nghiệp tại ChatGPT",
+          "summary_vi": "Quản lý thông tin doanh nghiệp của bạn, nhận thông tin chi tiết về cách doanh nghiệp của bạn hiển thị và biến sự quan tâm thành hành động trong ChatGPT.",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": []
+        },
+        {
+          "day": "2026-11-14",
+          "id": "5bf4951adbe9698dd9e45df17c29fd95e4f30a2d",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "source_id": "openai",
+          "lang": "en",
+          "title_orig": "Introducing ChatGPT Wallet",
+          "title_vi": "Giới thiệu Ví ChatGPT",
+          "summary_vi": "Giới thiệu Ví ChatGPT, một cách an toàn để agents trong ChatGPT Work, Codex và dots hoàn tất giao dịch mua với sự chấp thuận của người dùng và các biện pháp bảo vệ thẻ hiện có.",
+          "translated": true,
+          "category": "models",
+          "subcategory": null,
+          "label": "important",
+          "score": 8.0,
+          "n_sources": 3,
+          "matched_keywords": [
+            "AI agents",
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Notion says Fireworks breach exposed customer AI chat transcripts",
+      "title_vi": "Notion cho biết vụ vi phạm dữ liệu của Fireworks đã làm lộ bản ghi cuộc trò chuyện AI với khách hàng",
+      "translated": true,
+      "days": [
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-12",
+          "id": "efe87e331be8efe1428fa298a7dfb4f8c2aa7456",
+          "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+          "source_id": "bleepingcomputer",
+          "lang": "en",
+          "title_orig": "Notion says Fireworks breach exposed customer AI chat transcripts",
+          "title_vi": "Notion cho biết vụ vi phạm dữ liệu của Fireworks đã làm lộ bản ghi cuộc trò chuyện AI với khách hàng",
+          "summary_vi": "Notion, nền tảng không gian làm việc kỹ thuật số, đã tiết lộ rằng một lỗ hổng bảo mật tại nhà cung cấp cơ sở hạ tầng AI của họ, Fireworks AI, đã khiến các bản ghi cuộc trò chuyện của Notion AI bị lộ ở một số ít không gian làm việc.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 5.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "breach",
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-13",
+          "id": "660711644cdc9dc9c8a6ac97bbb0a66a2efe281a",
+          "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+          "source_id": "techcrunch-ai",
+          "lang": "en",
+          "title_orig": "Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts",
+          "title_vi": "Vụ tấn công mạng vào Fireworks AI đã cho phép tin tặc truy cập vào bản ghi trò chuyện của khách hàng Notion",
+          "summary_vi": "Đây là vụ vi phạm dữ liệu thứ hai của Fireworks trong vòng vài tháng.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 5.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "data breach",
+            "breach",
+            "hackers",
+            "AI"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Active ScreenConnect attacks breach MSPs, impact dozens of organizations",
+      "title_vi": "Các cuộc tấn công ScreenConnect đang diễn ra xâm nhập vào các MSP, ảnh hưởng đến hàng chục tổ chức",
+      "translated": true,
+      "days": [
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-12",
+          "id": "ab7e7ef2388bff6b3e48faacfee692864678f967",
+          "url": "https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
+          "source_id": "bleepingcomputer",
+          "lang": "en",
+          "title_orig": "Active ScreenConnect attacks breach MSPs, impact dozens of organizations",
+          "title_vi": "Các cuộc tấn công ScreenConnect đang diễn ra xâm nhập vào các MSP, ảnh hưởng đến hàng chục tổ chức",
+          "summary_vi": "ConnectWise đang điều tra một chiến dịch malware đang diễn ra, nhắm vào các nhà cung cấp dịch vụ được quản lý (MSP), sử dụng các môi trường ScreenConnect bị xâm phạm để triển khai các máy khách truy cập từ xa giả mạo vào các thiết bị của khách hàng.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "breach",
+            "malware"
+          ]
+        },
+        {
+          "day": "2026-11-13",
+          "id": "a9ddc63596346bff342e8b9ae2649bc89245cc06",
+          "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+          "source_id": "bleepingcomputer",
+          "lang": "en",
+          "title_orig": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+          "title_vi": "\"SCKit\" malware mới giống như sâu máy tính nhắm mục tiêu vào các MSP trong các cuộc tấn công ScreenConnect",
+          "summary_vi": "Một bộ công cụ malware giống sâu máy tính mới có tên SCKit đã được triển khai trong các cuộc tấn công ScreenConnect gần đây nhằm vào các nhà cung cấp dịch vụ được quản lý (MSP), được thiết kế để lây lan từ các thiết bị của khách hàng bị nhiễm mã độc sang máy tính của các kỹ thuật viên MSP và xâm phạm các mạng được quản lý khác.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "malware"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "title_vi": "N-able phát hành các bản sửa lỗi bảo mật cho các lỗ hổng zero-day",
+      "translated": true,
+      "days": [
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-12",
+          "id": "4d16177dd74e8154f7f7c36d8b44a34244f3a661",
+          "url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+          "source_id": "bleepingcomputer",
+          "lang": "en",
+          "title_orig": "N-able releases security hotfixes for zero-day vulnerabilities",
+          "title_vi": "N-able phát hành các bản sửa lỗi bảo mật cho các lỗ hổng zero-day",
+          "summary_vi": "N-able đã phát hành các bản sửa lỗi khẩn cấp để khắc phục các lỗi zero-day ảnh hưởng đến nền tảng giám sát và quản lý từ xa (RMM) N-central của họ, những lỗi này đã được công bố công khai vào cuối tuần và buộc họ phải đưa các môi trường được lưu trữ dễ bị tấn công vào chế độ ngoại tuyến.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "zero-day"
+          ]
+        },
+        {
+          "day": "2026-11-13",
+          "id": "9cb2b44a4924a73342245e582b4da1ab864fb2f1",
+          "url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+          "source_id": "bleepingcomputer",
+          "lang": "en",
+          "title_orig": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
+          "title_vi": "Lỗ hổng mới \"4EverAble2Shell\" zero-day của N-able bị khai thác vài giờ sau khi PoC được công bố",
+          "summary_vi": "Các tin tặc đang tích cực khai thác lỗ hổng zero-day của N-able N-central mới được tiết lộ, được gọi là \"4EverAble2Shell\", để xâm nhập vào các máy chủ và triển khai các phần mềm đào tiền mã hóa, với các nhà nghiên cứu báo cáo có ít nhất 21 hệ thống bị ảnh hưởng, trong đó có 19 hệ thống đang chạy bản cập nhật bảo mật mới nhất của công ty.",
+          "translated": true,
+          "category": "security",
+          "subcategory": null,
+          "label": "notable",
+          "score": 4.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "zero-day",
+            "hackers"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+      "title_vi": "Duo: Mô hình thế giới tương hỗ cho tương tác song công toàn phần",
+      "translated": true,
+      "days": [
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-13",
+          "id": "ce2f01d6fb8562b6967b112394f799b161cee60c",
+          "url": "https://huggingface.co/papers/2611.08286",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds",
+          "title_vi": "Phòng tập thị giác tương tác: Đánh giá các mô hình tương tác thị giác với người dùng mô phỏng trong các thế giới tương tác",
+          "summary_vi": "Các mô hình tương tác trực quan hỗ trợ người dùng trong các tác vụ vật lý đang diễn ra cần được đánh giá trong vòng lặp kín, nơi phản hồi của trợ lý có thể thay đổi hành vi của người dùng và kết quả tác vụ sau đó. Các benchmarks hiện có chủ yếu dựa vào phát lại ngoại tuyến và do đó không thể ghi lại những tác động này.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "other",
+          "label": "notable",
+          "score": 5.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "benchmark",
+            "benchmarks",
+            "state-of-the-art"
+          ]
+        },
+        {
+          "day": "2026-11-14",
+          "id": "2741c921d01961e0f8090191a39c7a8a00354ce4",
+          "url": "https://huggingface.co/papers/2611.15131",
+          "source_id": "hf-papers",
+          "lang": "en",
+          "title_orig": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+          "title_vi": "Duo: Mô hình thế giới tương hỗ cho tương tác song công toàn phần",
+          "summary_vi": "Trong báo cáo này, chúng tôi giới thiệu Mô hình thế giới đối ứng (RWM) và trình bày Duo v1, một mô hình thế giới song công toàn phần liên tục nhận biết các đầu vào nghe nhìn trong khi phản hồi người dùng theo thời gian thực. RWM coi trí tuệ và thực tế vật lý là những yếu tố có tầm quan trọng như nhau trong việc cấu thành nên một thế giới.",
+          "translated": true,
+          "category": "research",
+          "subcategory": "cv",
+          "label": "notable",
+          "score": 6.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "reasoning"
+          ]
+        }
+      ]
+    },
+    {
+      "title_orig": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
+      "title_vi": "FAA mở rộng phạm vi tư vấn về AI để quản lý tình trạng tắc nghẽn giao thông hàng không trên toàn bộ không phận Hoa Kỳ",
+      "translated": true,
+      "days": [
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "stories": [
+        {
+          "day": "2026-11-13",
+          "id": "e94b957965237b81a67714296ac4b51b446602d8",
+          "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
+          "source_id": "ars",
+          "lang": "en",
+          "title_orig": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
+          "title_vi": "FAA mở rộng phạm vi tư vấn về AI để quản lý tình trạng tắc nghẽn giao thông hàng không trên toàn bộ không phận Hoa Kỳ",
+          "summary_vi": "Các hãng hàng không đánh giá cao công cụ AI này, nhưng công đoàn kiểm soát không lưu không tham gia.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        },
+        {
+          "day": "2026-11-14",
+          "id": "4ecfb44c1aedd9ae21362ab1c19013da4102a598",
+          "url": "https://arstechnica.com/features/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
+          "source_id": "ars",
+          "lang": "en",
+          "title_orig": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
+          "title_vi": "FAA mở rộng phạm vi tư vấn về AI để quản lý tình trạng tắc nghẽn giao thông hàng không trên toàn bộ không phận Hoa Kỳ",
+          "summary_vi": "Các hãng hàng không đánh giá cao công cụ AI này, nhưng công đoàn kiểm soát không lưu không tham gia ý kiến.",
+          "translated": true,
+          "category": "other",
+          "subcategory": null,
+          "label": "notable",
+          "score": 3.0,
+          "n_sources": 1,
+          "matched_keywords": [
+            "AI"
+          ]
+        }
+      ]
+    }
+  ]
+}

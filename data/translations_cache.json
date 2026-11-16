@@ -27,6 +27,13 @@
     "hash": "04264ee1a47fd7d8",
     "translated_at": "2026-11-02T15:37:03+00:00"
   },
+  "024802442c5a3f860ab73b2ba73180bf57eabf4a": {
+    "title_vi": "Quốc hội muốn thắt chặt các quy định xuất khẩu đối với chip AI sau vụ bê bối gián điệp Nvidia",
+    "summary_vi": "Không có gì đáng ngạc nhiên khi sau vụ bê bối liên quan đến cựu Giám đốc điều hành Nvidia Jensen Huang và một nghi phạm gián điệp Trung Quốc, Quốc hội đang tìm cách hạn chế hơn nữa việc xuất khẩu chip AI. Cả đảng Dân chủ và đảng Cộng hòa đều lên tiếng ủng hộ nhiều biện pháp và dự luật nhằm thắt chặt các quy định, đồng thời yêu cầu ông Huang và các lãnh đạo khác của Nvidia ra điều trần trước Quốc hội. Phe thiểu số Thượng viện",
+    "source": "mymemory",
+    "hash": "3dbf356c1ddbd322",
+    "translated_at": "2026-11-16T06:40:04+00:00"
+  },
   "02c43a1d4661e9d742f8095ca1105d12d7645eed": {
     "title_vi": "OmniShowcase: Tạo video phù hợp với chủ đề đa hướng từ hình ảnh nhiều chế độ xem",
     "summary_vi": "Tạo video của một đối tượng cụ thể từ một vài hình ảnh tham khảo vẫn còn khó khăn khi máy ảnh hiển thị các bề mặt không nhìn thấy được trong đầu vào. Các phương pháp chuyển chủ đề sang video (S2V) ban đầu điều kiện trên một hình ảnh tham chiếu duy nhất và do đó phải suy ra hình dạng và hình học vô hình của đối tượng khi quan điểm thay đổi.",
@@ -769,6 +776,13 @@
     "hash": "61a1a601103b28df",
     "translated_at": "2026-11-07T06:07:26+00:00"
   },
+  "29c8bcf132e2bb0134e51914d8176c3fb0dfacac": {
+    "title_vi": "FBI cảnh báo công cụ hack ARTEX AI đang hỗ trợ các cuộc tấn công mạng toàn cầu",
+    "summary_vi": "Cục Điều tra Liên bang Hoa Kỳ (FBI) đang cảnh báo rằng các tin tặc đang sử dụng một khung kiểm thử xâm nhập được hỗ trợ bởi AI có tên là ARTEX để tự động hóa các cuộc tấn công mạng nhằm vào các tổ chức trên toàn thế giới, bao gồm cả vụ vi phạm chuỗi cung ứng của ConnectWise gần đây đã xâm phạm các môi trường khách hàng Microsoft 365.",
+    "source": "mymemory",
+    "hash": "82e90bda212a9f4f",
+    "translated_at": "2026-11-16T06:40:01+00:00"
+  },
   "2abeb68b73347724c9fad468685c3e6b79682338": {
     "title_vi": "Sự cố ngừng hoạt động quy mô lớn của Microsoft 365 gây gián đoạn Outlook, Teams, Copilot trên toàn thế giới",
     "summary_vi": "Microsoft đang điều tra một sự cố ngừng hoạt động trên diện rộng ảnh hưởng đến nhiều dịch vụ Microsoft 365, bao gồm Outlook, Microsoft Teams và Copilot, khi người dùng báo cáo các vấn đề về kết nối trên toàn thế giới.",
@@ -796,6 +810,13 @@
     "source": "mymemory",
     "hash": "e0471fd73ddd3e1a",
     "translated_at": "2026-11-10T07:26:07+00:00"
+  },
+  "2cb612de9116082ae32c5c2bc2297c343b9a9e96": {
+    "title_vi": "Tin xấu cho Jensen Huang có phải cũng là tin xấu cho ngành công nghiệp AI không?",
+    "summary_vi": "\"Jensen là Nvidia, phải không? Và phần lớn nền kinh tế này đang phụ thuộc vào Nvidia.\"",
+    "source": "mymemory",
+    "hash": "2c2b2ef50f1f3114",
+    "translated_at": "2026-11-16T06:40:11+00:00"
   },
   "2d52e97e8a16228c7fcaca5484b81f5d963dbb40": {
     "title_vi": "Những tiến bộ trong đồ họa máy tính Agentic",
@@ -1252,6 +1273,13 @@
     "hash": "23dc1fe3da3c5746",
     "translated_at": "2026-11-05T06:57:35+00:00"
   },
+  "476e3424762141c56a66ae5935d9bd5151e69c05": {
+    "title_vi": "Loài thú cưng ảo Tamagotchi AI này biến những đồ vật hằng ngày thành những thú cưng ảo cần được chăm sóc",
+    "summary_vi": "Các thiết bị nhỏ gọn sử dụng công nghệ mực điện tử E Ink của một sinh viên Đại học Carnegie Mellon, được gọi là OAT, mang đến cho cây cảnh trong nhà, ván trượt và tạ tay những cá tính sinh động để thúc đẩy bạn hình thành những thói quen tốt hơn.",
+    "source": "mymemory",
+    "hash": "3f078ec54c094226",
+    "translated_at": "2026-11-16T06:40:15+00:00"
+  },
   "49c4f78acfc1d008ddba1f1df594be7e675b8334": {
     "title_vi": "VidUEU-Agent: Agent quản lý dữ liệu cho các tác vụ đa phương thức, chỉnh sửa và hợp nhất",
     "summary_vi": "Sự tiến bộ của học tập đa phương thức bị hạn chế rất nhiều bởi sự khan hiếm và chi phí chú thích cao của dữ liệu giảng dạy chất lượng cao. Mặc dù video thô cung cấp một nguồn kiến thức trực quan phong phú và năng động, việc chuyển đổi chúng thành dữ liệu hướng dẫn chính xác vẫn còn nhiều thách thức.",
@@ -1286,6 +1314,13 @@
     "source": "mymemory",
     "hash": "025c672be4c88219",
     "translated_at": "2026-11-13T06:53:41+00:00"
+  },
+  "4b0fc5b701ffd77dc12523f912000158b7c589e6": {
+    "title_vi": "Blog mới của chúng tôi về khoa học",
+    "summary_vi": "Blog khoa học OpenAI chia sẻ những phát hiện mới, các phương pháp thực tiễn và những câu chuyện từ chính các nhà nghiên cứu sử dụng AI để thúc đẩy các khám phá khoa học.",
+    "source": "mymemory",
+    "hash": "4239c3296c7b82e4",
+    "translated_at": "2026-11-16T06:39:55+00:00"
   },
   "4b216c6625249c325d02606a1bae96dce2cb3473": {
     "title_vi": "Claude AI có thể cắm trực tiếp vào tài khoản ngân hàng của bạn",
@@ -2400,6 +2435,13 @@
     "hash": "a10f31cf36c47021",
     "translated_at": "2026-11-11T06:36:03+00:00"
   },
+  "87d7014c15ee68a3a258e4931bcaef4b31534b44": {
+    "title_vi": "Một bước tiến tới việc xác định Mô hình chuẩn trên mạng lưới",
+    "summary_vi": "Khám phá một định nghĩa lưới phi nhiễu tiềm năng của Mô hình chuẩn và cách GPT-6 Astra đã giúp biến ý tưởng này thành một bằng chứng chi tiết.",
+    "source": "mymemory",
+    "hash": "97851284c88b2d65",
+    "translated_at": "2026-11-16T06:39:57+00:00"
+  },
   "8903f352878ca52fe3415b00cbac708599f65885": {
     "title_vi": "Cuộc phiêu lưu bí ẩn nhất của The Elder Scrolls được tân trang lại cho PC 4K",
     "summary_vi": "Shadowkey độc quyền của N-Gage được nâng cấp với công nghệ AI và nhiều tính năng mới.",
@@ -2645,6 +2687,13 @@
     "hash": "8aeeff97eb296e8f",
     "translated_at": "2026-11-05T06:56:37+00:00"
   },
+  "950ac38f23f2d5a7b62eb3e171ad86cac2083969": {
+    "title_vi": "Hiểu về Embeddings theo vị trí trong LLMs hiện đại",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "27b5f0ab1cda70c6",
+    "translated_at": "2026-11-16T06:40:07+00:00"
+  },
   "95afc08ba069a5290ba23ed805077d30e17d4a0e": {
     "title_vi": "Tự chưng cất theo chính sách với sự phát triển của giáo viên",
     "summary_vi": "Tự phân loại theo chính sách (OPSD), phù hợp với phân phối cấp độ token của mô hình sinh viên với phân phối cấp độ tự giáo viên được thúc đẩy bởi bối cảnh đặc quyền, đã nổi lên như một hướng đầy hứa hẹn để giảm thiểu sự thưa thớt phần thưởng trong các mô hình sau đào tạo cấp độ trình tự. Tuy nhiên, OPSD thường không đạt được mức tăng hiệu suất liên tục trong quá trình đào tạo.",
@@ -2763,6 +2812,13 @@
     "source": "mymemory",
     "hash": "8852e7c56eb565e7",
     "translated_at": "2026-11-10T07:27:04+00:00"
+  },
+  "9a259c4fc906b717f1253a1590eb6ec8ad1d57b4": {
+    "title_vi": "Mặt trái của sự bùng nổ AI",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "14ce2ac5078ed74d",
+    "translated_at": "2026-11-16T06:39:59+00:00"
   },
   "9abae69701c4237c31577151e84749465bbe434f": {
     "title_vi": "The New York Times kiện trình duyệt web Brave vì đã cào và bỏ qua các bức tường thanh toán bằng AI",
@@ -2917,6 +2973,13 @@
     "source": "mymemory",
     "hash": "ab91e2851bc06388",
     "translated_at": "2026-11-04T06:35:11+00:00"
+  },
+  "a23beef7bff8aca9e65220b4c6b7c50df0923ca6": {
+    "title_vi": "Các DJ AI hoàn toàn phá hỏng nhịp điệu của tôi",
+    "summary_vi": "YouTube Music và Spotify muốn các người dẫn chương trình tổng hợp phụ trách việc tuyển chọn các danh sách phát của bạn. Những lời trêu đùa vụng về và những thông tin vặt giả mạo về bài hát của họ đang làm hỏng bầu không khí.",
+    "source": "mymemory",
+    "hash": "0ca5502cfdfd5c91",
+    "translated_at": "2026-11-16T06:40:13+00:00"
   },
   "a25d5f10bd8ee27e9bf7c6e1e0e594279e817317": {
     "title_vi": "Trang web agentic ở đây",
@@ -3863,6 +3926,13 @@
     "hash": "acf7b3e23a40ad5c",
     "translated_at": "2026-11-10T07:27:08+00:00"
   },
+  "d1f88f4d5d8d433eecc70d0ab8500e6b9f561d91": {
+    "title_vi": "Vi phạm dữ liệu nhân viên TSMC liên quan đến nhà cung cấp dịch vụ đám mây",
+    "summary_vi": "Công ty Sản xuất Chất bán dẫn Đài Loan (TSMC) đã xác nhận rằng dữ liệu cá nhân của nhân viên đã bị rò rỉ trực tuyến sau khi một kẻ tấn công đưa 6,9GB thông tin được cho là đã bị đánh cắp từ công ty ra đấu giá.",
+    "source": "mymemory",
+    "hash": "6f5b05e1fb3dde97",
+    "translated_at": "2026-11-16T06:40:06+00:00"
+  },
   "d2296a64c0dc3b898a3595115c1f5ace43ee82d5": {
     "title_vi": "Token Đào tạo có tính đến gộp cho các mô hình Embedding đa vectơ",
     "summary_vi": "",
@@ -4051,6 +4121,13 @@
     "source": "mymemory",
     "hash": "3ce37790327d27d6",
     "translated_at": "2026-11-07T06:07:09+00:00"
+  },
+  "de1b04aef218049582c90c0014efe24118570b1b": {
+    "title_vi": "Tất cả mã do AI tạo ra phải là mã nguồn mở",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "b98288dfd6b41b38",
+    "translated_at": "2026-11-16T06:40:02+00:00"
   },
   "de2d08d434a1a3b1033c7ec2cba0e7282597b333": {
     "title_vi": "MUON-RT Sử dụng lại quỹ đạo của giáo viên cho Muon không có xung lượng để tự chưng cất LLM",
@@ -4660,6 +4737,13 @@
     "source": "mymemory",
     "hash": "ef64062e30b37737",
     "translated_at": "2026-11-07T06:07:30+00:00"
+  },
+  "fc91828979fbf24c464412bb305af75974558950": {
+    "title_vi": "Công ty khởi nghiệp sản xuất chip của Ấn Độ, Bharat Semi, huy động được 24 triệu USD trong vòng gọi vốn hạt giống khi nhắm đến thị trường cảm biến AI toàn cầu",
+    "summary_vi": "Bharat Semi cho biết họ đã giành được các hợp đồng thiết kế cho công nghệ cảm biến hỗ trợ AI của mình với các công ty bao gồm General Atomics.",
+    "source": "mymemory",
+    "hash": "9d4e6ef6e69f93c4",
+    "translated_at": "2026-11-16T06:40:09+00:00"
   },
   "fcc02b9fa5cbb70a6e9a3848fd37dfeff721c542": {
     "title_vi": "Định dạng lại: Chưng cất theo chính sách đa giáo viên phù hợp với quan sát cho lý luận trực quan Agentic",

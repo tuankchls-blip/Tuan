@@ -1,42 +1,62 @@
 [
   {
-    "id": "b26717d449a421fa88c85772050927cb442473a2",
-    "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+    "id": "4b0fc5b701ffd77dc12523f912000158b7c589e6",
+    "title": "Our new blog for science",
+    "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery."
+  },
+  {
+    "id": "87d7014c15ee68a3a258e4931bcaef4b31534b44",
+    "title": "A step toward defining the Standard Model on a lattice",
+    "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof."
+  },
+  {
+    "id": "9a259c4fc906b717f1253a1590eb6ec8ad1d57b4",
+    "title": "The jagged edge of the ai boom",
     "summary": ""
   },
   {
-    "id": "3f424bb62f49c6217ab104cf6013b9e9e5775ef3",
-    "title": "Starship flight 15 powers to orbit—setting up a possible catch on Saturday",
-    "summary": "One way or another, the company will get some more data on Saturday."
+    "id": "29c8bcf132e2bb0134e51914d8176c3fb0dfacac",
+    "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+    "summary": "The FBI is warning that hackers are using an AI-powered penetration testing framework called ARTEX to automate cyberattacks against organizations worldwide, including a recent ConnectWise supply-chain breach that compromised Microsoft 365 customer environments."
   },
   {
-    "id": "205541d416beff19858bf4bcaf447ba129dce693",
-    "title": "Cursor confirms security breach led to malicious Claude Code extension",
-    "summary": "Cursor confirmed it suffered a security breach that let hackers distribute a malicious Claude Code extension through its marketplace after stealing credentials from AI infrastructure provider Fireworks AI."
+    "id": "de1b04aef218049582c90c0014efe24118570b1b",
+    "title": "All AI-generated code should be Open Source",
+    "summary": ""
   },
   {
-    "id": "1a55776cd7f3fa76a0c48c8c1c0699b3af144d75",
-    "title": "Beware the New AI-Fueled Ransomware Boom",
-    "summary": "Fully automated ransomware hasn’t arrived—yet. But seemingly unsophisticated attackers are using AI tools to wreak havoc."
+    "id": "024802442c5a3f860ab73b2ba73180bf57eabf4a",
+    "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+    "summary": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips. Both Democrats and Republicans have voiced support for various measures and bills that would tighten rules and have demanded that Huang and other Nvidia leaders testify before Congress. Senate Minority"
   },
   {
-    "id": "f9a3c449e5989b1d35e5805bde68b8ad845f3218",
-    "title": "datasette-llm 0.1a11",
-    "summary": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.default_model ' { \"model\": \"lmstudio-qwen\", \"model_name\": \"qwen/qwen3.8-27b\", \"api_base\": \"http://localhost:1234/v1\" } ' content.db And you'll get a local server running a Datasette Agent instance powered by your local model! Tags: uv , datasette-agent , llm , datasette , llms , ai , generative-ai"
+    "id": "d1f88f4d5d8d433eecc70d0ab8500e6b9f561d91",
+    "title": "TSMC employee data breach linked to cloud provider",
+    "summary": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data has been leaked online after a threat actor put 6.9GB of information allegedly stolen from the company up for auction."
   },
   {
-    "id": "19d3409769297d89a6a32d74846a5137e3ee4f76",
-    "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
-    "summary": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on"
+    "id": "950ac38f23f2d5a7b62eb3e171ad86cac2083969",
+    "title": "Understanding Positional Embeddings in Modern LLMs",
+    "summary": ""
   },
   {
-    "id": "b08cefd9996dfc5a6f6dc1ddd91fe34424b098fa",
-    "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-    "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations."
+    "id": "fc91828979fbf24c464412bb305af75974558950",
+    "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+    "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics."
   },
   {
-    "id": "4cb83f2a325913879688e11b023a27349c96ba58",
-    "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
-    "summary": "Normally, aviation is slow to embrace new technology—but AI has come for the skies."
+    "id": "2cb612de9116082ae32c5c2bc2297c343b9a9e96",
+    "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+    "summary": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\""
+  },
+  {
+    "id": "a23beef7bff8aca9e65220b4c6b7c50df0923ca6",
+    "title": "AI DJs Completely Kill My Groove",
+    "summary": "YouTube Music and Spotify want synthetic hosts to curate your playlists. Their awkward banter and bogus song trivia are ruining the vibe."
+  },
+  {
+    "id": "476e3424762141c56a66ae5935d9bd5151e69c05",
+    "title": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
+    "summary": "A Carnegie Mellon student’s tiny E Ink gadgets, called OATs, give houseplants, skateboards, and dumbbells expressive personalities to nudge you toward better habits."
   }
 ]

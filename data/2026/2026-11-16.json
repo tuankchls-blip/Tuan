@@ -1,0 +1,683 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T13:39:48+07:00",
+  "window": {
+    "start": "2026-11-15T07:00:00+07:00",
+    "end": "2026-11-16T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 392,
+      "error": null,
+      "note": "bỏ 257 mục cập nhật bài cũ"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 16,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 1,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1389,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 907,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 2,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 35,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "4b0fc5b701ffd77dc12523f912000158b7c589e6",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "source_id": "openai",
+      "published_at": "2026-11-15T22:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Our new blog for science",
+      "summary_orig": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+      "title_vi": "Blog mới của chúng tôi về khoa học",
+      "summary_vi": "Blog khoa học OpenAI chia sẻ những phát hiện mới, các phương pháp thực tiễn và những câu chuyện từ chính các nhà nghiên cứu sử dụng AI để thúc đẩy các khám phá khoa học.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 4.0,
+      "label": "important",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "từ khóa AI nói chung +1",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "4b0fc5b701ffd77dc12523f912000158b7c589e6"
+      ]
+    },
+    {
+      "id": "87d7014c15ee68a3a258e4931bcaef4b31534b44",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "source_id": "openai",
+      "published_at": "2026-11-15T22:00:01+00:00",
+      "lang": "en",
+      "title_orig": "A step toward defining the Standard Model on a lattice",
+      "summary_orig": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+      "title_vi": "Một bước tiến tới việc xác định Mô hình chuẩn trên mạng lưới",
+      "summary_vi": "Khám phá một định nghĩa lưới phi nhiễu tiềm năng của Mô hình chuẩn và cách GPT-6 Astra đã giúp biến ý tưởng này thành một bằng chứng chi tiết.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn openai +3",
+        "luôn đưa vào: công bố gốc từ openai"
+      ],
+      "article_ids": [
+        "87d7014c15ee68a3a258e4931bcaef4b31534b44"
+      ]
+    },
+    {
+      "id": "9a259c4fc906b717f1253a1590eb6ec8ad1d57b4",
+      "url": "https://hai.stanford.edu/news/the-jagged-edge-of-the-ai-boom",
+      "source_id": "stanford-hai",
+      "published_at": "2026-11-15T18:55:34+00:00",
+      "lang": "en",
+      "title_orig": "The jagged edge of the ai boom",
+      "summary_orig": "",
+      "title_vi": "Mặt trái của sự bùng nổ AI",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn stanford-hai +3",
+        "luôn đưa vào: công bố gốc từ stanford-hai"
+      ],
+      "article_ids": [
+        "9a259c4fc906b717f1253a1590eb6ec8ad1d57b4"
+      ]
+    },
+    {
+      "id": "29c8bcf132e2bb0134e51914d8176c3fb0dfacac",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-15T18:29:53+00:00",
+      "lang": "en",
+      "title_orig": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+      "summary_orig": "The FBI is warning that hackers are using an AI-powered penetration testing framework called ARTEX to automate cyberattacks against organizations worldwide, including a recent ConnectWise supply-chain breach that compromised Microsoft 365 customer environments.",
+      "title_vi": "FBI cảnh báo công cụ hack ARTEX AI đang hỗ trợ các cuộc tấn công mạng toàn cầu",
+      "summary_vi": "Cục Điều tra Liên bang Hoa Kỳ (FBI) đang cảnh báo rằng các tin tặc đang sử dụng một khung kiểm thử xâm nhập được hỗ trợ bởi AI có tên là ARTEX để tự động hóa các cuộc tấn công mạng nhằm vào các tổ chức trên toàn thế giới, bao gồm cả vụ vi phạm chuỗi cung ứng của ConnectWise gần đây đã xâm phạm các môi trường khách hàng Microsoft 365.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "hackers",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "29c8bcf132e2bb0134e51914d8176c3fb0dfacac"
+      ]
+    },
+    {
+      "id": "de1b04aef218049582c90c0014efe24118570b1b",
+      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+      "source_id": "hackernews",
+      "published_at": "2026-11-15T14:46:58+00:00",
+      "lang": "en",
+      "title_orig": "All AI-generated code should be Open Source",
+      "summary_orig": "",
+      "title_vi": "Tất cả mã do AI tạo ra phải là mã nguồn mở",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "software",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 1132
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 1132 +3",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "de1b04aef218049582c90c0014efe24118570b1b"
+      ]
+    },
+    {
+      "id": "024802442c5a3f860ab73b2ba73180bf57eabf4a",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-15T19:15:43+00:00",
+      "lang": "en",
+      "title_orig": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+      "summary_orig": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips. Both Democrats and Republicans have voiced support for various measures and bills that would tighten rules and have demanded that Huang and other Nvidia leaders testify before Congress. Senate Minority",
+      "title_vi": "Quốc hội muốn thắt chặt các quy định xuất khẩu đối với chip AI sau vụ bê bối gián điệp Nvidia",
+      "summary_vi": "Không có gì đáng ngạc nhiên khi sau vụ bê bối liên quan đến cựu Giám đốc điều hành Nvidia Jensen Huang và một nghi phạm gián điệp Trung Quốc, Quốc hội đang tìm cách hạn chế hơn nữa việc xuất khẩu chip AI. Cả đảng Dân chủ và đảng Cộng hòa đều lên tiếng ủng hộ nhiều biện pháp và dự luật nhằm thắt chặt các quy định, đồng thời yêu cầu ông Huang và các lãnh đạo khác của Nvidia ra điều trần trước Quốc hội. Phe thiểu số Thượng viện",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI chips",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa Hạ tầng +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "024802442c5a3f860ab73b2ba73180bf57eabf4a"
+      ]
+    },
+    {
+      "id": "d1f88f4d5d8d433eecc70d0ab8500e6b9f561d91",
+      "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-15T15:23:48+00:00",
+      "lang": "en",
+      "title_orig": "TSMC employee data breach linked to cloud provider",
+      "summary_orig": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data has been leaked online after a threat actor put 6.9GB of information allegedly stolen from the company up for auction.",
+      "title_vi": "Vi phạm dữ liệu nhân viên TSMC liên quan đến nhà cung cấp dịch vụ đám mây",
+      "summary_vi": "Công ty Sản xuất Chất bán dẫn Đài Loan (TSMC) đã xác nhận rằng dữ liệu cá nhân của nhân viên đã bị rò rỉ trực tuyến sau khi một kẻ tấn công đưa 6,9GB thông tin được cho là đã bị đánh cắp từ công ty ra đấu giá.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "data breach",
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "d1f88f4d5d8d433eecc70d0ab8500e6b9f561d91"
+      ]
+    },
+    {
+      "id": "950ac38f23f2d5a7b62eb3e171ad86cac2083969",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "source_id": "hackernews",
+      "published_at": "2026-11-15T12:14:06+00:00",
+      "lang": "en",
+      "title_orig": "Understanding Positional Embeddings in Modern LLMs",
+      "summary_orig": "",
+      "title_vi": "Hiểu về Embeddings theo vị trí trong LLMs hiện đại",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLMs"
+      ],
+      "signals": {
+        "hn_points": 226
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 226 +1",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "950ac38f23f2d5a7b62eb3e171ad86cac2083969"
+      ]
+    },
+    {
+      "id": "fc91828979fbf24c464412bb305af75974558950",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-15T23:30:00+00:00",
+      "lang": "en",
+      "title_orig": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "summary_orig": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+      "title_vi": "Công ty khởi nghiệp sản xuất chip của Ấn Độ, Bharat Semi, huy động được 24 triệu USD trong vòng gọi vốn hạt giống khi nhắm đến thị trường cảm biến AI toàn cầu",
+      "summary_vi": "Bharat Semi cho biết họ đã giành được các hợp đồng thiết kế cho công nghệ cảm biến hỗ trợ AI của mình với các công ty bao gồm General Atomics.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "infra",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "fc91828979fbf24c464412bb305af75974558950"
+      ]
+    },
+    {
+      "id": "2cb612de9116082ae32c5c2bc2297c343b9a9e96",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-15T21:56:35+00:00",
+      "lang": "en",
+      "title_orig": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "summary_orig": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\"",
+      "title_vi": "Tin xấu cho Jensen Huang có phải cũng là tin xấu cho ngành công nghiệp AI không?",
+      "summary_vi": "\"Jensen là Nvidia, phải không? Và phần lớn nền kinh tế này đang phụ thuộc vào Nvidia.\"",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "policy",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "2cb612de9116082ae32c5c2bc2297c343b9a9e96"
+      ]
+    },
+    {
+      "id": "a23beef7bff8aca9e65220b4c6b7c50df0923ca6",
+      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-15T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "AI DJs Completely Kill My Groove",
+      "summary_orig": "YouTube Music and Spotify want synthetic hosts to curate your playlists. Their awkward banter and bogus song trivia are ruining the vibe.",
+      "title_vi": "Các DJ AI hoàn toàn phá hỏng nhịp điệu của tôi",
+      "summary_vi": "YouTube Music và Spotify muốn các người dẫn chương trình tổng hợp phụ trách việc tuyển chọn các danh sách phát của bạn. Những lời trêu đùa vụng về và những thông tin vặt giả mạo về bài hát của họ đang làm hỏng bầu không khí.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "a23beef7bff8aca9e65220b4c6b7c50df0923ca6"
+      ]
+    },
+    {
+      "id": "476e3424762141c56a66ae5935d9bd5151e69c05",
+      "url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-15T11:00:00+00:00",
+      "lang": "en",
+      "title_orig": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
+      "summary_orig": "A Carnegie Mellon student’s tiny E Ink gadgets, called OATs, give houseplants, skateboards, and dumbbells expressive personalities to nudge you toward better habits.",
+      "title_vi": "Loài thú cưng ảo Tamagotchi AI này biến những đồ vật hằng ngày thành những thú cưng ảo cần được chăm sóc",
+      "summary_vi": "Các thiết bị nhỏ gọn sử dụng công nghệ mực điện tử E Ink của một sinh viên Đại học Carnegie Mellon, được gọi là OAT, mang đến cho cây cảnh trong nhà, ván trượt và tạ tay những cá tính sinh động để thúc đẩy bạn hình thành những thói quen tốt hơn.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "476e3424762141c56a66ae5935d9bd5151e69c05"
+      ]
+    },
+    {
+      "id": "0ddb5ce22f3e83168f30d1aeca4be28b14df4479",
+      "url": "https://vnexpress.net/hai-ngay-chao-dao-vi-cac-su-co-cong-nghe-5144815.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-15T05:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Hai ngày chao đảo vì các sự cố công nghệ",
+      "summary_orig": "Outlook của Microsoft gián đoạn trên toàn cầu, hệ thống liên lạc hàng không Mỹ gặp trục trặc, trong khi nhiều cuộc tấn công mạng nhắm vào hạ tầng thiết yếu tuần này.",
+      "title_vi": "Hai ngày chao đảo vì các sự cố công nghệ",
+      "summary_vi": "Outlook của Microsoft gián đoạn trên toàn cầu, hệ thống liên lạc hàng không Mỹ gặp trục trặc, trong khi nhiều cuộc tấn công mạng nhắm vào hạ tầng thiết yếu tuần này.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "tấn công mạng"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "0ddb5ce22f3e83168f30d1aeca4be28b14df4479"
+      ]
+    },
+    {
+      "id": "175398eef9c523f2a7498a709fe6291383f03888",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-cho-doanh-nghiep-dung-mien-phi-du-lieu-mo-de-huan-luyen-ai-5144898.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-15T12:50:28+00:00",
+      "lang": "vi",
+      "title_orig": "TP HCM đề xuất cho doanh nghiệp dùng miễn phí dữ liệu mở để huấn luyện AI",
+      "summary_orig": "Dự thảo Nghị quyết đề xuất doanh nghiệp, tổ chức nghiên cứu hoạt động trong khu đô thị khoa học TP HCM có thể được khai thác miễn phí dữ liệu mở để huấn luyện AI, phát triển ứng dụng số.",
+      "title_vi": "TP HCM đề xuất cho doanh nghiệp dùng miễn phí dữ liệu mở để huấn luyện AI",
+      "summary_vi": "Dự thảo Nghị quyết đề xuất doanh nghiệp, tổ chức nghiên cứu hoạt động trong khu đô thị khoa học TP HCM có thể được khai thác miễn phí dữ liệu mở để huấn luyện AI, phát triển ứng dụng số.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "175398eef9c523f2a7498a709fe6291383f03888"
+      ]
+    },
+    {
+      "id": "9d72212081b1e77e800a0a4b405ade1e1133b4e3",
+      "url": "https://vnexpress.net/looki-l1-camera-nhat-ky-ai-gia-6-9-trieu-dong-5144839.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-15T12:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Looki L1 - camera ‘nhật ký AI’ giá 6,9 triệu đồng",
+      "summary_orig": "Looki L1 thuộc dòng camera đeo cổ hoặc kẹp áo, tích hợp AI, tự động tổng hợp khoảnh khắc đời sống thành nhật ký cá nhân sinh động.",
+      "title_vi": "Looki L1 - camera ‘nhật ký AI’ giá 6,9 triệu đồng",
+      "summary_vi": "Looki L1 thuộc dòng camera đeo cổ hoặc kẹp áo, tích hợp AI, tự động tổng hợp khoảnh khắc đời sống thành nhật ký cá nhân sinh động.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "9d72212081b1e77e800a0a4b405ade1e1133b4e3"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 3,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 12,
+      "untranslated": 0
+    }
+  }
+}
