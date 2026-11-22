@@ -188,6 +188,13 @@
     "hash": "a58dd95e628cec59",
     "translated_at": "2026-11-04T06:35:20+00:00"
   },
+  "069e9d2518d3611f2ff61db9d31279e4be073e17": {
+    "title_vi": "Lỗ hổng bảo mật Rackspace Spot cho phép tin tặc truy cập vào các bí mật của khách hàng Kubernetes",
+    "summary_vi": "Rackspace đã cảnh báo khách hàng rằng các tin tặc đã xâm nhập vào nền tảng đám mây Rackspace Spot bằng cách sử dụng thông tin đăng nhập bị xâm phạm, cho phép chúng triển khai các khối lượng công việc trái phép và truy cập các bí mật Kubernetes trong các cụm của khách hàng.",
+    "source": "mymemory",
+    "hash": "bf1e1d0dc5d37802",
+    "translated_at": "2026-11-22T06:58:28+00:00"
+  },
   "06a3dfba7c273df033b93f1e68dec4e6f92e0044": {
     "title_vi": "Bộ nhớ tự cải thiện cho phép tự cải thiện đệ quy liên tục",
     "summary_vi": "Tối ưu hóa bó dây thường được nghiên cứu với một mô hình chính sách cố định và benchmark. Khi một trong hai yếu tố này thay đổi, trình tối ưu hóa phải quyết định những phần nào của một bộ công cụ đã phát triển cần được tái sử dụng hoặc sửa đổi, nhưng chỉ riêng bộ công cụ có thể không giải thích được lý do tại sao các chỉnh sửa trước đó được thực hiện hoặc hiệu quả của chúng như thế nào. Trong nghiên cứu này, chúng tôi nghiên cứu phương pháp Tự cải thiện đệ quy liên tục (CRSI), một thiết lập để tiếp tục các phương pháp tối ưu hóa khung hiện có trên các benchmarks hoặc mô hình chính sách tương thích.",
@@ -2764,6 +2771,13 @@
     "hash": "690adde0143e75ed",
     "translated_at": "2026-11-20T07:25:06+00:00"
   },
+  "669406732a3f4212be8238db1339b6a04a6916de": {
+    "title_vi": "Giám đốc công nghệ của ‘RansomwareHelp’ bị buộc tội lừa đảo qua mạng",
+    "summary_vi": "Giám đốc công nghệ và đồng sáng lập của ransomwarehelp.com, một doanh nghiệp sáu năm tuổi ở Florida tuyên bố sử dụng \"các công cụ mã hóa tiên tiến\" để khôi phục dữ liệu bị mã hóa bởi ransomware, đã bị buộc tội lừa đảo qua mạng sau khi một chiến dịch chìm của FBI phát hiện ra rằng công ty này chỉ đơn giản là trả tiền cho những kẻ tấn công để lấy khóa giải mã và tính phí cho các nạn nhân với mức giá cao hơn cho một công việc chưa bao giờ được thực hiện.",
+    "source": "mymemory",
+    "hash": "1ede1234f8f851d3",
+    "translated_at": "2026-11-22T06:58:38+00:00"
+  },
   "6797542b56c02b570f36b6d4e4e0af8e15b82257": {
     "title_vi": "Tôi đã sử dụng công cụ sửa đổi công thức nấu ăn dựa trên trí tuệ nhân tạo mới của NYT Cooking và nó thực sự khá tốt",
     "summary_vi": "The New York Times đã thêm một tính năng beta vào ứng dụng Nấu ăn của mình, giúp độc giả trao đổi nguyên liệu hoặc điều chỉnh công thức nấu ăn cho phù hợp với nhu cầu của họ. Nó chủ yếu đánh trúng mục tiêu.",
@@ -2924,6 +2938,13 @@
     "source": "mymemory",
     "hash": "5705f6faaf3a91c5",
     "translated_at": "2026-11-19T07:34:16+00:00"
+  },
+  "6ccebafcdf30c2702885250fb925516a6c098d35": {
+    "title_vi": "Dưới đây là những AI agents hàng đầu có thể tồn tại trong tin nhắn văn bản của bạn",
+    "summary_vi": "Chúng tôi đã tạo một danh sách các agents AI đáng chú ý nhất có thể tồn tại trong các tin nhắn văn bản của bạn, từ các trợ lý tổng hợp đến agents được thiết kế cho gia đình, du lịch và công việc.",
+    "source": "mymemory",
+    "hash": "65419a2dd860741d",
+    "translated_at": "2026-11-22T06:58:25+00:00"
   },
   "6d0b2e187b1989163f2c06b448878a1e2efea0f6": {
     "title_vi": "Băng ghế dự bị mô hình toán học kiểu đầu cuối: Agentic đầu tiên và ZZ0Z có thể xác minh cho mô hình toán học",
@@ -3477,6 +3498,13 @@
     "source": "mymemory",
     "hash": "93f1fd9123900974",
     "translated_at": "2026-11-10T07:26:58+00:00"
+  },
+  "7e3153a77bb316a94fbe62a8f934d04d8a04ffbf": {
+    "title_vi": "Microsoft Lỗ hổng Entra Connect Health bị lợi dụng để đánh cắp dữ liệu của đối tượng thuê",
+    "summary_vi": "Microsoft đang cảnh báo các tổ chức rằng họ đã bị vi phạm dữ liệu sau khi những kẻ tấn công khai thác lỗ hổng trong dịch vụ Entra Connect Health để có được quyền truy cập trái phép vào các địa chỉ email của quản trị viên và thông tin cấu hình đối tượng thuê.",
+    "source": "mymemory",
+    "hash": "cc01f96c280d6b9e",
+    "translated_at": "2026-11-22T06:58:30+00:00"
   },
   "7e61ab468b477b232d11d162a9bf27fff15ff041": {
     "title_vi": "Những nguy cơ của việc phó thác cho AI",
@@ -4192,6 +4220,13 @@
     "hash": "19694b4a76b4d57d",
     "translated_at": "2026-11-05T06:56:26+00:00"
   },
+  "96ff9ae23e2c19bab4682aa4a8febd9430bc00bb": {
+    "title_vi": "Mạng botnet BADBOX trở lại với 40 tỷ lượt yêu cầu quảng cáo hằng ngày, một con số kỷ lục",
+    "summary_vi": "BADBOX malware được tìm thấy trong nhiều loại thiết bị TV box Android thông thường đã quay trở lại với các hoạt động gian lận quảng cáo quy mô lớn sau những gián đoạn vào năm ngoái.",
+    "source": "mymemory",
+    "hash": "41f6cc268663ce86",
+    "translated_at": "2026-11-22T06:58:33+00:00"
+  },
   "97138dfcf19d4bc700b707d2241ff32cdbe5e7bc": {
     "title_vi": "Hướng tới kỷ nguyên của Agentic Thể hiện trí thông minh",
     "summary_vi": "Các mô hình nền tảng ngày càng hướng dẫn các hành động của robot, nhưng quyền tự chủ bền vững đòi hỏi phải kiểm soát hiệu quả và khôi phục lỗi. Chúng tôi giới thiệu A2-MEAS, một khung đa agent được thể hiện được xây dựng xung quanh mã như một giao diện mở rộng. Các mã hiệu chỉnh đã học kết hợp ngôn ngữ hiệu chỉnh, bằng chứng không gian, lịch sử thực hiện và đề xuất hành động. MetaBrain cung cấp giám sát đào tạo và hướng dẫn thời gian chạy.",
@@ -4555,6 +4590,13 @@
     "source": "mymemory",
     "hash": "ca423c4bc6109014",
     "translated_at": "2026-11-03T06:56:26+00:00"
+  },
+  "a2b0b71c81205cd44f9c9f2026cebb2400d5da49": {
+    "title_vi": "Anthropic có đủ khả năng để đặt sự an toàn lên hàng đầu không?",
+    "summary_vi": "Hôm nay, tôi sẽ trò chuyện với Hayden Field, phóng viên mảng AI cấp cao của The Verge, về đợt IPO của Anthropic trong tập thứ ba và cũng là tập cuối cùng của loạt bài về AI trong đời thực. Phòng thí nghiệm AI đứng sau Claude đã niêm yết trên sàn Nasdaq vào thứ Năm tuần trước. Các con số rất lớn, nhưng không thực sự quan trọng đối với cuộc trò chuyện này, ngoại trừ việc",
+    "source": "mymemory",
+    "hash": "2953f3b25a0156db",
+    "translated_at": "2026-11-22T06:58:46+00:00"
   },
   "a2fb00344062975fa7ac8b40f7787e8b1769674a": {
     "title_vi": "Bắt đầu với Daybreak Blue",
@@ -5543,6 +5585,13 @@
     "hash": "fabc81774f10647c",
     "translated_at": "2026-11-06T06:55:35+00:00"
   },
+  "c10c491428fe415f970a9e8c332b0bf8ea67eb95": {
+    "title_vi": "FBI được cho là lại bị tấn công mạng, lần này nhắm vào cơ sở dữ liệu cảnh sát toàn quốc",
+    "summary_vi": "Theo báo cáo, các hệ thống của FBI đã bị xâm nhập lần thứ hai trong vòng hai tháng, lần này nhắm vào Trung tâm Thông tin Tội phạm Quốc gia (NCIC) của cơ quan này, được sử dụng để chia sẻ thông tin giữa các cơ quan thực thi pháp luật địa phương, tiểu bang và liên bang.",
+    "source": "mymemory",
+    "hash": "6dfa340183c696d2",
+    "translated_at": "2026-11-22T06:58:36+00:00"
+  },
   "c13c96e83c9e05a1c3204fd899d7186ec5ebab7e": {
     "title_vi": "PhotoGuider: Cắt xén thành phần nhận biết và 360^{circ} Xem khung với các đánh giá nhiếp ảnh có thể giải thích",
     "summary_vi": "Cắt xén hình ảnh truyền thống giả sử ảnh đã chứa bố cục đáng giữ và chỉ hỏi nơi cắt. Một cảnh 360^{circ} đầy đủ không đảm bảo như vậy: hướng xem trong một cảnh phải được phát hiện trước khi bất cứ điều gì có thể được đóng khung. Chúng tôi trình bày PhotoGuider, một phương pháp đo lường sau đó trả lời cả hai câu hỏi với những người chấm điểm đã học nhỏ gọn trên một tập hợp các tính năng nhận biết thành phần được chia sẻ.",
@@ -5668,6 +5717,13 @@
     "source": "mymemory",
     "hash": "f6c13129de65b0f4",
     "translated_at": "2026-11-02T15:38:32+00:00"
+  },
+  "c6d77569c1742093fb374ac7140a82a495774580": {
+    "title_vi": "Tình trạng mất điện mới chỉ bắt đầu",
+    "summary_vi": "AI đang buộc các công ty phải vá các hệ thống của họ nhanh hơn khi những kẻ tấn công đang chạy đua để khai thác các lỗ hổng mới được phát hiện. Chào mừng bạn đến với địa ngục mất kết nối Internet.",
+    "source": "mymemory",
+    "hash": "c5cd5b4546f831a8",
+    "translated_at": "2026-11-22T06:58:49+00:00"
   },
   "c6ef76c2052daf03a3f969b6a823ed8ea227aea7": {
     "title_vi": "AI đã chỉ cho những cựu nhân viên Google này cách xây dựng một doanh nghiệp vũ khí trị giá hàng tỷ đô la",
@@ -6243,6 +6299,13 @@
     "hash": "076e45329c61218d",
     "translated_at": "2026-11-12T07:19:33+00:00"
   },
+  "dffab27fe8d5022c0bdbf4d7acf0cd3e05cba73e": {
+    "title_vi": "Liệu việc bán một phiên bản AI của khuôn mặt bạn cho công ty khởi nghiệp chuyên về phim ngắn này có phải là tương lai của Hollywood?",
+    "summary_vi": "Một diễn viên đã cấp phép sử dụng khuôn mặt của mình cho một công ty khởi nghiệp chuyên về phim ngắn — một xu hướng đã trở nên phổ biến ở Trung Quốc. Các chuyên gia đặt câu hỏi về những hậu quả lâu dài nếu điều này cũng trở thành một xu hướng ở Hollywood.",
+    "source": "mymemory",
+    "hash": "36b000bed29f81d2",
+    "translated_at": "2026-11-22T06:58:44+00:00"
+  },
   "e002325be7cdd97aee418083ac5689b9c1adaa8f": {
     "title_vi": "WaveGen: Tạo dạng sóng thực sự từ đầu đến cuối thông qua học tập quỹ đạo phổ nội bộ",
     "summary_vi": "Công trình này đề xuất WaveGen, một khung chuyển đổi văn bản thành dạng sóng dựa trên khuếch tán hoàn toàn từ đầu đến cuối, dựa trên Phương pháp ép phổ (Spectral Forcing), đồng thời học quỹ đạo phổ bên trong và quỹ đạo dạng sóng mục tiêu trong một mô hình duy nhất, cho phép tạo dạng sóng trực tiếp từ văn bản từ đầu đến cuối.",
@@ -6795,6 +6858,13 @@
     "source": "mymemory",
     "hash": "18f911cf67bb7edb",
     "translated_at": "2026-11-07T06:07:28+00:00"
+  },
+  "f3487ac9886e909daaf4f66544d23b111033acd1": {
+    "title_vi": "Signal hạn chế chụp ảnh màn hình trên thiết bị di động vì phải đối mặt với \"mối đe dọa hiện hữu\" từ hoạt động giám sát bằng AI",
+    "summary_vi": "Signal đang hạn chế khả năng chụp ảnh màn hình của người dùng trong cả ứng dụng Android và iOS.",
+    "source": "mymemory",
+    "hash": "028f40398960f52a",
+    "translated_at": "2026-11-22T06:58:42+00:00"
   },
   "f3538b6fb36f4f58fdca64e1b764cff7fa0ed810": {
     "title_vi": "Granite Switch 4.1.1 — Cập nhật mô hình như bạn cập nhật phần mềm",

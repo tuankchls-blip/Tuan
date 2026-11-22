@@ -1,0 +1,592 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T13:58:17+07:00",
+  "window": {
+    "start": "2026-11-21T07:00:00+07:00",
+    "end": "2026-11-22T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": "feed trống"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1421,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 915,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 4,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 38,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "6ccebafcdf30c2702885250fb925516a6c098d35",
+      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-21T17:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Here are the top AI agents that can live in your text messages",
+      "summary_orig": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+      "title_vi": "Dưới đây là những AI agents hàng đầu có thể tồn tại trong tin nhắn văn bản của bạn",
+      "summary_vi": "Chúng tôi đã tạo một danh sách các agents AI đáng chú ý nhất có thể tồn tại trong các tin nhắn văn bản của bạn, từ các trợ lý tổng hợp đến agents được thiết kế cho gia đình, du lịch và công việc.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI agents",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "6ccebafcdf30c2702885250fb925516a6c098d35"
+      ]
+    },
+    {
+      "id": "069e9d2518d3611f2ff61db9d31279e4be073e17",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-21T22:59:58+00:00",
+      "lang": "en",
+      "title_orig": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+      "summary_orig": "Rackspace warned customers that hackers breached its Rackspace Spot cloud platform using compromised credentials, allowing them to deploy unauthorized workloads and access Kubernetes secrets in customer clusters.",
+      "title_vi": "Lỗ hổng bảo mật Rackspace Spot cho phép tin tặc truy cập vào các bí mật của khách hàng Kubernetes",
+      "summary_vi": "Rackspace đã cảnh báo khách hàng rằng các tin tặc đã xâm nhập vào nền tảng đám mây Rackspace Spot bằng cách sử dụng thông tin đăng nhập bị xâm phạm, cho phép chúng triển khai các khối lượng công việc trái phép và truy cập các bí mật Kubernetes trong các cụm của khách hàng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "hackers"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "069e9d2518d3611f2ff61db9d31279e4be073e17"
+      ]
+    },
+    {
+      "id": "7e3153a77bb316a94fbe62a8f934d04d8a04ffbf",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-21T18:01:58+00:00",
+      "lang": "en",
+      "title_orig": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+      "summary_orig": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information.",
+      "title_vi": "Microsoft Lỗ hổng Entra Connect Health bị lợi dụng để đánh cắp dữ liệu của đối tượng thuê",
+      "summary_vi": "Microsoft đang cảnh báo các tổ chức rằng họ đã bị vi phạm dữ liệu sau khi những kẻ tấn công khai thác lỗ hổng trong dịch vụ Entra Connect Health để có được quyền truy cập trái phép vào các địa chỉ email của quản trị viên và thông tin cấu hình đối tượng thuê.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "data breach",
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "7e3153a77bb316a94fbe62a8f934d04d8a04ffbf"
+      ]
+    },
+    {
+      "id": "96ff9ae23e2c19bab4682aa4a8febd9430bc00bb",
+      "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-21T15:17:27+00:00",
+      "lang": "en",
+      "title_orig": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+      "summary_orig": "The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions.",
+      "title_vi": "Mạng botnet BADBOX trở lại với 40 tỷ lượt yêu cầu quảng cáo hằng ngày, một con số kỷ lục",
+      "summary_vi": "BADBOX malware được tìm thấy trong nhiều loại thiết bị TV box Android thông thường đã quay trở lại với các hoạt động gian lận quảng cáo quy mô lớn sau những gián đoạn vào năm ngoái.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "malware"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "96ff9ae23e2c19bab4682aa4a8febd9430bc00bb"
+      ]
+    },
+    {
+      "id": "c10c491428fe415f970a9e8c332b0bf8ea67eb95",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-21T14:26:04+00:00",
+      "lang": "en",
+      "title_orig": "FBI reportedly hacked again, this time targeting nationwide police database",
+      "summary_orig": "FBI systems have reportedly been breached for the second time in two months, this time targeting the agency's National Crime Information Center (NCIC), which is used to share information between local, state, and federal law enforcement agencies.",
+      "title_vi": "FBI được cho là lại bị tấn công mạng, lần này nhắm vào cơ sở dữ liệu cảnh sát toàn quốc",
+      "summary_vi": "Theo báo cáo, các hệ thống của FBI đã bị xâm nhập lần thứ hai trong vòng hai tháng, lần này nhắm vào Trung tâm Thông tin Tội phạm Quốc gia (NCIC) của cơ quan này, được sử dụng để chia sẻ thông tin giữa các cơ quan thực thi pháp luật địa phương, tiểu bang và liên bang.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hacked"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "c10c491428fe415f970a9e8c332b0bf8ea67eb95"
+      ]
+    },
+    {
+      "id": "669406732a3f4212be8238db1339b6a04a6916de",
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "source_id": "krebs",
+      "published_at": "2026-11-21T00:36:39+00:00",
+      "lang": "en",
+      "title_orig": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+      "summary_orig": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting operation found the company was simply paying the attackers for a decryption key and charging victims a markup for work that was never performed.",
+      "title_vi": "Giám đốc công nghệ của ‘RansomwareHelp’ bị buộc tội lừa đảo qua mạng",
+      "summary_vi": "Giám đốc công nghệ và đồng sáng lập của ransomwarehelp.com, một doanh nghiệp sáu năm tuổi ở Florida tuyên bố sử dụng \"các công cụ mã hóa tiên tiến\" để khôi phục dữ liệu bị mã hóa bởi ransomware, đã bị buộc tội lừa đảo qua mạng sau khi một chiến dịch chìm của FBI phát hiện ra rằng công ty này chỉ đơn giản là trả tiền cho những kẻ tấn công để lấy khóa giải mã và tính phí cho các nạn nhân với mức giá cao hơn cho một công việc chưa bao giờ được thực hiện.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "ransomware"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn krebs +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "669406732a3f4212be8238db1339b6a04a6916de"
+      ]
+    },
+    {
+      "id": "f3487ac9886e909daaf4f66544d23b111033acd1",
+      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-21T21:37:10+00:00",
+      "lang": "en",
+      "title_orig": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+      "summary_orig": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+      "title_vi": "Signal hạn chế chụp ảnh màn hình trên thiết bị di động vì phải đối mặt với \"mối đe dọa hiện hữu\" từ hoạt động giám sát bằng AI",
+      "summary_vi": "Signal đang hạn chế khả năng chụp ảnh màn hình của người dùng trong cả ứng dụng Android và iOS.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "f3487ac9886e909daaf4f66544d23b111033acd1"
+      ]
+    },
+    {
+      "id": "dffab27fe8d5022c0bdbf4d7acf0cd3e05cba73e",
+      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+      "source_id": "techcrunch-ai",
+      "published_at": "2026-11-21T16:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "summary_orig": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
+      "title_vi": "Liệu việc bán một phiên bản AI của khuôn mặt bạn cho công ty khởi nghiệp chuyên về phim ngắn này có phải là tương lai của Hollywood?",
+      "summary_vi": "Một diễn viên đã cấp phép sử dụng khuôn mặt của mình cho một công ty khởi nghiệp chuyên về phim ngắn — một xu hướng đã trở nên phổ biến ở Trung Quốc. Các chuyên gia đặt câu hỏi về những hậu quả lâu dài nếu điều này cũng trở thành một xu hướng ở Hollywood.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "business",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn techcrunch-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "dffab27fe8d5022c0bdbf4d7acf0cd3e05cba73e"
+      ]
+    },
+    {
+      "id": "a2b0b71c81205cd44f9c9f2026cebb2400d5da49",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-21T15:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Can Anthropic afford to put safety first?",
+      "summary_orig": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to",
+      "title_vi": "Anthropic có đủ khả năng để đặt sự an toàn lên hàng đầu không?",
+      "summary_vi": "Hôm nay, tôi sẽ trò chuyện với Hayden Field, phóng viên mảng AI cấp cao của The Verge, về đợt IPO của Anthropic trong tập thứ ba và cũng là tập cuối cùng của loạt bài về AI trong đời thực. Phòng thí nghiệm AI đứng sau Claude đã niêm yết trên sàn Nasdaq vào thứ Năm tuần trước. Các con số rất lớn, nhưng không thực sự quan trọng đối với cuộc trò chuyện này, ngoại trừ việc",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "models",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "a2b0b71c81205cd44f9c9f2026cebb2400d5da49"
+      ]
+    },
+    {
+      "id": "c6d77569c1742093fb374ac7140a82a495774580",
+      "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-21T13:00:00+00:00",
+      "lang": "en",
+      "title_orig": "The Outages Are Just Getting Started",
+      "summary_orig": "AI is forcing companies to patch their systems faster as attackers race to exploit newly discovered vulnerabilities. Welcome to internet outage hell.",
+      "title_vi": "Tình trạng mất điện mới chỉ bắt đầu",
+      "summary_vi": "AI đang buộc các công ty phải vá các hệ thống của họ nhanh hơn khi những kẻ tấn công đang chạy đua để khai thác các lỗ hổng mới được phát hiện. Chào mừng bạn đến với địa ngục mất kết nối Internet.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "c6d77569c1742093fb374ac7140a82a495774580"
+      ]
+    },
+    {
+      "id": "8f68065a65766c3dea547ecbc4b94552ba7972c8",
+      "url": "https://vnexpress.net/anh-phat-hien-lo-hong-bao-mat-trong-he-thong-tu-lanh-5147268.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-21T01:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Anh phát hiện lỗ hổng bảo mật trong hệ thống tủ lạnh",
+      "summary_orig": "Các chuyên gia Anh phát hiện lỗ hổng bảo mật trong hệ thống tủ lạnh, sau khi thiết bị tương tự ở nhiều nước châu Âu bị tin tặc tấn công.",
+      "title_vi": "Anh phát hiện lỗ hổng bảo mật trong hệ thống tủ lạnh",
+      "summary_vi": "Các chuyên gia Anh phát hiện lỗ hổng bảo mật trong hệ thống tủ lạnh, sau khi thiết bị tương tự ở nhiều nước châu Âu bị tin tặc tấn công.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "lỗ hổng"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "8f68065a65766c3dea547ecbc4b94552ba7972c8"
+      ]
+    },
+    {
+      "id": "df92f808b75a2e2be7bbf53744ddf51f4062427f",
+      "url": "https://vnexpress.net/anthropic-tu-phong-thi-nghiem-ai-den-de-che-nghin-ty-usd-5147177.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-21T05:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Anthropic - từ phòng thí nghiệm AI đến đế chế nghìn tỷ USD",
+      "summary_orig": "Được thành lập với 7 cựu nhân viên OpenAI, Anthropic mong muốn phát triển trí tuệ nhân tạo an toàn, nhưng đang gặp thách thức với chính mục tiêu đó sau IPO.",
+      "title_vi": "Anthropic - từ phòng thí nghiệm AI đến đế chế nghìn tỷ USD",
+      "summary_vi": "Được thành lập với 7 cựu nhân viên OpenAI, Anthropic mong muốn phát triển trí tuệ nhân tạo an toàn, nhưng đang gặp thách thức với chính mục tiêu đó sau IPO.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI",
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "df92f808b75a2e2be7bbf53744ddf51f4062427f"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 2,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 10,
+      "untranslated": 0
+    }
+  }
+}
