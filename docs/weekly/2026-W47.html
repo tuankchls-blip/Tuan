@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin tuần 47/2026</title>
+<meta name="description" content="126 tin Quan trọng, 379 tin trong tuần 47/2026">
+<style>
+/* Giao diện chung: nhúng thẳng vào mỗi trang HTML, không dùng CDN */
+:root {
+  --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f2f0ec; --text: #1d1d1f; --muted: #5f6368;
+  --border: #e3e0da; --link: #1a56b8; --accent: #b4441f;
+  --imp-bg: #fde8e1; --imp-fg: #9a2f10; --not-bg: #e6eefb; --not-fg: #1d4f9c;
+  --warn-bg: #fff4d6; --warn-fg: #7a5600; --ok: #1e7d3a; --err: #b3261e;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+    --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+    --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+    --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+  --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+  --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+  --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 48px; }
+header.top { padding: 20px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .9rem; }
+.topbar nav { display: flex; gap: 14px; flex-wrap: wrap; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 14px 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+h3.sub { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
+.stat b { font-variant-numeric: tabular-nums; }
+button.theme {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0; padding: 0; list-style: none; font-size: .95rem; }
+.toc .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.filters {
+  position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--border);
+}
+.filters .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.filters .seg button {
+  border: 0; background: var(--surface); color: var(--text); padding: 5px 12px; font: inherit; font-size: .88rem; cursor: pointer;
+}
+.filters .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.filters select {
+  font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 8px; max-width: 100%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.filters .count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.story {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 10px 0; box-shadow: var(--shadow);
+}
+.story[hidden], section[hidden] { display: none; }
+.story h4 { font-size: 1.05rem; line-height: 1.4; margin: 6px 0 2px; overflow-wrap: anywhere; }
+.story .orig { color: var(--muted); font-size: .85rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+.story .summary { margin: 6px 0; overflow-wrap: anywhere; }
+.story details { font-size: .9rem; color: var(--muted); }
+.story details summary { cursor: pointer; color: var(--link); }
+.story details p { margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .82rem; color: var(--muted); }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: .75rem; font-weight: 600; letter-spacing: .01em; }
+.badge.important { background: var(--imp-bg); color: var(--imp-fg); }
+.badge.notable { background: var(--not-bg); color: var(--not-fg); }
+.badge.untranslated { background: var(--warn-bg); color: var(--warn-fg); font-weight: 500; }
+.also, .kw { font-size: .85rem; color: var(--muted); margin: 6px 0 0; }
+.kw { display: flex; flex-wrap: wrap; gap: 4px; }
+.kw span { background: var(--surface-2); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.empty { color: var(--muted); font-style: italic; }
+table.status { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.status th, table.status td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.status td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--ok); } .err { color: var(--err); }
+.table-scroll { overflow-x: auto; }
+footer { margin-top: 36px; font-size: .85rem; color: var(--muted); }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0 8px; font-size: .95rem; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive .n { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+details.month > summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.search input {
+  width: 100%; font: inherit; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.search ol { padding-left: 0; list-style: none; }
+.search li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.search .when { color: var(--muted); font-size: .8rem; }
+.latest .story h4 { font-size: 1rem; }
+section[data-group] { scroll-margin-top: 64px; }
+@media (max-width: 520px) {
+  h1 { font-size: 1.35rem; }
+  .filters { position: static; }  /* trên điện thoại thanh lọc chiếm quá nhiều chỗ nếu dính */
+  section[data-group] { scroll-margin-top: 8px; }
+  .story { padding: 12px; }
+  .filters .count { width: 100%; margin-left: 0; }
+}
+/* Bản tổng hợp: biểu đồ thanh bằng CSS, bảng chủ đề, dòng thời gian */
+.bars { list-style: none; padding: 0; margin: 8px 0; }
+.bars li { display: grid; grid-template-columns: minmax(7em, 34%) 1fr 3.2em; gap: 8px; align-items: center; padding: 3px 0; font-size: .9rem; }
+.bars .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { background: var(--surface-2); border-radius: 4px; height: 10px; overflow: hidden; }
+.bars .fill { display: block; height: 100%; background: var(--link); border-radius: 4px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--muted); }
+.daylink { font-size: .8rem; }
+.event { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin: 10px 0; }
+.event h4 { margin: 0 0 6px; font-size: 1rem; }
+.event ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.timeline h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); }
+.note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: minmax(8em, 50%) 1fr 2.6em; }
+}</style>
+<script>
+// Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
+(function () {
+  var KEY = "digest-theme";
+  var LABEL = { auto: "Giao diện: tự động", light: "Giao diện: sáng", dark: "Giao diện: tối" };
+  var root = document.documentElement;
+  function load() { try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
+    var b = document.getElementById("theme-btn"); if (b) b.textContent = LABEL[v];
+  }
+  var current = load(); apply(current);
+  document.addEventListener("DOMContentLoaded", function () {
+    apply(current);
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    b.addEventListener("click", function () {
+      current = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+      save(current); apply(current);
+    });
+  });
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="../index.html">Mục lục</a>
+<a href="2026-W46.html">← Tuần 46/2026</a>    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+<h1>Bản tin tuần 47/2026<br><small>16/11/2026 – 22/11/2026</small></h1>
+<div class="stats">
+  <span class="stat"><b>379</b> tin</span>
+  <span class="stat"><b>126</b> Quan trọng</span>
+  <span class="stat"><b>253</b> Đáng chú ý</span>
+  <span class="stat"><b>7</b> ngày có bản tin</span>
+</div>
+<ul class="toc">
+  <li><a href="#noi-bat">Tin nổi bật</a></li>
+<li><a href="#nhieu-ngay">Đưa tin nhiều ngày</a></li>  <li><a href="#chu-de">Chủ đề</a></li>
+<li><a href="#nghien-cuu">Nghiên cứu đáng đọc</a></li>  <li><a href="#so-lieu">Số liệu</a></li>
+</ul>
+</header>
+<main>
+
+
+<section id="noi-bat">
+  <h2>Tin nổi bật</h2>
+<article class="story" id="h-549a77347d">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>OpenAI News</span>
+<span>· 3 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-549a77347d">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank" rel="noopener noreferrer">Giới thiệu GPT-6.2 Astra và Sol</a>
+  </h4>
+<p class="orig" lang="en">Introducing GPT-6.2 Astra and Sol</p><p class="summary">Giới thiệu GPT‑6.2 Astra và Sol, với kết quả học tập chuyên môn, kỹ năng lập trình, sử dụng máy tính và hiệu quả tốt hơn với chi phí thấp hơn trong ChatGPT Work, Codex và API.</p></article><article class="story" id="h-1711dfbcef">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-1711dfbcef">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.18397" target="_blank" rel="noopener noreferrer">Gamer: Mô hình nền tảng đa năng kết hợp thị giác – ngôn ngữ – hành động cho trò chơi thời gian thực có tầm nhìn dài hạn Agent</a>
+  </h4>
+<p class="orig" lang="en">Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent</p><p class="summary">Chúng tôi xin giới thiệu Gamer, một khung agent đa năng được xây dựng cho các nhiệm vụ dài hạn trong các môi trường tương tác phức tạp. Kiến trúc đầu cuối của nó kết hợp nhận thức, quản lý bộ nhớ và suy luận nhiều bước. Một quy trình đào tạo và triển khai chung hỗ trợ tương tác với cả giao diện đồ họa 2D thông thường và các thế giới mô phỏng 3D phức tạp.</p></article><article class="story" id="h-19becf065b">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-19becf065b">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.15789" target="_blank" rel="noopener noreferrer">VibePrevisBench: Đánh giá mã hóa Agentic để tạo cảnh 4D trong Blender</a>
+  </h4>
+<p class="orig" lang="en">VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender</p><p class="summary">Các mô hình tạo video trong thế giới thực có thể kiểm soát được có thể dựa trên một video proxy hộp xám được dựng, giúp cố định bố cục, chuyển động và camera. Coding agents có thể tạo ra những video như vậy bằng cách tái tạo một cảnh 4D trong Blender, nhưng không có benchmark nào kiểm tra cả những video này và những cảnh dài, nhiều cảnh quay đằng sau chúng.</p></article><article class="story" id="h-769d6247ab">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-20.html#s-769d6247ab">bản ngày 20/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.19200" target="_blank" rel="noopener noreferrer">LogT: Tư duy logic bằng hình ảnh để tìm kiếm trực quan</a>
+  </h4>
+<p class="orig" lang="en">LogT: Logically Think with Images for Visual Search</p><p class="summary">Việc suy nghĩ bằng hình ảnh cho phép các mô hình thị giác-ngôn ngữ (VLM) sử dụng một công cụ Phóng to bên ngoài để thực hiện tìm kiếm trực quan chi tiết. Các công trình gần đây sử dụng fine-tuning có giám sát (SFT) và học tăng cường (RL) với các thiết kế dành riêng cho công cụ để kích hoạt các khả năng đó. Tuy nhiên, việc đạt được khả năng suy luận logic cùng với việc sử dụng công cụ chính xác và hiệu quả vẫn là một thách thức lớn.</p></article><article class="story" id="h-77e0a0e89a">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-77e0a0e89a">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.26380" target="_blank" rel="noopener noreferrer">EgoCaptioner: Hướng tới việc chú thích video vị kỷ toàn diện và chi tiết</a>
+  </h4>
+<p class="orig" lang="en">EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning</p><p class="summary">Việc tạo phụ đề cho video góc nhìn thứ nhất đòi hỏi mức độ chi tiết tỉ mỉ và tính chính xác về thời gian, tuy nhiên, các mô hình ngôn ngữ lớn đa phương thức (MLLM) hiện nay thường bỏ sót các hành động diễn ra trong thời gian ngắn, lẫn lộn thứ tự của chúng hoặc diễn giải sai chuyển động của người đeo. Các định dạng chú thích hiện có cũng chỉ hỗ trợ ở mức hạn chế việc kết hợp lời tường thuật chi tiết với thời gian chính xác.</p></article><article class="story" id="h-9ccf866557">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>MIT Technology Review – AI</span>
+<span>· 6 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-9ccf866557">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/" target="_blank" rel="noopener noreferrer">Phong trào open-source muốn Jensen Huang trở lại</a>
+  </h4>
+<p class="orig" lang="en">The open-source movement wants Jensen Huang back</p><p class="summary">Bài viết này ban đầu được đăng trên The Algorithm, bản tin hằng tuần của chúng tôi về AI. Để là người đầu tiên nhận được những bài viết như thế này trong hộp thư đến của mình, hãy đăng ký tại đây. Vào thứ Sáu, một bản kiến nghị yêu cầu khôi phục chức vụ Giám đốc điều hành Nvidia cho Jensen Huang bắt đầu lan truyền trên mạng xã hội, và đến thứ Hai, bản kiến nghị này đã có một số người ký tên đáng chú ý, bao gồm Elon Musk và một số Nvidia có ảnh hưởng…</p></article><article class="story" id="h-c7d3ecb006">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>OpenAI News</span>
+<span>· 2 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-19.html#s-c7d3ecb006">bản ngày 19/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://openai.com/index/advancing-chip-design-with-our-models" target="_blank" rel="noopener noreferrer">Đẩy mạnh thiết kế chip với các mô hình OpenAI</a>
+  </h4>
+<p class="orig" lang="en">Advancing chip design with OpenAI models</p><p class="summary">Các mẫu OpenAI đã tối ưu hóa các mạch được sử dụng trong chip silicon Jalapeño và cải tiến thiết kế lõi RISC‑V, cho thấy sự tiến bộ trong thiết kế chip được hỗ trợ bởi AI với GPT‑6 Astra.</p></article><article class="story" id="h-15712514dc">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-15712514dc">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.21218" target="_blank" rel="noopener noreferrer">InclusionMed: Đánh giá chuẩn AI cho dịch vụ chăm sóc sức khỏe hòa nhập</a>
+  </h4>
+<p class="orig" lang="en">InclusionMed: Benchmarking AI for Inclusive Healthcare</p><p class="summary">Để phát triển AI y tế nhằm phục vụ chăm sóc sức khỏe hòa nhập, cần phải đánh giá trên nhiều vai trò, nhiệm vụ và môi trường chăm sóc sức khỏe khác nhau, nhưng phạm vi bao phủ của benchmark vẫn chưa đồng đều. Chúng tôi xin giới thiệu InclusionMed, một sáng kiến đánh giá AI y tế mở nhằm hướng tới dịch vụ chăm sóc sức khỏe hòa nhập. Bản đồ InclusionMed sắp xếp benchmarks theo ba vai trò chăm sóc sức khỏe và ba khả năng AI.</p></article><article class="story" id="h-1c343af691">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-19.html#s-1c343af691">bản ngày 19/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.17621" target="_blank" rel="noopener noreferrer">AscendGYM: Tối ưu hóa nhân có tính đến chi phí Benchmark cho các khối lượng công việc thực tế trên NPU Ascend</a>
+  </h4>
+<p class="orig" lang="en">AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs</p><p class="summary">Tối ưu hóa kernel là yếu tố thiết yếu để đào tạo và suy luận mô hình ngôn ngữ lớn (LLM) hiệu quả trên các NPU Ascend. Kernel benchmarks hiện có của Ascend chủ yếu tập trung vào việc tạo kernel, ít chú trọng hơn đến khả năng của agents trong việc tối ưu hóa các triển khai hiện có theo các cấu hình đầu vào được rút ra từ các khối lượng công việc thực tế.</p></article><article class="story" id="h-b88c69fd1f">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-19.html#s-b88c69fd1f">bản ngày 19/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.20992" target="_blank" rel="noopener noreferrer">MedJev: Mô hình quyết định ngôn ngữ thị giác System One để hiểu hình ảnh y tế nhanh chóng và hiệu quả</a>
+  </h4>
+<p class="orig" lang="en">MedJev: A System One Vision-Language Decision Model for Fast and Effective Medical Image Understanding</p><p class="summary">Việc hiểu hình ảnh y tế bằng các mô hình ngôn ngữ thị giác (VLM) thường dựa trên việc tạo ra lập luận và câu trả lời tokens theo phương pháp tự hồi quy. Những tokens không cần thiết này khiến chi phí suy luận tăng theo độ dài của câu trả lời và buộc phải phân tích câu trả lời từ văn bản dạng tự do, dẫn đến độ trễ và sai sót trong quyết định có thể tránh được.</p></article><article class="story" id="h-0cdac5c6e4">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-0cdac5c6e4">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.26409" target="_blank" rel="noopener noreferrer">Video WeMM: Đẩy lùi ranh giới của khả năng hiểu video đa phương thức Open-Source</a>
+  </h4>
+<p class="orig" lang="en">WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding</p><p class="summary">Khả năng hiểu video, đặc biệt là khi có âm thanh đi kèm, vẫn là một thách thức trọng yếu trong trí tuệ đa phương thức. Trong báo cáo này, chúng tôi giới thiệu WeMM-Video, một họ các mô hình nền tảng đa phương thức song ngữ Trung – Anh, bao gồm các biến thể 2B, 4B, 9B và 35B-A3B.</p></article><article class="story" id="h-b76cb2dfc7">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-b76cb2dfc7">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.25387" target="_blank" rel="noopener noreferrer">TuringSpace: Ứng dụng trí tuệ không gian vào thực tế với CAPTCHA tương tác</a>
+  </h4>
+<p class="orig" lang="en">TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs</p><p class="summary">Con người hành động trong thế giới trực quan bằng cách suy luận bố cục 3D đằng sau một hình chiếu 2D, dự đoán một hành động sẽ thay đổi bố cục đó như thế nào và tự điều chỉnh sau khi quan sát kết quả. Liệu các mô hình ngôn ngữ lớn đa phương thức (MLLM) có thể làm điều tương tự không? CAPTCHA là một bài kiểm tra tự nhiên, vì con người giải quyết chúng thông qua chính vòng lặp này, bằng cách nhấp và kéo trên màn hình rồi điều chỉnh sau mỗi kết quả.</p></article><article class="story" id="h-773cc78ee1">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>TechCrunch – AI</span>
+<span>· 3 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-773cc78ee1">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/" target="_blank" rel="noopener noreferrer">Tổng chưởng lý bang California kiện OpenAI vì các sự cố agent gian lận</a>
+  </h4>
+<p class="orig" lang="en">California state AG sues OpenAI over rogue agent incidents</p><p class="summary">Vụ kiện ở California là một trong những nỗ lực đầu tiên nhằm buộc một phòng thí nghiệm AI phải chịu trách nhiệm pháp lý về một sự cố agent bất thường.</p></article><article class="story" id="h-1e29d1d934">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-1e29d1d934">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.18359" target="_blank" rel="noopener noreferrer">Tầm nhìn về Agentic Robotics: Một kỷ nguyên mới của các hệ thống robot</a>
+  </h4>
+<p class="orig" lang="en">Envisioning Agentic Robotics: A New Era of Robotic Systems</p><p class="summary">Sự ra mắt của GPT-6 Astra đánh dấu sự xuất hiện của một mô hình mới trong lĩnh vực robot: robot agentic. Chỉ trong vòng vài tuần, các mô hình tiên phong với bộ dây agentic đã đạt được hoặc vượt qua các chính sách dành riêng cho từng nhiệm vụ trên nhiều benchmarks được hiện thực hóa. Thay vì huấn luyện một chính sách chuyên biệt cho từng nhóm tác vụ, một hệ thống robot agentic áp dụng một mô hình nền tảng cho các tác vụ được hiện thực hóa trong thế giới mở.</p></article><article class="story" id="h-0904df37e9">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-0904df37e9">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.21607" target="_blank" rel="noopener noreferrer">ScaleVLA: Mở rộng quy mô các mô hình Thị giác-Ngôn ngữ-Hành động lên 552 tỷ tham số</a>
+  </h4>
+<p class="orig" lang="en">ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters</p><p class="summary">Các Mô hình Thị giác-Ngôn ngữ (VLM) tiên tiến như GPT-6 Astra đã thể hiện những khả năng đáng kể trong việc điều khiển robot, cho thấy rằng việc huấn luyện trước trên quy mô rộng cung cấp kiến thức có giá trị cho hành động thực tế. Tuy nhiên, hầu hết các chính sách Thị giác-Ngôn ngữ-Hành động (VLA) vẫn dựa vào các khung VLM nhỏ hơn nhiều, khiến tiềm năng này phần lớn chưa được khai thác. Chúng tôi đặt ra câu hỏi liệu các mô hình biểu diễn ở quy mô tiên tiến có thể tạo nền tảng vững chắc hơn cho việc học của robot hay không.</p></article><article class="story" id="h-121bd2762d">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-121bd2762d">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.20385" target="_blank" rel="noopener noreferrer">DominoBench: Đánh giá khả năng suy luận vật lý theo nhiều bước từ hình ảnh tĩnh</a>
+  </h4>
+<p class="orig" lang="en">DominoBench: Evaluating Multi-Step Physical Reasoning from Still Images</p><p class="summary">Liệu một mô hình thị giác-ngôn ngữ có thể nhìn vào hình ảnh của một phản ứng dây chuyền và cho biết điều gì sẽ xảy ra không? Các mô hình đa phương thức gần đây mô tả các cảnh một cách trôi chảy và giải được các bài toán vật lý trong sách giáo khoa, điều này cho thấy các mô hình đó cũng có thể dự đoán được diễn biến của một cảnh có các dốc, gờ, con lắc, bập bênh và quân domino sau khi một quả bóng được đẩy đi. Chúng tôi đã kiểm tra tuyên bố này trên 30 mô hình từ 10 họ mô hình và đi đến một kết luận rõ ràng: khi không được hỗ trợ, không có mô hình nào dự đoán được kết quả một cách đáng tin cậy.</p></article><article class="story" id="h-e1f0b02699">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-e1f0b02699">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.21003" target="_blank" rel="noopener noreferrer">K2-Horizon: Một đội hình tiên phong gồm các mô hình ngôn ngữ mã nguồn mở</a>
+  </h4>
+<p class="orig" lang="en">K2-Horizon: A Frontier Fleet of Open Source Language Models</p><p class="summary">Chúng tôi xin giới thiệu K2-Horizon, một nhóm gồm sáu mô hình ngôn ngữ hoàn toàn mở, từ mô hình dày đặc 0,9 tỷ tham số đến mô hình 375 tỷ-A23B MoE, được xây dựng để phục vụ khả năng suy luận tổng quát và thực hiện các tác vụ agentic trong các lĩnh vực toán học và khoa học, kỹ thuật phần mềm, nghiên cứu chuyên sâu, tự động hóa văn phòng và nhiều lĩnh vực khác. Các mô hình này dẫn đầu hoặc cạnh tranh với các mô hình mã nguồn mở mạnh mẽ có quy mô tương đương về agentic và benchmarks lập trình.</p></article><article class="story" id="h-720286b496">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-20.html#s-720286b496">bản ngày 20/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.24651" target="_blank" rel="noopener noreferrer">Piccolo: Các mô hình quyết định và dữ liệu đồng tiến hóa thông qua tự cải thiện đệ quy</a>
+  </h4>
+<p class="orig" lang="en">Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement</p><p class="summary">Chúng tôi xin giới thiệu Piccolo, một họ các mô hình ra quyết định đa phương thức (0,8 tỷ đến 27 tỷ) đồng tiến hóa các khả năng của mô hình và dữ liệu đào tạo thông qua Agentic Kỹ thuật dữ liệu và tự cải thiện đệ quy (RSI). Các mô hình dự đoán xác suất cho các câu trả lời tiềm năng đối với các đánh giá văn bản và hình ảnh đa dụng, agent bộ khai thác, quy trình xử lý dữ liệu và các trò chơi tương tác.</p></article><article class="story" id="h-8750223535">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-20.html#s-8750223535">bản ngày 20/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.14848" target="_blank" rel="noopener noreferrer">Tideway: Quản lý bộ nhớ phân tầng có nhận biết giai đoạn cho suy luận MoE trên các thiết bị tiêu dùng</a>
+  </h4>
+<p class="orig" lang="en">Tideway: Phase-Aware Tiered Memory Management for MoE Inference on Consumer Devices</p><p class="summary">Mô hình ngôn ngữ lớn (LLM) agents đang nhanh chóng trở thành một mô hình chủ đạo cho các ứng dụng AI. Gần đây, nhu cầu triển khai các mô hình Mixture-of-Experts (MoE) quy mô lớn cục bộ trên máy tính cá nhân của người tiêu dùng ngày càng tăng để cân bằng giữa quyền riêng tư dữ liệu, chi phí API và hiệu quả suy luận.</p></article><article class="story" id="h-8867e3714b">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-20.html#s-8867e3714b">bản ngày 20/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.24098" target="_blank" rel="noopener noreferrer">RoughCut-Bench: A Benchmark để cắt thô video tự động với các mô hình ngôn ngữ thị giác quy mô lớn</a>
+  </h4>
+<p class="orig" lang="en">RoughCut-Bench: A Benchmark for Automatic Video Rough-Cut with Large Vision-Language Models</p><p class="summary">Cắt dựng thô video là một giai đoạn cốt lõi trong quy trình sản xuất nội dung truyền thông, nhằm sắp xếp các tư liệu truyền thông thô thành một bản cắt dựng video ban đầu. Bất chấp những tiến bộ gần đây trong các mô hình ngôn ngữ thị giác lớn (LVLM) dành cho các tác vụ liên quan đến video, việc cắt thô tự động vẫn chưa được nghiên cứu kỹ lưỡng, thiếu một benchmark toàn diện để đánh giá hoặc các quy trình làm việc hoàn thiện để tạo ra các kế hoạch cắt có thể thực hiện được.</p></article><article class="story" id="h-321bf9e3c3">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>TechCrunch – AI</span>
+<span>· 3 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-321bf9e3c3">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/" target="_blank" rel="noopener noreferrer">AI tuyên bố đã tìm ra lời giải cho giả thuyết Riemann 167 năm tuổi — và một con người cũng vậy</a>
+  </h4>
+<p class="orig" lang="en">AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too</p><p class="summary">Các nhà toán học đang vô cùng kinh ngạc trước kết quả mới nhất do AI tạo ra — và cũng có một lời giải do con người đưa ra để cạnh tranh với kết quả đó.</p></article><article class="story" id="h-3976a6719c">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+<span>· 2 nguồn</span>    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-3976a6719c">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.21885" target="_blank" rel="noopener noreferrer">Các mô hình ngôn ngữ có thể viết lại các trọng số của chính chúng</a>
+  </h4>
+<p class="orig" lang="en">Language Models Can Rewrite Their Own Weights</p><p class="summary">Các mô hình ngôn ngữ được đào tạo một lần, được đóng băng và triển khai: việc cải thiện một mô hình một lần nữa đòi hỏi phải thực hiện một lượt đào tạo khác, và một prompt, một khung hoặc phép tính bổ sung khi suy luận sẽ biến mất khi nhiệm vụ kết thúc. Một mô hình tiên phong đã được chứng minh là có thể chỉnh sửa các trọng số của một mô hình nhỏ hơn nhiều. Chúng tôi đặt câu hỏi liệu một mô hình có thể tự viết lại các trọng số của chính nó để cải thiện bản thân hay không, và nhận thấy rằng mô hình đó có thể làm được điều đó bằng chính quá trình suy luận của mình, mà không cần gradient và không cần đào tạo; chúng tôi gọi đây là quá trình tự viết lại.</p></article><article class="story" id="h-3e2b76e461">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-3e2b76e461">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.12901" target="_blank" rel="noopener noreferrer">Suy nghĩ lại theo các điểm đột biến: Giảm thiểu ảo giác trong các MDLM bằng cách giải mã có nhận thức về bước</a>
+  </h4>
+<p class="orig" lang="en">Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding</p><p class="summary">Những tiến bộ gần đây trong các mô hình ngôn ngữ khuếch tán đa phương thức (MDLM) đã cho thấy khả năng mô hình hóa toàn cục mạnh mẽ thông qua quá trình tinh chỉnh lặp. Chúng tôi quan sát thấy rằng độ không chắc chắn của mặt nạ có xu hướng giảm tổng thể trong quá trình khử nhiễu lặp, trong khi một số bước khử nhiễu cho thấy các mức tăng đột biến entropy cục bộ có liên quan chặt chẽ đến hiện tượng ảo giác.</p></article><article class="story" id="h-890b3b5545">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-890b3b5545">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.13509" target="_blank" rel="noopener noreferrer">Mobile AI Factory: Xây dựng các mô hình ngôn ngữ chuyên biệt cho thiết bị di động của bạn</a>
+  </h4>
+<p class="orig" lang="en">Mobile AI Factory: Building Specialized Language Models for Your Mobile Device</p><p class="summary">Các mô hình ngôn ngữ nhỏ (SLM) chạy trên thiết bị di động có thể bảo mật dữ liệu người dùng và hoạt động mà không cần kết nối. Nhưng chúng chỉ hoạt động tốt khi được tinh chỉnh cho nhiệm vụ mục tiêu và có kích thước phù hợp với thiết bị mục tiêu – một quy trình hiện nay đòi hỏi phải được các chuyên gia tinh chỉnh nhiều lần. Chúng tôi xin giới thiệu {\it Mobile AI Factory}, một hệ thống agentic xây dựng một SLM được tinh chỉnh, lượng tử hóa cho một tác vụ và điện thoại nhất định.</p></article><article class="story" id="h-979c445d2a">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-979c445d2a">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.12068" target="_blank" rel="noopener noreferrer">MIRIX-2.0: Hệ thống bộ nhớ Multi-Agent</a>
+  </h4>
+<p class="orig" lang="en">MIRIX-2.0: Multi-Agent Memory System</p><p class="summary">Bộ nhớ dài hạn cho phép LLM agents cá nhân hóa, duy trì tính nhất quán và tái sử dụng những gì đã hiệu quả trước đây. Bộ nhớ tham số cần được đào tạo, quá trình hợp nhất có thể làm mất vĩnh viễn các chi tiết và việc lưu giữ mọi bản ghi sẽ tạo ra một kho lưu trữ ngày càng lớn cần tìm kiếm. Chúng tôi xin giới thiệu MIRIX-2.0, một hệ thống bộ nhớ đa agent được thiết kế để vừa thực tế, vừa chính xác và vừa hiệu quả. Đây là hệ thống chính xác nhất trong số các hệ thống được so sánh trên bốn trong số năm benchmarks QA.</p></article></section>
+
+<section id="nhieu-ngay">
+  <h2>Sự kiện được đưa tin nhiều ngày</h2>
+  <div class="event">
+    <h4>Phong trào open-source muốn Jensen Huang trở lại</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-2cb612de91">16/11/2026</a>:
+        Tin xấu cho Jensen Huang có phải cũng là tin xấu cho ngành công nghiệp AI không? <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-18.html#s-9ccf866557">18/11/2026</a>:
+        Phong trào open-source muốn Jensen Huang trở lại <span class="note">(MIT Technology Review – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-319e08473b">19/11/2026</a>:
+        OpenAI Giám đốc điều hành Sam Altman cho biết &#34;thật khó để tưởng tượng ngành công nghiệp AI mà không có Jensen&#34; <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-2fc737ddb9">20/11/2026</a>:
+        Vụ bê bối Jensen Huang đang diễn ra: dòng thời gian <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-f0e77c900b">21/11/2026</a>:
+        Hậu quả của vụ bê bối liên quan đến Jensen Huang của Nvidia vẫn tiếp diễn <span class="note">(TechCrunch – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>CVE-2026-115731: Lỗ hổng giải mã dữ liệu không đáng tin cậy trong Perforce Puppet Enterprise</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-18.html#s-7ca8ed11e0">18/11/2026</a>:
+        CVE-2026-115731: Lỗ hổng giải mã dữ liệu không đáng tin cậy trong Perforce Puppet Enterprise <span class="note">(CISA – Known Exploited Vulnerabilities)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-d53492c6a0">19/11/2026</a>:
+        Apache cảnh báo về lỗ hổng RCE của Roller đang bị lợi dụng trong các cuộc tấn công <span class="note">(BleepingComputer)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-b21af4fa25">20/11/2026</a>:
+        Drupal vá lỗ hổng RCE nghiêm trọng, cảnh báo các lỗ hổng có thể nhanh chóng bị khai thác <span class="note">(BleepingComputer)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-8c4a7c3d14">21/11/2026</a>:
+        CVE-2026-129448: Lỗ hổng giải mã dữ liệu không đáng tin cậy trong Apache Roller <span class="note">(CISA – Known Exploited Vulnerabilities)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-2034edc430">21/11/2026</a>:
+        F5 phát hành các bản vá khẩn cấp cho các lỗ hổng RCE nghiêm trọng của BIG-IP <span class="note">(BleepingComputer)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>FBI cảnh báo công cụ hack ARTEX AI đang hỗ trợ các cuộc tấn công mạng toàn cầu</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-29c8bcf132">16/11/2026</a>:
+        FBI cảnh báo công cụ hack ARTEX AI đang hỗ trợ các cuộc tấn công mạng toàn cầu <span class="note">(BleepingComputer)</span></li>
+      <li><a href="../daily/2026/2026-11-17.html#s-030a040e02">17/11/2026</a>:
+        FBI cho biết công cụ hack mã nguồn mở Artex AI được sử dụng để xâm nhập vào các mạng trong &#34;dưới ba giờ&#34; <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-e63bb55695">19/11/2026</a>:
+        Artex là công cụ tấn công bằng AI &#34;chỉ và chụp&#34; mới được bọn tội phạm ưa chuộng <span class="note">(Wired – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>AI đang giết chết All About Berlin</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-a23beef7bf">16/11/2026</a>:
+        Các DJ AI hoàn toàn phá hỏng nhịp điệu của tôi <span class="note">(Wired – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-f1feb2e4bb">19/11/2026</a>:
+        AI đang giết chết All About Berlin <span class="note">(Hacker News)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-cc2401a740">21/11/2026</a>:
+        Chàng trai 16 tuổi này đã thành lập một công ty khởi nghiệp về tên lửa AI. Mục tiêu của cậu là &#34;chi phí cho mỗi lần tiêu diệt&#34; <span class="note">(Wired – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>MedJev: Mô hình quyết định ngôn ngữ thị giác System One để hiểu hình ảnh y tế nhanh chóng và hiệu quả</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-18.html#s-e8bac21d91">18/11/2026</a>:
+        Marimba: Một mô hình Hệ thống 1 cho lời nói <span class="note">(arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.SE, cs.CR))</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-b88c69fd1f">19/11/2026</a>:
+        MedJev: Mô hình quyết định ngôn ngữ thị giác System One để hiểu hình ảnh y tế nhanh chóng và hiệu quả <span class="note">(Hugging Face Daily Papers)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-eba1ef6c1e">20/11/2026</a>:
+        Jeveration: Các mô hình Hệ thống 1 hiện đang tạo ra <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Satya Nadella dự đoán AI agents sẽ tái cấu trúc nền kinh tế của mạng Internet</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-18.html#s-698ced14e3">18/11/2026</a>:
+        Satya Nadella nói rằng ông hiện đã tin vào AGI <span class="note">(The Verge – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-acb7f96633">19/11/2026</a>:
+        Satya Nadella dự đoán AI agents sẽ tái cấu trúc nền kinh tế của mạng Internet <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-2cf389d7c3">19/11/2026</a>:
+        Giữa bối cảnh lo ngại về các cuộc tấn công mạng sử dụng AI, Satya Nadella cho biết nhiều cơ sở hạ tầng quan trọng là &#34;không thể vá lỗi&#34; <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-c8a4b2ac13">20/11/2026</a>:
+        Microsoft CEO Satya Nadella giải thích lý do tại sao ông yêu cầu 60.000 nhân viên nghỉ việc <span class="note">(TechCrunch – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>K2-Horizon: Một đội hình tiên phong gồm các mô hình ngôn ngữ mã nguồn mở</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-de1b04aef2">16/11/2026</a>:
+        Tất cả mã do AI tạo ra phải là mã nguồn mở <span class="note">(Hacker News)</span></li>
+      <li><a href="../daily/2026/2026-11-18.html#s-e1f0b02699">18/11/2026</a>:
+        K2-Horizon: Một đội hình tiên phong gồm các mô hình ngôn ngữ mã nguồn mở <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Quốc hội muốn thắt chặt các quy định xuất khẩu đối với chip AI sau vụ bê bối gián điệp Nvidia</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-024802442c">16/11/2026</a>:
+        Quốc hội muốn thắt chặt các quy định xuất khẩu đối với chip AI sau vụ bê bối gián điệp Nvidia <span class="note">(The Verge – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-19.html#s-bfaa144bfe">19/11/2026</a>:
+        Nvidia không còn bán chip AI cho Trung Quốc nữa <span class="note">(The Verge – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Chúng ta có thể hiểu được cách thức hoạt động bên trong của LLMs không?</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-16.html#s-950ac38f23">16/11/2026</a>:
+        Hiểu về Embeddings theo vị trí trong LLMs hiện đại <span class="note">(Hacker News)</span></li>
+      <li><a href="../daily/2026/2026-11-18.html#s-9e1f8db3a8">18/11/2026</a>:
+        Chúng ta có thể hiểu được cách thức hoạt động bên trong của LLMs không? <span class="note">(Communications of the ACM)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>MMFlash: Giải mã suy đoán nhanh hơn cho các mô hình thị giác-ngôn ngữ</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-17.html#s-ef27ea1143">17/11/2026</a>:
+        MMFlash: Giải mã suy đoán nhanh hơn cho các mô hình thị giác-ngôn ngữ <span class="note">(Hugging Face Daily Papers)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-68af699b42">21/11/2026</a>:
+        VSpark: Giải mã suy đoán cho các mô hình hành động ngôn ngữ thị giác tự hồi quy <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Gemini AI agents liên tục vượt qua các biện pháp bảo vệ để tấn công trang web thực</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-17.html#s-a252afbf67">17/11/2026</a>:
+        Gemini AI agents liên tục vượt qua các biện pháp bảo vệ để tấn công trang web thực <span class="note">(BleepingComputer)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-32cca7ee57">20/11/2026</a>:
+        Đếch cần các biện pháp bảo vệ AI của các người <span class="note">(Hacker News)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>AI giúp các nhà nghiên cứu tìm hiểu cách hàng nghìn nghiên cứu y học chia sẻ mã</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-17.html#s-99f66f454c">17/11/2026</a>:
+        OpenAI sẽ tuyển dụng các nhà nghiên cứu về an toàn để điều tra việc phá hoại AI <span class="note">(TechCrunch – AI)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-4665289b81">20/11/2026</a>:
+        AI giúp các nhà nghiên cứu tìm hiểu cách hàng nghìn nghiên cứu y học chia sẻ mã <span class="note">(MIT News – AI)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Lập trình không gian trọng lượng không cần Transformers</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-19.html#s-62671662bf">19/11/2026</a>:
+        Lập trình không gian trọng lượng không cần Transformers <span class="note">(Hugging Face Daily Papers)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-ffb0dde8d8">21/11/2026</a>:
+        Đào tạo các mô hình thị giác cho lập trình không gian trọng số do LLM điều khiển <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>CVE-2026-40217: Lỗ hổng kênh thay thế không được bảo vệ của BerriAI LiteLLM</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-19.html#s-2767467965">19/11/2026</a>:
+        CVE-2026-40217: Lỗ hổng kênh thay thế không được bảo vệ của BerriAI LiteLLM <span class="note">(CISA – Known Exploited Vulnerabilities)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-5c82ea4b1c">21/11/2026</a>:
+        CVE-2026-123890: Lỗ hổng bỏ qua xác thực VMWare vCenter bằng cách sử dụng đường dẫn hoặc kênh thay thế <span class="note">(CISA – Known Exploited Vulnerabilities)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>Piccolo: Các mô hình quyết định và dữ liệu đồng tiến hóa thông qua tự cải thiện đệ quy</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-19.html#s-06a3dfba7c">19/11/2026</a>:
+        Bộ nhớ tự cải thiện cho phép tự cải thiện đệ quy liên tục <span class="note">(Hugging Face Daily Papers)</span></li>
+      <li><a href="../daily/2026/2026-11-20.html#s-720286b496">20/11/2026</a>:
+        Piccolo: Các mô hình quyết định và dữ liệu đồng tiến hóa thông qua tự cải thiện đệ quy <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+  <div class="event">
+    <h4>WeVisForensics: Agent tự phát triển để phát hiện video do AI tạo ra toàn diện</h4>
+    <ul>
+      <li><a href="../daily/2026/2026-11-20.html#s-7547cac93d">20/11/2026</a>:
+        VAE Rhythm: Dấu vết giải mã theo thời gian để phát hiện video do AI tạo ra <span class="note">(Hugging Face Daily Papers)</span></li>
+      <li><a href="../daily/2026/2026-11-21.html#s-47ddbf71e0">21/11/2026</a>:
+        WeVisForensics: Agent tự phát triển để phát hiện video do AI tạo ra toàn diện <span class="note">(Hugging Face Daily Papers)</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="chu-de">
+  <h2>Chủ đề so với tuần 46/2026</h2>
+  <div class="table-scroll">
+  <table class="status">
+    <thead><tr><th>Chủ đề</th><th class="n">Kỳ này</th><th class="n">Kỳ trước</th><th class="n">Thay đổi</th></tr></thead>
+    <tbody>
+      <tr><td>Mô hình ngôn ngữ</td><td class="n">110</td><td class="n">71</td>
+        <td class="n up">▲ +39</td></tr>
+      <tr><td>AI nói chung</td><td class="n">172</td><td class="n">150</td>
+        <td class="n up">▲ +22</td></tr>
+      <tr><td>Đa phương thức &amp; thị giác</td><td class="n">31</td><td class="n">13</td>
+        <td class="n up">▲ +18</td></tr>
+      <tr><td>Hạ tầng</td><td class="n">44</td><td class="n">27</td>
+        <td class="n up">▲ +17</td></tr>
+      <tr><td>Mô hình mở &amp; đánh giá</td><td class="n">58</td><td class="n">46</td>
+        <td class="n up">▲ +12</td></tr>
+      <tr><td>Dữ liệu</td><td class="n">18</td><td class="n">8</td>
+        <td class="n up">▲ +10</td></tr>
+      <tr><td>Bảo mật</td><td class="n">58</td><td class="n">58</td>
+        <td class="n flat">—</td></tr>
+      <tr><td>An toàn AI</td><td class="n">11</td><td class="n">13</td>
+        <td class="n down">▼ -2</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="nghien-cuu">
+  <h2>Nghiên cứu đáng đọc</h2>
+<article class="story" id="h-1711dfbcef">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-1711dfbcef">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.18397" target="_blank" rel="noopener noreferrer">Gamer: Mô hình nền tảng đa năng kết hợp thị giác – ngôn ngữ – hành động cho trò chơi thời gian thực có tầm nhìn dài hạn Agent</a>
+  </h4>
+<p class="orig" lang="en">Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent</p><p class="summary">Chúng tôi xin giới thiệu Gamer, một khung agent đa năng được xây dựng cho các nhiệm vụ dài hạn trong các môi trường tương tác phức tạp. Kiến trúc đầu cuối của nó kết hợp nhận thức, quản lý bộ nhớ và suy luận nhiều bước. Một quy trình đào tạo và triển khai chung hỗ trợ tương tác với cả giao diện đồ họa 2D thông thường và các thế giới mô phỏng 3D phức tạp.</p></article><article class="story" id="h-19becf065b">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-19becf065b">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.15789" target="_blank" rel="noopener noreferrer">VibePrevisBench: Đánh giá mã hóa Agentic để tạo cảnh 4D trong Blender</a>
+  </h4>
+<p class="orig" lang="en">VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender</p><p class="summary">Các mô hình tạo video trong thế giới thực có thể kiểm soát được có thể dựa trên một video proxy hộp xám được dựng, giúp cố định bố cục, chuyển động và camera. Coding agents có thể tạo ra những video như vậy bằng cách tái tạo một cảnh 4D trong Blender, nhưng không có benchmark nào kiểm tra cả những video này và những cảnh dài, nhiều cảnh quay đằng sau chúng.</p></article><article class="story" id="h-769d6247ab">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-20.html#s-769d6247ab">bản ngày 20/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.19200" target="_blank" rel="noopener noreferrer">LogT: Tư duy logic bằng hình ảnh để tìm kiếm trực quan</a>
+  </h4>
+<p class="orig" lang="en">LogT: Logically Think with Images for Visual Search</p><p class="summary">Việc suy nghĩ bằng hình ảnh cho phép các mô hình thị giác-ngôn ngữ (VLM) sử dụng một công cụ Phóng to bên ngoài để thực hiện tìm kiếm trực quan chi tiết. Các công trình gần đây sử dụng fine-tuning có giám sát (SFT) và học tăng cường (RL) với các thiết kế dành riêng cho công cụ để kích hoạt các khả năng đó. Tuy nhiên, việc đạt được khả năng suy luận logic cùng với việc sử dụng công cụ chính xác và hiệu quả vẫn là một thách thức lớn.</p></article><article class="story" id="h-77e0a0e89a">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-77e0a0e89a">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.26380" target="_blank" rel="noopener noreferrer">EgoCaptioner: Hướng tới việc chú thích video vị kỷ toàn diện và chi tiết</a>
+  </h4>
+<p class="orig" lang="en">EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning</p><p class="summary">Việc tạo phụ đề cho video góc nhìn thứ nhất đòi hỏi mức độ chi tiết tỉ mỉ và tính chính xác về thời gian, tuy nhiên, các mô hình ngôn ngữ lớn đa phương thức (MLLM) hiện nay thường bỏ sót các hành động diễn ra trong thời gian ngắn, lẫn lộn thứ tự của chúng hoặc diễn giải sai chuyển động của người đeo. Các định dạng chú thích hiện có cũng chỉ hỗ trợ ở mức hạn chế việc kết hợp lời tường thuật chi tiết với thời gian chính xác.</p></article><article class="story" id="h-15712514dc">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-18.html#s-15712514dc">bản ngày 18/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.21218" target="_blank" rel="noopener noreferrer">InclusionMed: Đánh giá chuẩn AI cho dịch vụ chăm sóc sức khỏe hòa nhập</a>
+  </h4>
+<p class="orig" lang="en">InclusionMed: Benchmarking AI for Inclusive Healthcare</p><p class="summary">Để phát triển AI y tế nhằm phục vụ chăm sóc sức khỏe hòa nhập, cần phải đánh giá trên nhiều vai trò, nhiệm vụ và môi trường chăm sóc sức khỏe khác nhau, nhưng phạm vi bao phủ của benchmark vẫn chưa đồng đều. Chúng tôi xin giới thiệu InclusionMed, một sáng kiến đánh giá AI y tế mở nhằm hướng tới dịch vụ chăm sóc sức khỏe hòa nhập. Bản đồ InclusionMed sắp xếp benchmarks theo ba vai trò chăm sóc sức khỏe và ba khả năng AI.</p></article><article class="story" id="h-1c343af691">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-19.html#s-1c343af691">bản ngày 19/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.17621" target="_blank" rel="noopener noreferrer">AscendGYM: Tối ưu hóa nhân có tính đến chi phí Benchmark cho các khối lượng công việc thực tế trên NPU Ascend</a>
+  </h4>
+<p class="orig" lang="en">AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs</p><p class="summary">Tối ưu hóa kernel là yếu tố thiết yếu để đào tạo và suy luận mô hình ngôn ngữ lớn (LLM) hiệu quả trên các NPU Ascend. Kernel benchmarks hiện có của Ascend chủ yếu tập trung vào việc tạo kernel, ít chú trọng hơn đến khả năng của agents trong việc tối ưu hóa các triển khai hiện có theo các cấu hình đầu vào được rút ra từ các khối lượng công việc thực tế.</p></article><article class="story" id="h-b88c69fd1f">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-19.html#s-b88c69fd1f">bản ngày 19/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.20992" target="_blank" rel="noopener noreferrer">MedJev: Mô hình quyết định ngôn ngữ thị giác System One để hiểu hình ảnh y tế nhanh chóng và hiệu quả</a>
+  </h4>
+<p class="orig" lang="en">MedJev: A System One Vision-Language Decision Model for Fast and Effective Medical Image Understanding</p><p class="summary">Việc hiểu hình ảnh y tế bằng các mô hình ngôn ngữ thị giác (VLM) thường dựa trên việc tạo ra lập luận và câu trả lời tokens theo phương pháp tự hồi quy. Những tokens không cần thiết này khiến chi phí suy luận tăng theo độ dài của câu trả lời và buộc phải phân tích câu trả lời từ văn bản dạng tự do, dẫn đến độ trễ và sai sót trong quyết định có thể tránh được.</p></article><article class="story" id="h-0cdac5c6e4">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-0cdac5c6e4">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.26409" target="_blank" rel="noopener noreferrer">Video WeMM: Đẩy lùi ranh giới của khả năng hiểu video đa phương thức Open-Source</a>
+  </h4>
+<p class="orig" lang="en">WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding</p><p class="summary">Khả năng hiểu video, đặc biệt là khi có âm thanh đi kèm, vẫn là một thách thức trọng yếu trong trí tuệ đa phương thức. Trong báo cáo này, chúng tôi giới thiệu WeMM-Video, một họ các mô hình nền tảng đa phương thức song ngữ Trung – Anh, bao gồm các biến thể 2B, 4B, 9B và 35B-A3B.</p></article><article class="story" id="h-b76cb2dfc7">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-21.html#s-b76cb2dfc7">bản ngày 21/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.25387" target="_blank" rel="noopener noreferrer">TuringSpace: Ứng dụng trí tuệ không gian vào thực tế với CAPTCHA tương tác</a>
+  </h4>
+<p class="orig" lang="en">TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs</p><p class="summary">Con người hành động trong thế giới trực quan bằng cách suy luận bố cục 3D đằng sau một hình chiếu 2D, dự đoán một hành động sẽ thay đổi bố cục đó như thế nào và tự điều chỉnh sau khi quan sát kết quả. Liệu các mô hình ngôn ngữ lớn đa phương thức (MLLM) có thể làm điều tương tự không? CAPTCHA là một bài kiểm tra tự nhiên, vì con người giải quyết chúng thông qua chính vòng lặp này, bằng cách nhấp và kéo trên màn hình rồi điều chỉnh sau mỗi kết quả.</p></article><article class="story" id="h-1e29d1d934">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <a class="daylink" href="../daily/2026/2026-11-17.html#s-1e29d1d934">bản ngày 17/11/2026</a>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.18359" target="_blank" rel="noopener noreferrer">Tầm nhìn về Agentic Robotics: Một kỷ nguyên mới của các hệ thống robot</a>
+  </h4>
+<p class="orig" lang="en">Envisioning Agentic Robotics: A New Era of Robotic Systems</p><p class="summary">Sự ra mắt của GPT-6 Astra đánh dấu sự xuất hiện của một mô hình mới trong lĩnh vực robot: robot agentic. Chỉ trong vòng vài tuần, các mô hình tiên phong với bộ dây agentic đã đạt được hoặc vượt qua các chính sách dành riêng cho từng nhiệm vụ trên nhiều benchmarks được hiện thực hóa. Thay vì huấn luyện một chính sách chuyên biệt cho từng nhóm tác vụ, một hệ thống robot agentic áp dụng một mô hình nền tảng cho các tác vụ được hiện thực hóa trong thế giới mở.</p></article></section>
+
+
+<section id="so-lieu">
+  <h2>Số liệu</h2>
+  <div class="grid2">
+    <div>
+      <h3 class="sub">Theo mục</h3>
+<ul class="bars">
+  <li><span class="name" title="Nghiên cứu">Nghiên cứu</span>
+      <span class="track"><span class="fill" style="width: 100.0%"></span></span>
+      <span class="n">171</span></li>
+  <li><span class="name" title="Bảo mật">Bảo mật</span>
+      <span class="track"><span class="fill" style="width: 29.8%"></span></span>
+      <span class="n">51</span></li>
+  <li><span class="name" title="Tin khác">Tin khác</span>
+      <span class="track"><span class="fill" style="width: 28.7%"></span></span>
+      <span class="n">49</span></li>
+  <li><span class="name" title="Mô hình &amp; hệ thống AI mới">Mô hình &amp; hệ thống AI mới</span>
+      <span class="track"><span class="fill" style="width: 21.1%"></span></span>
+      <span class="n">36</span></li>
+  <li><span class="name" title="Việt Nam">Việt Nam</span>
+      <span class="track"><span class="fill" style="width: 11.1%"></span></span>
+      <span class="n">19</span></li>
+  <li><span class="name" title="Kinh doanh &amp; ngành">Kinh doanh &amp; ngành</span>
+      <span class="track"><span class="fill" style="width: 9.4%"></span></span>
+      <span class="n">16</span></li>
+  <li><span class="name" title="Chính sách &amp; đạo đức AI">Chính sách &amp; đạo đức AI</span>
+      <span class="track"><span class="fill" style="width: 8.8%"></span></span>
+      <span class="n">15</span></li>
+  <li><span class="name" title="Hạ tầng &amp; phần cứng">Hạ tầng &amp; phần cứng</span>
+      <span class="track"><span class="fill" style="width: 8.2%"></span></span>
+      <span class="n">14</span></li>
+  <li><span class="name" title="Phần mềm &amp; công cụ">Phần mềm &amp; công cụ</span>
+      <span class="track"><span class="fill" style="width: 4.7%"></span></span>
+      <span class="n">8</span></li>
+</ul>    </div>
+    <div>
+      <h3 class="sub">Theo nguồn gốc</h3>
+<ul class="bars">
+  <li><span class="name" title="Hugging Face Daily Papers">Hugging Face Daily Papers</span>
+      <span class="track"><span class="fill" style="width: 100.0%"></span></span>
+      <span class="n">115</span></li>
+  <li><span class="name" title="TechCrunch – AI">TechCrunch – AI</span>
+      <span class="track"><span class="fill" style="width: 34.8%"></span></span>
+      <span class="n">40</span></li>
+  <li><span class="name" title="BleepingComputer">BleepingComputer</span>
+      <span class="track"><span class="fill" style="width: 30.4%"></span></span>
+      <span class="n">35</span></li>
+  <li><span class="name" title="OpenAI News">OpenAI News</span>
+      <span class="track"><span class="fill" style="width: 27.0%"></span></span>
+      <span class="n">31</span></li>
+  <li><span class="name" title="The Verge – AI">The Verge – AI</span>
+      <span class="track"><span class="fill" style="width: 21.7%"></span></span>
+      <span class="n">25</span></li>
+  <li><span class="name" title="VnExpress Số hóa">VnExpress Số hóa</span>
+      <span class="track"><span class="fill" style="width: 16.5%"></span></span>
+      <span class="n">19</span></li>
+  <li><span class="name" title="Wired – AI">Wired – AI</span>
+      <span class="track"><span class="fill" style="width: 12.2%"></span></span>
+      <span class="n">14</span></li>
+  <li><span class="name" title="Hacker News">Hacker News</span>
+      <span class="track"><span class="fill" style="width: 9.6%"></span></span>
+      <span class="n">11</span></li>
+  <li><span class="name" title="MIT News – AI">MIT News – AI</span>
+      <span class="track"><span class="fill" style="width: 8.7%"></span></span>
+      <span class="n">10</span></li>
+  <li><span class="name" title="CISA – Known Exploited Vulnerabilities">CISA – Known Exploited Vulnerabilities</span>
+      <span class="track"><span class="fill" style="width: 7.8%"></span></span>
+      <span class="n">9</span></li>
+  <li><span class="name" title="Hugging Face Blog">Hugging Face Blog</span>
+      <span class="track"><span class="fill" style="width: 7.0%"></span></span>
+      <span class="n">8</span></li>
+  <li><span class="name" title="IEEE Spectrum – AI">IEEE Spectrum – AI</span>
+      <span class="track"><span class="fill" style="width: 7.0%"></span></span>
+      <span class="n">8</span></li>
+  <li><span class="name" title="NVIDIA Technical Blog">NVIDIA Technical Blog</span>
+      <span class="track"><span class="fill" style="width: 7.0%"></span></span>
+      <span class="n">8</span></li>
+  <li><span class="name" title="Ars Technica">Ars Technica</span>
+      <span class="track"><span class="fill" style="width: 7.0%"></span></span>
+      <span class="n">8</span></li>
+  <li><span class="name" title="Stanford HAI">Stanford HAI</span>
+      <span class="track"><span class="fill" style="width: 6.1%"></span></span>
+      <span class="n">7</span></li>
+</ul>    </div>
+  </div>
+  <h3 class="sub">Từ khóa xuất hiện nhiều</h3>
+  <p class="kw"><span>AI · 165</span><span>benchmark · 34</span><span>benchmarks · 33</span><span>LLM · 30</span><span>reasoning · 29</span><span>inference · 28</span><span>agentic · 28</span><span>AI agents · 22</span><span>multimodal · 19</span><span>large language models · 18</span><span>LLMs · 17</span><span>vision-language · 16</span><span>breach · 15</span><span>GPU · 14</span><span>dataset · 12</span></p>
+</section>
+</main>
+<footer>
+<div class="pager">
+  <span><a href="2026-W46.html">← Tuần 46/2026</a></span>
+  <span></span>
+</div>
+<p>Số liệu tính từ các bản ngày trong kỳ. Tạo lúc 14:48 23/11.</p>
+<p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+</body>
+</html>

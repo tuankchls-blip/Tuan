@@ -125,6 +125,13 @@
     "hash": "db14b230dec169e1",
     "translated_at": "2026-11-18T07:38:42+00:00"
   },
+  "05744626c0d61baf83b69ad6be7ea5b0c59b36b6": {
+    "title_vi": "Nhà khoa học trưởng của OpenAI có những suy nghĩ về cách hạn chế sự phát triển của AI",
+    "summary_vi": "Để thiết lập giới hạn tốc độ phát triển AI, bạn cần thống nhất cách đo tốc độ.",
+    "source": "mymemory",
+    "hash": "4f2224bf9f07c15a",
+    "translated_at": "2026-11-23T07:48:06+00:00"
+  },
   "057e22ab69c04fb1c6649cb0bf4e92ea8c65293a": {
     "title_vi": "Nemotron-Personas-Finance-Japan: Bộ dữ liệu tổng hợp nắm bắt bối cảnh tài chính và nhân khẩu học của Nhật Bản",
     "summary_vi": "",
@@ -363,6 +370,13 @@
     "hash": "b5066ea2cc42f640",
     "translated_at": "2026-11-02T15:35:04+00:00"
   },
+  "0c81fa30a9f6ed1d767d19b54d14d6ce14ea7481": {
+    "title_vi": "Cuộc cách mạng lập trình bằng rung động sắp lan rộng đến tất cả các thiết bị",
+    "summary_vi": "Đây là The Stepback, một bản tin hằng tuần phân tích một câu chuyện quan trọng từ thế giới công nghệ. Để biết thêm thông tin về việc \"hack\" cảm xúc trong mọi thứ, hãy theo dõi David Pierce. The Stepback được gửi đến hộp thư của các thuê bao vào lúc 8 giờ sáng Chủ Nhật (giờ ET). Đăng ký nhận The Stepback tại đây. Câu chuyện bắt đầu như thế nào Cũng giống như rất nhiều thứ liên quan đến AI, câu chuyện không phải là",
+    "source": "mymemory",
+    "hash": "86a1ae109c59f1d2",
+    "translated_at": "2026-11-23T07:48:11+00:00"
+  },
   "0cb7ad579ad86abd134aeed35ebe0eaeb4178d0a": {
     "title_vi": "Otter AI hiện có thể theo dõi các cuộc hội thoại trên hơn30 ngôn ngữ",
     "summary_vi": "Otter AI vừa thêm hỗ trợ cho 27 ngôn ngữ và tiết lộ một tính năng sắp tới có thể theo dõi nếu người nói chuyển đổi giữa các ngôn ngữ.",
@@ -467,6 +481,13 @@
     "source": "mymemory",
     "hash": "4c07fbdc046558ec",
     "translated_at": "2026-11-19T07:34:39+00:00"
+  },
+  "10b966779bbd07a3a0a34e089b4af780bd58b9cb": {
+    "title_vi": "Nhà phát triển The Binding of Isaac gỡ bỏ nhạc AI khỏi Repentance Plus",
+    "summary_vi": "The Binding of Isaac: Repentance Plus đã phải hứng chịu làn sóng đánh giá tiêu cực trên Steam trong vài ngày qua sau khi người chơi phát hiện ra một phân đoạn cụ thể trong trò chơi sử dụng nhạc AI. Người dùng Reddit ShweetsStuff đã phát hiện ra các bài hát được sử dụng trong một phần có chủ đề Grand Theft Auto. Họ đã tìm thấy một số tệp âm thanh có siêu dữ liệu Suno trỏ ngược về",
+    "source": "mymemory",
+    "hash": "ab888c050dc99f45",
+    "translated_at": "2026-11-23T07:48:08+00:00"
   },
   "11029e559b6add875662f59d776270e0f0263262": {
     "title_vi": "SIMIT: Các mô hình thị giác - ngôn ngữ tự cải thiện thông qua trí tưởng tượng trong thời gian thử nghiệm",
@@ -1601,6 +1622,13 @@
     "source": "mymemory",
     "hash": "413bf84d88712268",
     "translated_at": "2026-11-14T06:35:20+00:00"
+  },
+  "3c4f4993adcaa465da5801177e8227155c28464e": {
+    "title_vi": "Show HN: Tôi đã tạo ra một trò chơi trong đó bạn là đặc vụ cấp dưới của LLM",
+    "summary_vi": "",
+    "source": "mymemory",
+    "hash": "064a581e20015723",
+    "translated_at": "2026-11-23T07:48:04+00:00"
   },
   "3ca89e3a8361fa8c9e3ac6835ca14e569bf75ee6": {
     "title_vi": "CrossSWE: Benchmarking Cross-Repository Joint Development for Coding Agents",
@@ -5697,6 +5725,13 @@
     "hash": "588a009f43e354a5",
     "translated_at": "2026-11-20T07:27:00+00:00"
   },
+  "c5cf84a8db2ed1d1b1afd27a6cc53a95b38fea3d": {
+    "title_vi": "Cleverbridge cảnh báo tin tặc đã đánh cắp số thẻ tín dụng, mã CVV trong vụ vi phạm dữ liệu",
+    "summary_vi": "Nền tảng thương mại điện tử Cleverbridge đang cảnh báo rằng tin tặc đã xâm nhập vào hệ thống của họ và đánh cắp thông tin thẻ thanh toán của khách hàng, bao gồm số thẻ tín dụng và mã bảo mật CVV.",
+    "source": "mymemory",
+    "hash": "b099053b8676ccbf",
+    "translated_at": "2026-11-23T07:48:03+00:00"
+  },
   "c618f0b74f32ed02574bf751069efd43a5f9174d": {
     "title_vi": "Báo cáo kỹ thuật về Sage S2.1 Flash",
     "summary_vi": "Chúng tôi xin giới thiệu Sage S1.5 Flash, một mô hình hỗn hợp các chuyên gia đa dụng với 320 tỷ tham số, được thiết kế để suy luận dựa trên bằng chứng khoa học và hoạt động trong các môi trường tương tác. Sage Sci-Perception sử dụng các bộ mã hóa chuyên dụng cho các đồ thị phân tử và trình tự sinh học, đồng thời biểu diễn các phổ dưới dạng các mảng đo lường được sắp xếp theo thứ tự.",
@@ -6012,6 +6047,13 @@
     "hash": "9f2d846d2b7a4223",
     "translated_at": "2026-11-12T07:20:36+00:00"
   },
+  "d30ef6e5d40a924a6904be2e3232d9730378a07c": {
+    "title_vi": "Tin tặc lợi dụng lỗ hổng đám mây GL.iNet để lây nhiễm cho các bộ định tuyến, thiết bị KVM",
+    "summary_vi": "GL.iNet đã xác nhận rằng tin tặc đã khai thác lỗ hổng trong các dịch vụ quản lý từ xa trên đám mây của họ để cài đặt malware tùy chỉnh trên các bộ định tuyến và thiết bị KVM của khách hàng, với một số người dùng bị ảnh hưởng báo cáo về các cửa hậu và shell đảo ngược cho phép truy cập từ xa vào các thiết bị bị nhiễm mã độc.",
+    "source": "mymemory",
+    "hash": "88c14bede7f831d2",
+    "translated_at": "2026-11-23T07:48:00+00:00"
+  },
   "d3c21aad125298df1a69f9d3e9e2bfcd385aef1a": {
     "title_vi": "Nectar ra mắt AI agent để tự động hóa quy trình tìm kiếm và tiếp cận người sáng tạo cho các thương hiệu",
     "summary_vi": "AI agent mới của Nectar tự động hóa tiếp thị thông qua người có sức ảnh hưởng, giúp các thương hiệu khám phá các nhà sáng tạo, quản lý hoạt động tiếp cận và quan hệ đối tác, cũng như theo dõi kết quả chiến dịch.",
@@ -6270,6 +6312,13 @@
     "source": "mymemory",
     "hash": "384eaf02758adc3d",
     "translated_at": "2026-11-03T06:55:46+00:00"
+  },
+  "de5cd1a6d51dc917ab910942b7b9fe70d73cd78c": {
+    "title_vi": "Perplexity và Tình báo",
+    "summary_vi": "Cách thức độ khó hiểu đo lường sự tiến bộ trong các mô hình AI và lý do nó có thể giúp các nhà phát triển thiết lập một cách tiếp cận chung để đánh giá các khả năng mới nổi.",
+    "source": "mymemory",
+    "hash": "355bd257d41e409e",
+    "translated_at": "2026-11-23T07:47:57+00:00"
   },
   "df92921082e9f46d9a748485ac1bae4f5068f016": {
     "title_vi": "Voyage Labs huy động được 12 triệu USD cho một trợ lý du lịch AI chuyên biệt",
