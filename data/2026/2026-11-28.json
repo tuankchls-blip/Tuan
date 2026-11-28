@@ -1,0 +1,1191 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T14:56:48+07:00",
+  "window": {
+    "start": "2026-11-27T07:00:00+07:00",
+    "end": "2026-11-28T07:00:00+07:00"
+  },
+  "sources_status": [
+    {
+      "source_id": "arxiv",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": "feed trống"
+    },
+    {
+      "source_id": "hf-papers",
+      "ok": true,
+      "items": 72,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nature-mi",
+      "ok": true,
+      "items": 8,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cacm",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "quanta-cs",
+      "ok": true,
+      "items": 5,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-news-ai",
+      "ok": true,
+      "items": 50,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bair",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "stanford-hai",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "deepmind",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "google-research",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "openai",
+      "ok": true,
+      "items": 1430,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "anthropic",
+      "ok": true,
+      "items": 0,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "meta-ai",
+      "ok": true,
+      "items": 9,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "msr",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "apple-ml",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "hf-blog",
+      "ok": true,
+      "items": 919,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "nvidia",
+      "ok": true,
+      "items": 100,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "mit-tr-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ieee-spectrum-ai",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "ars",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "verge-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "wired-ai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "ok": true,
+      "items": 20,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "github-blog",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "cisa-kev",
+      "ok": true,
+      "items": 13,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "krebs",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "bleepingcomputer",
+      "ok": true,
+      "items": 15,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "simonwillison",
+      "ok": true,
+      "items": 30,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "importai",
+      "ok": true,
+      "items": 10,
+      "error": null,
+      "note": "dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)"
+    },
+    {
+      "source_id": "hackernews",
+      "ok": true,
+      "items": 39,
+      "error": null,
+      "note": null
+    },
+    {
+      "source_id": "vnexpress-sohoa",
+      "ok": true,
+      "items": 60,
+      "error": null,
+      "note": null
+    }
+  ],
+  "stories": [
+    {
+      "id": "9636993dcbefcb0f32eec8e17c518d9cb048e97e",
+      "url": "https://huggingface.co/papers/2611.31619",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
+      "summary_orig": "A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much…",
+      "title_vi": "Bảng xếp hạng dự báo có thể thiết lập những gì: Báo cáo độ phân giải cho các mô hình chuỗi thời gian không cần dữ liệu huấn luyện",
+      "summary_vi": "Một mô hình nền tảng cho chuỗi thời gian được huấn luyện trước một lần, sau đó được yêu cầu dự báo các chuỗi mà nó chưa từng thấy, vì vậy bằng chứng cho mô hình này là điểm số của nó trên các tập dữ liệu được giữ lại. Các tập dữ liệu như vậy rất hiếm và một số bảng xếp hạng công khai chứa hầu hết các phép so sánh, nhưng không bảng xếp hạng nào nêu rõ tập dữ liệu của mình có thể phát hiện được mức chênh lệch nhỏ đến mức nào.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 8.0,
+      "label": "important",
+      "matched_keywords": [
+        "benchmark",
+        "datasets"
+      ],
+      "signals": {
+        "hf_upvotes": 58
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 58 +3",
+        "từ khóa Mô hình mở & đánh giá +2",
+        "từ khóa Dữ liệu +1"
+      ],
+      "article_ids": [
+        "9636993dcbefcb0f32eec8e17c518d9cb048e97e"
+      ]
+    },
+    {
+      "id": "cf71a125cc26a7a2619949f780f46d421fc86762",
+      "url": "https://huggingface.co/papers/2611.34290",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation",
+      "summary_orig": "Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot…",
+      "title_vi": "StateWeaver: Điều phối đa Agent các quá trình chuyển đổi trạng thái câu chuyện để tạo video dài hạn",
+      "summary_vi": "Các mô hình nền tảng video hiện đại tạo ra các đoạn video ngắn chất lượng cao, nhưng việc duy trì tính nhất quán của video dài và mô tả chính xác các thay đổi trạng thái do sự kiện vẫn còn là thách thức. Các quy trình làm việc agentic hiện tại gặp phải những thách thức này vì việc lập kế hoạch và sửa chữa liên tục tích lũy bối cảnh, trong khi các bản cập nhật tham chiếu vẫn còn hạn chế.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 8.0,
+      "label": "important",
+      "matched_keywords": [
+        "agentic",
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 27
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 27 +2",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "cf71a125cc26a7a2619949f780f46d421fc86762"
+      ]
+    },
+    {
+      "id": "284a8dbee52e09dbdf4ebcb9a7e2101117b6375b",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120705",
+      "source_id": "cisa-kev",
+      "published_at": "2026-11-27T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "CVE-2026-120705: OSGeo GeoServer XML Injection Vulnerability",
+      "summary_orig": "OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "title_vi": "CVE-2026-120705: Lỗ hổng chèn mã XML trong OSGeo GeoServer",
+      "summary_vi": "OsGeo GeoServer chứa lỗ hổng chèn XML cho phép kẻ tấn công từ xa chưa được xác thực khiến máy chủ đọc các tệp văn bản cục bộ mà quy trình GeoServer có thể truy cập hoặc truy xuất các URL HTTP hoặc HTTPS do kẻ tấn công chỉ định thông qua một tham số ID được thiết kế đặc biệt trong truy vấn được lưu trữ WFS 2.0 GetFeatureById.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "remote code execution",
+        "CVE"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn cisa-kev +3",
+        "từ khóa Bảo mật +2",
+        "luôn đưa vào: danh mục CISA KEV"
+      ],
+      "article_ids": [
+        "284a8dbee52e09dbdf4ebcb9a7e2101117b6375b"
+      ]
+    },
+    {
+      "id": "df885d426e95321433e5f18524b87f6dcaa3f2fa",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129243",
+      "source_id": "cisa-kev",
+      "published_at": "2026-11-27T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "CVE-2026-129243: OSGeo GeoServer Incorrect Authorization Vulnerability",
+      "summary_orig": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+      "title_vi": "CVE-2026-129243: Lỗ hổng xác thực không chính xác trong OSGeo GeoServer",
+      "summary_vi": "GeoServer chứa lỗ hổng ủy quyền không chính xác, cho phép kẻ tấn công từ xa chưa được xác thực bỏ qua các bước kiểm tra vai trò ở cấp độ dịch vụ và gọi các thao tác chỉ được bảo vệ bởi các bước kiểm tra đó thông qua một yêu cầu có tham số dịch vụ được đặt tiền tố. Lỗ hổng này có thể được kết hợp với CVE-2026-129244, CVE-2026-120705, CVE-2026-129245 và CVE-2026-129242 để thực thi mã từ xa mà không cần xác thực trên một phiên bản GeoServer bị ảnh hưởng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "remote code execution",
+        "CVE"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn cisa-kev +3",
+        "từ khóa Bảo mật +2",
+        "luôn đưa vào: danh mục CISA KEV"
+      ],
+      "article_ids": [
+        "df885d426e95321433e5f18524b87f6dcaa3f2fa"
+      ]
+    },
+    {
+      "id": "351b5c2f56fb449628a5e9683ac88718a77281fc",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136716",
+      "source_id": "cisa-kev",
+      "published_at": "2026-11-27T12:00:00+00:00",
+      "lang": "en",
+      "title_orig": "CVE-2026-136716: Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+      "summary_orig": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.",
+      "title_vi": "CVE-2026-136716: Lỗ hổng do kiểm tra không đúng cách các điều kiện bất thường hoặc ngoại lệ trong Drupal Core",
+      "summary_vi": "Drupal Core chứa lỗ hổng kiểm tra không đúng các điều kiện bất thường hoặc đặc biệt, cho phép kẻ tấn công từ xa chưa được xác thực chiếm quyền kiểm soát một trang web thông qua trình cài đặt Drupal bị lộ khi trang web đang ở một trong các trạng thái cài đặt bất thường hoặc chưa hoàn tất bị ảnh hưởng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "CVE"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn cisa-kev +3",
+        "từ khóa Bảo mật +2",
+        "luôn đưa vào: danh mục CISA KEV"
+      ],
+      "article_ids": [
+        "351b5c2f56fb449628a5e9683ac88718a77281fc"
+      ]
+    },
+    {
+      "id": "758256fbb63416813627396d7d7a140a3f6c1eb0",
+      "url": "https://www.nature.com/articles/s42256-026-01329-2",
+      "source_id": "nature-mi",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Generating proteins with computationally predicted functions and multiple states via multimodal diffusion",
+      "summary_orig": "Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01329-2 Jing et al. present ProDiT, a multimodal diffusion model that generates diverse, functionally conditioned proteins, including multistate proteins, expanding capabilities beyond existing generative protein design methods.",
+      "title_vi": "Tạo ra các protein có các chức năng được dự đoán bằng tính toán và nhiều trạng thái thông qua khuếch tán đa phương thức",
+      "summary_vi": "Nature Machine Intelligence, Công bố trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01329-2 Jing và cộng sự giới thiệu ProDiT, một diffusion model đa phương thức tạo ra các protein đa dạng, được điều kiện hóa về mặt chức năng, bao gồm các protein đa trạng thái, mở rộng khả năng vượt ra ngoài các phương pháp thiết kế protein tạo sinh hiện có.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 5.0,
+      "label": "important",
+      "matched_keywords": [
+        "multimodal"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn nature-mi +3",
+        "từ khóa Đa phương thức & thị giác +2",
+        "luôn đưa vào: công bố gốc từ nature-mi"
+      ],
+      "article_ids": [
+        "758256fbb63416813627396d7d7a140a3f6c1eb0"
+      ]
+    },
+    {
+      "id": "d83b18def8288ec8d0f33e19c3c1738779ae7f9f",
+      "url": "https://www.nature.com/articles/s42256-026-01330-9",
+      "source_id": "nature-mi",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Generating proteins with complex functions",
+      "summary_orig": "Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01330-9 A simple generative model learns protein sequence and structure together with functional context, enabling the design of proteins with specified molecular functions and multiple structural states.",
+      "title_vi": "Tạo ra các protein có chức năng phức tạp",
+      "summary_vi": "Nature Machine Intelligence, Đăng trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01330-9 Một mô hình sinh sản đơn giản học được trình tự và cấu trúc protein cùng với bối cảnh chức năng, cho phép thiết kế các protein có các chức năng phân tử cụ thể và nhiều trạng thái cấu trúc.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn nature-mi +3",
+        "luôn đưa vào: công bố gốc từ nature-mi"
+      ],
+      "article_ids": [
+        "d83b18def8288ec8d0f33e19c3c1738779ae7f9f"
+      ]
+    },
+    {
+      "id": "9a44799831389fcb8968dec07a9669c7faeabe81",
+      "url": "https://www.nature.com/articles/s42256-026-01320-x",
+      "source_id": "nature-mi",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Exploring nonlinear body oscillations for natural quadruped gaits",
+      "summary_orig": "Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01320-x Schmidt et al. demonstrate that nonlinear normal modes can be used to develop natural, multi-gait locomotion in a compliant quadruped robot, leveraging its inherent mechanics. The approach offers a design tool to shape embodied intelligence in robotics.",
+      "title_vi": "Khám phá các dao động phi tuyến của cơ thể để tạo ra các kiểu dáng đi tự nhiên của động vật bốn chân",
+      "summary_vi": "Nature Machine Intelligence, Đăng trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01320-x Schmidt và các đồng tác giả chứng minh rằng các chế độ rung riêng phi tuyến tính có thể được sử dụng để phát triển khả năng di chuyển tự nhiên, đa kiểu dáng đi ở một robot bốn chân linh hoạt, tận dụng cơ chế vốn có của nó. Phương pháp này cung cấp một công cụ thiết kế để định hình trí tuệ được thể hiện trong robot.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn nature-mi +3",
+        "luôn đưa vào: công bố gốc từ nature-mi"
+      ],
+      "article_ids": [
+        "9a44799831389fcb8968dec07a9669c7faeabe81"
+      ]
+    },
+    {
+      "id": "b15682f285ab61456f06f4551c65fa4f5fbd054f",
+      "url": "https://www.nature.com/articles/s42256-026-01321-w",
+      "source_id": "nature-mi",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "A long-context generative foundation model for versatile RNA design",
+      "summary_orig": "Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01321-w Huang, Lv, Gao and colleagues investigate RNA scaling laws and introduce EVA, a long-context RNA foundation model for function prediction and diverse RNA design, supported by experimental validation.",
+      "title_vi": "Mô hình nền tảng tạo sinh có ngữ cảnh dài để thiết kế RNA linh hoạt",
+      "summary_vi": "Nature Machine Intelligence, Công bố trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01321-w Huang, Lv, Gao và các đồng nghiệp nghiên cứu các quy luật mở rộng RNA và giới thiệu EVA, một mô hình nền tảng RNA ngữ cảnh dài để dự đoán chức năng và thiết kế RNA đa dạng, được hỗ trợ bởi xác nhận thực nghiệm.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn nature-mi +3",
+        "luôn đưa vào: công bố gốc từ nature-mi"
+      ],
+      "article_ids": [
+        "b15682f285ab61456f06f4551c65fa4f5fbd054f"
+      ]
+    },
+    {
+      "id": "2d7f8b4f8454af3138b975bc7f8d7a019ddb5d13",
+      "url": "https://huggingface.co/blog/video-trainium3",
+      "source_id": "hf-blog",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+      "summary_orig": "",
+      "title_vi": "Đưa Trainium3 lên đường đua: Tạo video với LTX-2.5",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 3.0,
+      "label": "important",
+      "matched_keywords": [],
+      "signals": {},
+      "reasons": [
+        "nguồn hf-blog +3",
+        "luôn đưa vào: công bố gốc từ hf-blog"
+      ],
+      "article_ids": [
+        "2d7f8b4f8454af3138b975bc7f8d7a019ddb5d13"
+      ]
+    },
+    {
+      "id": "ea247b47b521fbc6e0b89aafe203afb3f5b253f4",
+      "url": "https://huggingface.co/papers/2611.34232",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+      "summary_orig": "Computer-using agents are increasingly expected to complete realistic user goals rather than isolated GUI actions. However, existing benchmarks typically isolate web, mobile, or desktop environments, leaving it unclear whether a single generalist agent can execute long-horizon workflows that span multiple operating systems and persistent application states. We introduce OS-Omni, a live cross-platform benchmark and execution environment for evaluating computer-using agents across Windows, Ubuntu, macOS, iOS, Android, and Web environments. OS-Omni is released in versioned waves of 300 tasks each; this paper focuses on the first release, v1, which contains 48 tasks per platform and 12 cross-platform workflows that pair a desktop with an Android phone. OS-Omni provides reproducible initialization, platform-specific adapters, trajectory logging, and executable final-state evaluators, and includes controlled service-backed applications for workflows involving account, cart, budget, calendar, message, and other persistent state. Human studies show that OS-Omni tasks require 67.54 interaction steps, substantially exceeding OSWorld references of 15.0 steps. On v1, the strongest evaluated…",
+      "title_vi": "OS-Omni: Đánh giá so sánh chuyên gia sử dụng máy tính Agents trong các quy trình làm việc dài hạn trên nhiều nền tảng",
+      "summary_vi": "agents sử dụng máy tính ngày càng được kỳ vọng sẽ hoàn thành các mục tiêu thực tế của người dùng hơn là các thao tác giao diện người dùng (GUI) riêng lẻ. Tuy nhiên, các benchmarks hiện có thường tách biệt các môi trường web, di động hoặc máy tính để bàn, khiến cho việc liệu một agent đa năng duy nhất có thể thực hiện các quy trình làm việc dài hạn, trải dài trên nhiều hệ điều hành và các trạng thái ứng dụng liên tục hay không vẫn còn chưa rõ ràng.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "systems",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "benchmark",
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 107
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 107 +3",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "ea247b47b521fbc6e0b89aafe203afb3f5b253f4"
+      ]
+    },
+    {
+      "id": "07af9c5780f0ec6ef9c063c3d1d643307df019f3",
+      "url": "https://huggingface.co/papers/2611.34813",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models",
+      "summary_orig": "Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? The paradigm is considered advantageous because the reasoning is native to the visual medium, unfolding directly in the frames rather than through language or code. Whether this native route is in fact the more reliable path to visual reasoning has not been tested against a symbolic alternative under the same conditions. We therefore pose the same tasks, with identical inputs, output specification and evaluator, to both media: rather than denoising pixels, a coding agent writes a program that renders the answer video, which an unmodified rule-based evaluator scores. On VBVR-Pro-Bench (Xu et al., 2026), a 500-instance suite spanning five cognitive categories with symbolic ground truth, the agent receives the same first frame and prompt as the video model, with no access to ground truth, metadata or generation models, and one attempt per instance. Three closed-model agents (Codex with gpt-6-astra, Claude Code with Fable 5.1 and Gemini CLI with Gemini 3.1 Pro) score 0.923, 0.894 and…",
+      "title_vi": "Giải quyết vấn đề về thị giác bằng mã lệnh: Mô hình lập trình Agents có khả năng suy luận thị giác mạnh hơn mô hình video",
+      "summary_vi": "Các mô hình tạo video ngày càng được đánh giá là công cụ suy luận trực quan: khi được cung cấp khung hình đầu tiên và một prompt bằng ngôn ngữ tự nhiên, liệu mô hình có thể tạo ra video trong đó nhiệm vụ được chỉ định được thực hiện hay không? Mô hình này được coi là có lợi vì quá trình suy luận vốn có trong phương tiện trực quan, diễn ra trực tiếp trong các khung hình thay vì thông qua ngôn ngữ hoặc mã.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "reasoning"
+      ],
+      "signals": {
+        "hf_upvotes": 61
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 61 +3",
+        "từ khóa Mô hình ngôn ngữ +2"
+      ],
+      "article_ids": [
+        "07af9c5780f0ec6ef9c063c3d1d643307df019f3"
+      ]
+    },
+    {
+      "id": "b3bc1206fc202557ddb09ed94f9574a202bd9ce3",
+      "url": "https://huggingface.co/papers/2611.32238",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation",
+      "summary_orig": "Agent-orchestrated robot systems combine the general reasoning capability of multimodal agents with the precise physical control of learned visuomotor policies. Yet such systems often fail at the moment of handoff: a policy is reliable only from a limited set of start states, while the agent may invoke it outside this region. We call this region the policy's handoff boundary. Existing whole-task policies typically have handoff boundaries that are narrow and difficult for an agent to characterize, making reliable coordination challenging. We propose Boundary-Aware Policy Learning, which explicitly shapes and then expands the handoff boundary of a visuomotor policy. First, Boundary-Explicit Training fine-tunes the policy on contact segments with diverse start poses, yielding a wide and well-defined boundary that can be communicated to the agent through a simple handoff protocol. Second, Boundary-Expanding Self-Improvement retrains the policy on curated successful system rollouts, extending the boundary toward earlier stages of each task and allowing the agent to hand over sooner with fewer language-model calls. Across RoboTwin 2.0 and RoboDojo, our system outperforms the strongest…",
+      "title_vi": "Học chính sách nhận biết ranh giới cho thao tác robot do Agent điều phối",
+      "summary_vi": "Các hệ thống robot được điều phối bởi Agent kết hợp khả năng suy luận chung của agents đa phương thức với khả năng điều khiển vật lý chính xác của các chính sách thị giác – vận động đã học. Tuy nhiên, các hệ thống như vậy thường thất bại vào thời điểm bàn giao: một chính sách chỉ đáng tin cậy khi xuất phát từ một tập hợp các trạng thái bắt đầu hạn chế, trong khi agent có thể kích hoạt chính sách đó bên ngoài phạm vi này. Chúng tôi gọi vùng này là ranh giới bàn giao của chính sách.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "rl",
+      "score": 7.0,
+      "label": "notable",
+      "matched_keywords": [
+        "reasoning",
+        "multimodal"
+      ],
+      "signals": {
+        "hf_upvotes": 7
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 7 +1",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa Đa phương thức & thị giác +2"
+      ],
+      "article_ids": [
+        "b3bc1206fc202557ddb09ed94f9574a202bd9ce3"
+      ]
+    },
+    {
+      "id": "ffd015cfc3747d723f324ecc420b9359473fcf8b",
+      "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T15:09:40+00:00",
+      "lang": "en",
+      "title_orig": "US Air Force cloud platform reportedly hacked in latest federal breach",
+      "summary_orig": "Hackers have reportedly breached the US Air Force's Cloud One computing platform, adding to a recent wave of cyberattacks affecting US government agencies, including the FBI, CIA, and Treasury Department.",
+      "title_vi": "Nền tảng đám mây của Không quân Hoa Kỳ được cho là đã bị tấn công trong vụ vi phạm liên bang gần đây nhất",
+      "summary_vi": "Theo báo cáo, các tin tặc đã xâm nhập vào nền tảng điện toán Cloud One của Không quân Hoa Kỳ, góp phần vào làn sóng tấn công mạng gần đây ảnh hưởng đến các cơ quan chính phủ Hoa Kỳ, bao gồm FBI, CIA và Bộ Tài chính.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [
+        {
+          "source_id": "hackernews",
+          "url": "https://news.ycombinator.com/item?id=50666375",
+          "title": "US Air Force's cloud computing platform hacked"
+        }
+      ],
+      "category": "security",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "hacked",
+        "hackers"
+      ],
+      "signals": {
+        "hn_points": 343
+      },
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "2 nguồn cùng đưa tin +1",
+        "Hacker News 343 +1",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "ffd015cfc3747d723f324ecc420b9359473fcf8b",
+        "3b8b3d993078fe80ac07c99d46519bb128f024ff"
+      ]
+    },
+    {
+      "id": "0f99575864156ade4c325715ff049646e5b12fc1",
+      "url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+      "source_id": "ieee-spectrum-ai",
+      "published_at": "2026-11-27T14:00:01+00:00",
+      "lang": "en",
+      "title_orig": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+      "summary_orig": "When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job. At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wanted people who knew how to coax the best answers from large language models (LLMs) by carefully wording instructions, supplying examples, and giving the systems personas or other context. Dinesh Rai Employer: Boston Children’s Hospital Occupation: Clinical AI Engineer Education: Bachelor’s degree in supply-chain management and marketing sciences, Rutgers Business School; Doctor of Medicine, Albert Einstein College of Medicine It was an unusual role for a hospital, but Rai had an unusual résumé. While he was trained as an emergency physician, he had also taught himself to code just before entering medical school. After completing a fellowship in clinical informatics—which focuses on the intersection of clinical practice and IT systems—he moved into health technology. Boston Children’s brought him on board in August 2023. Three years later, Rai still works there. Prompt engineering, however, has become a much less important…",
+      "title_vi": "Bác sĩ cấp cứu này đã trở thành kỹ sư AI lâm sàng đầu tiên của một bệnh viện",
+      "summary_vi": "Khi Bệnh viện Nhi Boston đăng thông báo tuyển dụng một kỹ sư prompt vào năm 2023, Dinesh Rai đã quyết định nộp đơn. Anh không nghĩ rằng mình sẽ được nhận vào làm. Vào thời điểm đó, kỹ sư prompt được quảng cáo là một trong những công việc mới \"hot\" được tạo ra bởi AI tạo sinh. Các công ty muốn tuyển những người biết cách gợi ý để các mô hình ngôn ngữ lớn (LLMs) đưa ra câu trả lời tốt nhất bằng cách diễn đạt cẩn thận các hướng dẫn, cung cấp ví dụ và gán cho hệ thống các tính cách hoặc bối cảnh khác.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "LLMs",
+        "large language models",
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn ieee-spectrum-ai +3",
+        "từ khóa Mô hình ngôn ngữ +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "0f99575864156ade4c325715ff049646e5b12fc1"
+      ]
+    },
+    {
+      "id": "4342d45f5c91eb5598bbe78a2cc2964fba6002d0",
+      "url": "https://huggingface.co/papers/2611.34457",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
+      "summary_orig": "Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, guide generation by specifying scene layout, motion, camera behavior, and event order. However, these coarse inputs leave details unspecified and may contain artifacts that should not be reproduced. Successful proxy-guided generation must therefore Preserve intended structure, Complete missing content and correct proxy artifacts, and Bind text, image, and audio conditions to the right entities and events. We introduce ProxyGenBench to study these interacting requirements, with 312 evaluation cases from 60 scenes across three scene tasks and controlled variations in proxy fidelity, text detail, and multimodal inputs. We evaluate five video generators using verified, case-specific checklists. Experiments show that proxies improve spatiotemporal control, but greater proxy detail can coincide with poorer completion, while strong structural adherence does not ensure correct binding.",
+      "title_vi": "ProxyGenBench: Đánh giá so sánh việc tạo video theo hướng dẫn của proxy",
+      "summary_vi": "Các trình tạo video gần đây tạo ra các video chân thực, nhưng việc kiểm soát cách các cảnh diễn ra vẫn còn là một thách thức. Các đại diện cấu trúc, chẳng hạn như các khối 3D động, hướng dẫn quá trình tạo bằng cách chỉ định bố cục cảnh, chuyển động, hành vi của camera và thứ tự sự kiện. Tuy nhiên, các đầu vào thô này không xác định rõ chi tiết và có thể chứa các thành phần không mong muốn không nên được tái tạo.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 6.0,
+      "label": "notable",
+      "matched_keywords": [
+        "multimodal"
+      ],
+      "signals": {
+        "hf_upvotes": 36
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 36 +2",
+        "từ khóa Đa phương thức & thị giác +2"
+      ],
+      "article_ids": [
+        "4342d45f5c91eb5598bbe78a2cc2964fba6002d0"
+      ]
+    },
+    {
+      "id": "c8e92f78ca47aa6a614d183ec77d668e99bef9bc",
+      "url": "https://huggingface.co/papers/2611.34693",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "ShowNow: Fine-Grained Speculative Streaming for Responsive World Models",
+      "summary_orig": "Interactive world models must generate video continuously while responding promptly to user actions. Real-time throughput alone leaves input latency unresolved: coarse generation blocks delay action updates, and generation after input adds work to the response path. We introduce ShowNow, a fine-grained speculative streaming framework that uses computation available during playback to prepare action-conditioned futures before input arrives. Single-latent commitment enables frequent decisions, while configurable preparation covers one to eight actions. We construct a matched multi-future dataset to train alternative continuations from a common state; shared-history tree execution and fused commitment make their preparation efficient. On a single H100, our 5B model sustains 480p generation at 16 fps with eight prepared futures. In ViZDoom, the complete ShowNow deployment reduces median input-to-display latency from 620 to 208 ms relative to the native-block SolarWM-FT deployment. Matched-policy experiments reduce restart empty ticks from 1.56% to 0.09% (94%) and improve on-time responses to action changes. These results establish complementary roles for fine-grained commitment and…",
+      "title_vi": "ShowNow: Truyền phát suy đoán chi tiết cho các mô hình thế giới đáp ứng",
+      "summary_vi": "Các mô hình thế giới tương tác phải liên tục tạo video trong khi phản hồi nhanh chóng với các thao tác của người dùng. Chỉ riêng thông lượng thời gian thực vẫn chưa giải quyết được độ trễ đầu vào: các khối tạo thô làm chậm các cập nhật hành động và việc tạo sau đầu vào làm tăng khối lượng công việc trên đường dẫn phản hồi. Chúng tôi xin giới thiệu ShowNow, một khung phát trực tuyến suy đoán chi tiết, sử dụng khả năng tính toán có sẵn trong quá trình phát lại để chuẩn bị các kết quả tương lai có điều kiện theo hành động trước khi dữ liệu đầu vào được đưa vào.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "cv",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "dataset"
+      ],
+      "signals": {
+        "hf_upvotes": 21
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 21 +2",
+        "từ khóa Dữ liệu +1"
+      ],
+      "article_ids": [
+        "c8e92f78ca47aa6a614d183ec77d668e99bef9bc"
+      ]
+    },
+    {
+      "id": "f7df6e6b8267db297d2195f0af21d966159a9af6",
+      "url": "https://huggingface.co/papers/2611.34852",
+      "source_id": "hf-papers",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "lang": "en",
+      "title_orig": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+      "summary_orig": "Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how deeply it explores them. We introduce DRBench Pro, a benchmark that makes structured knowledge coverage the primary evaluation target. Our automated pipeline builds local knowledge trees from Wikipedia and uses sampled subgraphs to generate research queries and evidence-grounded rubrics. Each rubric corresponds to a relation in the tree, preserving the structure of the knowledge being evaluated. Agents receive only the research query. This structure allows us to measure breadth across major research directions and depth along related knowledge chains, with their geometric mean giving overall coverage. The benchmark includes 144 cases across 24 domains and 44,102 rubrics. Evaluating 16 deep research agents reveals different strengths in breadth and depth, with the best-performing agent reaching 57.04% overall coverage. Rubric judgments agree closely with human annotations, and agent…",
+      "title_vi": "DRBench Pro: Một Benchmark lấy tri thức làm trọng tâm dành cho hoạt động nghiên cứu chuyên sâu chuyên nghiệp Agents",
+      "summary_vi": "Nghiên cứu chuyên sâu agents thu thập thông tin từ nhiều nguồn và tổng hợp thành các báo cáo về các câu hỏi phức tạp, mở. Các benchmarks hiện có đánh giá chất lượng báo cáo theo nhiều khía cạnh, nhưng thiếu một đánh giá chuyên biệt, tập trung vào kiến thức về các hướng nghiên cứu mà một báo cáo đề cập đến và mức độ chuyên sâu mà báo cáo đó khám phá các hướng nghiên cứu đó. Chúng tôi xin giới thiệu DRBench Pro, một benchmark lấy phạm vi kiến thức có cấu trúc làm mục tiêu đánh giá chính.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "research",
+      "subcategory": "other",
+      "score": 5.0,
+      "label": "notable",
+      "matched_keywords": [
+        "benchmark",
+        "benchmarks"
+      ],
+      "signals": {
+        "hf_upvotes": 17
+      },
+      "reasons": [
+        "nguồn hf-papers +2",
+        "HF Papers 17 +1",
+        "từ khóa Mô hình mở & đánh giá +2"
+      ],
+      "article_ids": [
+        "f7df6e6b8267db297d2195f0af21d966159a9af6"
+      ]
+    },
+    {
+      "id": "1fb658de3739200a056a558c6b88a1135583485c",
+      "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T19:26:04+00:00",
+      "lang": "en",
+      "title_orig": "pCloud confirms password manager hack after suspicious login alerts",
+      "summary_orig": "The pCloud Pass password manager suffered a cyberattack, with users reporting that unknown devices had connected to their accounts even with two-factor authentication (2FA) enabled.",
+      "title_vi": "pCloud xác nhận vụ tấn công vào trình quản lý mật khẩu sau các cảnh báo đăng nhập đáng ngờ",
+      "summary_vi": "Trình quản lý mật khẩu pCloud Pass đã bị tấn công mạng, với việc người dùng báo cáo rằng các thiết bị không xác định đã kết nối với tài khoản của họ ngay cả khi đã bật xác thực hai yếu tố (2FA).",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "hack"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "1fb658de3739200a056a558c6b88a1135583485c"
+      ]
+    },
+    {
+      "id": "8b082e360c9e3624b8cde510bd065dceeae2ed3e",
+      "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T18:57:42+00:00",
+      "lang": "en",
+      "title_orig": "New Boston Scientific data breach exposes personal, medical info",
+      "summary_orig": "Medical technology company Boston Scientific is sending data breach notices to individuals affected by a cyberattack on the firm.",
+      "title_vi": "Vụ vi phạm dữ liệu mới của Boston Scientific làm lộ thông tin cá nhân, thông tin y tế",
+      "summary_vi": "Công ty công nghệ y tế Boston Scientific đang gửi thông báo về việc vi phạm dữ liệu cho các cá nhân bị ảnh hưởng bởi một cuộc tấn công mạng vào công ty.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "data breach",
+        "breach"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "8b082e360c9e3624b8cde510bd065dceeae2ed3e"
+      ]
+    },
+    {
+      "id": "30b0f99624beea5ee5823c21feb9c108069da557",
+      "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T17:06:13+00:00",
+      "lang": "en",
+      "title_orig": "Unpatched Cacti zero-day with public PoC gives remote code execution",
+      "summary_orig": "A zero-day vulnerability in the Cacti network monitoring platform has been publicly disclosed, along with a proof-of-concept exploit that lets unauthenticated attackers execute commands on vulnerable servers.",
+      "title_vi": "Cacti zero-day chưa được vá với PoC công khai cho phép thực thi mã từ xa",
+      "summary_vi": "Một lỗ hổng zero-day trong nền tảng giám sát mạng Cacti đã được công khai, cùng với một lỗ hổng chứng minh tính khả thi cho phép những kẻ tấn công chưa được xác thực thực thi các lệnh trên các máy chủ dễ bị tấn công.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "zero-day",
+        "remote code execution"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "30b0f99624beea5ee5823c21feb9c108069da557"
+      ]
+    },
+    {
+      "id": "78b38f09dd1794e6f06211d1d95028cc7f5b9a0d",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T10:10:15+00:00",
+      "lang": "en",
+      "title_orig": "Drupal warns of new site takeover flaw exploited in attacks",
+      "summary_orig": "The Drupal security team says attackers are exploiting a second critical vulnerability that lets them breach and hijack unpatched websites.",
+      "title_vi": "Drupal cảnh báo về lỗ hổng chiếm quyền kiểm soát trang web mới đang bị lợi dụng trong các cuộc tấn công",
+      "summary_vi": "Nhóm bảo mật của Drupal cho biết những kẻ tấn công đang lợi dụng một lỗ hổng nghiêm trọng thứ hai cho phép chúng xâm nhập và chiếm quyền điều khiển các trang web chưa được vá lỗi.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "breach",
+        "critical vulnerability"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "78b38f09dd1794e6f06211d1d95028cc7f5b9a0d"
+      ]
+    },
+    {
+      "id": "1d7e87ba13cbf75836b17ec28664356f687bd351",
+      "url": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/",
+      "source_id": "bleepingcomputer",
+      "published_at": "2026-11-27T08:06:58+00:00",
+      "lang": "en",
+      "title_orig": "New NFS2ROOT Linux flaw can let attackers gain root privileges",
+      "summary_orig": "​A 12-year-old critical vulnerability in the Linux kernel's Network File System (NFS) server, tracked as CVE-2026-99362, allows remote attackers to gain root privileges.",
+      "title_vi": "Lỗ hổng NFS2ROOT Linux mới có thể cho phép kẻ tấn công giành được quyền hạn của người dùng root",
+      "summary_vi": "​Một lỗ hổng nghiêm trọng đã tồn tại 12 năm trong máy chủ Hệ thống tệp mạng (NFS) của nhân Linux, được theo dõi với mã định danh CVE-2026-99362, cho phép kẻ tấn công từ xa giành được quyền hạn của người dùng root.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "security",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "CVE",
+        "critical vulnerability"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn bleepingcomputer +2",
+        "từ khóa Bảo mật +2"
+      ],
+      "article_ids": [
+        "1d7e87ba13cbf75836b17ec28664356f687bd351"
+      ]
+    },
+    {
+      "id": "48b0d8d3f8cacbd348871db4b86cc9ae911c31c0",
+      "url": "https://construct22.com/",
+      "source_id": "hackernews",
+      "published_at": "2026-11-27T06:44:34+00:00",
+      "lang": "en",
+      "title_orig": "Group chat where your AI talks behind your back",
+      "summary_orig": "",
+      "title_vi": "Cuộc trò chuyện nhóm nơi AI nói xấu sau lưng bạn",
+      "summary_vi": "",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "other",
+      "subcategory": null,
+      "score": 4.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {
+        "hn_points": 701
+      },
+      "reasons": [
+        "nguồn hackernews +1",
+        "Hacker News 701 +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "48b0d8d3f8cacbd348871db4b86cc9ae911c31c0"
+      ]
+    },
+    {
+      "id": "cc2646aaf051069822484408cbdc05afcb0c81ba",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "source_id": "verge-ai",
+      "published_at": "2026-11-27T14:00:00+00:00",
+      "lang": "en",
+      "title_orig": "Android’s DIY widgets are a bit of vibe-coding fun",
+      "summary_orig": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and",
+      "title_vi": "Các tiện ích DIY của Android là một chút niềm vui mã hóa theo cảm hứng",
+      "summary_vi": "Ngoài việc quản lý lịch của tôi, còn có một việc tôi muốn AI thực hiện: báo cho tôi biết nếu tôi sắp lỡ chuyến xe buýt. Cái tôi cần là một tiện ích con. Widget đó cần cho tôi biết thời gian xe buýt đến điểm dừng gần nhà tôi trong thời gian thực. Tôi phải chạm lung tung trên màn hình điện thoại để mở đúng ứng dụng và",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "software",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn verge-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "cc2646aaf051069822484408cbdc05afcb0c81ba"
+      ]
+    },
+    {
+      "id": "355eb2e5ee2073abedf13f25d59e3004152aec1d",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "source_id": "wired-ai",
+      "published_at": "2026-11-27T07:00:00+00:00",
+      "lang": "en",
+      "title_orig": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "summary_orig": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+      "title_vi": "Một loại chip mới chạy các mô hình AI bằng sóng ánh sáng",
+      "summary_vi": "Công ty Q.ANT của Đức đang nỗ lực giảm lượng năng lượng cần thiết để vận hành các mô hình AI bằng cách sử dụng ánh sáng để thực hiện các phép tính phức tạp nhất.",
+      "translated": true,
+      "translation_source": "mymemory",
+      "also_covered_by": [],
+      "category": "infra",
+      "subcategory": null,
+      "score": 3.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn wired-ai +2",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "355eb2e5ee2073abedf13f25d59e3004152aec1d"
+      ]
+    },
+    {
+      "id": "724bee489efb8436d63764b39f9c2daffcee36f1",
+      "url": "https://vnexpress.net/than-dong-terence-tao-keu-goi-chuyen-sang-toan-hoc-2-0-vi-ai-5149544.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-27T22:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Thần đồng Terence Tao kêu gọi chuyển sang 'toán học 2.0' vì AI",
+      "summary_orig": "GS Terence Tao của UCLA cho rằng những phát hiện chấn động gần đây của AI về toán học đang buộc giới nghiên cứu phải thay đổi triệt để.",
+      "title_vi": "Thần đồng Terence Tao kêu gọi chuyển sang 'toán học 2.0' vì AI",
+      "summary_vi": "GS Terence Tao của UCLA cho rằng những phát hiện chấn động gần đây của AI về toán học đang buộc giới nghiên cứu phải thay đổi triệt để.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "724bee489efb8436d63764b39f9c2daffcee36f1"
+      ]
+    },
+    {
+      "id": "4c55c37770c9d7f37c9be4eed76d5a2bb7992d65",
+      "url": "https://vnexpress.net/ai-tao-cu-phanh-ngan-rui-ro-dong-tien-tren-momo-5148006.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-27T12:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "AI tạo 'cú phanh' ngăn rủi ro dòng tiền trên MoMo",
+      "summary_orig": "MoMo xây dựng AI nhận diện rủi ro trong giao dịch, tạo \"cú phanh\" lúc người dùng ra quyết định, giảm nguy cơ trước các kịch bản lừa đảo.",
+      "title_vi": "AI tạo 'cú phanh' ngăn rủi ro dòng tiền trên MoMo",
+      "summary_vi": "MoMo xây dựng AI nhận diện rủi ro trong giao dịch, tạo \"cú phanh\" lúc người dùng ra quyết định, giảm nguy cơ trước các kịch bản lừa đảo.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "4c55c37770c9d7f37c9be4eed76d5a2bb7992d65"
+      ]
+    },
+    {
+      "id": "fbaaffb49d8cc582860513ccc91cc2dd54da1616",
+      "url": "https://vnexpress.net/nvidia-yeu-cau-doi-tac-dung-chuyen-chip-den-bon-nuoc-dong-nam-a-5149453.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-27T04:25:14+00:00",
+      "lang": "vi",
+      "title_orig": "Nvidia 'yêu cầu đối tác dừng chuyển chip đến bốn nước Đông Nam Á'",
+      "summary_orig": "Nvidia được cho là đã yêu cầu đối tác tạm dừng chuyển hàng đến bốn quốc gia Đông Nam Á sau khi Mỹ tăng áp lực ngăn công ty Trung Quốc tiếp cận chip AI.",
+      "title_vi": "Nvidia 'yêu cầu đối tác dừng chuyển chip đến bốn nước Đông Nam Á'",
+      "summary_vi": "Nvidia được cho là đã yêu cầu đối tác tạm dừng chuyển hàng đến bốn quốc gia Đông Nam Á sau khi Mỹ tăng áp lực ngăn công ty Trung Quốc tiếp cận chip AI.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "fbaaffb49d8cc582860513ccc91cc2dd54da1616"
+      ]
+    },
+    {
+      "id": "747e1727b874a7f111b34169c201257e1de2886f",
+      "url": "https://vnexpress.net/hang-phan-mem-lon-nhat-chau-au-co-the-sa-thai-10-000-nguoi-5149433.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-27T03:04:16+00:00",
+      "lang": "vi",
+      "title_orig": "Hãng phần mềm lớn nhất châu Âu có thể sa thải 10.000 người",
+      "summary_orig": "SAP, hãng phần mềm nổi tiếng Đức, được cho là có thể cắt giảm hơn 10.000 nhân sự khi công ty trong quá trình tái cấu trúc mảng trí tuệ nhân tạo.",
+      "title_vi": "Hãng phần mềm lớn nhất châu Âu có thể sa thải 10.000 người",
+      "summary_vi": "SAP, hãng phần mềm nổi tiếng Đức, được cho là có thể cắt giảm hơn 10.000 nhân sự khi công ty trong quá trình tái cấu trúc mảng trí tuệ nhân tạo.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "trí tuệ nhân tạo"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "747e1727b874a7f111b34169c201257e1de2886f"
+      ]
+    },
+    {
+      "id": "927d1e187e5b0594d11bd5c699c59c6783f651b4",
+      "url": "https://vnexpress.net/dan-cong-nghe-viet-xoay-xo-doi-nghe-trong-bao-ai-5145736.html",
+      "source_id": "vnexpress-sohoa",
+      "published_at": "2026-11-27T02:00:00+00:00",
+      "lang": "vi",
+      "title_orig": "Dân công nghệ Việt xoay xở đổi nghề trong 'bão' AI",
+      "summary_orig": "AI ngày càng tác động sâu rộng buộc nhiều người tìm cách thích ứng, thậm chí học nghề mới để phòng trường hợp thất nghiệp.",
+      "title_vi": "Dân công nghệ Việt xoay xở đổi nghề trong 'bão' AI",
+      "summary_vi": "AI ngày càng tác động sâu rộng buộc nhiều người tìm cách thích ứng, thậm chí học nghề mới để phòng trường hợp thất nghiệp.",
+      "translated": true,
+      "translation_source": "original",
+      "also_covered_by": [],
+      "category": "vietnam",
+      "subcategory": null,
+      "score": 2.0,
+      "label": "notable",
+      "matched_keywords": [
+        "AI"
+      ],
+      "signals": {},
+      "reasons": [
+        "nguồn vnexpress-sohoa +1",
+        "từ khóa AI nói chung +1"
+      ],
+      "article_ids": [
+        "927d1e187e5b0594d11bd5c699c59c6783f651b4"
+      ]
+    }
+  ],
+  "translation": {
+    "counts": {
+      "original": 5,
+      "cache": 0,
+      "claude": 0,
+      "google": 0,
+      "mymemory": 26,
+      "untranslated": 0
+    }
+  }
+}

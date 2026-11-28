@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bản tin AI & CNTT 28/11/2026</title>
+<meta name="description" content="10 tin Quan trọng, 21 tin Đáng chú ý ngày 28/11/2026">
+<style>
+/* Giao diện chung: nhúng thẳng vào mỗi trang HTML, không dùng CDN */
+:root {
+  --bg: #fbfaf8; --surface: #ffffff; --surface-2: #f2f0ec; --text: #1d1d1f; --muted: #5f6368;
+  --border: #e3e0da; --link: #1a56b8; --accent: #b4441f;
+  --imp-bg: #fde8e1; --imp-fg: #9a2f10; --not-bg: #e6eefb; --not-fg: #1d4f9c;
+  --warn-bg: #fff4d6; --warn-fg: #7a5600; --ok: #1e7d3a; --err: #b3261e;
+  --radius: 10px; --shadow: 0 1px 2px rgba(0,0,0,.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+    --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+    --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+    --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1c1d20; --surface-2: #26282c; --text: #e8e6e3; --muted: #a2a5ab;
+  --border: #33363b; --link: #8ab4f8; --accent: #f28b6b;
+  --imp-bg: #4a2418; --imp-fg: #ffb59c; --not-bg: #1f2f4a; --not-fg: #a8c7fa;
+  --warn-bg: #3d3214; --warn-fg: #f5d77a; --ok: #6dd58c; --err: #f2b8b5;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 48px; }
+header.top { padding: 20px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .9rem; }
+.topbar nav { display: flex; gap: 14px; flex-wrap: wrap; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 14px 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+h3.sub { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 18px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
+.stat b { font-variant-numeric: tabular-nums; }
+button.theme {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0; padding: 0; list-style: none; font-size: .95rem; }
+.toc .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.filters {
+  position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--border);
+}
+.filters .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.filters .seg button {
+  border: 0; background: var(--surface); color: var(--text); padding: 5px 12px; font: inherit; font-size: .88rem; cursor: pointer;
+}
+.filters .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.filters select {
+  font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 8px; max-width: 100%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.filters .count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.story {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin: 10px 0; box-shadow: var(--shadow);
+}
+.story[hidden], section[hidden] { display: none; }
+.story h4 { font-size: 1.05rem; line-height: 1.4; margin: 6px 0 2px; overflow-wrap: anywhere; }
+.story .orig { color: var(--muted); font-size: .85rem; margin: 0 0 6px; overflow-wrap: anywhere; }
+.story .summary { margin: 6px 0; overflow-wrap: anywhere; }
+.story details { font-size: .9rem; color: var(--muted); }
+.story details summary { cursor: pointer; color: var(--link); }
+.story details p { margin: 6px 0 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .82rem; color: var(--muted); }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: .75rem; font-weight: 600; letter-spacing: .01em; }
+.badge.important { background: var(--imp-bg); color: var(--imp-fg); }
+.badge.notable { background: var(--not-bg); color: var(--not-fg); }
+.badge.untranslated { background: var(--warn-bg); color: var(--warn-fg); font-weight: 500; }
+.also, .kw { font-size: .85rem; color: var(--muted); margin: 6px 0 0; }
+.kw { display: flex; flex-wrap: wrap; gap: 4px; }
+.kw span { background: var(--surface-2); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.empty { color: var(--muted); font-style: italic; }
+table.status { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.status th, table.status td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.status td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--ok); } .err { color: var(--err); }
+.table-scroll { overflow-x: auto; }
+footer { margin-top: 36px; font-size: .85rem; color: var(--muted); }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 28px 0 8px; font-size: .95rem; }
+.archive { list-style: none; padding: 0; margin: 0; }
+.archive li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive .n { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+details.month > summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.search input {
+  width: 100%; font: inherit; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.search ol { padding-left: 0; list-style: none; }
+.search li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.search .when { color: var(--muted); font-size: .8rem; }
+.latest .story h4 { font-size: 1rem; }
+section[data-group] { scroll-margin-top: 64px; }
+@media (max-width: 520px) {
+  h1 { font-size: 1.35rem; }
+  .filters { position: static; }  /* trên điện thoại thanh lọc chiếm quá nhiều chỗ nếu dính */
+  section[data-group] { scroll-margin-top: 8px; }
+  .story { padding: 12px; }
+  .filters .count { width: 100%; margin-left: 0; }
+}
+/* Bản tổng hợp: biểu đồ thanh bằng CSS, bảng chủ đề, dòng thời gian */
+.bars { list-style: none; padding: 0; margin: 8px 0; }
+.bars li { display: grid; grid-template-columns: minmax(7em, 34%) 1fr 3.2em; gap: 8px; align-items: center; padding: 3px 0; font-size: .9rem; }
+.bars .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { background: var(--surface-2); border-radius: 4px; height: 10px; overflow: hidden; }
+.bars .fill { display: block; height: 100%; background: var(--link); border-radius: 4px; }
+.bars .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--muted); }
+.daylink { font-size: .8rem; }
+.event { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin: 10px 0; }
+.event h4 { margin: 0 0 6px; font-size: 1rem; }
+.event ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.timeline h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); }
+.note { color: var(--muted); font-size: .9rem; }
+@media (max-width: 520px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: minmax(8em, 50%) 1fr 2.6em; }
+}</style>
+<script>
+// Chế độ sáng/tối: Tự động -> Sáng -> Tối; nhớ lựa chọn trên trình duyệt (nếu được phép)
+(function () {
+  var KEY = "digest-theme";
+  var LABEL = { auto: "Giao diện: tự động", light: "Giao diện: sáng", dark: "Giao diện: tối" };
+  var root = document.documentElement;
+  function load() { try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
+    var b = document.getElementById("theme-btn"); if (b) b.textContent = LABEL[v];
+  }
+  var current = load(); apply(current);
+  document.addEventListener("DOMContentLoaded", function () {
+    apply(current);
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    b.addEventListener("click", function () {
+      current = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
+      save(current); apply(current);
+    });
+  });
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="topbar">
+    <nav>
+      <a href="../../index.html">Mục lục</a>
+<a href="../2026/2026-11-27.html">← Ngày trước</a>    </nav>
+    <button class="theme" id="theme-btn" type="button">Giao diện: tự động</button>
+  </div>
+<h1>Bản tin AI & CNTT<br><small>Thứ Bảy, 28/11/2026</small></h1>
+<p class="lead">Tin trong 24 giờ đến 07:00 28/11 (giờ Việt Nam).</p>
+<div class="stats">
+  <span class="stat"><b>10</b> Quan trọng</span>
+  <span class="stat"><b>21</b> Đáng chú ý</span>
+  <span class="stat"><b>31/31</b> nguồn đọc được</span>
+</div>
+<ul class="toc">
+<li><a href="#c-research">Nghiên cứu</a> <span class="n">13</span></li><li><a href="#c-infra">Hạ tầng &amp; phần cứng</a> <span class="n">1</span></li><li><a href="#c-software">Phần mềm &amp; công cụ</a> <span class="n">1</span></li><li><a href="#c-security">Bảo mật</a> <span class="n">9</span></li><li><a href="#c-vietnam">Việt Nam</a> <span class="n">5</span></li><li><a href="#c-other">Tin khác</a> <span class="n">2</span></li></ul>
+</header>
+<main>
+<div class="filters" id="filters" hidden>
+  <span class="seg" role="group" aria-label="Lọc theo nhãn">
+    <button type="button" data-label-btn="all" aria-pressed="true">Tất cả</button>
+    <button type="button" data-label-btn="important" aria-pressed="false">Quan trọng</button>
+    <button type="button" data-label-btn="notable" aria-pressed="false">Đáng chú ý</button>
+  </span>
+  <select id="f-cat" aria-label="Lọc theo mục">
+    <option value="all">Mọi mục</option>
+<option value="research">Nghiên cứu</option><option value="infra">Hạ tầng &amp; phần cứng</option><option value="software">Phần mềm &amp; công cụ</option><option value="security">Bảo mật</option><option value="vietnam">Việt Nam</option><option value="other">Tin khác</option>  </select>
+  <select id="f-src" aria-label="Lọc theo nguồn">
+    <option value="all">Mọi nguồn</option>
+<option value="bleepingcomputer">BleepingComputer</option><option value="cisa-kev">CISA – Known Exploited Vulnerabilities</option><option value="hackernews">Hacker News</option><option value="hf-blog">Hugging Face Blog</option><option value="hf-papers">Hugging Face Daily Papers</option><option value="ieee-spectrum-ai">IEEE Spectrum – AI</option><option value="nature-mi">Nature Machine Intelligence</option><option value="verge-ai">The Verge – AI</option><option value="vnexpress-sohoa">VnExpress Số hóa</option><option value="wired-ai">Wired – AI</option>  </select>
+  <span class="count" id="filter-count"></span>
+</div>
+<section id="c-research" data-group="research">
+  <h2>Nghiên cứu</h2>
+    <section data-group="research-cv">
+      <h3 class="sub">Thị giác máy tính</h3>
+<article class="story" id="s-cf71a125cc" data-label="important" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 27 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34290" target="_blank" rel="noopener noreferrer">StateWeaver: Điều phối đa Agent các quá trình chuyển đổi trạng thái câu chuyện để tạo video dài hạn</a>
+  </h4>
+<p class="orig" lang="en">StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation</p>    <p class="summary">Các mô hình nền tảng video hiện đại tạo ra các đoạn video ngắn chất lượng cao, nhưng việc duy trì tính nhất quán của video dài và mô tả chính xác các thay đổi trạng thái do sự kiện vẫn còn là thách thức. Các quy trình làm việc agentic hiện tại gặp phải những thách thức này vì việc lập kế hoạch và sửa chữa liên tục tích lũy bối cảnh, trong khi các bản cập nhật tham chiếu vẫn còn hạn chế.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot…</p></details>
+<p class="kw"><span>agentic</span><span>benchmarks</span></p></article><article class="story" id="s-758256fbb6" data-label="important" data-cat="research"
+         data-srcs="nature-mi">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Nature Machine Intelligence</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.nature.com/articles/s42256-026-01329-2" target="_blank" rel="noopener noreferrer">Tạo ra các protein có các chức năng được dự đoán bằng tính toán và nhiều trạng thái thông qua khuếch tán đa phương thức</a>
+  </h4>
+<p class="orig" lang="en">Generating proteins with computationally predicted functions and multiple states via multimodal diffusion</p>    <p class="summary">Nature Machine Intelligence, Công bố trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01329-2 Jing và cộng sự giới thiệu ProDiT, một diffusion model đa phương thức tạo ra các protein đa dạng, được điều kiện hóa về mặt chức năng, bao gồm các protein đa trạng thái, mở rộng khả năng vượt ra ngoài các phương pháp thiết kế protein tạo sinh hiện có.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01329-2 Jing et al. present ProDiT, a multimodal diffusion model that generates diverse, functionally conditioned proteins, including multistate proteins, expanding capabilities beyond existing generative protein design methods.</p></details>
+<p class="kw"><span>multimodal</span></p></article><article class="story" id="s-07af9c5780" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 61 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34813" target="_blank" rel="noopener noreferrer">Giải quyết vấn đề về thị giác bằng mã lệnh: Mô hình lập trình Agents có khả năng suy luận thị giác mạnh hơn mô hình video</a>
+  </h4>
+<p class="orig" lang="en">Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models</p>    <p class="summary">Các mô hình tạo video ngày càng được đánh giá là công cụ suy luận trực quan: khi được cung cấp khung hình đầu tiên và một prompt bằng ngôn ngữ tự nhiên, liệu mô hình có thể tạo ra video trong đó nhiệm vụ được chỉ định được thực hiện hay không? Mô hình này được coi là có lợi vì quá trình suy luận vốn có trong phương tiện trực quan, diễn ra trực tiếp trong các khung hình thay vì thông qua ngôn ngữ hoặc mã.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? The paradigm is considered advantageous because the reasoning is native to the visual medium, unfolding directly in the frames rather than through language or code. Whether this native route is in fact the more reliable path to visual reasoning has not been tested against a symbolic alternative under the same conditions. We therefore pose the same tasks, with identical inputs, output specification and evaluator, to both media: rather than denoising pixels, a coding agent writes a program that renders the answer video, which an unmodified rule-based evaluator scores. On VBVR-Pro-Bench (Xu et al., 2026), a 500-instance suite spanning five cognitive categories with symbolic ground truth, the agent receives the same first frame and prompt as the video model, with no access to ground truth, metadata or generation models, and one attempt per instance. Three closed-model agents (Codex with gpt-6-astra, Claude Code with Fable 5.1 and Gemini CLI with Gemini 3.1 Pro) score 0.923, 0.894 and…</p></details>
+<p class="kw"><span>reasoning</span></p></article><article class="story" id="s-4342d45f5c" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 36 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34457" target="_blank" rel="noopener noreferrer">ProxyGenBench: Đánh giá so sánh việc tạo video theo hướng dẫn của proxy</a>
+  </h4>
+<p class="orig" lang="en">ProxyGenBench: Benchmarking Proxy-Guided Video Generation</p>    <p class="summary">Các trình tạo video gần đây tạo ra các video chân thực, nhưng việc kiểm soát cách các cảnh diễn ra vẫn còn là một thách thức. Các đại diện cấu trúc, chẳng hạn như các khối 3D động, hướng dẫn quá trình tạo bằng cách chỉ định bố cục cảnh, chuyển động, hành vi của camera và thứ tự sự kiện. Tuy nhiên, các đầu vào thô này không xác định rõ chi tiết và có thể chứa các thành phần không mong muốn không nên được tái tạo.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, guide generation by specifying scene layout, motion, camera behavior, and event order. However, these coarse inputs leave details unspecified and may contain artifacts that should not be reproduced. Successful proxy-guided generation must therefore Preserve intended structure, Complete missing content and correct proxy artifacts, and Bind text, image, and audio conditions to the right entities and events. We introduce ProxyGenBench to study these interacting requirements, with 312 evaluation cases from 60 scenes across three scene tasks and controlled variations in proxy fidelity, text detail, and multimodal inputs. We evaluate five video generators using verified, case-specific checklists. Experiments show that proxies improve spatiotemporal control, but greater proxy detail can coincide with poorer completion, while strong structural adherence does not ensure correct binding.</p></details>
+<p class="kw"><span>multimodal</span></p></article><article class="story" id="s-c8e92f78ca" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 21 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34693" target="_blank" rel="noopener noreferrer">ShowNow: Truyền phát suy đoán chi tiết cho các mô hình thế giới đáp ứng</a>
+  </h4>
+<p class="orig" lang="en">ShowNow: Fine-Grained Speculative Streaming for Responsive World Models</p>    <p class="summary">Các mô hình thế giới tương tác phải liên tục tạo video trong khi phản hồi nhanh chóng với các thao tác của người dùng. Chỉ riêng thông lượng thời gian thực vẫn chưa giải quyết được độ trễ đầu vào: các khối tạo thô làm chậm các cập nhật hành động và việc tạo sau đầu vào làm tăng khối lượng công việc trên đường dẫn phản hồi. Chúng tôi xin giới thiệu ShowNow, một khung phát trực tuyến suy đoán chi tiết, sử dụng khả năng tính toán có sẵn trong quá trình phát lại để chuẩn bị các kết quả tương lai có điều kiện theo hành động trước khi dữ liệu đầu vào được đưa vào.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Interactive world models must generate video continuously while responding promptly to user actions. Real-time throughput alone leaves input latency unresolved: coarse generation blocks delay action updates, and generation after input adds work to the response path. We introduce ShowNow, a fine-grained speculative streaming framework that uses computation available during playback to prepare action-conditioned futures before input arrives. Single-latent commitment enables frequent decisions, while configurable preparation covers one to eight actions. We construct a matched multi-future dataset to train alternative continuations from a common state; shared-history tree execution and fused commitment make their preparation efficient. On a single H100, our 5B model sustains 480p generation at 16 fps with eight prepared futures. In ViZDoom, the complete ShowNow deployment reduces median input-to-display latency from 620 to 208 ms relative to the native-block SolarWM-FT deployment. Matched-policy experiments reduce restart empty ticks from 1.56% to 0.09% (94%) and improve on-time responses to action changes. These results establish complementary roles for fine-grained commitment and…</p></details>
+<p class="kw"><span>dataset</span></p></article>    </section>
+    <section data-group="research-rl">
+      <h3 class="sub">Học tăng cường</h3>
+<article class="story" id="s-9a44799831" data-label="important" data-cat="research"
+         data-srcs="nature-mi">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Nature Machine Intelligence</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.nature.com/articles/s42256-026-01320-x" target="_blank" rel="noopener noreferrer">Khám phá các dao động phi tuyến của cơ thể để tạo ra các kiểu dáng đi tự nhiên của động vật bốn chân</a>
+  </h4>
+<p class="orig" lang="en">Exploring nonlinear body oscillations for natural quadruped gaits</p>    <p class="summary">Nature Machine Intelligence, Đăng trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01320-x Schmidt và các đồng tác giả chứng minh rằng các chế độ rung riêng phi tuyến tính có thể được sử dụng để phát triển khả năng di chuyển tự nhiên, đa kiểu dáng đi ở một robot bốn chân linh hoạt, tận dụng cơ chế vốn có của nó. Phương pháp này cung cấp một công cụ thiết kế để định hình trí tuệ được thể hiện trong robot.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01320-x Schmidt et al. demonstrate that nonlinear normal modes can be used to develop natural, multi-gait locomotion in a compliant quadruped robot, leveraging its inherent mechanics. The approach offers a design tool to shape embodied intelligence in robotics.</p></details>
+</article><article class="story" id="s-b3bc1206fc" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 7 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.32238" target="_blank" rel="noopener noreferrer">Học chính sách nhận biết ranh giới cho thao tác robot do Agent điều phối</a>
+  </h4>
+<p class="orig" lang="en">Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation</p>    <p class="summary">Các hệ thống robot được điều phối bởi Agent kết hợp khả năng suy luận chung của agents đa phương thức với khả năng điều khiển vật lý chính xác của các chính sách thị giác – vận động đã học. Tuy nhiên, các hệ thống như vậy thường thất bại vào thời điểm bàn giao: một chính sách chỉ đáng tin cậy khi xuất phát từ một tập hợp các trạng thái bắt đầu hạn chế, trong khi agent có thể kích hoạt chính sách đó bên ngoài phạm vi này. Chúng tôi gọi vùng này là ranh giới bàn giao của chính sách.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Agent-orchestrated robot systems combine the general reasoning capability of multimodal agents with the precise physical control of learned visuomotor policies. Yet such systems often fail at the moment of handoff: a policy is reliable only from a limited set of start states, while the agent may invoke it outside this region. We call this region the policy&#39;s handoff boundary. Existing whole-task policies typically have handoff boundaries that are narrow and difficult for an agent to characterize, making reliable coordination challenging. We propose Boundary-Aware Policy Learning, which explicitly shapes and then expands the handoff boundary of a visuomotor policy. First, Boundary-Explicit Training fine-tunes the policy on contact segments with diverse start poses, yielding a wide and well-defined boundary that can be communicated to the agent through a simple handoff protocol. Second, Boundary-Expanding Self-Improvement retrains the policy on curated successful system rollouts, extending the boundary toward earlier stages of each task and allowing the agent to hand over sooner with fewer language-model calls. Across RoboTwin 2.0 and RoboDojo, our system outperforms the strongest…</p></details>
+<p class="kw"><span>reasoning</span><span>multimodal</span></p></article>    </section>
+    <section data-group="research-systems">
+      <h3 class="sub">Hệ thống</h3>
+<article class="story" id="s-ea247b47b5" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 107 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34232" target="_blank" rel="noopener noreferrer">OS-Omni: Đánh giá so sánh chuyên gia sử dụng máy tính Agents trong các quy trình làm việc dài hạn trên nhiều nền tảng</a>
+  </h4>
+<p class="orig" lang="en">OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms</p>    <p class="summary">agents sử dụng máy tính ngày càng được kỳ vọng sẽ hoàn thành các mục tiêu thực tế của người dùng hơn là các thao tác giao diện người dùng (GUI) riêng lẻ. Tuy nhiên, các benchmarks hiện có thường tách biệt các môi trường web, di động hoặc máy tính để bàn, khiến cho việc liệu một agent đa năng duy nhất có thể thực hiện các quy trình làm việc dài hạn, trải dài trên nhiều hệ điều hành và các trạng thái ứng dụng liên tục hay không vẫn còn chưa rõ ràng.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Computer-using agents are increasingly expected to complete realistic user goals rather than isolated GUI actions. However, existing benchmarks typically isolate web, mobile, or desktop environments, leaving it unclear whether a single generalist agent can execute long-horizon workflows that span multiple operating systems and persistent application states. We introduce OS-Omni, a live cross-platform benchmark and execution environment for evaluating computer-using agents across Windows, Ubuntu, macOS, iOS, Android, and Web environments. OS-Omni is released in versioned waves of 300 tasks each; this paper focuses on the first release, v1, which contains 48 tasks per platform and 12 cross-platform workflows that pair a desktop with an Android phone. OS-Omni provides reproducible initialization, platform-specific adapters, trajectory logging, and executable final-state evaluators, and includes controlled service-backed applications for workflows involving account, cart, budget, calendar, message, and other persistent state. Human studies show that OS-Omni tasks require 67.54 interaction steps, substantially exceeding OSWorld references of 15.0 steps. On v1, the strongest evaluated…</p></details>
+<p class="kw"><span>benchmark</span><span>benchmarks</span></p></article>    </section>
+    <section data-group="research-other">
+      <h3 class="sub">Lĩnh vực khác</h3>
+<article class="story" id="s-9636993dcb" data-label="important" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 58 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.31619" target="_blank" rel="noopener noreferrer">Bảng xếp hạng dự báo có thể thiết lập những gì: Báo cáo độ phân giải cho các mô hình chuỗi thời gian không cần dữ liệu huấn luyện</a>
+  </h4>
+<p class="orig" lang="en">What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models</p>    <p class="summary">Một mô hình nền tảng cho chuỗi thời gian được huấn luyện trước một lần, sau đó được yêu cầu dự báo các chuỗi mà nó chưa từng thấy, vì vậy bằng chứng cho mô hình này là điểm số của nó trên các tập dữ liệu được giữ lại. Các tập dữ liệu như vậy rất hiếm và một số bảng xếp hạng công khai chứa hầu hết các phép so sánh, nhưng không bảng xếp hạng nào nêu rõ tập dữ liệu của mình có thể phát hiện được mức chênh lệch nhỏ đến mức nào.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">A foundation model for time series is pretrained once and then asked to forecast series it has never seen, so the evidence for it is its score on held-out datasets. Such datasets are scarce, and a few public leaderboards carry most comparisons, yet none of them states how small a difference its datasets can detect. We call that quantity the resolution of a board and introduce Vernier, a tool that computes it from the files a board already publishes. Vernier also reports which entries a board cannot separate from its leader and whether its order changes when unrelated parties submit. GIFT-Eval resolves 6.8 rank places, and its displayed neighbours sit 0.91 apart. The ten places of its top ten hold fewer than two resolvable steps. fev-bench, Chronos Benchmark II and TIME show the same pattern: their resolution is 3.6 to 19 times the gap between neighbours. With each of its 2,554 series as an independent source, BOOM is the one board that resolves its top ten. Below the resolution the order depends on who else submitted: across four boards, rules that rank against the pool reversed 43 top-ten pairs with neither entry rerun, in one update in seven. Boards also do not record how much…</p></details>
+<p class="kw"><span>benchmark</span><span>datasets</span></p></article><article class="story" id="s-d83b18def8" data-label="important" data-cat="research"
+         data-srcs="nature-mi">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Nature Machine Intelligence</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.nature.com/articles/s42256-026-01330-9" target="_blank" rel="noopener noreferrer">Tạo ra các protein có chức năng phức tạp</a>
+  </h4>
+<p class="orig" lang="en">Generating proteins with complex functions</p>    <p class="summary">Nature Machine Intelligence, Đăng trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01330-9 Một mô hình sinh sản đơn giản học được trình tự và cấu trúc protein cùng với bối cảnh chức năng, cho phép thiết kế các protein có các chức năng phân tử cụ thể và nhiều trạng thái cấu trúc.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01330-9 A simple generative model learns protein sequence and structure together with functional context, enabling the design of proteins with specified molecular functions and multiple structural states.</p></details>
+</article><article class="story" id="s-b15682f285" data-label="important" data-cat="research"
+         data-srcs="nature-mi">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Nature Machine Intelligence</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.nature.com/articles/s42256-026-01321-w" target="_blank" rel="noopener noreferrer">Mô hình nền tảng tạo sinh có ngữ cảnh dài để thiết kế RNA linh hoạt</a>
+  </h4>
+<p class="orig" lang="en">A long-context generative foundation model for versatile RNA design</p>    <p class="summary">Nature Machine Intelligence, Công bố trực tuyến: ngày 27 tháng 11 năm 2026; doi:10.1038/s42256-026-01321-w Huang, Lv, Gao và các đồng nghiệp nghiên cứu các quy luật mở rộng RNA và giới thiệu EVA, một mô hình nền tảng RNA ngữ cảnh dài để dự đoán chức năng và thiết kế RNA đa dạng, được hỗ trợ bởi xác nhận thực nghiệm.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Nature Machine Intelligence, Published online: 27 November 2026; doi:10.1038/s42256-026-01321-w Huang, Lv, Gao and colleagues investigate RNA scaling laws and introduce EVA, a long-context RNA foundation model for function prediction and diverse RNA design, supported by experimental validation.</p></details>
+</article><article class="story" id="s-2d7f8b4f84" data-label="important" data-cat="research"
+         data-srcs="hf-blog">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>Hugging Face Blog</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://huggingface.co/blog/video-trainium3" target="_blank" rel="noopener noreferrer">Đưa Trainium3 lên đường đua: Tạo video với LTX-2.5</a>
+  </h4>
+<p class="orig" lang="en">Taking Trainium3 to the Track: Generating Videos with LTX-2.5</p></article><article class="story" id="s-f7df6e6b82" data-label="notable" data-cat="research"
+         data-srcs="hf-papers">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hugging Face Daily Papers</span>
+    <span>·</span>
+    <time datetime="2026-11-27T00:00:00+00:00">07:00 27/11</time>
+<span>· HF 17 phiếu</span>  </div>
+  <h4>
+    <a href="https://huggingface.co/papers/2611.34852" target="_blank" rel="noopener noreferrer">DRBench Pro: Một Benchmark lấy tri thức làm trọng tâm dành cho hoạt động nghiên cứu chuyên sâu chuyên nghiệp Agents</a>
+  </h4>
+<p class="orig" lang="en">DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents</p>    <p class="summary">Nghiên cứu chuyên sâu agents thu thập thông tin từ nhiều nguồn và tổng hợp thành các báo cáo về các câu hỏi phức tạp, mở. Các benchmarks hiện có đánh giá chất lượng báo cáo theo nhiều khía cạnh, nhưng thiếu một đánh giá chuyên biệt, tập trung vào kiến thức về các hướng nghiên cứu mà một báo cáo đề cập đến và mức độ chuyên sâu mà báo cáo đó khám phá các hướng nghiên cứu đó. Chúng tôi xin giới thiệu DRBench Pro, một benchmark lấy phạm vi kiến thức có cấu trúc làm mục tiêu đánh giá chính.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how deeply it explores them. We introduce DRBench Pro, a benchmark that makes structured knowledge coverage the primary evaluation target. Our automated pipeline builds local knowledge trees from Wikipedia and uses sampled subgraphs to generate research queries and evidence-grounded rubrics. Each rubric corresponds to a relation in the tree, preserving the structure of the knowledge being evaluated. Agents receive only the research query. This structure allows us to measure breadth across major research directions and depth along related knowledge chains, with their geometric mean giving overall coverage. The benchmark includes 144 cases across 24 domains and 44,102 rubrics. Evaluating 16 deep research agents reveals different strengths in breadth and depth, with the best-performing agent reaching 57.04% overall coverage. Rubric judgments agree closely with human annotations, and agent…</p></details>
+<p class="kw"><span>benchmark</span><span>benchmarks</span></p></article>    </section>
+</section>
+<section id="c-infra" data-group="infra">
+  <h2>Hạ tầng &amp; phần cứng</h2>
+<article class="story" id="s-355eb2e5ee" data-label="notable" data-cat="infra"
+         data-srcs="wired-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Wired – AI</span>
+    <span>·</span>
+    <time datetime="2026-11-27T07:00:00+00:00">14:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/" target="_blank" rel="noopener noreferrer">Một loại chip mới chạy các mô hình AI bằng sóng ánh sáng</a>
+  </h4>
+<p class="orig" lang="en">A New Breed of Chip Runs AI Models Using Waves of Light</p>    <p class="summary">Công ty Q.ANT của Đức đang nỗ lực giảm lượng năng lượng cần thiết để vận hành các mô hình AI bằng cách sử dụng ánh sáng để thực hiện các phép tính phức tạp nhất.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.</p></details>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-software" data-group="software">
+  <h2>Phần mềm &amp; công cụ</h2>
+<article class="story" id="s-cc2646aaf0" data-label="notable" data-cat="software"
+         data-srcs="verge-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>The Verge – AI</span>
+    <span>·</span>
+    <time datetime="2026-11-27T14:00:00+00:00">21:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini" target="_blank" rel="noopener noreferrer">Các tiện ích DIY của Android là một chút niềm vui mã hóa theo cảm hứng</a>
+  </h4>
+<p class="orig" lang="en">Android’s DIY widgets are a bit of vibe-coding fun</p>    <p class="summary">Ngoài việc quản lý lịch của tôi, còn có một việc tôi muốn AI thực hiện: báo cho tôi biết nếu tôi sắp lỡ chuyến xe buýt. Cái tôi cần là một tiện ích con. Widget đó cần cho tôi biết thời gian xe buýt đến điểm dừng gần nhà tôi trong thời gian thực. Tôi phải chạm lung tung trên màn hình điện thoại để mở đúng ứng dụng và</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Aside from dealing with my calendar, there&#39;s one thing I want AI to do: tell me if I&#39;m about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right app and</p></details>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-security" data-group="security">
+  <h2>Bảo mật</h2>
+<article class="story" id="s-284a8dbee5" data-label="important" data-cat="security"
+         data-srcs="cisa-kev">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <time datetime="2026-11-27T12:00:00+00:00">19:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120705" target="_blank" rel="noopener noreferrer">CVE-2026-120705: Lỗ hổng chèn mã XML trong OSGeo GeoServer</a>
+  </h4>
+<p class="orig" lang="en">CVE-2026-120705: OSGeo GeoServer XML Injection Vulnerability</p>    <p class="summary">OsGeo GeoServer chứa lỗ hổng chèn XML cho phép kẻ tấn công từ xa chưa được xác thực khiến máy chủ đọc các tệp văn bản cục bộ mà quy trình GeoServer có thể truy cập hoặc truy xuất các URL HTTP hoặc HTTPS do kẻ tấn công chỉ định thông qua một tham số ID được thiết kế đặc biệt trong truy vấn được lưu trữ WFS 2.0 GetFeatureById.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.</p></details>
+<p class="kw"><span>remote code execution</span><span>CVE</span></p></article><article class="story" id="s-df885d426e" data-label="important" data-cat="security"
+         data-srcs="cisa-kev">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <time datetime="2026-11-27T12:00:00+00:00">19:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129243" target="_blank" rel="noopener noreferrer">CVE-2026-129243: Lỗ hổng xác thực không chính xác trong OSGeo GeoServer</a>
+  </h4>
+<p class="orig" lang="en">CVE-2026-129243: OSGeo GeoServer Incorrect Authorization Vulnerability</p>    <p class="summary">GeoServer chứa lỗ hổng ủy quyền không chính xác, cho phép kẻ tấn công từ xa chưa được xác thực bỏ qua các bước kiểm tra vai trò ở cấp độ dịch vụ và gọi các thao tác chỉ được bảo vệ bởi các bước kiểm tra đó thông qua một yêu cầu có tham số dịch vụ được đặt tiền tố. Lỗ hổng này có thể được kết hợp với CVE-2026-129244, CVE-2026-120705, CVE-2026-129245 và CVE-2026-129242 để thực thi mã từ xa mà không cần xác thực trên một phiên bản GeoServer bị ảnh hưởng.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.</p></details>
+<p class="kw"><span>remote code execution</span><span>CVE</span></p></article><article class="story" id="s-351b5c2f56" data-label="important" data-cat="security"
+         data-srcs="cisa-kev">
+  <div class="meta">
+    <span class="badge important">Quan trọng</span>
+    <span>CISA – Known Exploited Vulnerabilities</span>
+    <span>·</span>
+    <time datetime="2026-11-27T12:00:00+00:00">19:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716" target="_blank" rel="noopener noreferrer">CVE-2026-136716: Lỗ hổng do kiểm tra không đúng cách các điều kiện bất thường hoặc ngoại lệ trong Drupal Core</a>
+  </h4>
+<p class="orig" lang="en">CVE-2026-136716: Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability</p>    <p class="summary">Drupal Core chứa lỗ hổng kiểm tra không đúng các điều kiện bất thường hoặc đặc biệt, cho phép kẻ tấn công từ xa chưa được xác thực chiếm quyền kiểm soát một trang web thông qua trình cài đặt Drupal bị lộ khi trang web đang ở một trong các trạng thái cài đặt bất thường hoặc chưa hoàn tất bị ảnh hưởng.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.</p></details>
+<p class="kw"><span>CVE</span></p></article><article class="story" id="s-ffd015cfc3" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer hackernews">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T15:09:40+00:00">22:09 27/11</time>
+<span>· 2 nguồn</span><span>· HN 343 điểm</span>  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/" target="_blank" rel="noopener noreferrer">Nền tảng đám mây của Không quân Hoa Kỳ được cho là đã bị tấn công trong vụ vi phạm liên bang gần đây nhất</a>
+  </h4>
+<p class="orig" lang="en">US Air Force cloud platform reportedly hacked in latest federal breach</p>    <p class="summary">Theo báo cáo, các tin tặc đã xâm nhập vào nền tảng điện toán Cloud One của Không quân Hoa Kỳ, góp phần vào làn sóng tấn công mạng gần đây ảnh hưởng đến các cơ quan chính phủ Hoa Kỳ, bao gồm FBI, CIA và Bộ Tài chính.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Hackers have reportedly breached the US Air Force&#39;s Cloud One computing platform, adding to a recent wave of cyberattacks affecting US government agencies, including the FBI, CIA, and Treasury Department.</p></details>
+  <p class="also">Cùng đưa tin:
+<a href="https://news.ycombinator.com/item?id=50666375" target="_blank" rel="noopener noreferrer" title="US Air Force&#39;s cloud computing platform hacked">Hacker News</a>  </p>
+<p class="kw"><span>breach</span><span>hacked</span><span>hackers</span></p></article><article class="story" id="s-1fb658de37" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T19:26:04+00:00">02:26 28/11</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/" target="_blank" rel="noopener noreferrer">pCloud xác nhận vụ tấn công vào trình quản lý mật khẩu sau các cảnh báo đăng nhập đáng ngờ</a>
+  </h4>
+<p class="orig" lang="en">pCloud confirms password manager hack after suspicious login alerts</p>    <p class="summary">Trình quản lý mật khẩu pCloud Pass đã bị tấn công mạng, với việc người dùng báo cáo rằng các thiết bị không xác định đã kết nối với tài khoản của họ ngay cả khi đã bật xác thực hai yếu tố (2FA).</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">The pCloud Pass password manager suffered a cyberattack, with users reporting that unknown devices had connected to their accounts even with two-factor authentication (2FA) enabled.</p></details>
+<p class="kw"><span>hack</span></p></article><article class="story" id="s-8b082e360c" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T18:57:42+00:00">01:57 28/11</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/" target="_blank" rel="noopener noreferrer">Vụ vi phạm dữ liệu mới của Boston Scientific làm lộ thông tin cá nhân, thông tin y tế</a>
+  </h4>
+<p class="orig" lang="en">New Boston Scientific data breach exposes personal, medical info</p>    <p class="summary">Công ty công nghệ y tế Boston Scientific đang gửi thông báo về việc vi phạm dữ liệu cho các cá nhân bị ảnh hưởng bởi một cuộc tấn công mạng vào công ty.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">Medical technology company Boston Scientific is sending data breach notices to individuals affected by a cyberattack on the firm.</p></details>
+<p class="kw"><span>data breach</span><span>breach</span></p></article><article class="story" id="s-30b0f99624" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T17:06:13+00:00">00:06 28/11</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/" target="_blank" rel="noopener noreferrer">Cacti zero-day chưa được vá với PoC công khai cho phép thực thi mã từ xa</a>
+  </h4>
+<p class="orig" lang="en">Unpatched Cacti zero-day with public PoC gives remote code execution</p>    <p class="summary">Một lỗ hổng zero-day trong nền tảng giám sát mạng Cacti đã được công khai, cùng với một lỗ hổng chứng minh tính khả thi cho phép những kẻ tấn công chưa được xác thực thực thi các lệnh trên các máy chủ dễ bị tấn công.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">A zero-day vulnerability in the Cacti network monitoring platform has been publicly disclosed, along with a proof-of-concept exploit that lets unauthenticated attackers execute commands on vulnerable servers.</p></details>
+<p class="kw"><span>zero-day</span><span>remote code execution</span></p></article><article class="story" id="s-78b38f09dd" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T10:10:15+00:00">17:10 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">Drupal cảnh báo về lỗ hổng chiếm quyền kiểm soát trang web mới đang bị lợi dụng trong các cuộc tấn công</a>
+  </h4>
+<p class="orig" lang="en">Drupal warns of new site takeover flaw exploited in attacks</p>    <p class="summary">Nhóm bảo mật của Drupal cho biết những kẻ tấn công đang lợi dụng một lỗ hổng nghiêm trọng thứ hai cho phép chúng xâm nhập và chiếm quyền điều khiển các trang web chưa được vá lỗi.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">The Drupal security team says attackers are exploiting a second critical vulnerability that lets them breach and hijack unpatched websites.</p></details>
+<p class="kw"><span>breach</span><span>critical vulnerability</span></p></article><article class="story" id="s-1d7e87ba13" data-label="notable" data-cat="security"
+         data-srcs="bleepingcomputer">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>BleepingComputer</span>
+    <span>·</span>
+    <time datetime="2026-11-27T08:06:58+00:00">15:06 27/11</time>
+  </div>
+  <h4>
+    <a href="https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/" target="_blank" rel="noopener noreferrer">Lỗ hổng NFS2ROOT Linux mới có thể cho phép kẻ tấn công giành được quyền hạn của người dùng root</a>
+  </h4>
+<p class="orig" lang="en">New NFS2ROOT Linux flaw can let attackers gain root privileges</p>    <p class="summary">​Một lỗ hổng nghiêm trọng đã tồn tại 12 năm trong máy chủ Hệ thống tệp mạng (NFS) của nhân Linux, được theo dõi với mã định danh CVE-2026-99362, cho phép kẻ tấn công từ xa giành được quyền hạn của người dùng root.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">​A 12-year-old critical vulnerability in the Linux kernel&#39;s Network File System (NFS) server, tracked as CVE-2026-99362, allows remote attackers to gain root privileges.</p></details>
+<p class="kw"><span>CVE</span><span>critical vulnerability</span></p></article></section>
+<section id="c-vietnam" data-group="vietnam">
+  <h2>Việt Nam</h2>
+<article class="story" id="s-724bee489e" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-11-27T22:00:00+00:00">05:00 28/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/than-dong-terence-tao-keu-goi-chuyen-sang-toan-hoc-2-0-vi-ai-5149544.html" target="_blank" rel="noopener noreferrer">Thần đồng Terence Tao kêu gọi chuyển sang &#39;toán học 2.0&#39; vì AI</a>
+  </h4>
+    <p class="summary">GS Terence Tao của UCLA cho rằng những phát hiện chấn động gần đây của AI về toán học đang buộc giới nghiên cứu phải thay đổi triệt để.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-4c55c37770" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-11-27T12:00:00+00:00">19:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/ai-tao-cu-phanh-ngan-rui-ro-dong-tien-tren-momo-5148006.html" target="_blank" rel="noopener noreferrer">AI tạo &#39;cú phanh&#39; ngăn rủi ro dòng tiền trên MoMo</a>
+  </h4>
+    <p class="summary">MoMo xây dựng AI nhận diện rủi ro trong giao dịch, tạo &#34;cú phanh&#34; lúc người dùng ra quyết định, giảm nguy cơ trước các kịch bản lừa đảo.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-fbaaffb49d" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-11-27T04:25:14+00:00">11:25 27/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/nvidia-yeu-cau-doi-tac-dung-chuyen-chip-den-bon-nuoc-dong-nam-a-5149453.html" target="_blank" rel="noopener noreferrer">Nvidia &#39;yêu cầu đối tác dừng chuyển chip đến bốn nước Đông Nam Á&#39;</a>
+  </h4>
+    <p class="summary">Nvidia được cho là đã yêu cầu đối tác tạm dừng chuyển hàng đến bốn quốc gia Đông Nam Á sau khi Mỹ tăng áp lực ngăn công ty Trung Quốc tiếp cận chip AI.</p>
+<p class="kw"><span>AI</span></p></article><article class="story" id="s-747e1727b8" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-11-27T03:04:16+00:00">10:04 27/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/hang-phan-mem-lon-nhat-chau-au-co-the-sa-thai-10-000-nguoi-5149433.html" target="_blank" rel="noopener noreferrer">Hãng phần mềm lớn nhất châu Âu có thể sa thải 10.000 người</a>
+  </h4>
+    <p class="summary">SAP, hãng phần mềm nổi tiếng Đức, được cho là có thể cắt giảm hơn 10.000 nhân sự khi công ty trong quá trình tái cấu trúc mảng trí tuệ nhân tạo.</p>
+<p class="kw"><span>trí tuệ nhân tạo</span></p></article><article class="story" id="s-927d1e187e" data-label="notable" data-cat="vietnam"
+         data-srcs="vnexpress-sohoa">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>VnExpress Số hóa</span>
+    <span>·</span>
+    <time datetime="2026-11-27T02:00:00+00:00">09:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://vnexpress.net/dan-cong-nghe-viet-xoay-xo-doi-nghe-trong-bao-ai-5145736.html" target="_blank" rel="noopener noreferrer">Dân công nghệ Việt xoay xở đổi nghề trong &#39;bão&#39; AI</a>
+  </h4>
+    <p class="summary">AI ngày càng tác động sâu rộng buộc nhiều người tìm cách thích ứng, thậm chí học nghề mới để phòng trường hợp thất nghiệp.</p>
+<p class="kw"><span>AI</span></p></article></section>
+<section id="c-other" data-group="other">
+  <h2>Tin khác</h2>
+<article class="story" id="s-0f99575864" data-label="notable" data-cat="other"
+         data-srcs="ieee-spectrum-ai">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>IEEE Spectrum – AI</span>
+    <span>·</span>
+    <time datetime="2026-11-27T14:00:01+00:00">21:00 27/11</time>
+  </div>
+  <h4>
+    <a href="https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai" target="_blank" rel="noopener noreferrer">Bác sĩ cấp cứu này đã trở thành kỹ sư AI lâm sàng đầu tiên của một bệnh viện</a>
+  </h4>
+<p class="orig" lang="en">This ER Doctor Became a Hospital’s First Clinical AI Engineer</p>    <p class="summary">Khi Bệnh viện Nhi Boston đăng thông báo tuyển dụng một kỹ sư prompt vào năm 2023, Dinesh Rai đã quyết định nộp đơn. Anh không nghĩ rằng mình sẽ được nhận vào làm. Vào thời điểm đó, kỹ sư prompt được quảng cáo là một trong những công việc mới &#34;hot&#34; được tạo ra bởi AI tạo sinh. Các công ty muốn tuyển những người biết cách gợi ý để các mô hình ngôn ngữ lớn (LLMs) đưa ra câu trả lời tốt nhất bằng cách diễn đạt cẩn thận các hướng dẫn, cung cấp ví dụ và gán cho hệ thống các tính cách hoặc bối cảnh khác.</p>
+    <details><summary>Xem bản gốc</summary><p lang="en">When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job. At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wanted people who knew how to coax the best answers from large language models (LLMs) by carefully wording instructions, supplying examples, and giving the systems personas or other context. Dinesh Rai Employer: Boston Children’s Hospital Occupation: Clinical AI Engineer Education: Bachelor’s degree in supply-chain management and marketing sciences, Rutgers Business School; Doctor of Medicine, Albert Einstein College of Medicine It was an unusual role for a hospital, but Rai had an unusual résumé. While he was trained as an emergency physician, he had also taught himself to code just before entering medical school. After completing a fellowship in clinical informatics—which focuses on the intersection of clinical practice and IT systems—he moved into health technology. Boston Children’s brought him on board in August 2023. Three years later, Rai still works there. Prompt engineering, however, has become a much less important…</p></details>
+<p class="kw"><span>LLMs</span><span>large language models</span><span>AI</span></p></article><article class="story" id="s-48b0d8d3f8" data-label="notable" data-cat="other"
+         data-srcs="hackernews">
+  <div class="meta">
+    <span class="badge notable">Đáng chú ý</span>
+    <span>Hacker News</span>
+    <span>·</span>
+    <time datetime="2026-11-27T06:44:34+00:00">13:44 27/11</time>
+<span>· HN 701 điểm</span>  </div>
+  <h4>
+    <a href="https://construct22.com/" target="_blank" rel="noopener noreferrer">Cuộc trò chuyện nhóm nơi AI nói xấu sau lưng bạn</a>
+  </h4>
+<p class="orig" lang="en">Group chat where your AI talks behind your back</p><p class="kw"><span>AI</span></p></article></section>
+</main>
+<footer>
+<div class="pager">
+  <span><a href="../2026/2026-11-27.html">← 27/11/2026</a></span>
+  <span></span>
+</div>
+<h2>Tình trạng nguồn</h2>
+<div class="table-scroll">
+<table class="status">
+  <thead><tr><th>Nguồn</th><th>Trạng thái</th><th class="n">Số bài</th><th>Ghi chú</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>arXiv (cs.AI, cs.LG, cs.CL, cs.CV, cs.SE, cs.CR)</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">0</td>
+      <td>feed trống</td>
+    </tr>
+    <tr>
+      <td>Hugging Face Daily Papers</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">72</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nature Machine Intelligence</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">8</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Communications of the ACM</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Quanta Magazine – Computer Science</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MIT News – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Berkeley AI Research (BAIR)</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stanford HAI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Google DeepMind</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Google Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>OpenAI News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">1430</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Anthropic News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Meta AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">9</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Microsoft Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Apple Machine Learning Research</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Hugging Face Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">919</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NVIDIA Technical Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MIT Technology Review – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IEEE Spectrum – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ars Technica</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>The Verge – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Wired – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TechCrunch – AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GitHub Blog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CISA – Known Exploited Vulnerabilities</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">13</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Krebs on Security</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>BleepingComputer</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">15</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Simon Willison’s Weblog</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Import AI</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">10</td>
+      <td>dùng địa chỉ dự phòng (địa chỉ chính: HTTP 403)</td>
+    </tr>
+    <tr>
+      <td>Hacker News</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">39</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>VnExpress Số hóa</td>
+      <td><span class="ok">✓ đọc được</span></td>
+      <td class="n">60</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Dịch: Claude 0 · Google 0 · MyMemory 26 · dùng lại bản dịch cũ 0 · chưa dịch 0.</p>
+<p>Tạo lúc 14:56 28/11.</p>
+<p>Tạo tự động bởi <a href="https://github.com/tuankchls-blip/Tuan">ai-daily-digest</a>. Tin được tóm lược từ nguồn gốc; bấm tiêu đề để đọc bài đầy đủ.</p>
+</footer>
+</div>
+<script>
+// Bộ lọc nhanh theo nhãn, mục, nguồn. Không có JavaScript thì mọi tin vẫn hiện.
+(function () {
+  var state = { label: "all", cat: "all", src: "all" };
+  function update() {
+    var stories = document.querySelectorAll(".story[data-label]");
+    var shown = 0;
+    stories.forEach(function (el) {
+      var ok = (state.label === "all" || el.dataset.label === state.label) &&
+               (state.cat === "all" || el.dataset.cat === state.cat) &&
+               (state.src === "all" || (" " + el.dataset.srcs + " ").indexOf(" " + state.src + " ") >= 0);
+      el.hidden = !ok; if (ok) shown++;
+    });
+    document.querySelectorAll("section[data-group]").forEach(function (sec) {
+      sec.hidden = !sec.querySelector(".story:not([hidden])");
+    });
+    var c = document.getElementById("filter-count");
+    if (c) c.textContent = "Đang hiện " + shown + "/" + stories.length + " tin";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var bar = document.getElementById("filters");
+    if (!bar) return;
+    bar.hidden = false;
+    bar.querySelectorAll("[data-label-btn]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        state.label = b.dataset.labelBtn;
+        bar.querySelectorAll("[data-label-btn]").forEach(function (x) {
+          x.setAttribute("aria-pressed", x === b ? "true" : "false");
+        });
+        update();
+      });
+    });
+    document.getElementById("f-cat").addEventListener("change", function (e) { state.cat = e.target.value; update(); });
+    document.getElementById("f-src").addEventListener("change", function (e) { state.src = e.target.value; update(); });
+    update();
+  });
+})();</script>
+</body>
+</html>
